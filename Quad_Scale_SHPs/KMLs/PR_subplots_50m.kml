@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="PR_subplots_50m" id="PR_subplots_50m">
+	<SimpleField name="subplotID" type="string"></SimpleField>
+</Schema>
+<Folder><name>PR_subplots_50m</name>
+  <Placemark>
+	<name>sub50_1</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.306083906449,34.7695273769662 -86.3064822701157,34.7698358245304 -86.3061084749014,34.770164548286 -86.3057101110887,34.7698560995128 -86.306083906449,34.7695273769662</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_2</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3057101110887,34.7698560995128 -86.3061084749014,34.770164548286 -86.3057346767229,34.7704932708396 -86.3053363127642,34.7701848208576 -86.3057101110887,34.7698560995128</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_3</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3053363127642,34.7701848208576 -86.3057346767229,34.7704932708396 -86.3053608755802,34.7708219921914 -86.3049625114756,34.7705135410004 -86.3053363127642,34.7701848208576</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_4</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3049625114756,34.7705135410004 -86.3053608755802,34.7708219921914 -86.3049870714733,34.7711507123411 -86.3045887072228,34.7708422599411 -86.3049625114756,34.7705135410004</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_5</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3045887072228,34.7708422599411 -86.3049870714733,34.7711507123411 -86.3046132644021,34.7714794312887 -86.3042149000058,34.7711709776798 -86.3045887072228,34.7708422599411</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_6</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3042149000058,34.7711709776798 -86.3046132644021,34.7714794312887 -86.3042394543665,34.7718081490343 -86.3038410898245,34.7714996942164 -86.3042149000058,34.7711709776798</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_7</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3038410898245,34.7714996942164 -86.3042394543665,34.7718081490343 -86.3038656413666,34.7721368655777 -86.3034672766788,34.7718284095508 -86.3038410898245,34.7714996942164</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_8</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3034672766788,34.7718284095508 -86.3038656413666,34.7721368655777 -86.3034918254022,34.772465580919 -86.3030934605688,34.7721571236831 -86.3034672766788,34.7718284095508</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_9</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3064822701157,34.7698358245304 -86.3068806367466,34.7701442708121 -86.3065068416783,34.7704729957766 -86.3061084749014,34.770164548286 -86.3064822701157,34.7698358245304</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_10</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3061084749014,34.770164548286 -86.3065068416783,34.7704729957766 -86.3061330436458,34.7708017195392 -86.3057346767229,34.7704932708396 -86.3061084749014,34.770164548286</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_11</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3057346767229,34.7704932708396 -86.3061330436458,34.7708017195392 -86.305759242649,34.7711304420998 -86.3053608755802,34.7708219921914 -86.3057346767229,34.7704932708396</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_12</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3053608755802,34.7708219921914 -86.305759242649,34.7711304420998 -86.305385438688,34.7714591634585 -86.3049870714733,34.7711507123411 -86.3053608755802,34.7708219921914</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_13</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3049870714733,34.7711507123411 -86.305385438688,34.7714591634585 -86.3050116317627,34.7717878836151 -86.3046132644021,34.7714794312887 -86.3049870714733,34.7711507123411</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_14</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3046132644021,34.7714794312887 -86.3050116317627,34.7717878836151 -86.304637821873,34.7721166025697 -86.3042394543665,34.7718081490343 -86.3046132644021,34.7714794312887</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_15</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3042394543665,34.7718081490343 -86.304637821873,34.7721166025697 -86.3042640090188,34.7724453203221 -86.3038656413666,34.7721368655777 -86.3042394543665,34.7718081490343</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_16</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3038656413666,34.7721368655777 -86.3042640090188,34.7724453203221 -86.3038901932002,34.7727740368724 -86.3034918254022,34.772465580919 -86.3038656413666,34.7721368655777</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_17</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3068806367466,34.7701442708121 -86.3072790063416,34.7704527158112 -86.3069052114193,34.7707814419847 -86.3065068416783,34.7704729957766 -86.3068806367466,34.7701442708121</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_18</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3065068416783,34.7704729957766 -86.3069052114193,34.7707814419847 -86.3065314135329,34.7711101669562 -86.3061330436458,34.7708017195392 -86.3065068416783,34.7704729957766</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_19</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3061330436458,34.7708017195392 -86.3065314135329,34.7711101669562 -86.3061576126822,34.7714388907258 -86.305759242649,34.7711304420998 -86.3061330436458,34.7708017195392</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_20</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.305759242649,34.7711304420998 -86.3061576126822,34.7714388907258 -86.3057838088671,34.7717676132934 -86.305385438688,34.7714591634585 -86.305759242649,34.7711304420998</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_21</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.305385438688,34.7714591634585 -86.3057838088671,34.7717676132934 -86.3054100020877,34.772096334659 -86.3050116317627,34.7717878836151 -86.305385438688,34.7714591634585</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_22</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3050116317627,34.7717878836151 -86.3054100020877,34.772096334659 -86.3050361923438,34.7724250548226 -86.304637821873,34.7721166025697 -86.3050116317627,34.7717878836151</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_23</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.304637821873,34.7721166025697 -86.3050361923438,34.7724250548226 -86.3046623796355,34.772753773784 -86.3042640090188,34.7724453203221 -86.304637821873,34.7721166025697</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_24</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3042640090188,34.7724453203221 -86.3046623796355,34.772753773784 -86.3042885639627,34.7730824915434 -86.3038901932002,34.7727740368724 -86.3042640090188,34.7724453203221</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_25</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3072790063416,34.7704527158112 -86.3076773789007,34.7707611595277 -86.3073035841247,34.7710898869101 -86.3069052114193,34.7707814419847 -86.3072790063416,34.7704527158112</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_26</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3069052114193,34.7707814419847 -86.3073035841247,34.7710898869101 -86.3069297863843,34.7714186130906 -86.3065314135329,34.7711101669562 -86.3069052114193,34.7707814419847</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_27</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3065314135329,34.7711101669562 -86.3069297863843,34.7714186130906 -86.3065559856796,34.7717473380691 -86.3061576126822,34.7714388907258 -86.3065314135329,34.7711101669562</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_28</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3061576126822,34.7714388907258 -86.3065559856796,34.7717473380691 -86.3061821820106,34.7720760618457 -86.3057838088671,34.7717676132934 -86.3061576126822,34.7714388907258</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_29</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3057838088671,34.7717676132934 -86.3061821820106,34.7720760618457 -86.3058083753771,34.7724047844204 -86.3054100020877,34.772096334659 -86.3057838088671,34.7717676132934</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_30</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3054100020877,34.772096334659 -86.3058083753771,34.7724047844204 -86.3054345657792,34.7727335057929 -86.3050361923438,34.7724250548226 -86.3054100020877,34.772096334659</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_31</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3050361923438,34.7724250548226 -86.3054345657792,34.7727335057929 -86.3050607532168,34.7730622259634 -86.3046623796355,34.772753773784 -86.3050361923438,34.7724250548226</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_32</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3046623796355,34.772753773784 -86.3050607532168,34.7730622259634 -86.3046869376898,34.7733909449318 -86.3042885639627,34.7730824915434 -86.3046623796355,34.772753773784</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_33</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3076773789007,34.7707611595277 -86.3080757544241,34.7710696019616 -86.3077019597942,34.7713983305529 -86.3073035841247,34.7710898869101 -86.3076773789007,34.7707611595277</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_34</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3073035841247,34.7710898869101 -86.3077019597942,34.7713983305529 -86.3073281622,34.7717270579423 -86.3069297863843,34.7714186130906 -86.3073035841247,34.7710898869101</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_35</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3069297863843,34.7714186130906 -86.3073281622,34.7717270579423 -86.3069543616414,34.7720557841299 -86.3065559856796,34.7717473380691 -86.3069297863843,34.7714186130906</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_36</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3065559856796,34.7717473380691 -86.3069543616414,34.7720557841299 -86.3065805581185,34.7723845091155 -86.3061821820106,34.7720760618457 -86.3065559856796,34.7717473380691</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_37</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3061821820106,34.7720760618457 -86.3065805581185,34.7723845091155 -86.3062067516311,34.7727132328991 -86.3058083753771,34.7724047844204 -86.3061821820106,34.7720760618457</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_38</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3058083753771,34.7724047844204 -86.3062067516311,34.7727132328991 -86.3058329421791,34.7730419554807 -86.3054345657792,34.7727335057929 -86.3058083753771,34.7724047844204</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_39</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3054345657792,34.7727335057929 -86.3058329421791,34.7730419554807 -86.3054591297626,34.7733706768602 -86.3050607532168,34.7730622259634 -86.3054345657792,34.7727335057929</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_40</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3050607532168,34.7730622259634 -86.3054591297626,34.7733706768602 -86.3050853143815,34.7736993970377 -86.3046869376898,34.7733909449318 -86.3050607532168,34.7730622259634</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_41</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3080757544241,34.7710696019616 -86.3084741329118,34.7713780431127 -86.3081003384281,34.771706772913 -86.3077019597942,34.7713983305529 -86.3080757544241,34.7710696019616</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_42</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3077019597942,34.7713983305529 -86.3081003384281,34.771706772913 -86.3077265409801,34.7720355015114 -86.3073281622,34.7717270579423 -86.3077019597942,34.7713983305529</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_43</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3073281622,34.7717270579423 -86.3077265409801,34.7720355015114 -86.3073527405677,34.7723642289079 -86.3069543616414,34.7720557841299 -86.3073281622,34.7717270579423</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_44</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3069543616414,34.7720557841299 -86.3073527405677,34.7723642289079 -86.3069789371908,34.7726929551025 -86.3065805581185,34.7723845091155 -86.3069543616414,34.7720557841299</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_45</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3065805581185,34.7723845091155 -86.3069789371908,34.7726929551025 -86.3066051308495,34.7730216800952 -86.3062067516311,34.7727132328991 -86.3065805581185,34.7723845091155</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_46</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3062067516311,34.7727132328991 -86.3066051308495,34.7730216800952 -86.3062313215436,34.7733504038858 -86.3058329421791,34.7730419554807 -86.3062067516311,34.7727132328991</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_47</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3058329421791,34.7730419554807 -86.3062313215436,34.7733504038858 -86.3058575092731,34.7736791264744 -86.3054591297626,34.7733706768602 -86.3058329421791,34.7730419554807</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_48</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3054591297626,34.7733706768602 -86.3058575092731,34.7736791264744 -86.3054836940379,34.7740078478609 -86.3050853143815,34.7736993970377 -86.3054591297626,34.7733706768602</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_49</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3084741329118,34.7713780431127 -86.3088725143638,34.7716864829811 -86.3084987200264,34.7720152139903 -86.3081003384281,34.771706772913 -86.3084741329118,34.7713780431127</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_50</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3081003384281,34.771706772913 -86.3084987200264,34.7720152139903 -86.3081249227246,34.7723439437977 -86.3077265409801,34.7720355015114 -86.3081003384281,34.771706772913</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_51</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3077265409801,34.7720355015114 -86.3081249227246,34.7723439437977 -86.3077511224584,34.7726726724032 -86.3073527405677,34.7723642289079 -86.3077265409801,34.7720355015114</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_52</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3073527405677,34.7723642289079 -86.3077511224584,34.7726726724032 -86.3073773192277,34.7730013998069 -86.3069789371908,34.7726929551025 -86.3073527405677,34.7723642289079</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_53</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3069789371908,34.7726929551025 -86.3073773192277,34.7730013998069 -86.3070035130325,34.7733301260085 -86.3066051308495,34.7730216800952 -86.3069789371908,34.7726929551025</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_54</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3066051308495,34.7730216800952 -86.3070035130325,34.7733301260085 -86.3066297038727,34.7736588510082 -86.3062313215436,34.7733504038858 -86.3066051308495,34.7730216800952</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_55</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3062313215436,34.7733504038858 -86.3066297038727,34.7736588510082 -86.3062558917482,34.7739875748059 -86.3058575092731,34.7736791264744 -86.3062313215436,34.7733504038858</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_56</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3058575092731,34.7736791264744 -86.3062558917482,34.7739875748059 -86.305882076659,34.7743162974015 -86.3054836940379,34.7740078478609 -86.3058575092731,34.7736791264744</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_57</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3088725143638,34.7716864829811 -86.3092708987801,34.7719949215667 -86.3088971045891,34.7723236537849 -86.3084987200264,34.7720152139903 -86.3088725143638,34.7716864829811</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_58</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3084987200264,34.7720152139903 -86.3088971045891,34.7723236537849 -86.3085233074336,34.7726523848012 -86.3081249227246,34.7723439437977 -86.3084987200264,34.7720152139903</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_59</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3081249227246,34.7723439437977 -86.3085233074336,34.7726523848012 -86.3081495073136,34.7729811146158 -86.3077511224584,34.7726726724032 -86.3081249227246,34.7723439437977</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_60</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3077511224584,34.7726726724032 -86.3081495073136,34.7729811146158 -86.3077757042292,34.7733098432284 -86.3073773192277,34.7730013998069 -86.3077511224584,34.7726726724032</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_61</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3073773192277,34.7730013998069 -86.3077757042292,34.7733098432284 -86.3074018981801,34.7736385706392 -86.3070035130325,34.7733301260085 -86.3073773192277,34.7730013998069</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_62</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3070035130325,34.7733301260085 -86.3074018981801,34.7736385706392 -86.3070280891664,34.7739672968479 -86.3066297038727,34.7736588510082 -86.3070035130325,34.7733301260085</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_63</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3066297038727,34.7736588510082 -86.3070280891664,34.7739672968479 -86.306654277188,34.7742960218547 -86.3062558917482,34.7739875748059 -86.3066297038727,34.7736588510082</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_64</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3062558917482,34.7739875748059 -86.306654277188,34.7742960218547 -86.3062804622449,34.7746247456594 -86.305882076659,34.7743162974015 -86.3062558917482,34.7739875748059</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_65</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3092708987801,34.7719949215667 -86.3096692861608,34.7723033588694 -86.3092954921162,34.7726320922966 -86.3088971045891,34.7723236537849 -86.3092708987801,34.7719949215667</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_66</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3088971045891,34.7723236537849 -86.3092954921162,34.7726320922966 -86.3089216951071,34.772960824522 -86.3085233074336,34.7726523848012 -86.3088971045891,34.7723236537849</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_67</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3085233074336,34.7726523848012 -86.3089216951071,34.772960824522 -86.3085478951334,34.7732895555455 -86.3081495073136,34.7729811146158 -86.3085233074336,34.7726523848012</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_68</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3081495073136,34.7729811146158 -86.3085478951334,34.7732895555455 -86.3081740921952,34.7736182853672 -86.3077757042292,34.7733098432284 -86.3081495073136,34.7729811146158</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_69</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3077757042292,34.7733098432284 -86.3081740921952,34.7736182853672 -86.3078002862923,34.773947013987 -86.3074018981801,34.7736385706392 -86.3077757042292,34.7733098432284</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_70</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3074018981801,34.7736385706392 -86.3078002862923,34.773947013987 -86.3074264774248,34.7742757414049 -86.3070280891664,34.7739672968479 -86.3074018981801,34.7736385706392</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_71</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3070280891664,34.7739672968479 -86.3074264774248,34.7742757414049 -86.3070526655926,34.7746044676207 -86.306654277188,34.7742960218547 -86.3070280891664,34.7739672968479</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_72</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.306654277188,34.7742960218547 -86.3070526655926,34.7746044676207 -86.3066788507955,34.7749331926345 -86.3062804622449,34.7746247456594 -86.306654277188,34.7742960218547</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_73</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3096692861608,34.7723033588694 -86.310067676506,34.7726117948892 -86.3096938826078,34.7729405295254 -86.3092954921162,34.7726320922966 -86.3096692861608,34.7723033588694</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_74</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3092954921162,34.7726320922966 -86.3096938826078,34.7729405295254 -86.3093200857451,34.7732692629598 -86.3089216951071,34.772960824522 -86.3092954921162,34.7726320922966</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_75</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3089216951071,34.772960824522 -86.3093200857451,34.7732692629598 -86.3089462859178,34.7735979951924 -86.3085478951334,34.7732895555455 -86.3089216951071,34.772960824522</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_76</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3085478951334,34.7732895555455 -86.3089462859178,34.7735979951924 -86.3085724831259,34.7739267262232 -86.3081740921952,34.7736182853672 -86.3085478951334,34.7732895555455</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_77</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3081740921952,34.7736182853672 -86.3085724831259,34.7739267262232 -86.3081986773693,34.7742554560521 -86.3078002862923,34.773947013987 -86.3081740921952,34.7736182853672</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_78</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3078002862923,34.773947013987 -86.3081986773693,34.7742554560521 -86.307824868648,34.774584184679 -86.3074264774248,34.7742757414049 -86.3078002862923,34.773947013987</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_79</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3074264774248,34.7742757414049 -86.307824868648,34.774584184679 -86.3074510569619,34.7749129121039 -86.3070526655926,34.7746044676207 -86.3074264774248,34.7742757414049</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>sub50_80</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-86.3070526655926,34.7746044676207 -86.3074510569619,34.7749129121039 -86.307077242311,34.7752416383268 -86.3066788507955,34.7749331926345 -86.3070526655926,34.7746044676207</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>

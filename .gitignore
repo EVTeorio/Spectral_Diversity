@@ -1,0 +1,23 @@
+# Ignore large hyperspectral and derived data directories
+HSI_NA_trimmed/
+VegIndex_NA_trimmed/
+Quad_spectra/
+
+# Ignore large R data object
+global_pca.rds
+
+# R session/history files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Temporary / intermediate files
+*.tmp
+*.log
+
+# Geospatial raster sidecars (often large or regenerable)
+*.aux.xml
+
+# OS / editor files
+.DS_Store
+Thumbs.db
