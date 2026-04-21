@@ -1,9 +1,7 @@
-
+library(dplyr)
 
 het_df <- read.csv("Indices_SHPs/20m_SA_smooth_masked_7_11.csv")
 csv <- read.csv("Indices_SHPs/20m_spectral_sp.csv")
-
-library(dplyr)
 
 # Ensure consistent column name (case-sensitive!)
 het_df_clean <- het_df %>%
