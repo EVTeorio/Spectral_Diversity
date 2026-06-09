@@ -56,8 +56,8 @@ spectral_vars <- c("global_pca_20m_masked_5nm",
 
 pd_vars <- c("afaith_pd", "faith_pd", "rao_pd", "rchnss_", "shnnn_d", "smpsn_d")
 
-response_var  <- "rao_pd"
-predictor_var <- "global_pca_20m_masked_5nm"
+response_var  <- "afaith_pd"
+predictor_var <- "sa_entropy_20m_masked_5nm"
 
 # ---------------------------
 # 4) Scale predictors

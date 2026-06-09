@@ -10,7 +10,7 @@ raster_file <- "Indices_SHPs/Other_variables/lci_update/w001001x.adf"
 raster_layer <- raster(raster_file)
 
 # 2) Read in the shapefile (quads) as a Simple Feature (SF) object
-quads <- st_read("Quad_Scale_SHPs/PR_20m.shp")  # Update with your shapefile path
+quads <- st_read("Quad_Scale_SHPs/PR_20m.shp")
 quads <- quads %>% dplyr::select(-matches("^Dscrptn"))
 quads <- st_transform(quads, crs_proj)
 

@@ -45,7 +45,7 @@ topo_vars <- c(
 )
 
 pd_vars <- c("afaith_pd", "faith_pd", "rao_pd", "shnnn_d")
-response_var <- "rao_pd"
+response_var <- "afaith_pd"
 
 # --- Scale all predictors ----------------------------------------------------
 

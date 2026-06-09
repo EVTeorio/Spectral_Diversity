@@ -44,7 +44,7 @@ spectral_vars <- c("global_pca_20m_masked_5nm",
 pd_vars <- c("afaith_pd", "faith_pd", "rao_pd", "rchnss_", "shnnn_d", "smpsn_d")
 
 # Define predictor & response variables
-response_var <- "faith_pd"
+response_var <- "afaith_pd"
 predictor_var <-  "sa_entropy_20m_masked_5nm"
 
 # Exploratory plot
