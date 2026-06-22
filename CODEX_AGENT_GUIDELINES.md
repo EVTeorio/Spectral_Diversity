@@ -100,6 +100,8 @@ Generated code should remain compatible with:
 
 `R 4.2.3`
 
+Before writing or restructuring R code, read relevant existing scripts under `/scripts` to understand the user's established workflow structure, object naming, and R style. Pay particular attention to how existing scripts implement loops, nested iteration across scales/quadrats/files, and progress/output handling so generated code fits the project's current pattern unless there is a clear reason to improve it.
+
 ---
 
 ### Style
@@ -316,8 +318,10 @@ The user remains responsible for all Git actions.
 
 1. Unnamed first columns in CSV outputs are likely index columns unless later evidence shows otherwise.
 2. Spectral products that produce spectral heterogeneity values are stored in `/Indices_SHPs/Spectral_diversitySHPs`.
-3. Spectra cropped to quadrat extents are stored in `/Quad_Spectra`.
-4. Current analysis should use current, non-legacy data products. Files under directories named `old`, `Outdated`, or `Currently not relevant` are authorized for deletion when cleanup is requested.
+3. The user has independently tested the partitioned quadrat spectra and confirmed they are the spectral inputs to use moving forward.
+4. The confirmed partitioned quadrat spectra are stored in `/Quad_Spectra/10m`, `/Quad_Spectra/20m`, and `/Quad_Spectra/50m`.
+5. Temporary validation folders such as `/Quad_Spectra/10m_test`, `/Quad_Spectra/20m_test`, and `/Quad_Spectra/50m_test` document testing activity and should not replace the confirmed primary spectra unless the user explicitly directs that change.
+6. Current analysis should use current, non-legacy data products. Files under directories named `old`, `Outdated`, or `Currently not relevant` are authorized for deletion when cleanup is requested.
 
 ### During Work
 
@@ -336,6 +340,12 @@ The user remains responsible for all Git actions.
 5. Create task report.
 6. Create validation report.
 7. Summarize work completed.
+8. As the very last action at the end of a whole completed task, run the following lines in the R interactive terminal:
+
+```r
+library(beepr)
+beep()
+```
 
 ---
 
@@ -381,3 +391,4 @@ Checklist:
 - [ ] Task report created
 - [ ] Validation report created
 - [ ] Summary provided to user
+- [ ] Completion beep run in the R interactive terminal with `library(beepr)` and `beep()`

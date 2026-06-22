@@ -1,44 +1,82 @@
+user_library <- "C:/Users/PaintRock/AppData/Local/R/win-library/4.2"
+if (dir.exists(user_library)) {
+  .libPaths(c(user_library, .libPaths()))
+}
+
 library(terra)
 library(signal)
 library(beepr)
 
-setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/")
-
-# --- Paths ---
-in_dir  <- "Spectral_Diversity/Quad_Spectra/20m_resampled_5nm"
-out_dir <- "Spectral_Diversity/Quad_Spectra/20m_smoothed_5nm"
+setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens")
 
 # --- Parameters ---
 sg_p <- 3   # polynomial order
-sg_n <- 7  # window size
+sg_n <- 15  # window size
 
-# --- List files ---
-ras_files <- list.files(in_dir, full.names = TRUE)
-raster_files <- ras_files[!grepl("\\.hdr$|\\.aux$|\\.xml$|\\.enp$|\\.sta$", ras_files)]
+scale_dirs <- c("10m", "20m", "50m")
+scale_cores <- c("10m" = 8, "20m" = 4, "50m" = 2)
+quad_spectra_dir <- "Spectral_Diversity/Quad_Spectra"
+sidecar_pattern <- "\\.(hdr|aux|xml|enp|sta)$"
+progress_log <- "Spectral_Diversity/logs/smoothing_progress.log"
 
-# --- Loop through files ---
-for(f in raster_files){
-  r <- rast(f)
+smooth_spectrum <- function(x) {
+  if (all(is.na(x))) {
+    return(x)
+  }
   
-  # Store original band names
-  orig_names <- names(r)
+  signal::sgolayfilt(x, p = 3, n = 15)
+}
+
+for (scale_dir in scale_dirs) {
+  in_dir <- file.path(quad_spectra_dir, scale_dir)
+  out_dir <- file.path(quad_spectra_dir, paste0(scale_dir, "_smooth"))
+  n_cores <- min(scale_cores[[scale_dir]], max(1, parallel::detectCores() - 3))
   
-  # Apply Savitzky-Golay smoothing band by band
-  r_smoothed <- app(r, fun = function(x){
-    if(all(is.na(x))){
-      return(x)  # keep NA if all values are NA
-    } else {
-      return(sgolayfilt(x, p = sg_p, n = sg_n))
+  if (!dir.exists(out_dir)) {
+    dir.create(out_dir, recursive = TRUE)
+  }
+  
+  ras_files <- list.files(in_dir, full.names = TRUE)
+  raster_files <- ras_files[!grepl(sidecar_pattern, ras_files, ignore.case = TRUE)]
+  
+  start_message <- paste(
+    Sys.time(),
+    "Starting smoothing for",
+    scale_dir,
+    "with",
+    length(raster_files),
+    "rasters using",
+    n_cores,
+    "cores"
+  )
+  cat(start_message, "\n")
+  cat(start_message, "\n", file = progress_log, append = TRUE)
+  
+  for (i in seq_along(raster_files)) {
+    f <- raster_files[[i]]
+    out_file <- file.path(out_dir, basename(f))
+    out_hdr <- paste0(out_file, ".hdr")
+    
+    if (file.exists(out_file) && file.exists(out_hdr)) {
+      cat("Skipping existing:", file.path(basename(out_dir), basename(f)), "\n")
+      next
     }
-  })
+    
+    r <- rast(f)
+    orig_names <- names(r)
+    
+    r_smoothed <- app(r, fun = smooth_spectrum, cores = n_cores)
+    names(r_smoothed) <- orig_names
+    
+    writeRaster(r_smoothed, out_file, filetype = "ENVI", overwrite = TRUE)
+    progress_message <- paste(Sys.time(), "Smoothed", i, "of", length(raster_files), file.path(scale_dir, basename(f)))
+    cat(progress_message, "\n")
+    cat(progress_message, "\n", file = progress_log, append = TRUE)
+  }
   
-  # Restore original band names
-  names(r_smoothed) <- orig_names
-  
-  # --- Save output ---
-  out_file <- file.path(out_dir, basename(f))
-  writeRaster(r_smoothed, out_file, filetype = "ENVI")
-  cat("Smoothed:", basename(f), "\n")
+  done_message <- paste(Sys.time(), "Finished smoothing for", scale_dir)
+  cat(done_message, "\n")
+  cat(done_message, "\n", file = progress_log, append = TRUE)
   beep()
 }
 

@@ -5,11 +5,11 @@ library(dplyr)
 library(snow)
 library(beepr)
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens")
-hsi_dir  <- "Spectral_Diversity/VegIndex_NA_trimmed"
-out_dir  <- "Spectral_Diversity/Quad_Spectra/10m_VegIndex"
-shp_path <- "Spectral_Diversity/Quad_Scale_SHPs/PR_10m.shp"
+hsi_dir  <- "Spectral_Diversity/HSI_NA_trimmed"
+out_dir  <- "Spectral_Diversity/Quad_Spectra/50m_test"
+shp_path <- "Spectral_Diversity/Quad_Scale_SHPs/PR_50m.shp"
 # Parallel
-n_cores <- max(1, parallel::detectCores() - 2)
+n_cores <- max(1, parallel::detectCores() - 3)
 # Read in quads
 quads <- st_read(shp_path, quiet = TRUE)
 quads_sf <- quads %>% select(-matches("^Dscrptn"))
@@ -35,7 +35,7 @@ hsi_info <- lapply(hsi_files, function(f) {
 })
 # Starting place, if loop had to be interrupted
 #---------------------------------------
-start_idx <- which(quads_sf$Name == "0_a")
+start_idx <- which(quads_sf$Name == "sub50_1")
 quad_indices <- start_idx:nrow(quads_sf)
 # SNOW cluster
 #----------------------------------------
@@ -48,11 +48,11 @@ clusterEvalQ(cl, {
   library(sf)
   library(dplyr)
   terraOptions(memfrac = 0.3, progress = 0)
-  quads_sf <- st_read("Spectral_Diversity/Quad_Scale_SHPs/PR_10m.shp", quiet = TRUE)
+  quads_sf <- st_read("Spectral_Diversity/Quad_Scale_SHPs/PR_50m.shp", quiet = TRUE)
   quads_sf <- quads_sf[, !grepl("^Dscrptn", names(quads_sf))]
-  quads_sf <- quads_sf %>% # only for 10m
-    mutate(Name = sub_id) %>%
-    select(-sub_id)
+  # quads_sf <- quads_sf %>% # only for 10m
+  #   mutate(Name = sub_id) %>%
+  #   select(-sub_id)
   NULL
 })
 # Processing function

@@ -155,9 +155,19 @@ Processed and partitioned spectral data are stored in:
 
 - **Quad_Spectra/**
 
-This directory contains quadrat-level spectral extractions and derived products organized by spatial scale (10 m, 20 m, 50 m). It includes multiple processing stages:
+This directory contains quadrat-level spectral extractions and derived products organized by spatial scale (10 m, 20 m, 50 m). The user has independently tested the partitioned quadrat spectra and confirmed that the primary spectra to use moving forward are:
+
+- **Quad_Spectra/10m/**
+- **Quad_Spectra/20m/**
+- **Quad_Spectra/50m/**
+
+These confirmed folders should be treated as the current spectral inputs for downstream spectral heterogeneity calculations. Testing folders such as **10m_test/**, **20m_test/**, and **50m_test/** are validation artifacts unless the user explicitly promotes them.
+
+Quad_Spectra/ also includes multiple processing stages:
 
 - Raw quadrat spectra (10m/, 20m/, 50m/)
+- Current smoothed quadrat spectra (10m_smooth/, 20m_smooth/, 50m_smooth/)
+- Current smoothed and 5 nm resampled quadrat spectra (10m_smooth_5nm/, 20m_smooth_5nm/, 50m_smooth_5nm/)
 - Spectral smoothing outputs (*_smoothed_5nm, 50m_RGB_smooth)
 - Resampled spectra (*_resampled_5nm)
 - RGB composites (20m_RGB, 50m_RGB)
@@ -247,6 +257,7 @@ For each R script:
 The agent should:
 
 - Prefer modular functions.
+- Review existing scripts in **scripts/** before writing new R code, especially loop structures used for iterating across quadrats, scales, and spectral files.
 - Avoid hard-coded file paths.
 - Clearly document workflow dependencies.
 - Record package versions when possible.

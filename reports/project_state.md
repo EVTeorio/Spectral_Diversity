@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-15
+Last updated: 2026-06-18
 
 ## Current Objective
 
@@ -16,6 +16,44 @@ Build a reproducible and well-documented research workflow for evaluating relati
 ## Completed Work
 
 - Confirmed `CODEX_AGENT_GUIDELINES.md` and `RESEARCH_OBJECTIVES.md` as governing/context documents.
+- Updated documentation to reflect the user's independent testing confirmation that partitioned quadrat spectra in `Quad_Spectra/10m`, `Quad_Spectra/20m`, and `Quad_Spectra/50m` are the spectral inputs to use moving forward.
+- Updated agent guidance to require review of existing `scripts/` R code style and loop patterns before writing or restructuring R scripts.
+- Applied Savitzky-Golay smoothing to confirmed partitioned quadrat spectra at 10 m, 20 m, and 50 m scales.
+- Created current smoothed spectra output folders:
+  - `Quad_Spectra/10m_smooth` with 1,909 rasters
+  - `Quad_Spectra/20m_smooth` with 485 rasters
+  - `Quad_Spectra/50m_smooth` with 80 rasters
+- Updated `scripts/1_Data Processing/smoothing.R` to process all confirmed scales, create `_smooth` output folders, skip completed outputs, log progress, and use scale-aware `terra::app()` core counts.
+- Resampled the current smoothed spectra to 5 nm spacing.
+- Created current smoothed 5 nm spectra output folders:
+  - `Quad_Spectra/10m_smooth_5nm` with 1,909 rasters
+  - `Quad_Spectra/20m_smooth_5nm` with 485 rasters
+  - `Quad_Spectra/50m_smooth_5nm` with 80 rasters
+- Updated `scripts/1_Data Processing/resampling.R` to process all current smoothed scales, create `_smooth_5nm` output folders, skip completed outputs, and log progress.
+- Reviewed all current Markdown project-state, context, task, execution-plan, and validation notes before beginning the spectral heterogeneity workflow update.
+- Confirmed that the active pickup point for the next analysis stage is the current smoothed and 5 nm resampled quadrat spectra in `Quad_Spectra/10m_smooth_5nm`, `Quad_Spectra/20m_smooth_5nm`, and `Quad_Spectra/50m_smooth_5nm`.
+- Refactored `scripts/2_Indices Creation/Spectral_diversity/SA_entropy_bootstrapping.R` so it can calculate per-quadrat spectral angle entropy for 10 m, 20 m, and 50 m current `_smooth_5nm` spectra.
+- Added a guarded all-pixel entropy path for small enough masked quadrats and automatic fallback to `boot_mean` from bootstrap subsamples when all-pixel pair counts are too large.
+- Added sampled-pair entropy inside large bootstrap replicates to make the workflow computationally feasible while preserving bootstrap subsampling of pixels.
+- Preserved and documented the current shadow masking threshold in the spectral heterogeneity workflow: `563 nm`, threshold `0.0305476`, retaining sunlit pixels greater than the threshold under the current direction setting.
+- Added `scripts/2_Indices Creation/Spectral_diversity/run_sa_entropy_scale.R` to run the spectral heterogeneity workflow one scale at a time.
+- Added `tests/test_sa_entropy_bootstrapping.R` with base R helper checks for identifier parsing, spectral normalization, pairwise angle generation, sampled-pair angle generation, and entropy calculation.
+- Added `tests/smoke_sa_entropy_bootstrapping.R` for a one-raster-per-scale smoke test with reduced bootstrap settings.
+- Confirmed R package availability through the R 4.2 user library when Codex is allowed to access `C:/Users/PaintRock/AppData/Local/R/win-library/4.2`; `terra` 1.7.71 and `beepr` are available there.
+- Ran the spectral heterogeneity workflow for all three scales from current `_smooth_5nm` spectra.
+- Created current spectral heterogeneity outputs:
+  - `Indices_SHPs/10m_SA_entropy_smooth_masked_5nm_summary.csv`
+  - `Indices_SHPs/20m_SA_entropy_smooth_masked_5nm_summary.csv`
+  - `Indices_SHPs/50m_SA_entropy_smooth_masked_5nm_summary.csv`
+  - matching long and wide bootstrap CSVs for 10 m, 20 m, and 50 m
+  - `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_10m_smooth_masked_5nm.shp`
+  - `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_20m_smooth_masked_5nm.shp`
+  - `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_50m_smooth_masked_5nm.shp`
+- Created a bootstrap variation QC analysis comparing within-quadrat bootstrap variation to between-quadrat spectral heterogeneity variation.
+- Added `scripts/3_Analysis/bootstrap_variation_analysis.R`.
+- Created `reports/analysis/20260618_bootstrap_variation_analysis.md` with seven figures and three diagnostic tables under `reports/figures/bootstrap_variation/` and `reports/tables/bootstrap_variation/`.
+- Added `reports/figures/bootstrap_variation/spectral_entropy_histograms_by_scale.png` to visualize spectral heterogeneity distribution shape and skewness by scale.
+- Bootstrap variation analysis conclusion: `spectral_entropy` / `boot_mean` values are usable as primary heterogeneity estimates, but `boot_sd`, `boot_cv`, and `method` should be carried forward as quality-control fields and high-CV quadrats should be used in sensitivity checks.
 - Created required governance directories under `reports/` and `logs/`.
 - Created an execution plan for repository documentation and cleanup.
 - Created baseline `reports/directory_map.md`.
@@ -24,18 +62,22 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Updated `CODEX_AGENT_GUIDELINES.md` with R/Rtools access guidance, subsampled unit testing expectations, and current data assumptions.
 - Removed authorized legacy directories named `old`, `Outdated`, and `Currently not relevant`.
 - Created `tests/` for future `testthat` unit tests.
-- Added `tests/test_quad_crop_reproducibility.R` to compare a small quadrat subset against the core crop logic from `HSI_quad_crop_refined.R`.
 - Updated R package library use to the standard R 4.2 paths:
   - `C:/Users/PaintRock/AppData/Local/R/win-library/4.2`
   - `C:/Program Files/R/R-4.2.3/library`
+- Discarded raster checking/reproduction artifacts at user request; those temporary scripts, reports, and outputs should not guide future analysis.
 
 ## Pending Work
 
 - Review current R scripts for package dependencies, inputs, outputs, assumptions, and reproducibility risks.
+- Join the new per-scale spectral heterogeneity values into downstream biodiversity/species/environment analysis tables.
+- Decide how to handle missing 10 m and 20 m quadrats that do not have current raster summaries.
+- Carry bootstrap quality-control fields into downstream tables, especially `boot_sd`, `boot_cv`, and `method`.
+- Run downstream model sensitivity checks with high-CV quadrats flagged or excluded.
+- When modifying R workflows, first review nearby scripts in `scripts/` to match the project's existing loop structure and file-processing pattern.
 - Standardize script and directory names that contain spaces or spelling errors after checking dependencies.
 - Add formal `testthat` tests once core functions are modularized.
 - Expand shapefile and raster data dictionary entries using R geospatial packages.
-- Revisit the quadrat crop reproducibility test after source HSI rasters are hydrated locally from OneDrive.
 
 ## Known Issues
 
@@ -44,32 +86,46 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Some current CSV files contain unnamed first columns.
 - `Indices_SHPs/20m_spectral_sp.csv` has 64 missing values for each primary spectral metric.
 - `Rscript` is available at `C:/Program Files/R/R-4.2.3/bin/Rscript.exe`, matching the required R 4.2.3 compatibility target, though it is not available as `Rscript` on the active shell path.
-- Quadrat crop reproducibility testing could not be completed because most `HSI_NA_trimmed/` source rasters were unreadable/cloud-only OneDrive files during the test attempt. Only `raw_0_rd_rf_or` and `raw_11159_rd_rf_or` loaded successfully.
-- The final crop reproducibility test run was manually interrupted before completion.
+- Codex can access the R 4.2 user package library under `C:/Users/PaintRock/AppData/Local/R/win-library/4.2` when commands are run with permission outside the workspace sandbox; sandboxed Rscript may still report only the base R library.
 
 ## Technical Debt
 
 - Some scripts appear exploratory or duplicated, including `modeling_test.R` and `scratch paper.R`.
 - Current workflows likely use hard-coded paths and should be audited.
-- The project now has a `tests/` directory and an initial crop reproducibility test, but that test has not passed end-to-end yet.
 - The temporary project-local `r_libs/` package library was removed from the working directory.
-- The user R library has a broken/locked `rlang` installation: `dplyr` and `testthat` fail to load because the `rlang` DLL version does not match the package metadata. This likely requires closing active R/RStudio sessions and reinstalling `rlang`.
 
 ## Important Assumptions
 
 - Legacy directories named `old`, `Outdated`, and `Currently not relevant` have been removed from the active repository.
 - The primary integrated 20 m analysis table is `Indices_SHPs/20m_spectral_sp.csv`.
 - Raw spectral inputs are in `HSI_NA_trimmed/`.
-- Quadrat spectral products are in `Quad_Spectra/`.
+- The user has independently tested and confirmed the partitioned quadrat spectra as the inputs to use moving forward.
+- Confirmed partitioned quadrat spectra are in `Quad_Spectra/10m`, `Quad_Spectra/20m`, and `Quad_Spectra/50m`.
+- Current smoothed spectra derived from those confirmed inputs are in `Quad_Spectra/10m_smooth`, `Quad_Spectra/20m_smooth`, and `Quad_Spectra/50m_smooth`.
+- Current smoothed 5 nm spectra are in `Quad_Spectra/10m_smooth_5nm`, `Quad_Spectra/20m_smooth_5nm`, and `Quad_Spectra/50m_smooth_5nm`.
+- The current spectral heterogeneity workflow should consume the current `_smooth_5nm` spectra, not older `_resampled_5nm` or `_smoothed_5nm` folders.
+- Spectral angle entropy values should be produced per quadrat at each resolution; 10 m uses `sub_id` IDs such as `0_a`, 20 m uses numeric `Name` IDs, and 50 m uses `Name` IDs such as `sub50_1`.
+- Exact all-pixel spectral angle entropy is only reasonable for small masked quadrats because pairwise angle counts scale quadratically with pixel count; the workflow should use bootstrap `boot_mean` as the primary fallback value for larger quadrats.
+- Current spectral heterogeneity outputs used 70 bootstrap replicates, 5,000 sampled pixels per bootstrap, and 10,000 sampled pixel-pairs per large bootstrap replicate.
+- Validation found 10 m summary rows for 1,909 rasters, with 1,866 bootstrap-mean estimates, 37 exact all-pixel estimates, and 6 insufficient-pixel outputs.
+- Validation found 20 m summary rows for 485 rasters, with 477 bootstrap-mean estimates and 8 exact all-pixel estimates.
+- Validation found 50 m summary rows for 80 rasters, with 79 bootstrap-mean estimates and 1 exact all-pixel estimate.
+- The 10 m output shapefile has 97 missing `spec_ent` values: 91 shapefile quadrats without matching current raster outputs and 6 insufficient-pixel raster summaries.
+- The 20 m output shapefile has 15 missing `spec_ent` values from shapefile quadrats without matching current raster outputs.
+- The 50 m output shapefile has no missing `spec_ent` values.
+- Bootstrap QC found low median CV at all scales, about 0.4% to 0.5%, but a non-trivial high-CV tail.
+- Using a 5% bootstrap-CV flag, 372 of 1,866 10 m bootstrap-estimated quadrats, 60 of 477 20 m quadrats, and 11 of 79 50 m quadrats would be flagged.
+- Using a 10% bootstrap-CV flag, 127 of 1,866 10 m bootstrap-estimated quadrats and 12 of 477 20 m quadrats would be flagged; no 50 m quadrats exceed 10%.
+- Spectral heterogeneity distributions show mild right skew at 10 m, near-symmetry at 20 m, and stronger right skew at 50 m.
+- `Quad_Spectra/10m_test`, `Quad_Spectra/20m_test`, and `Quad_Spectra/50m_test` are testing/validation artifacts unless the user explicitly promotes them.
 - Quadrat boundary files are in `Quad_Scale_SHPs/`.
 - Spectral products that produce spectral heterogeneity values are in `Indices_SHPs/Spectral_diversitySHPs/`.
 - Unnamed first CSV columns are likely index columns.
 
 ## Next Recommended Actions
 
-1. Review `scripts/1_Data Processing/HSI_quad_crop_refined.R` and all scripts that feed `Indices_SHPs/20m_spectral_sp.csv`.
-2. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.
-3. Rename or replace files with spaces and misspellings after dependency references are checked.
-4. Begin tests for diversity metric joins and missing-quadrat handling using small representative subsamples.
-5. Expand the data dictionary with shapefile attribute counts and raster metadata once R geospatial tooling is available.
-6. Close active R/RStudio sessions if needed, repair `rlang` in `C:/Users/PaintRock/AppData/Local/R/win-library/4.2`, hydrate the `HSI_NA_trimmed/` source rasters locally, then rerun `tests/test_quad_crop_reproducibility.R`.
+1. Join the new `*_SA_entropy_smooth_masked_5nm_summary.csv` values and bootstrap QC fields into downstream per-scale biodiversity/species/environment tables.
+2. Decide whether 10 m and 20 m missing quadrats should remain `NA`, be excluded, or be tracked in a missing-quadrat report.
+3. Run downstream model sensitivity checks with high-CV quadrats flagged or excluded, using 5% and 10% bootstrap-CV thresholds.
+4. Compare the new current 20 m spectral heterogeneity output against older 20 m spectral entropy products before replacing downstream analysis columns.
+5. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.
