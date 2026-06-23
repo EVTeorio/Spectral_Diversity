@@ -340,12 +340,12 @@ The user remains responsible for all Git actions.
 5. Create task report.
 6. Create validation report.
 7. Summarize work completed.
-8. As the very last action at the end of a whole completed task, run the following lines in the R interactive terminal:
+8. When all tasks are complete and immediately before producing the final response to the user, execute the following in an interactive R session:
 
-```r
 library(beepr)
 beep()
-```
+
+If the beepr package is unavailable, note this in the final response.
 
 ---
 

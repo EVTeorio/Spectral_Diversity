@@ -5,6 +5,7 @@ Quad_spectra/
 
 # Ignore large R data object
 global_pca.rds
+Indices_SHPs/Spectral_diversitySHPs/global_pca_smooth_masked_5nm.rds
 
 # R session/history files
 .Rhistory

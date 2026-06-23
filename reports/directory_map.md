@@ -1,6 +1,6 @@
 # Directory Map
 
-Last updated: 2026-06-18
+Last updated: 2026-06-22
 
 Working directory:
 `C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity`
@@ -54,6 +54,9 @@ Spectral_Diversity/
         20m_SA_entrop_boot100_results.csv
         Diversity_Rasters/
         Diversity_SHPs/
+            plant_diversity_10m.*
+            plant_diversity_20m.*
+            plant_diversity_50m.*
         Other_variables/
             Slope_Aspect.csv
             Slope_Aspect_rasters/
@@ -150,12 +153,14 @@ Spectral_Diversity/
 - `Indices_CSV.R`
 - `topo_Index.R`
 - `Plant_diversity/Missing_quads.R`
+- `Plant_diversity/plant_diversity_all_scales.R`
 - `Plant_diversity/phylogenetic_diversity.R`
 - `Plant_diversity/sp_weighted_matrix.R`
 - `Plant_diversity/species_diversity.R`
 - `Spectral_diversity/HSI_global_PCA.R`
 - `Spectral_diversity/SA_entropy_bootstrapping.R`
 - `Spectral_diversity/run_sa_entropy_scale.R`
+- `Spectral_diversity/spectral_heterogeneity_all_metrics.R`
 - `Spectral_diversity/spectral_angle_entropy.R`
 - `Spectral_diversity/spectral_angle_entropy_movingwindow.R`
 - `Spectral_diversity/spectral_angle_entropy_raster.R`
@@ -229,5 +234,7 @@ Spectral_Diversity/
 - Current smoothed spectra generated from those confirmed inputs are in `Quad_Spectra/10m_smooth`, `Quad_Spectra/20m_smooth`, and `Quad_Spectra/50m_smooth`.
 - Current smoothed 5 nm spectra generated from the smoothed outputs are in `Quad_Spectra/10m_smooth_5nm`, `Quad_Spectra/20m_smooth_5nm`, and `Quad_Spectra/50m_smooth_5nm`.
 - The current spectral angle entropy workflow should pick up from the `_smooth_5nm` folders and write per-scale heterogeneity outputs under `Indices_SHPs/` and `Indices_SHPs/Spectral_diversitySHPs/`.
+- The current PCA-dependent spectral heterogeneity workflow is `scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all_metrics.R`. It excludes documented atmospheric/cloud-affected quadrats from the global PCA sample and leaves their PCA-dependent metric values missing.
 - Current per-scale spectral heterogeneity outputs have been generated for 10 m, 20 m, and 50 m using the current `_smooth_5nm` spectra.
+- Current per-scale plant diversity outputs have been generated for 10 m, 20 m, and 50 m under `Indices_SHPs/Diversity_SHPs/`, with `quad_id` values aligned to the current spectral heterogeneity outputs.
 - `Quad_Spectra/10m_test`, `Quad_Spectra/20m_test`, and `Quad_Spectra/50m_test` are testing/validation artifacts and should not be treated as primary analytical inputs without explicit user direction.

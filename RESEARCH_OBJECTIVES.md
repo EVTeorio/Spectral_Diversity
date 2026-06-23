@@ -32,6 +32,8 @@ Calculate spectral heterogeneity metrics from drone-acquired hyperspectral image
 
 - Alpha hull of pixels in PCA space
 - Euclidean distance in PCA space
+- Rao's Quadratic Entropy
+- 
 
 **Questions:**
 
@@ -174,6 +176,55 @@ Quad_Spectra/ also includes multiple processing stages:
 - Vegetation indices (*_VegIndex)
 
 These outputs represent the primary analytical dataset used for spectral heterogeneity calculations.
+
+---
+
+#### Quadrat Quality Flags and Analysis Exclusions
+
+Some quadrats require special handling because they represent plot edges or atmospheric distortion artifacts. These flags should be treated as current analysis assumptions unless a later validated script or user instruction supersedes them.
+
+**Edge quadrats**
+
+Edge quadrats are identified in:
+
+- **scripts/3_Analysis/Analysis_PDF.R**
+
+The current 20 m edge quadrat IDs are:
+
+- 0, 1, 100, 2, 200, 3, 300, 4, 400, 5, 500, 6, 600, 7, 700, 8, 800, 9, 900, 10, 1000, 11, 1100, 12, 1200, 13, 14, 1300, 15, 1400, 16, 1500, 17, 1600, 18, 1700, 19, 1800, 20, 1900, 21, 22, 1901, 23, 24, 1903, 124, 1905, 224, 1906, 324, 1907, 424, 1908, 524, 1909, 624, 1910, 1911, 724, 1912, 824, 1913, 924, 1914, 1024, 1915, 1124, 1916, 1224, 1324, 1917, 1424, 1919, 1524, 1920, 1624, 1921, 1724, 1922, 1824, 1923, 1924, 1904, 1902, 1918
+
+These IDs are currently filtered from the 20 m spectral-biodiversity analysis in `Analysis_PDF.R`.
+
+**Atmospheric/cloud-affected quadrats**
+
+Quadrats affected by atmospheric distortion or clouds are identified by the exclusion vector in:
+
+- **scripts/2_Indices Creation/Spectral_diversity/HSI_global_PCA.R**
+
+The current 20 m atmospheric/cloud-affected quadrat IDs are:
+
+- 1424, 1423, 1422, 1420, 1421, 1419, 1418, 1414, 1521, 1522, 1523, 1524, 1520, 1519, 1624, 1622, 1623, 1621, 1620, 1724, 1723, 1722, 1721, 1824, 1823, 1822, 1923, 1924, 1922, 1921, 1322, 1321, 1319, 1320, 1318, 1317, 1316, 1315, 1314, 1313, 1221, 1220, 1219, 1216, 1215, 1213, 1214, 1212, 1211, 1120, 1119, 1115, 1114, 1113, 1112, 1111, 1110, 1014, 1013, 1010, 1009, 909, 908, 24
+
+These IDs are excluded from the 20 m global PCA spectral heterogeneity workflow in `HSI_global_PCA.R`.
+
+**10 m scale rule**
+
+The 10 m quadrats inherit these flags from their parent 20 m quadrats. For each listed 20 m quadrat ID, the corresponding 10 m flagged quadrats are the four suffixed subquadrats:
+
+- `<20m_id>_a`
+- `<20m_id>_b`
+- `<20m_id>_c`
+- `<20m_id>_d`
+
+For example, if 20 m quadrat `1424` is cloud-affected, then `1424_a`, `1424_b`, `1424_c`, and `1424_d` should be treated as cloud-affected at the 10 m scale. These 20 m-derived flags should not be automatically applied to 50 m quadrats unless a separate 50 m-specific rule is documented.
+
+**50 m scale rule**
+
+The current 50 m atmospheric/cloud-affected quadrat IDs are:
+
+- `sub50_80`, `sub50_79`, `sub50_71`, `sub50_70`, `sub50_62`, `sub50_53`
+
+These 50 m quadrats should be treated as manually excluded for PCA-dependent spectral heterogeneity products. They should not contribute pixels to the global PCA basis, and their PCA-dependent heterogeneity values should be left missing in the PCA metric outputs. Spectral angle entropy outputs may still retain their existing values unless a separate SA entropy exclusion workflow is requested.
 
 ---
 
