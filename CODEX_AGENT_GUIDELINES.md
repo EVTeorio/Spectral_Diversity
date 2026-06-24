@@ -391,4 +391,4 @@ Checklist:
 - [ ] Task report created
 - [ ] Validation report created
 - [ ] Summary provided to user
-- [ ] Completion beep run in the R interactive terminal with `library(beepr)` and `beep()`
+- [ ] Completion beep run in the R interactive terminal with `library(beepr)` and `beep(3)`

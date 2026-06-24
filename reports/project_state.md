@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-22
+Last updated: 2026-06-24
 
 ## Current Objective
 
@@ -89,6 +89,29 @@ Build a reproducible and well-documented research workflow for evaluating relati
   - `plant_diversity_20m.csv` and `plant_diversity_20m.shp`
   - `plant_diversity_50m.csv` and `plant_diversity_50m.shp`
 - Confirmed plant-diversity `quad_id` values align with current spectral diversity IDs: 10 m uses `sub_id` values such as `0_a`, 20 m uses `Name`, and 50 m uses `Name` values such as `sub50_1`.
+- Added `scripts/2_Indices Creation/Enviro_Variables/environmental_variables_all_scales.R` to calculate all-scale environmental covariates from `PRFPD_DTM_leafOff.tiff`.
+- Created all-scale environmental outputs under `Indices_SHPs/Enviro_SHPs/`:
+  - `enviro_variables_10m.csv` and `enviro_variables_10m.shp`
+  - `enviro_variables_20m.csv` and `enviro_variables_20m.shp`
+  - `enviro_variables_50m.csv` and `enviro_variables_50m.shp`
+- Environmental outputs include mean DTM elevation (`elev_mean`) and mean Riley topographic roughness index at 5x5, 11x11, and 21x21 windows (`tri5_mean`, `tri11_mean`, `tri21_mean`).
+- Confirmed environmental output row counts match source quadrat shapefiles: 2,000 rows for 10 m, 500 rows for 20 m, and 80 rows for 50 m.
+- Confirmed no missing values in the required environmental metrics across all three scales.
+- Added `tests/test_environmental_variables_all_scales.R`.
+- Added `reports/tasks/20260623_environmental_variables_all_scales.md`.
+- Added `reports/validation/20260623_environmental_variables_all_scales_validation.md`.
+- Added `scripts/3_Analysis/combine_quadrat_analysis_tables.R` to join current spectral heterogeneity, species composition, species diversity, phylogenetic diversity, environmental/topographic values, and quadrat center coordinates into one analysis-ready root-level CSV per scale.
+- Created current combined quadrat analysis tables:
+  - `quadrat_analysis_10m.csv` with 2,000 rows and 24 columns
+  - `quadrat_analysis_20m.csv` with 500 rows and 24 columns
+  - `quadrat_analysis_50m.csv` with 80 rows and 24 columns
+- Updated the combined tables to exclude per-species composition columns while retaining species diversity summaries, phylogenetic diversity summaries, spectral heterogeneity metrics, environmental/topographic metrics, and center coordinates.
+- Added shortened-column documentation in `reports/combined_quadrat_variable_guide.md` and a user-friendly Word guide in `combined_quadrat_variable_guide.docx`.
+- Added `scripts/3_Analysis/create_combined_variable_guide_docx.R` to regenerate the Word guide.
+- Added `reports/tasks/20260624_combined_quadrat_analysis_tables.md`.
+- Added `reports/validation/20260624_combined_quadrat_analysis_tables_validation.md`.
+- Validation found no duplicate quadrat IDs, no missing center coordinates, no missing environmental elevation values, no per-species composition columns, and no pixel-count/pair-count/bootstrap/method/geometry metadata columns in the combined CSVs.
+- Combined-table spectral missingness reflects upstream raster availability and manual PCA exclusions: missing `spec_sa` values are 97 at 10 m, 15 at 20 m, and 0 at 50 m; missing `spec_pca_mean` values are 256 at 10 m, 64 at 20 m, and 6 at 50 m.
 - Created required governance directories under `reports/` and `logs/`.
 - Created an execution plan for repository documentation and cleanup.
 - Created baseline `reports/directory_map.md`.
@@ -105,11 +128,9 @@ Build a reproducible and well-documented research workflow for evaluating relati
 ## Pending Work
 
 - Review current R scripts for package dependencies, inputs, outputs, assumptions, and reproducibility risks.
-- Join the new per-scale spectral heterogeneity values into downstream biodiversity/species/environment analysis tables using `quad_id`.
 - Decide how to handle missing 10 m and 20 m quadrats that do not have current raster summaries.
 - Carry bootstrap quality-control fields into downstream tables, especially `boot_sd`, `boot_cv`, and `method`.
 - Run downstream model sensitivity checks with high-CV quadrats flagged or excluded.
-- Join the new all-scale combined spectral heterogeneity outputs to plant-diversity outputs by `scale` plus `quad_id`.
 - When modifying R workflows, first review nearby scripts in `scripts/` to match the project's existing loop structure and file-processing pattern.
 - Standardize script and directory names that contain spaces or spelling errors after checking dependencies.
 - Add formal `testthat` tests once core functions are modularized.
@@ -135,6 +156,10 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Legacy directories named `old`, `Outdated`, and `Currently not relevant` have been removed from the active repository.
 - The primary integrated 20 m analysis table is `Indices_SHPs/20m_spectral_sp.csv`.
 - The current all-scale plant-diversity outputs are `Indices_SHPs/Diversity_SHPs/plant_diversity_10m.csv`, `plant_diversity_20m.csv`, and `plant_diversity_50m.csv`, with matching shapefiles.
+- The current all-scale environmental outputs are `Indices_SHPs/Enviro_SHPs/enviro_variables_10m.csv`, `enviro_variables_20m.csv`, and `enviro_variables_50m.csv`, with matching shapefiles.
+- The current combined analysis-ready tables are `quadrat_analysis_10m.csv`, `quadrat_analysis_20m.csv`, and `quadrat_analysis_50m.csv`.
+- The combined analysis tables intentionally exclude per-species composition columns, pixel-count, pair-count, bootstrap replicate, processing method, manual exclusion, and geometry metadata columns.
+- Quadrat center coordinate columns in the combined analysis tables are `center_x` and `center_y`, derived from plant-diversity shapefile polygon centroids in NAD83 / UTM zone 16N.
 - Raw spectral inputs are in `HSI_NA_trimmed/`.
 - The user has independently tested and confirmed the partitioned quadrat spectra as the inputs to use moving forward.
 - Confirmed partitioned quadrat spectra are in `Quad_Spectra/10m`, `Quad_Spectra/20m`, and `Quad_Spectra/50m`.
@@ -143,6 +168,9 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - The current spectral heterogeneity workflow should consume the current `_smooth_5nm` spectra, not older `_resampled_5nm` or `_smoothed_5nm` folders.
 - Spectral angle entropy values should be produced per quadrat at each resolution; 10 m uses `sub_id` IDs such as `0_a`, 20 m uses numeric `Name` IDs, and 50 m uses `Name` IDs such as `sub50_1`.
 - Plant-diversity outputs now use the same `quad_id` convention as spectral diversity outputs, so downstream joins should use `scale` plus `quad_id`.
+- Environmental outputs now use the same `quad_id` convention as plant-diversity and spectral diversity outputs, so downstream joins should use `scale` plus `quad_id`.
+- Environmental outputs were derived from `PRFPD_DTM_leafOff.tiff`; quadrat polygons were transformed to the DTM CRS before raster extraction.
+- Riley topographic roughness index outputs were calculated from 5x5, 11x11, and 21x21 DTM moving windows and then averaged within each quadrat.
 - Plant-diversity species matrix values represent summed crown-overlap proportions by species and quadrat, preserving the existing crown-buffer/intersection logic.
 - Exact all-pixel spectral angle entropy is only reasonable for small masked quadrats because pairwise angle counts scale quadratically with pixel count; the workflow should use bootstrap `boot_mean` as the primary fallback value for larger quadrats.
 - Current spectral heterogeneity outputs used 70 bootstrap replicates, 5,000 sampled pixels per bootstrap, and 10,000 sampled pixel-pairs per large bootstrap replicate.
@@ -169,8 +197,9 @@ Build a reproducible and well-documented research workflow for evaluating relati
 
 ## Next Recommended Actions
 
-1. Join the new `*_SA_entropy_smooth_masked_5nm_summary.csv` values and bootstrap QC fields into the new all-scale `plant_diversity_*m.csv` tables by `quad_id`.
-2. Decide whether 10 m and 20 m missing quadrats should remain `NA`, be excluded, or be tracked in a missing-quadrat report.
-3. Run downstream model sensitivity checks with high-CV quadrats flagged or excluded, using 5% and 10% bootstrap-CV thresholds.
-4. Compare the new current 20 m spectral heterogeneity output against older 20 m spectral entropy products before replacing downstream analysis columns.
-5. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.
+1. Use `quadrat_analysis_10m.csv`, `quadrat_analysis_20m.csv`, and `quadrat_analysis_50m.csv` as the current analysis-ready tables for downstream biodiversity/spectral/environment modeling.
+2. Decide whether 10 m and 20 m missing spectral quadrats should remain `NA`, be excluded, or be tracked in a missing-quadrat report.
+3. Decide whether bootstrap quality-control fields such as `boot_sd`, `boot_cv`, and `method` should be added to a separate QC companion table rather than the value-only combined tables.
+4. Run downstream model sensitivity checks with high-CV quadrats flagged or excluded, using 5% and 10% bootstrap-CV thresholds.
+5. Compare the new current 20 m spectral heterogeneity output against older 20 m spectral entropy products before replacing downstream analysis columns.
+6. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.
