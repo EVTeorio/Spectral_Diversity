@@ -10,7 +10,7 @@ Update the plant-diversity workflow so species composition, species diversity, a
 
 - Align quadrat identifiers with the spectral diversity outputs.
 - Preserve the existing crown-buffer and crown-overlap logic used to build the species matrix.
-- Create one CSV and one shapefile per scale under `Indices_SHPs/Diversity_SHPs`.
+- Create one CSV and one shapefile per scale under `Quad_Values/Diversity_SHPs`.
 
 ## Files To Review
 
@@ -37,12 +37,12 @@ Update the plant-diversity workflow so species composition, species diversity, a
 
 ## Expected Outputs
 
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_10m.csv`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_20m.csv`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_50m.csv`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_10m.shp`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_20m.shp`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_50m.shp`
+- `Quad_Values/Diversity_SHPs/plant_diversity_10m.csv`
+- `Quad_Values/Diversity_SHPs/plant_diversity_20m.csv`
+- `Quad_Values/Diversity_SHPs/plant_diversity_50m.csv`
+- `Quad_Values/Diversity_SHPs/plant_diversity_10m.shp`
+- `Quad_Values/Diversity_SHPs/plant_diversity_20m.shp`
+- `Quad_Values/Diversity_SHPs/plant_diversity_50m.shp`
 
 ## Validation Plan
 

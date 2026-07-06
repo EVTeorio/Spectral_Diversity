@@ -26,7 +26,7 @@ edge_quads <- c(
 )
 
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/")
-df <- read.csv("Spectral_Diversity/Indices_SHPs/20m_spectral_sp.csv") %>%
+df <- read.csv("Spectral_Diversity/Quad_Values/20m_spectral_sp.csv") %>%
   clean_names() %>%
   dplyr::filter(
     complete.cases(.),

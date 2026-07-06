@@ -4,13 +4,13 @@ if (dir.exists(user_library)) {
 }
 
 # Spectral angle entropy from the current smoothed and 5 nm resampled
-# quadrat spectra. Exact all-pixel entropy is used only when pair counts
-# are small enough; larger quadrats fall back to bootstrap mean entropy.
+# quadrat spectra. Exact all-retained-pixel entropy is used only when pair
+# counts are small enough; larger quadrats fall back to bootstrap mean entropy.
 
 PROJECT_DIR <- "C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity"
 SIDECAR_PATTERN <- "\\.(hdr|aux|xml|enp|sta)$"
-OUTPUT_DIR <- "Indices_SHPs"
-OUTPUT_SHP_DIR <- "Indices_SHPs/Spectral_diversitySHPs"
+OUTPUT_DIR <- "Quad_Values"
+OUTPUT_SHP_DIR <- "Quad_Values/Spectral_diversitySHPs"
 PROGRESS_LOG <- "logs/sa_entropy_bootstrapping_progress.log"
 
 N_BOOT <- as.integer(Sys.getenv("SA_N_BOOT", "70"))

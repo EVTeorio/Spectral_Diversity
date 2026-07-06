@@ -1,0 +1,785 @@
+scale,quad_id,selection_note,raster_file,summary_csv,source_n_pixels,source_method,source_entropy,sample_rule,rule_type,rule_value,rule_label,rule_axis_label,applicable_scales,sample_size,sample_fraction,sample_label,plot_sample_label
+10m,1104_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1104_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9423,bootstrap_mean,2.85896810854118,pct_1,percent,0.01,1% of pixels,1%,all,94,0.009975591637482755,1% of pixels = 94 pixels (1.0%),"1%
+94 px"
+10m,1104_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1104_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9423,bootstrap_mean,2.85896810854118,pct_2,percent,0.02,2% of pixels,2%,all,188,0.01995118327496551,2% of pixels = 188 pixels (2.0%),"2%
+188 px"
+10m,1104_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1104_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9423,bootstrap_mean,2.85896810854118,pct_3,percent,0.03,3% of pixels,3%,all,283,0.030032898227740634,3% of pixels = 283 pixels (3.0%),"3%
+283 px"
+10m,1104_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1104_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9423,bootstrap_mean,2.85896810854118,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.13265414411546217,"Fixed 1,250 (13.3%)","1,250
+13.3%"
+10m,1104_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1104_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9423,bootstrap_mean,2.85896810854118,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.21224663058473947,"Fixed 2,000 (21.2%)","2,000
+21.2%"
+10m,1104_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1104_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9423,bootstrap_mean,2.85896810854118,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.3183699458771092,"Fixed 3,000 (31.8%)","3,000
+31.8%"
+10m,1104_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1104_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9423,bootstrap_mean,2.85896810854118,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.42449326116947894,"Fixed 4,000 (42.4%)","4,000
+42.4%"
+10m,1110_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1110_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7650,bootstrap_mean,2.64896242408516,pct_1,percent,0.01,1% of pixels,1%,all,76,0.009934640522875817,1% of pixels = 76 pixels (1.0%),"1%
+76 px"
+10m,1110_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1110_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7650,bootstrap_mean,2.64896242408516,pct_2,percent,0.02,2% of pixels,2%,all,153,0.02,2% of pixels = 153 pixels (2.0%),"2%
+153 px"
+10m,1110_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1110_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7650,bootstrap_mean,2.64896242408516,pct_3,percent,0.03,3% of pixels,3%,all,230,0.030065359477124184,3% of pixels = 230 pixels (3.0%),"3%
+230 px"
+10m,1110_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1110_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7650,bootstrap_mean,2.64896242408516,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.16339869281045752,"Fixed 1,250 (16.3%)","1,250
+16.3%"
+10m,1110_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1110_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7650,bootstrap_mean,2.64896242408516,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.26143790849673204,"Fixed 2,000 (26.1%)","2,000
+26.1%"
+10m,1110_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1110_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7650,bootstrap_mean,2.64896242408516,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.39215686274509803,"Fixed 3,000 (39.2%)","3,000
+39.2%"
+10m,1110_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1110_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7650,bootstrap_mean,2.64896242408516,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5228758169934641,"Fixed 4,000 (52.3%)","4,000
+52.3%"
+10m,1124_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1124_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8301,bootstrap_mean,2.95196559179526,pct_1,percent,0.01,1% of pixels,1%,all,83,0.009998795325864354,1% of pixels = 83 pixels (1.0%),"1%
+83 px"
+10m,1124_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1124_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8301,bootstrap_mean,2.95196559179526,pct_2,percent,0.02,2% of pixels,2%,all,166,0.01999759065172871,2% of pixels = 166 pixels (2.0%),"2%
+166 px"
+10m,1124_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1124_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8301,bootstrap_mean,2.95196559179526,pct_3,percent,0.03,3% of pixels,3%,all,249,0.029996385977593062,3% of pixels = 249 pixels (3.0%),"3%
+249 px"
+10m,1124_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1124_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8301,bootstrap_mean,2.95196559179526,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.15058426695578847,"Fixed 1,250 (15.1%)","1,250
+15.1%"
+10m,1124_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1124_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8301,bootstrap_mean,2.95196559179526,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.24093482712926154,"Fixed 2,000 (24.1%)","2,000
+24.1%"
+10m,1124_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1124_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8301,bootstrap_mean,2.95196559179526,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.3614022406938923,"Fixed 3,000 (36.1%)","3,000
+36.1%"
+10m,1124_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1124_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8301,bootstrap_mean,2.95196559179526,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.4818696542585231,"Fixed 4,000 (48.2%)","4,000
+48.2%"
+10m,112_b,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/112_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7340,bootstrap_mean,3.06860627904306,pct_1,percent,0.01,1% of pixels,1%,all,73,0.00994550408719346,1% of pixels = 73 pixels (1.0%),"1%
+73 px"
+10m,112_b,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/112_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7340,bootstrap_mean,3.06860627904306,pct_2,percent,0.02,2% of pixels,2%,all,147,0.02002724795640327,2% of pixels = 147 pixels (2.0%),"2%
+147 px"
+10m,112_b,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/112_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7340,bootstrap_mean,3.06860627904306,pct_3,percent,0.03,3% of pixels,3%,all,220,0.02997275204359673,3% of pixels = 220 pixels (3.0%),"3%
+220 px"
+10m,112_b,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/112_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7340,bootstrap_mean,3.06860627904306,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17029972752043596,"Fixed 1,250 (17.0%)","1,250
+17.0%"
+10m,112_b,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/112_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7340,bootstrap_mean,3.06860627904306,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2724795640326976,"Fixed 2,000 (27.2%)","2,000
+27.2%"
+10m,112_b,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/112_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7340,bootstrap_mean,3.06860627904306,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.4087193460490463,"Fixed 3,000 (40.9%)","3,000
+40.9%"
+10m,112_b,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/112_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7340,bootstrap_mean,3.06860627904306,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5449591280653951,"Fixed 4,000 (54.5%)","4,000
+54.5%"
+10m,114_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/114_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7239,bootstrap_mean,3.02026959455353,pct_1,percent,0.01,1% of pixels,1%,all,72,0.009946125155408206,1% of pixels = 72 pixels (1.0%),"1%
+72 px"
+10m,114_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/114_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7239,bootstrap_mean,3.02026959455353,pct_2,percent,0.02,2% of pixels,2%,all,145,0.02003039093797486,2% of pixels = 145 pixels (2.0%),"2%
+145 px"
+10m,114_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/114_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7239,bootstrap_mean,3.02026959455353,pct_3,percent,0.03,3% of pixels,3%,all,217,0.029976516093383063,3% of pixels = 217 pixels (3.0%),"3%
+217 px"
+10m,114_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/114_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7239,bootstrap_mean,3.02026959455353,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17267578394805913,"Fixed 1,250 (17.3%)","1,250
+17.3%"
+10m,114_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/114_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7239,bootstrap_mean,3.02026959455353,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2762812543168946,"Fixed 2,000 (27.6%)","2,000
+27.6%"
+10m,114_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/114_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7239,bootstrap_mean,3.02026959455353,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.4144218814753419,"Fixed 3,000 (41.4%)","3,000
+41.4%"
+10m,114_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/114_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7239,bootstrap_mean,3.02026959455353,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5525625086337892,"Fixed 4,000 (55.3%)","4,000
+55.3%"
+10m,11_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/11_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6199,bootstrap_mean,2.71753081990538,pct_1,percent,0.01,1% of pixels,1%,all,62,0.010001613163413454,1% of pixels = 62 pixels (1.0%),"1%
+62 px"
+10m,11_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/11_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6199,bootstrap_mean,2.71753081990538,pct_2,percent,0.02,2% of pixels,2%,all,124,0.020003226326826908,2% of pixels = 124 pixels (2.0%),"2%
+124 px"
+10m,11_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/11_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6199,bootstrap_mean,2.71753081990538,pct_3,percent,0.03,3% of pixels,3%,all,186,0.03000483949024036,3% of pixels = 186 pixels (3.0%),"3%
+186 px"
+10m,11_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/11_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6199,bootstrap_mean,2.71753081990538,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.20164542668172286,"Fixed 1,250 (20.2%)","1,250
+20.2%"
+10m,11_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/11_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6199,bootstrap_mean,2.71753081990538,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.32263268269075657,"Fixed 2,000 (32.3%)","2,000
+32.3%"
+10m,11_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/11_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6199,bootstrap_mean,2.71753081990538,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.4839490240361349,"Fixed 3,000 (48.4%)","3,000
+48.4%"
+10m,11_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/11_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6199,bootstrap_mean,2.71753081990538,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.6452653653815131,"Fixed 4,000 (64.5%)","4,000
+64.5%"
+10m,120_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/120_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7068,bootstrap_mean,2.81525116144607,pct_1,percent,0.01,1% of pixels,1%,all,71,0.010045274476513865,1% of pixels = 71 pixels (1.0%),"1%
+71 px"
+10m,120_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/120_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7068,bootstrap_mean,2.81525116144607,pct_2,percent,0.02,2% of pixels,2%,all,141,0.019949066213921902,2% of pixels = 141 pixels (2.0%),"2%
+141 px"
+10m,120_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/120_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7068,bootstrap_mean,2.81525116144607,pct_3,percent,0.03,3% of pixels,3%,all,212,0.029994340690435765,3% of pixels = 212 pixels (3.0%),"3%
+212 px"
+10m,120_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/120_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7068,bootstrap_mean,2.81525116144607,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17685342388228636,"Fixed 1,250 (17.7%)","1,250
+17.7%"
+10m,120_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/120_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7068,bootstrap_mean,2.81525116144607,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2829654782116582,"Fixed 2,000 (28.3%)","2,000
+28.3%"
+10m,120_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/120_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7068,bootstrap_mean,2.81525116144607,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.4244482173174873,"Fixed 3,000 (42.4%)","3,000
+42.4%"
+10m,120_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/120_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7068,bootstrap_mean,2.81525116144607,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5659309564233164,"Fixed 4,000 (56.6%)","4,000
+56.6%"
+10m,1305_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1305_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8027,bootstrap_mean,2.94484543401492,pct_1,percent,0.01,1% of pixels,1%,all,80,0.009966363523109506,1% of pixels = 80 pixels (1.0%),"1%
+80 px"
+10m,1305_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1305_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8027,bootstrap_mean,2.94484543401492,pct_2,percent,0.02,2% of pixels,2%,all,161,0.02005730659025788,2% of pixels = 161 pixels (2.0%),"2%
+161 px"
+10m,1305_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1305_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8027,bootstrap_mean,2.94484543401492,pct_3,percent,0.03,3% of pixels,3%,all,241,0.030023670113367384,3% of pixels = 241 pixels (3.0%),"3%
+241 px"
+10m,1305_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1305_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8027,bootstrap_mean,2.94484543401492,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.15572443004858602,"Fixed 1,250 (15.6%)","1,250
+15.6%"
+10m,1305_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1305_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8027,bootstrap_mean,2.94484543401492,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.24915908807773762,"Fixed 2,000 (24.9%)","2,000
+24.9%"
+10m,1305_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1305_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8027,bootstrap_mean,2.94484543401492,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.37373863211660646,"Fixed 3,000 (37.4%)","3,000
+37.4%"
+10m,1305_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1305_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8027,bootstrap_mean,2.94484543401492,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.49831817615547525,"Fixed 4,000 (49.8%)","4,000
+49.8%"
+10m,1315_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1315_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9077,bootstrap_mean,2.82887997957035,pct_1,percent,0.01,1% of pixels,1%,all,91,0.010025338768315522,1% of pixels = 91 pixels (1.0%),"1%
+91 px"
+10m,1315_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1315_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9077,bootstrap_mean,2.82887997957035,pct_2,percent,0.02,2% of pixels,2%,all,182,0.020050677536631045,2% of pixels = 182 pixels (2.0%),"2%
+182 px"
+10m,1315_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1315_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9077,bootstrap_mean,2.82887997957035,pct_3,percent,0.03,3% of pixels,3%,all,272,0.029965847747052993,3% of pixels = 272 pixels (3.0%),"3%
+272 px"
+10m,1315_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1315_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9077,bootstrap_mean,2.82887997957035,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.13771069736697147,"Fixed 1,250 (13.8%)","1,250
+13.8%"
+10m,1315_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1315_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9077,bootstrap_mean,2.82887997957035,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.22033711578715434,"Fixed 2,000 (22.0%)","2,000
+22.0%"
+10m,1315_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1315_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9077,bootstrap_mean,2.82887997957035,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.3305056736807315,"Fixed 3,000 (33.1%)","3,000
+33.1%"
+10m,1315_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1315_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9077,bootstrap_mean,2.82887997957035,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.4406742315743087,"Fixed 4,000 (44.1%)","4,000
+44.1%"
+10m,1400_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1400_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6806,bootstrap_mean,2.91111167549858,pct_1,percent,0.01,1% of pixels,1%,all,68,0.00999118424919189,1% of pixels = 68 pixels (1.0%),"1%
+68 px"
+10m,1400_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1400_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6806,bootstrap_mean,2.91111167549858,pct_2,percent,0.02,2% of pixels,2%,all,136,0.01998236849838378,2% of pixels = 136 pixels (2.0%),"2%
+136 px"
+10m,1400_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1400_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6806,bootstrap_mean,2.91111167549858,pct_3,percent,0.03,3% of pixels,3%,all,204,0.02997355274757567,3% of pixels = 204 pixels (3.0%),"3%
+204 px"
+10m,1400_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1400_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6806,bootstrap_mean,2.91111167549858,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.18366147516896855,"Fixed 1,250 (18.4%)","1,250
+18.4%"
+10m,1400_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1400_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6806,bootstrap_mean,2.91111167549858,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.29385836027034967,"Fixed 2,000 (29.4%)","2,000
+29.4%"
+10m,1400_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1400_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6806,bootstrap_mean,2.91111167549858,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.44078754040552454,"Fixed 3,000 (44.1%)","3,000
+44.1%"
+10m,1400_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1400_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6806,bootstrap_mean,2.91111167549858,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5877167205406993,"Fixed 4,000 (58.8%)","4,000
+58.8%"
+10m,1414_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1414_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6227,bootstrap_mean,2.70719015152057,pct_1,percent,0.01,1% of pixels,1%,all,62,0.00995664043680745,1% of pixels = 62 pixels (1.0%),"1%
+62 px"
+10m,1414_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1414_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6227,bootstrap_mean,2.70719015152057,pct_2,percent,0.02,2% of pixels,2%,all,125,0.02007387184840212,2% of pixels = 125 pixels (2.0%),"2%
+125 px"
+10m,1414_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1414_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6227,bootstrap_mean,2.70719015152057,pct_3,percent,0.03,3% of pixels,3%,all,187,0.03003051228520957,3% of pixels = 187 pixels (3.0%),"3%
+187 px"
+10m,1414_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1414_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6227,bootstrap_mean,2.70719015152057,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.2007387184840212,"Fixed 1,250 (20.1%)","1,250
+20.1%"
+10m,1414_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1414_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6227,bootstrap_mean,2.70719015152057,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.3211819495744339,"Fixed 2,000 (32.1%)","2,000
+32.1%"
+10m,1414_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1414_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6227,bootstrap_mean,2.70719015152057,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.48177292436165087,"Fixed 3,000 (48.2%)","3,000
+48.2%"
+10m,1414_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1414_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,6227,bootstrap_mean,2.70719015152057,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.6423638991488678,"Fixed 4,000 (64.2%)","4,000
+64.2%"
+10m,1417_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1417_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7513,bootstrap_mean,2.98858242895204,pct_1,percent,0.01,1% of pixels,1%,all,75,0.009982696659124185,1% of pixels = 75 pixels (1.0%),"1%
+75 px"
+10m,1417_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1417_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7513,bootstrap_mean,2.98858242895204,pct_2,percent,0.02,2% of pixels,2%,all,150,0.01996539331824837,2% of pixels = 150 pixels (2.0%),"2%
+150 px"
+10m,1417_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1417_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7513,bootstrap_mean,2.98858242895204,pct_3,percent,0.03,3% of pixels,3%,all,225,0.029948089977372555,3% of pixels = 225 pixels (3.0%),"3%
+225 px"
+10m,1417_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1417_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7513,bootstrap_mean,2.98858242895204,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.16637827765206975,"Fixed 1,250 (16.6%)","1,250
+16.6%"
+10m,1417_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1417_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7513,bootstrap_mean,2.98858242895204,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2662052442433116,"Fixed 2,000 (26.6%)","2,000
+26.6%"
+10m,1417_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1417_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7513,bootstrap_mean,2.98858242895204,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.3993078663649674,"Fixed 3,000 (39.9%)","3,000
+39.9%"
+10m,1417_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1417_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7513,bootstrap_mean,2.98858242895204,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5324104884866232,"Fixed 4,000 (53.2%)","4,000
+53.2%"
+10m,1514_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1514_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7027,bootstrap_mean,2.91293669744591,pct_1,percent,0.01,1% of pixels,1%,all,70,0.00996157677529529,1% of pixels = 70 pixels (1.0%),"1%
+70 px"
+10m,1514_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1514_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7027,bootstrap_mean,2.91293669744591,pct_2,percent,0.02,2% of pixels,2%,all,141,0.020065461790237656,2% of pixels = 141 pixels (2.0%),"2%
+141 px"
+10m,1514_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1514_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7027,bootstrap_mean,2.91293669744591,pct_3,percent,0.03,3% of pixels,3%,all,211,0.030027038565532946,3% of pixels = 211 pixels (3.0%),"3%
+211 px"
+10m,1514_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1514_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7027,bootstrap_mean,2.91293669744591,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17788529955884447,"Fixed 1,250 (17.8%)","1,250
+17.8%"
+10m,1514_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1514_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7027,bootstrap_mean,2.91293669744591,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2846164792941511,"Fixed 2,000 (28.5%)","2,000
+28.5%"
+10m,1514_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1514_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7027,bootstrap_mean,2.91293669744591,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.4269247189412267,"Fixed 3,000 (42.7%)","3,000
+42.7%"
+10m,1514_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1514_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7027,bootstrap_mean,2.91293669744591,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5692329585883023,"Fixed 4,000 (56.9%)","4,000
+56.9%"
+10m,1516_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1516_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8358,bootstrap_mean,2.799259467132,pct_1,percent,0.01,1% of pixels,1%,all,84,0.010050251256281407,1% of pixels = 84 pixels (1.0%),"1%
+84 px"
+10m,1516_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1516_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8358,bootstrap_mean,2.799259467132,pct_2,percent,0.02,2% of pixels,2%,all,167,0.01998085666427375,2% of pixels = 167 pixels (2.0%),"2%
+167 px"
+10m,1516_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1516_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8358,bootstrap_mean,2.799259467132,pct_3,percent,0.03,3% of pixels,3%,all,251,0.030031107920555158,3% of pixels = 251 pixels (3.0%),"3%
+251 px"
+10m,1516_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1516_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8358,bootstrap_mean,2.799259467132,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.14955731036133046,"Fixed 1,250 (15.0%)","1,250
+15.0%"
+10m,1516_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1516_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8358,bootstrap_mean,2.799259467132,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.23929169657812874,"Fixed 2,000 (23.9%)","2,000
+23.9%"
+10m,1516_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1516_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8358,bootstrap_mean,2.799259467132,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.3589375448671931,"Fixed 3,000 (35.9%)","3,000
+35.9%"
+10m,1516_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1516_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8358,bootstrap_mean,2.799259467132,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.4785833931562575,"Fixed 4,000 (47.9%)","4,000
+47.9%"
+10m,1604_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1604_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7229,bootstrap_mean,2.89583751805474,pct_1,percent,0.01,1% of pixels,1%,all,72,0.009959883801355651,1% of pixels = 72 pixels (1.0%),"1%
+72 px"
+10m,1604_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1604_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7229,bootstrap_mean,2.89583751805474,pct_2,percent,0.02,2% of pixels,2%,all,145,0.020058099322174575,2% of pixels = 145 pixels (2.0%),"2%
+145 px"
+10m,1604_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1604_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7229,bootstrap_mean,2.89583751805474,pct_3,percent,0.03,3% of pixels,3%,all,217,0.030017983123530226,3% of pixels = 217 pixels (3.0%),"3%
+217 px"
+10m,1604_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1604_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7229,bootstrap_mean,2.89583751805474,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17291464932909115,"Fixed 1,250 (17.3%)","1,250
+17.3%"
+10m,1604_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1604_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7229,bootstrap_mean,2.89583751805474,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2766634389265459,"Fixed 2,000 (27.7%)","2,000
+27.7%"
+10m,1604_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1604_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7229,bootstrap_mean,2.89583751805474,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.41499515838981876,"Fixed 3,000 (41.5%)","3,000
+41.5%"
+10m,1604_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1604_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7229,bootstrap_mean,2.89583751805474,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5533268778530918,"Fixed 4,000 (55.3%)","4,000
+55.3%"
+10m,1606_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1606_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7594,bootstrap_mean,2.91632961041051,pct_1,percent,0.01,1% of pixels,1%,all,76,0.010007900974453516,1% of pixels = 76 pixels (1.0%),"1%
+76 px"
+10m,1606_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1606_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7594,bootstrap_mean,2.91632961041051,pct_2,percent,0.02,2% of pixels,2%,all,152,0.020015801948907033,2% of pixels = 152 pixels (2.0%),"2%
+152 px"
+10m,1606_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1606_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7594,bootstrap_mean,2.91632961041051,pct_3,percent,0.03,3% of pixels,3%,all,228,0.030023702923360547,3% of pixels = 228 pixels (3.0%),"3%
+228 px"
+10m,1606_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1606_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7594,bootstrap_mean,2.91632961041051,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.1646036344482486,"Fixed 1,250 (16.5%)","1,250
+16.5%"
+10m,1606_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1606_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7594,bootstrap_mean,2.91632961041051,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2633658151171978,"Fixed 2,000 (26.3%)","2,000
+26.3%"
+10m,1606_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1606_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7594,bootstrap_mean,2.91632961041051,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.39504872267579666,"Fixed 3,000 (39.5%)","3,000
+39.5%"
+10m,1606_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1606_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7594,bootstrap_mean,2.91632961041051,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5267316302343956,"Fixed 4,000 (52.7%)","4,000
+52.7%"
+10m,1701_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1701_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9299,bootstrap_mean,2.75084828514822,pct_1,percent,0.01,1% of pixels,1%,all,93,0.01000107538444994,1% of pixels = 93 pixels (1.0%),"1%
+93 px"
+10m,1701_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1701_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9299,bootstrap_mean,2.75084828514822,pct_2,percent,0.02,2% of pixels,2%,all,186,0.02000215076889988,2% of pixels = 186 pixels (2.0%),"2%
+186 px"
+10m,1701_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1701_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9299,bootstrap_mean,2.75084828514822,pct_3,percent,0.03,3% of pixels,3%,all,279,0.030003226153349823,3% of pixels = 279 pixels (3.0%),"3%
+279 px"
+10m,1701_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1701_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9299,bootstrap_mean,2.75084828514822,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.13442305624260673,"Fixed 1,250 (13.4%)","1,250
+13.4%"
+10m,1701_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1701_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9299,bootstrap_mean,2.75084828514822,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.21507688998817076,"Fixed 2,000 (21.5%)","2,000
+21.5%"
+10m,1701_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1701_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9299,bootstrap_mean,2.75084828514822,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.32261533498225614,"Fixed 3,000 (32.3%)","3,000
+32.3%"
+10m,1701_b,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1701_b,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,9299,bootstrap_mean,2.75084828514822,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.4301537799763415,"Fixed 4,000 (43.0%)","4,000
+43.0%"
+10m,1803_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1803_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5295,bootstrap_mean,2.85596855893488,pct_1,percent,0.01,1% of pixels,1%,all,53,0.010009442870632672,1% of pixels = 53 pixels (1.0%),"1%
+53 px"
+10m,1803_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1803_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5295,bootstrap_mean,2.85596855893488,pct_2,percent,0.02,2% of pixels,2%,all,106,0.020018885741265344,2% of pixels = 106 pixels (2.0%),"2%
+106 px"
+10m,1803_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1803_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5295,bootstrap_mean,2.85596855893488,pct_3,percent,0.03,3% of pixels,3%,all,159,0.03002832861189802,3% of pixels = 159 pixels (3.0%),"3%
+159 px"
+10m,1803_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1803_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5295,bootstrap_mean,2.85596855893488,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.2360717658168083,"Fixed 1,250 (23.6%)","1,250
+23.6%"
+10m,1803_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1803_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5295,bootstrap_mean,2.85596855893488,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.3777148253068933,"Fixed 2,000 (37.8%)","2,000
+37.8%"
+10m,1803_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1803_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5295,bootstrap_mean,2.85596855893488,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.56657223796034,"Fixed 3,000 (56.7%)","3,000
+56.7%"
+10m,1803_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1803_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5295,bootstrap_mean,2.85596855893488,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.7554296506137866,"Fixed 4,000 (75.5%)","4,000
+75.5%"
+10m,1816_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1816_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5193,bootstrap_mean,2.86819799829553,pct_1,percent,0.01,1% of pixels,1%,all,52,0.010013479684190255,1% of pixels = 52 pixels (1.0%),"1%
+52 px"
+10m,1816_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1816_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5193,bootstrap_mean,2.86819799829553,pct_2,percent,0.02,2% of pixels,2%,all,104,0.02002695936838051,2% of pixels = 104 pixels (2.0%),"2%
+104 px"
+10m,1816_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1816_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5193,bootstrap_mean,2.86819799829553,pct_3,percent,0.03,3% of pixels,3%,all,156,0.03004043905257077,3% of pixels = 156 pixels (3.0%),"3%
+156 px"
+10m,1816_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1816_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5193,bootstrap_mean,2.86819799829553,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.24070864625457347,"Fixed 1,250 (24.1%)","1,250
+24.1%"
+10m,1816_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1816_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5193,bootstrap_mean,2.86819799829553,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.38513383400731754,"Fixed 2,000 (38.5%)","2,000
+38.5%"
+10m,1816_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1816_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5193,bootstrap_mean,2.86819799829553,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.5777007510109763,"Fixed 3,000 (57.8%)","3,000
+57.8%"
+10m,1816_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1816_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5193,bootstrap_mean,2.86819799829553,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.7702676680146351,"Fixed 4,000 (77.0%)","4,000
+77.0%"
+10m,1912_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1912_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5467,bootstrap_mean,2.88702615259382,pct_1,percent,0.01,1% of pixels,1%,all,55,0.01006036217303823,1% of pixels = 55 pixels (1.0%),"1%
+55 px"
+10m,1912_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1912_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5467,bootstrap_mean,2.88702615259382,pct_2,percent,0.02,2% of pixels,2%,all,109,0.019937808670203037,2% of pixels = 109 pixels (2.0%),"2%
+109 px"
+10m,1912_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1912_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5467,bootstrap_mean,2.88702615259382,pct_3,percent,0.03,3% of pixels,3%,all,164,0.029998170843241266,3% of pixels = 164 pixels (3.0%),"3%
+164 px"
+10m,1912_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1912_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5467,bootstrap_mean,2.88702615259382,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.22864459484177793,"Fixed 1,250 (22.9%)","1,250
+22.9%"
+10m,1912_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1912_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5467,bootstrap_mean,2.88702615259382,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.3658313517468447,"Fixed 2,000 (36.6%)","2,000
+36.6%"
+10m,1912_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1912_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5467,bootstrap_mean,2.88702615259382,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.5487470276202671,"Fixed 3,000 (54.9%)","3,000
+54.9%"
+10m,1912_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1912_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5467,bootstrap_mean,2.88702615259382,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.7316627034936894,"Fixed 4,000 (73.2%)","4,000
+73.2%"
+10m,1917_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1917_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5452,bootstrap_mean,2.9549743453192,pct_1,percent,0.01,1% of pixels,1%,all,55,0.010088041085840058,1% of pixels = 55 pixels (1.0%),"1%
+55 px"
+10m,1917_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1917_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5452,bootstrap_mean,2.9549743453192,pct_2,percent,0.02,2% of pixels,2%,all,109,0.01999266324284666,2% of pixels = 109 pixels (2.0%),"2%
+109 px"
+10m,1917_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1917_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5452,bootstrap_mean,2.9549743453192,pct_3,percent,0.03,3% of pixels,3%,all,164,0.03008070432868672,3% of pixels = 164 pixels (3.0%),"3%
+164 px"
+10m,1917_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1917_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5452,bootstrap_mean,2.9549743453192,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.2292736610418195,"Fixed 1,250 (22.9%)","1,250
+22.9%"
+10m,1917_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1917_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5452,bootstrap_mean,2.9549743453192,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.36683785766691124,"Fixed 2,000 (36.7%)","2,000
+36.7%"
+10m,1917_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1917_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5452,bootstrap_mean,2.9549743453192,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.5502567865003668,"Fixed 3,000 (55.0%)","3,000
+55.0%"
+10m,1917_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/1917_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5452,bootstrap_mean,2.9549743453192,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.7336757153338225,"Fixed 4,000 (73.4%)","4,000
+73.4%"
+10m,204_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/204_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7147,bootstrap_mean,2.78939340179548,pct_1,percent,0.01,1% of pixels,1%,all,71,0.00993423814187771,1% of pixels = 71 pixels (1.0%),"1%
+71 px"
+10m,204_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/204_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7147,bootstrap_mean,2.78939340179548,pct_2,percent,0.02,2% of pixels,2%,all,143,0.02000839513082412,2% of pixels = 143 pixels (2.0%),"2%
+143 px"
+10m,204_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/204_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7147,bootstrap_mean,2.78939340179548,pct_3,percent,0.03,3% of pixels,3%,all,214,0.029942633272701833,3% of pixels = 214 pixels (3.0%),"3%
+214 px"
+10m,204_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/204_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7147,bootstrap_mean,2.78939340179548,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17489855883587518,"Fixed 1,250 (17.5%)","1,250
+17.5%"
+10m,204_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/204_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7147,bootstrap_mean,2.78939340179548,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2798376941374003,"Fixed 2,000 (28.0%)","2,000
+28.0%"
+10m,204_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/204_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7147,bootstrap_mean,2.78939340179548,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.41975654120610045,"Fixed 3,000 (42.0%)","3,000
+42.0%"
+10m,204_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/204_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7147,bootstrap_mean,2.78939340179548,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5596753882748006,"Fixed 4,000 (56.0%)","4,000
+56.0%"
+10m,217_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/217_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7850,bootstrap_mean,2.70411989665918,pct_1,percent,0.01,1% of pixels,1%,all,78,0.009936305732484076,1% of pixels = 78 pixels (1.0%),"1%
+78 px"
+10m,217_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/217_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7850,bootstrap_mean,2.70411989665918,pct_2,percent,0.02,2% of pixels,2%,all,157,0.02,2% of pixels = 157 pixels (2.0%),"2%
+157 px"
+10m,217_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/217_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7850,bootstrap_mean,2.70411989665918,pct_3,percent,0.03,3% of pixels,3%,all,236,0.030063694267515925,3% of pixels = 236 pixels (3.0%),"3%
+236 px"
+10m,217_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/217_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7850,bootstrap_mean,2.70411989665918,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.1592356687898089,"Fixed 1,250 (15.9%)","1,250
+15.9%"
+10m,217_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/217_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7850,bootstrap_mean,2.70411989665918,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.25477707006369427,"Fixed 2,000 (25.5%)","2,000
+25.5%"
+10m,217_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/217_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7850,bootstrap_mean,2.70411989665918,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.3821656050955414,"Fixed 3,000 (38.2%)","3,000
+38.2%"
+10m,217_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/217_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7850,bootstrap_mean,2.70411989665918,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5095541401273885,"Fixed 4,000 (51.0%)","4,000
+51.0%"
+10m,22_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/22_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7136,bootstrap_mean,2.91478053742055,pct_1,percent,0.01,1% of pixels,1%,all,71,0.009949551569506726,1% of pixels = 71 pixels (1.0%),"1%
+71 px"
+10m,22_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/22_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7136,bootstrap_mean,2.91478053742055,pct_2,percent,0.02,2% of pixels,2%,all,143,0.020039237668161434,2% of pixels = 143 pixels (2.0%),"2%
+143 px"
+10m,22_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/22_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7136,bootstrap_mean,2.91478053742055,pct_3,percent,0.03,3% of pixels,3%,all,214,0.02998878923766816,3% of pixels = 214 pixels (3.0%),"3%
+214 px"
+10m,22_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/22_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7136,bootstrap_mean,2.91478053742055,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17516816143497757,"Fixed 1,250 (17.5%)","1,250
+17.5%"
+10m,22_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/22_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7136,bootstrap_mean,2.91478053742055,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2802690582959641,"Fixed 2,000 (28.0%)","2,000
+28.0%"
+10m,22_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/22_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7136,bootstrap_mean,2.91478053742055,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.4204035874439462,"Fixed 3,000 (42.0%)","3,000
+42.0%"
+10m,22_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/22_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7136,bootstrap_mean,2.91478053742055,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5605381165919282,"Fixed 4,000 (56.1%)","4,000
+56.1%"
+10m,319_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/319_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8983,bootstrap_mean,2.73903145206806,pct_1,percent,0.01,1% of pixels,1%,all,90,0.010018924635422465,1% of pixels = 90 pixels (1.0%),"1%
+90 px"
+10m,319_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/319_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8983,bootstrap_mean,2.73903145206806,pct_2,percent,0.02,2% of pixels,2%,all,180,0.02003784927084493,2% of pixels = 180 pixels (2.0%),"2%
+180 px"
+10m,319_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/319_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8983,bootstrap_mean,2.73903145206806,pct_3,percent,0.03,3% of pixels,3%,all,269,0.029945452521429366,3% of pixels = 269 pixels (3.0%),"3%
+269 px"
+10m,319_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/319_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8983,bootstrap_mean,2.73903145206806,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.13915173104753423,"Fixed 1,250 (13.9%)","1,250
+13.9%"
+10m,319_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/319_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8983,bootstrap_mean,2.73903145206806,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.22264276967605476,"Fixed 2,000 (22.3%)","2,000
+22.3%"
+10m,319_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/319_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8983,bootstrap_mean,2.73903145206806,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.3339641545140822,"Fixed 3,000 (33.4%)","3,000
+33.4%"
+10m,319_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/319_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8983,bootstrap_mean,2.73903145206806,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.4452855393521095,"Fixed 4,000 (44.5%)","4,000
+44.5%"
+10m,409_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/409_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5989,bootstrap_mean,2.87584999618131,pct_1,percent,0.01,1% of pixels,1%,all,60,0.010018367006177992,1% of pixels = 60 pixels (1.0%),"1%
+60 px"
+10m,409_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/409_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5989,bootstrap_mean,2.87584999618131,pct_2,percent,0.02,2% of pixels,2%,all,120,0.020036734012355985,2% of pixels = 120 pixels (2.0%),"2%
+120 px"
+10m,409_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/409_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5989,bootstrap_mean,2.87584999618131,pct_3,percent,0.03,3% of pixels,3%,all,180,0.03005510101853398,3% of pixels = 180 pixels (3.0%),"3%
+180 px"
+10m,409_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/409_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5989,bootstrap_mean,2.87584999618131,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.20871597929537486,"Fixed 1,250 (20.9%)","1,250
+20.9%"
+10m,409_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/409_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5989,bootstrap_mean,2.87584999618131,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.33394556687259974,"Fixed 2,000 (33.4%)","2,000
+33.4%"
+10m,409_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/409_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5989,bootstrap_mean,2.87584999618131,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.5009183503088996,"Fixed 3,000 (50.1%)","3,000
+50.1%"
+10m,409_d,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/409_d,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,5989,bootstrap_mean,2.87584999618131,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.6678911337451995,"Fixed 4,000 (66.8%)","4,000
+66.8%"
+10m,503_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/503_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7403,bootstrap_mean,2.84088646495473,pct_1,percent,0.01,1% of pixels,1%,all,74,0.009995947588815345,1% of pixels = 74 pixels (1.0%),"1%
+74 px"
+10m,503_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/503_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7403,bootstrap_mean,2.84088646495473,pct_2,percent,0.02,2% of pixels,2%,all,148,0.01999189517763069,2% of pixels = 148 pixels (2.0%),"2%
+148 px"
+10m,503_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/503_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7403,bootstrap_mean,2.84088646495473,pct_3,percent,0.03,3% of pixels,3%,all,222,0.029987842766446036,3% of pixels = 222 pixels (3.0%),"3%
+222 px"
+10m,503_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/503_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7403,bootstrap_mean,2.84088646495473,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.16885046602728623,"Fixed 1,250 (16.9%)","1,250
+16.9%"
+10m,503_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/503_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7403,bootstrap_mean,2.84088646495473,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.270160745643658,"Fixed 2,000 (27.0%)","2,000
+27.0%"
+10m,503_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/503_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7403,bootstrap_mean,2.84088646495473,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.40524111846548694,"Fixed 3,000 (40.5%)","3,000
+40.5%"
+10m,503_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/503_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7403,bootstrap_mean,2.84088646495473,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.540321491287316,"Fixed 4,000 (54.0%)","4,000
+54.0%"
+10m,614_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/614_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7102,bootstrap_mean,2.82764202698412,pct_1,percent,0.01,1% of pixels,1%,all,71,0.009997183891861447,1% of pixels = 71 pixels (1.0%),"1%
+71 px"
+10m,614_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/614_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7102,bootstrap_mean,2.82764202698412,pct_2,percent,0.02,2% of pixels,2%,all,142,0.019994367783722895,2% of pixels = 142 pixels (2.0%),"2%
+142 px"
+10m,614_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/614_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7102,bootstrap_mean,2.82764202698412,pct_3,percent,0.03,3% of pixels,3%,all,213,0.029991551675584344,3% of pixels = 213 pixels (3.0%),"3%
+213 px"
+10m,614_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/614_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7102,bootstrap_mean,2.82764202698412,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.17600675865953253,"Fixed 1,250 (17.6%)","1,250
+17.6%"
+10m,614_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/614_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7102,bootstrap_mean,2.82764202698412,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.28161081385525205,"Fixed 2,000 (28.2%)","2,000
+28.2%"
+10m,614_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/614_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7102,bootstrap_mean,2.82764202698412,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.42241622078287805,"Fixed 3,000 (42.2%)","3,000
+42.2%"
+10m,614_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/614_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7102,bootstrap_mean,2.82764202698412,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5632216277105041,"Fixed 4,000 (56.3%)","4,000
+56.3%"
+10m,700_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/700_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7623,bootstrap_mean,2.7627938678889,pct_1,percent,0.01,1% of pixels,1%,all,76,0.009969828151646333,1% of pixels = 76 pixels (1.0%),"1%
+76 px"
+10m,700_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/700_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7623,bootstrap_mean,2.7627938678889,pct_2,percent,0.02,2% of pixels,2%,all,152,0.019939656303292665,2% of pixels = 152 pixels (2.0%),"2%
+152 px"
+10m,700_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/700_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7623,bootstrap_mean,2.7627938678889,pct_3,percent,0.03,3% of pixels,3%,all,229,0.03004066640430277,3% of pixels = 229 pixels (3.0%),"3%
+229 px"
+10m,700_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/700_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7623,bootstrap_mean,2.7627938678889,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.16397743670470943,"Fixed 1,250 (16.4%)","1,250
+16.4%"
+10m,700_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/700_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7623,bootstrap_mean,2.7627938678889,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.26236389872753507,"Fixed 2,000 (26.2%)","2,000
+26.2%"
+10m,700_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/700_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7623,bootstrap_mean,2.7627938678889,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.39354584809130266,"Fixed 3,000 (39.4%)","3,000
+39.4%"
+10m,700_c,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/700_c,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7623,bootstrap_mean,2.7627938678889,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.5247277974550701,"Fixed 4,000 (52.5%)","4,000
+52.5%"
+10m,722_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/722_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8781,bootstrap_mean,2.7727035242196,pct_1,percent,0.01,1% of pixels,1%,all,88,0.010021637626693999,1% of pixels = 88 pixels (1.0%),"1%
+88 px"
+10m,722_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/722_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8781,bootstrap_mean,2.7727035242196,pct_2,percent,0.02,2% of pixels,2%,all,176,0.020043275253387997,2% of pixels = 176 pixels (2.0%),"2%
+176 px"
+10m,722_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/722_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8781,bootstrap_mean,2.7727035242196,pct_3,percent,0.03,3% of pixels,3%,all,263,0.029951030634324107,3% of pixels = 263 pixels (3.0%),"3%
+263 px"
+10m,722_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/722_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8781,bootstrap_mean,2.7727035242196,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.14235280719735793,"Fixed 1,250 (14.2%)","1,250
+14.2%"
+10m,722_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/722_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8781,bootstrap_mean,2.7727035242196,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2277644915157727,"Fixed 2,000 (22.8%)","2,000
+22.8%"
+10m,722_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/722_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8781,bootstrap_mean,2.7727035242196,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.341646737273659,"Fixed 3,000 (34.2%)","3,000
+34.2%"
+10m,722_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/722_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,8781,bootstrap_mean,2.7727035242196,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.4555289830315454,"Fixed 4,000 (45.6%)","4,000
+45.6%"
+10m,800_a,"Original 10 m replacement: closest bootstrap-mean quadrat at or below 4,000 retained pixels",Quad_Spectra/10m_smooth_5nm/800_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,3976,bootstrap_mean,2.85455482195701,pct_1,percent,0.01,1% of pixels,1%,all,40,0.01006036217303823,1% of pixels = 40 pixels (1.0%),"1%
+40 px"
+10m,800_a,"Original 10 m replacement: closest bootstrap-mean quadrat at or below 4,000 retained pixels",Quad_Spectra/10m_smooth_5nm/800_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,3976,bootstrap_mean,2.85455482195701,pct_2,percent,0.02,2% of pixels,2%,all,80,0.02012072434607646,2% of pixels = 80 pixels (2.0%),"2%
+80 px"
+10m,800_a,"Original 10 m replacement: closest bootstrap-mean quadrat at or below 4,000 retained pixels",Quad_Spectra/10m_smooth_5nm/800_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,3976,bootstrap_mean,2.85455482195701,pct_3,percent,0.03,3% of pixels,3%,all,119,0.02992957746478873,3% of pixels = 119 pixels (3.0%),"3%
+119 px"
+10m,800_a,"Original 10 m replacement: closest bootstrap-mean quadrat at or below 4,000 retained pixels",Quad_Spectra/10m_smooth_5nm/800_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,3976,bootstrap_mean,2.85455482195701,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.31438631790744465,"Fixed 1,250 (31.4%)","1,250
+31.4%"
+10m,800_a,"Original 10 m replacement: closest bootstrap-mean quadrat at or below 4,000 retained pixels",Quad_Spectra/10m_smooth_5nm/800_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,3976,bootstrap_mean,2.85455482195701,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.5030181086519114,"Fixed 2,000 (50.3%)","2,000
+50.3%"
+10m,800_a,"Original 10 m replacement: closest bootstrap-mean quadrat at or below 4,000 retained pixels",Quad_Spectra/10m_smooth_5nm/800_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,3976,bootstrap_mean,2.85455482195701,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.7545271629778671,"Fixed 3,000 (75.5%)","3,000
+75.5%"
+10m,800_a,"Original 10 m replacement: closest bootstrap-mean quadrat at or below 4,000 retained pixels",Quad_Spectra/10m_smooth_5nm/800_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,3976,bootstrap_mean,2.85455482195701,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,3976,1,"Fixed 4,000 (100.0%)","3,976
+100.0%"
+10m,914_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/914_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7220,bootstrap_mean,2.93095464394747,pct_1,percent,0.01,1% of pixels,1%,all,72,0.009972299168975069,1% of pixels = 72 pixels (1.0%),"1%
+72 px"
+10m,914_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/914_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7220,bootstrap_mean,2.93095464394747,pct_2,percent,0.02,2% of pixels,2%,all,144,0.019944598337950138,2% of pixels = 144 pixels (2.0%),"2%
+144 px"
+10m,914_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/914_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7220,bootstrap_mean,2.93095464394747,pct_3,percent,0.03,3% of pixels,3%,all,217,0.030055401662049862,3% of pixels = 217 pixels (3.0%),"3%
+217 px"
+10m,914_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/914_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7220,bootstrap_mean,2.93095464394747,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.1731301939058172,"Fixed 1,250 (17.3%)","1,250
+17.3%"
+10m,914_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/914_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7220,bootstrap_mean,2.93095464394747,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.2770083102493075,"Fixed 2,000 (27.7%)","2,000
+27.7%"
+10m,914_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/914_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7220,bootstrap_mean,2.93095464394747,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.4155124653739612,"Fixed 3,000 (41.6%)","3,000
+41.6%"
+10m,914_a,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/10m_smooth_5nm/914_a,Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv,7220,bootstrap_mean,2.93095464394747,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.554016620498615,"Fixed 4,000 (55.4%)","4,000
+55.4%"
+20m,100,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/100,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30808,bootstrap_mean,2.78188656943148,pct_1,percent,0.01,1% of pixels,1%,all,308,0.009997403271877434,1% of pixels = 308 pixels (1.0%),"1%
+308 px"
+20m,100,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/100,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30808,bootstrap_mean,2.78188656943148,pct_2,percent,0.02,2% of pixels,2%,all,616,0.019994806543754868,2% of pixels = 616 pixels (2.0%),"2%
+616 px"
+20m,100,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/100,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30808,bootstrap_mean,2.78188656943148,pct_3,percent,0.03,3% of pixels,3%,all,924,0.029992209815632304,3% of pixels = 924 pixels (3.0%),"3%
+924 px"
+20m,100,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/100,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30808,bootstrap_mean,2.78188656943148,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.04057387691508699,"Fixed 1,250 (4.1%)","1,250
+4.1%"
+20m,100,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/100,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30808,bootstrap_mean,2.78188656943148,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.06491820306413919,"Fixed 2,000 (6.5%)","2,000
+6.5%"
+20m,100,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/100,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30808,bootstrap_mean,2.78188656943148,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.09737730459620877,"Fixed 3,000 (9.7%)","3,000
+9.7%"
+20m,100,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/100,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30808,bootstrap_mean,2.78188656943148,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.12983640612827838,"Fixed 4,000 (13.0%)","4,000
+13.0%"
+20m,1201,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1201,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,24803,bootstrap_mean,2.77916136239919,pct_1,percent,0.01,1% of pixels,1%,all,248,0.009998790468894892,1% of pixels = 248 pixels (1.0%),"1%
+248 px"
+20m,1201,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1201,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,24803,bootstrap_mean,2.77916136239919,pct_2,percent,0.02,2% of pixels,2%,all,496,0.019997580937789784,2% of pixels = 496 pixels (2.0%),"2%
+496 px"
+20m,1201,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1201,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,24803,bootstrap_mean,2.77916136239919,pct_3,percent,0.03,3% of pixels,3%,all,744,0.029996371406684676,3% of pixels = 744 pixels (3.0%),"3%
+744 px"
+20m,1201,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1201,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,24803,bootstrap_mean,2.77916136239919,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.05039712937951054,"Fixed 1,250 (5.0%)","1,250
+5.0%"
+20m,1201,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1201,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,24803,bootstrap_mean,2.77916136239919,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.08063540700721687,"Fixed 2,000 (8.1%)","2,000
+8.1%"
+20m,1201,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1201,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,24803,bootstrap_mean,2.77916136239919,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.1209531105108253,"Fixed 3,000 (12.1%)","3,000
+12.1%"
+20m,1201,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1201,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,24803,bootstrap_mean,2.77916136239919,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.16127081401443374,"Fixed 4,000 (16.1%)","4,000
+16.1%"
+20m,1402,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1402,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27061,bootstrap_mean,2.89891302547439,pct_1,percent,0.01,1% of pixels,1%,all,271,0.010014411884261483,1% of pixels = 271 pixels (1.0%),"1%
+271 px"
+20m,1402,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1402,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27061,bootstrap_mean,2.89891302547439,pct_2,percent,0.02,2% of pixels,2%,all,541,0.01999187021913455,2% of pixels = 541 pixels (2.0%),"2%
+541 px"
+20m,1402,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1402,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27061,bootstrap_mean,2.89891302547439,pct_3,percent,0.03,3% of pixels,3%,all,812,0.03000628210339603,3% of pixels = 812 pixels (3.0%),"3%
+812 px"
+20m,1402,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1402,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27061,bootstrap_mean,2.89891302547439,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.046191936735523444,"Fixed 1,250 (4.6%)","1,250
+4.6%"
+20m,1402,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1402,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27061,bootstrap_mean,2.89891302547439,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.07390709877683752,"Fixed 2,000 (7.4%)","2,000
+7.4%"
+20m,1402,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1402,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27061,bootstrap_mean,2.89891302547439,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.11086064816525627,"Fixed 3,000 (11.1%)","3,000
+11.1%"
+20m,1402,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1402,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27061,bootstrap_mean,2.89891302547439,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.14781419755367503,"Fixed 4,000 (14.8%)","4,000
+14.8%"
+20m,1512,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1512,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30984,bootstrap_mean,2.76327276047858,pct_1,percent,0.01,1% of pixels,1%,all,310,0.010005163955589981,1% of pixels = 310 pixels (1.0%),"1%
+310 px"
+20m,1512,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1512,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30984,bootstrap_mean,2.76327276047858,pct_2,percent,0.02,2% of pixels,2%,all,620,0.020010327911179963,2% of pixels = 620 pixels (2.0%),"2%
+620 px"
+20m,1512,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1512,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30984,bootstrap_mean,2.76327276047858,pct_3,percent,0.03,3% of pixels,3%,all,930,0.030015491866769946,3% of pixels = 930 pixels (3.0%),"3%
+930 px"
+20m,1512,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1512,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30984,bootstrap_mean,2.76327276047858,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.0403434030467338,"Fixed 1,250 (4.0%)","1,250
+4.0%"
+20m,1512,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1512,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30984,bootstrap_mean,2.76327276047858,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.06454944487477407,"Fixed 2,000 (6.5%)","2,000
+6.5%"
+20m,1512,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1512,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30984,bootstrap_mean,2.76327276047858,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.09682416731216112,"Fixed 3,000 (9.7%)","3,000
+9.7%"
+20m,1512,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1512,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,30984,bootstrap_mean,2.76327276047858,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.12909888974954814,"Fixed 4,000 (12.9%)","4,000
+12.9%"
+20m,1518,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1518,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,35713,bootstrap_mean,2.9318486657167,pct_1,percent,0.01,1% of pixels,1%,all,357,0.009996359868955283,1% of pixels = 357 pixels (1.0%),"1%
+357 px"
+20m,1518,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1518,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,35713,bootstrap_mean,2.9318486657167,pct_2,percent,0.02,2% of pixels,2%,all,714,0.019992719737910565,2% of pixels = 714 pixels (2.0%),"2%
+714 px"
+20m,1518,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1518,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,35713,bootstrap_mean,2.9318486657167,pct_3,percent,0.03,3% of pixels,3%,all,1071,0.029989079606865848,"3% of pixels = 1,071 pixels (3.0%)","3%
+1,071 px"
+20m,1518,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1518,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,35713,bootstrap_mean,2.9318486657167,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.03500126004536163,"Fixed 1,250 (3.5%)","1,250
+3.5%"
+20m,1518,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1518,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,35713,bootstrap_mean,2.9318486657167,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.05600201607257861,"Fixed 2,000 (5.6%)","2,000
+5.6%"
+20m,1518,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1518,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,35713,bootstrap_mean,2.9318486657167,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.08400302410886792,"Fixed 3,000 (8.4%)","3,000
+8.4%"
+20m,1518,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1518,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,35713,bootstrap_mean,2.9318486657167,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.11200403214515722,"Fixed 4,000 (11.2%)","4,000
+11.2%"
+20m,1800,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1800,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29990,bootstrap_mean,2.77191289044029,pct_1,percent,0.01,1% of pixels,1%,all,300,0.010003334444814937,1% of pixels = 300 pixels (1.0%),"1%
+300 px"
+20m,1800,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1800,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29990,bootstrap_mean,2.77191289044029,pct_2,percent,0.02,2% of pixels,2%,all,600,0.020006668889629875,2% of pixels = 600 pixels (2.0%),"2%
+600 px"
+20m,1800,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1800,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29990,bootstrap_mean,2.77191289044029,pct_3,percent,0.03,3% of pixels,3%,all,900,0.030010003334444816,3% of pixels = 900 pixels (3.0%),"3%
+900 px"
+20m,1800,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1800,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29990,bootstrap_mean,2.77191289044029,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.04168056018672891,"Fixed 1,250 (4.2%)","1,250
+4.2%"
+20m,1800,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1800,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29990,bootstrap_mean,2.77191289044029,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.06668889629876626,"Fixed 2,000 (6.7%)","2,000
+6.7%"
+20m,1800,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1800,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29990,bootstrap_mean,2.77191289044029,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.10003334444814939,"Fixed 3,000 (10.0%)","3,000
+10.0%"
+20m,1800,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1800,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29990,bootstrap_mean,2.77191289044029,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.13337779259753252,"Fixed 4,000 (13.3%)","4,000
+13.3%"
+20m,1805,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1805,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25420,bootstrap_mean,2.84709684644686,pct_1,percent,0.01,1% of pixels,1%,all,254,0.00999213217938631,1% of pixels = 254 pixels (1.0%),"1%
+254 px"
+20m,1805,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1805,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25420,bootstrap_mean,2.84709684644686,pct_2,percent,0.02,2% of pixels,2%,all,508,0.01998426435877262,2% of pixels = 508 pixels (2.0%),"2%
+508 px"
+20m,1805,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1805,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25420,bootstrap_mean,2.84709684644686,pct_3,percent,0.03,3% of pixels,3%,all,763,0.03001573564122738,3% of pixels = 763 pixels (3.0%),"3%
+763 px"
+20m,1805,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1805,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25420,bootstrap_mean,2.84709684644686,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.04917387883556255,"Fixed 1,250 (4.9%)","1,250
+4.9%"
+20m,1805,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1805,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25420,bootstrap_mean,2.84709684644686,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.07867820613690008,"Fixed 2,000 (7.9%)","2,000
+7.9%"
+20m,1805,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1805,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25420,bootstrap_mean,2.84709684644686,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.11801730920535011,"Fixed 3,000 (11.8%)","3,000
+11.8%"
+20m,1805,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1805,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25420,bootstrap_mean,2.84709684644686,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.15735641227380015,"Fixed 4,000 (15.7%)","4,000
+15.7%"
+20m,1910,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1910,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25613,bootstrap_mean,2.79976085257441,pct_1,percent,0.01,1% of pixels,1%,all,256,0.009994924452426503,1% of pixels = 256 pixels (1.0%),"1%
+256 px"
+20m,1910,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1910,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25613,bootstrap_mean,2.79976085257441,pct_2,percent,0.02,2% of pixels,2%,all,512,0.019989848904853006,2% of pixels = 512 pixels (2.0%),"2%
+512 px"
+20m,1910,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1910,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25613,bootstrap_mean,2.79976085257441,pct_3,percent,0.03,3% of pixels,3%,all,768,0.029984773357279507,3% of pixels = 768 pixels (3.0%),"3%
+768 px"
+20m,1910,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1910,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25613,bootstrap_mean,2.79976085257441,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.04880334205286378,"Fixed 1,250 (4.9%)","1,250
+4.9%"
+20m,1910,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1910,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25613,bootstrap_mean,2.79976085257441,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.07808534728458205,"Fixed 2,000 (7.8%)","2,000
+7.8%"
+20m,1910,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1910,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25613,bootstrap_mean,2.79976085257441,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.11712802092687308,"Fixed 3,000 (11.7%)","3,000
+11.7%"
+20m,1910,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/1910,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,25613,bootstrap_mean,2.79976085257441,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.1561706945691641,"Fixed 4,000 (15.6%)","4,000
+15.6%"
+20m,206,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/206,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,23348,bootstrap_mean,2.95886241130822,pct_1,percent,0.01,1% of pixels,1%,all,233,0.009979441493918108,1% of pixels = 233 pixels (1.0%),"1%
+233 px"
+20m,206,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/206,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,23348,bootstrap_mean,2.95886241130822,pct_2,percent,0.02,2% of pixels,2%,all,467,0.020001713208840158,2% of pixels = 467 pixels (2.0%),"2%
+467 px"
+20m,206,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/206,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,23348,bootstrap_mean,2.95886241130822,pct_3,percent,0.03,3% of pixels,3%,all,700,0.029981154702758268,3% of pixels = 700 pixels (3.0%),"3%
+700 px"
+20m,206,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/206,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,23348,bootstrap_mean,2.95886241130822,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.05353777625492548,"Fixed 1,250 (5.4%)","1,250
+5.4%"
+20m,206,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/206,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,23348,bootstrap_mean,2.95886241130822,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.08566044200788075,"Fixed 2,000 (8.6%)","2,000
+8.6%"
+20m,206,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/206,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,23348,bootstrap_mean,2.95886241130822,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.12849066301182113,"Fixed 3,000 (12.8%)","3,000
+12.8%"
+20m,206,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/206,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,23348,bootstrap_mean,2.95886241130822,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.1713208840157615,"Fixed 4,000 (17.1%)","4,000
+17.1%"
+20m,219,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/219,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29380,bootstrap_mean,2.8876492124115,pct_1,percent,0.01,1% of pixels,1%,all,294,0.010006807351940095,1% of pixels = 294 pixels (1.0%),"1%
+294 px"
+20m,219,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/219,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29380,bootstrap_mean,2.8876492124115,pct_2,percent,0.02,2% of pixels,2%,all,588,0.02001361470388019,2% of pixels = 588 pixels (2.0%),"2%
+588 px"
+20m,219,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/219,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29380,bootstrap_mean,2.8876492124115,pct_3,percent,0.03,3% of pixels,3%,all,881,0.02998638529611981,3% of pixels = 881 pixels (3.0%),"3%
+881 px"
+20m,219,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/219,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29380,bootstrap_mean,2.8876492124115,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.042545949625595644,"Fixed 1,250 (4.3%)","1,250
+4.3%"
+20m,219,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/219,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29380,bootstrap_mean,2.8876492124115,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.06807351940095303,"Fixed 2,000 (6.8%)","2,000
+6.8%"
+20m,219,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/219,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29380,bootstrap_mean,2.8876492124115,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.10211027910142954,"Fixed 3,000 (10.2%)","3,000
+10.2%"
+20m,219,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/219,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29380,bootstrap_mean,2.8876492124115,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.13614703880190607,"Fixed 4,000 (13.6%)","4,000
+13.6%"
+20m,302,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/302,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,26326,bootstrap_mean,2.84573939709323,pct_1,percent,0.01,1% of pixels,1%,all,263,0.009990123831953203,1% of pixels = 263 pixels (1.0%),"1%
+263 px"
+20m,302,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/302,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,26326,bootstrap_mean,2.84573939709323,pct_2,percent,0.02,2% of pixels,2%,all,527,0.02001823292562486,2% of pixels = 527 pixels (2.0%),"2%
+527 px"
+20m,302,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/302,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,26326,bootstrap_mean,2.84573939709323,pct_3,percent,0.03,3% of pixels,3%,all,790,0.03000835675757806,3% of pixels = 790 pixels (3.0%),"3%
+790 px"
+20m,302,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/302,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,26326,bootstrap_mean,2.84573939709323,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.04748157714806655,"Fixed 1,250 (4.7%)","1,250
+4.7%"
+20m,302,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/302,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,26326,bootstrap_mean,2.84573939709323,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.07597052343690648,"Fixed 2,000 (7.6%)","2,000
+7.6%"
+20m,302,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/302,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,26326,bootstrap_mean,2.84573939709323,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.11395578515535972,"Fixed 3,000 (11.4%)","3,000
+11.4%"
+20m,302,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/302,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,26326,bootstrap_mean,2.84573939709323,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.15194104687381296,"Fixed 4,000 (15.2%)","4,000
+15.2%"
+20m,317,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/317,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,31152,bootstrap_mean,2.79553240293147,pct_1,percent,0.01,1% of pixels,1%,all,312,0.010015408320493066,1% of pixels = 312 pixels (1.0%),"1%
+312 px"
+20m,317,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/317,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,31152,bootstrap_mean,2.79553240293147,pct_2,percent,0.02,2% of pixels,2%,all,623,0.019998715973292246,2% of pixels = 623 pixels (2.0%),"2%
+623 px"
+20m,317,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/317,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,31152,bootstrap_mean,2.79553240293147,pct_3,percent,0.03,3% of pixels,3%,all,935,0.03001412429378531,3% of pixels = 935 pixels (3.0%),"3%
+935 px"
+20m,317,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/317,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,31152,bootstrap_mean,2.79553240293147,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.040125834617360044,"Fixed 1,250 (4.0%)","1,250
+4.0%"
+20m,317,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/317,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,31152,bootstrap_mean,2.79553240293147,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.06420133538777606,"Fixed 2,000 (6.4%)","2,000
+6.4%"
+20m,317,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/317,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,31152,bootstrap_mean,2.79553240293147,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.0963020030816641,"Fixed 3,000 (9.6%)","3,000
+9.6%"
+20m,317,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/317,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,31152,bootstrap_mean,2.79553240293147,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.12840267077555212,"Fixed 4,000 (12.8%)","4,000
+12.8%"
+20m,405,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/405,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,36367,bootstrap_mean,2.84324059212325,pct_1,percent,0.01,1% of pixels,1%,all,364,0.010009074160640142,1% of pixels = 364 pixels (1.0%),"1%
+364 px"
+20m,405,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/405,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,36367,bootstrap_mean,2.84324059212325,pct_2,percent,0.02,2% of pixels,2%,all,727,0.019990650864795005,2% of pixels = 727 pixels (2.0%),"2%
+727 px"
+20m,405,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/405,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,36367,bootstrap_mean,2.84324059212325,pct_3,percent,0.03,3% of pixels,3%,all,1091,0.02999972502543515,"3% of pixels = 1,091 pixels (3.0%)","3%
+1,091 px"
+20m,405,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/405,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,36367,bootstrap_mean,2.84324059212325,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.03437182060659389,"Fixed 1,250 (3.4%)","1,250
+3.4%"
+20m,405,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/405,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,36367,bootstrap_mean,2.84324059212325,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.054994912970550223,"Fixed 2,000 (5.5%)","2,000
+5.5%"
+20m,405,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/405,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,36367,bootstrap_mean,2.84324059212325,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.08249236945582533,"Fixed 3,000 (8.2%)","3,000
+8.2%"
+20m,405,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/405,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,36367,bootstrap_mean,2.84324059212325,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.10998982594110045,"Fixed 4,000 (11.0%)","4,000
+11.0%"
+20m,821,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/821,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29194,bootstrap_mean,2.80160354060559,pct_1,percent,0.01,1% of pixels,1%,all,292,0.010002055216825375,1% of pixels = 292 pixels (1.0%),"1%
+292 px"
+20m,821,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/821,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29194,bootstrap_mean,2.80160354060559,pct_2,percent,0.02,2% of pixels,2%,all,584,0.02000411043365075,2% of pixels = 584 pixels (2.0%),"2%
+584 px"
+20m,821,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/821,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29194,bootstrap_mean,2.80160354060559,pct_3,percent,0.03,3% of pixels,3%,all,876,0.030006165650476126,3% of pixels = 876 pixels (3.0%),"3%
+876 px"
+20m,821,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/821,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29194,bootstrap_mean,2.80160354060559,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.042817017195314104,"Fixed 1,250 (4.3%)","1,250
+4.3%"
+20m,821,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/821,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29194,bootstrap_mean,2.80160354060559,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.06850722751250257,"Fixed 2,000 (6.9%)","2,000
+6.9%"
+20m,821,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/821,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29194,bootstrap_mean,2.80160354060559,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.10276084126875386,"Fixed 3,000 (10.3%)","3,000
+10.3%"
+20m,821,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/821,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29194,bootstrap_mean,2.80160354060559,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.13701445502500514,"Fixed 4,000 (13.7%)","4,000
+13.7%"
+20m,905,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/905,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27021,bootstrap_mean,3.01266142127711,pct_1,percent,0.01,1% of pixels,1%,all,270,0.009992228266903519,1% of pixels = 270 pixels (1.0%),"1%
+270 px"
+20m,905,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/905,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27021,bootstrap_mean,3.01266142127711,pct_2,percent,0.02,2% of pixels,2%,all,540,0.019984456533807038,2% of pixels = 540 pixels (2.0%),"2%
+540 px"
+20m,905,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/905,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27021,bootstrap_mean,3.01266142127711,pct_3,percent,0.03,3% of pixels,3%,all,811,0.030013693053550942,3% of pixels = 811 pixels (3.0%),"3%
+811 px"
+20m,905,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/905,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27021,bootstrap_mean,3.01266142127711,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.046260316050479255,"Fixed 1,250 (4.6%)","1,250
+4.6%"
+20m,905,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/905,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27021,bootstrap_mean,3.01266142127711,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.07401650568076681,"Fixed 2,000 (7.4%)","2,000
+7.4%"
+20m,905,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/905,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27021,bootstrap_mean,3.01266142127711,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.11102475852115022,"Fixed 3,000 (11.1%)","3,000
+11.1%"
+20m,905,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/905,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,27021,bootstrap_mean,3.01266142127711,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.14803301136153363,"Fixed 4,000 (14.8%)","4,000
+14.8%"
+20m,912,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/912,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29618,bootstrap_mean,2.95229466504588,pct_1,percent,0.01,1% of pixels,1%,all,296,0.009993922614626241,1% of pixels = 296 pixels (1.0%),"1%
+296 px"
+20m,912,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/912,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29618,bootstrap_mean,2.95229466504588,pct_2,percent,0.02,2% of pixels,2%,all,592,0.019987845229252482,2% of pixels = 592 pixels (2.0%),"2%
+592 px"
+20m,912,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/912,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29618,bootstrap_mean,2.95229466504588,pct_3,percent,0.03,3% of pixels,3%,all,889,0.030015531095955162,3% of pixels = 889 pixels (3.0%),"3%
+889 px"
+20m,912,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/912,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29618,bootstrap_mean,2.95229466504588,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.042204065095550004,"Fixed 1,250 (4.2%)","1,250
+4.2%"
+20m,912,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/912,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29618,bootstrap_mean,2.95229466504588,fixed_2000,fixed,2000,"Fixed 2,000","2,000","10m,20m",2000,0.06752650415288,"Fixed 2,000 (6.8%)","2,000
+6.8%"
+20m,912,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/912,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29618,bootstrap_mean,2.95229466504588,fixed_3000,fixed,3000,"Fixed 3,000","3,000","10m,20m",3000,0.10128975622932,"Fixed 3,000 (10.1%)","3,000
+10.1%"
+20m,912,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/20m_smooth_5nm/912,Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv,29618,bootstrap_mean,2.95229466504588,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.13505300830576,"Fixed 4,000 (13.5%)","4,000
+13.5%"
+50m,sub50_15,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_15,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,172782,bootstrap_mean,2.82963069525012,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.0072345498952437175,"Fixed 1,250 (0.7%)","1,250
+0.7%"
+50m,sub50_15,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_15,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,172782,bootstrap_mean,2.82963069525012,pct_1,percent,0.01,1% of pixels,1%,all,1728,0.010001041775184915,"1% of pixels = 1,728 pixels (1.0%)","1%
+1,728 px"
+50m,sub50_15,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_15,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,172782,bootstrap_mean,2.82963069525012,pct_2,percent,0.02,2% of pixels,2%,all,3456,0.02000208355036983,"2% of pixels = 3,456 pixels (2.0%)","2%
+3,456 px"
+50m,sub50_15,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_15,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,172782,bootstrap_mean,2.82963069525012,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.023150559664779895,"Fixed 4,000 (2.3%)","4,000
+2.3%"
+50m,sub50_15,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_15,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,172782,bootstrap_mean,2.82963069525012,pct_3,percent,0.03,3% of pixels,3%,all,5000,0.02893819958097487,"3% of pixels = 5,000 pixels (2.9%)","3%
+5,000 px"
+50m,sub50_15,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_15,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,172782,bootstrap_mean,2.82963069525012,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.03472583949716984,"Fixed 6,000 (3.5%)","6,000
+3.5%"
+50m,sub50_15,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_15,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,172782,bootstrap_mean,2.82963069525012,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.04630111932955979,"Fixed 8,000 (4.6%)","8,000
+4.6%"
+50m,sub50_24,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_24,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,166816,bootstrap_mean,2.83533767525212,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.007493286015729906,"Fixed 1,250 (0.7%)","1,250
+0.7%"
+50m,sub50_24,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_24,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,166816,bootstrap_mean,2.83533767525212,pct_1,percent,0.01,1% of pixels,1%,all,1668,0.009999040859389987,"1% of pixels = 1,668 pixels (1.0%)","1%
+1,668 px"
+50m,sub50_24,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_24,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,166816,bootstrap_mean,2.83533767525212,pct_2,percent,0.02,2% of pixels,2%,all,3336,0.019998081718779974,"2% of pixels = 3,336 pixels (2.0%)","2%
+3,336 px"
+50m,sub50_24,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_24,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,166816,bootstrap_mean,2.83533767525212,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.0239785152503357,"Fixed 4,000 (2.4%)","4,000
+2.4%"
+50m,sub50_24,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_24,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,166816,bootstrap_mean,2.83533767525212,pct_3,percent,0.03,3% of pixels,3%,all,5000,0.029973144062919625,"3% of pixels = 5,000 pixels (3.0%)","3%
+5,000 px"
+50m,sub50_24,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_24,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,166816,bootstrap_mean,2.83533767525212,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.03596777287550355,"Fixed 6,000 (3.6%)","6,000
+3.6%"
+50m,sub50_24,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_24,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,166816,bootstrap_mean,2.83533767525212,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.0479570305006714,"Fixed 8,000 (4.8%)","8,000
+4.8%"
+50m,sub50_36,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_36,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,174203,bootstrap_mean,2.8808076342713,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.007175536586625948,"Fixed 1,250 (0.7%)","1,250
+0.7%"
+50m,sub50_36,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_36,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,174203,bootstrap_mean,2.8808076342713,pct_1,percent,0.01,1% of pixels,1%,all,1742,0.00999982778712192,"1% of pixels = 1,742 pixels (1.0%)","1%
+1,742 px"
+50m,sub50_36,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_36,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,174203,bootstrap_mean,2.8808076342713,pct_2,percent,0.02,2% of pixels,2%,all,3484,0.01999965557424384,"2% of pixels = 3,484 pixels (2.0%)","2%
+3,484 px"
+50m,sub50_36,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_36,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,174203,bootstrap_mean,2.8808076342713,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.02296171707720303,"Fixed 4,000 (2.3%)","4,000
+2.3%"
+50m,sub50_36,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_36,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,174203,bootstrap_mean,2.8808076342713,pct_3,percent,0.03,3% of pixels,3%,all,5000,0.028702146346503792,"3% of pixels = 5,000 pixels (2.9%)","3%
+5,000 px"
+50m,sub50_36,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_36,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,174203,bootstrap_mean,2.8808076342713,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.03444257561580455,"Fixed 6,000 (3.4%)","6,000
+3.4%"
+50m,sub50_36,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_36,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,174203,bootstrap_mean,2.8808076342713,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.04592343415440606,"Fixed 8,000 (4.6%)","8,000
+4.6%"
+50m,sub50_49,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_49,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,206958,bootstrap_mean,2.82731937195229,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.006039872824437809,"Fixed 1,250 (0.6%)","1,250
+0.6%"
+50m,sub50_49,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_49,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,206958,bootstrap_mean,2.82731937195229,pct_1,percent,0.01,1% of pixels,1%,all,2070,0.010002029397269012,"1% of pixels = 2,070 pixels (1.0%)","1%
+2,070 px"
+50m,sub50_49,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_49,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,206958,bootstrap_mean,2.82731937195229,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.019327593038200988,"Fixed 4,000 (1.9%)","4,000
+1.9%"
+50m,sub50_49,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_49,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,206958,bootstrap_mean,2.82731937195229,pct_2,percent,0.02,2% of pixels,2%,all,4139,0.019999226896278473,"2% of pixels = 4,139 pixels (2.0%)","2%
+4,139 px"
+50m,sub50_49,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_49,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,206958,bootstrap_mean,2.82731937195229,pct_3,percent,0.03,3% of pixels,3%,all,5000,0.024159491297751235,"3% of pixels = 5,000 pixels (2.4%)","3%
+5,000 px"
+50m,sub50_49,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_49,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,206958,bootstrap_mean,2.82731937195229,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.028991389557301482,"Fixed 6,000 (2.9%)","6,000
+2.9%"
+50m,sub50_49,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_49,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,206958,bootstrap_mean,2.82731937195229,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.038655186076401976,"Fixed 8,000 (3.9%)","8,000
+3.9%"
+50m,sub50_51,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_51,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,200631,bootstrap_mean,2.81647698127603,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.006230343266992638,"Fixed 1,250 (0.6%)","1,250
+0.6%"
+50m,sub50_51,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_51,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,200631,bootstrap_mean,2.81647698127603,pct_1,percent,0.01,1% of pixels,1%,all,2006,0.009998454874869786,"1% of pixels = 2,006 pixels (1.0%)","1%
+2,006 px"
+50m,sub50_51,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_51,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,200631,bootstrap_mean,2.81647698127603,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.019937098454376443,"Fixed 4,000 (2.0%)","4,000
+2.0%"
+50m,sub50_51,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_51,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,200631,bootstrap_mean,2.81647698127603,pct_2,percent,0.02,2% of pixels,2%,all,4013,0.020001894024353165,"2% of pixels = 4,013 pixels (2.0%)","2%
+4,013 px"
+50m,sub50_51,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_51,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,200631,bootstrap_mean,2.81647698127603,pct_3,percent,0.03,3% of pixels,3%,all,5000,0.024921373067970553,"3% of pixels = 5,000 pixels (2.5%)","3%
+5,000 px"
+50m,sub50_51,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_51,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,200631,bootstrap_mean,2.81647698127603,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.029905647681564663,"Fixed 6,000 (3.0%)","6,000
+3.0%"
+50m,sub50_51,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_51,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,200631,bootstrap_mean,2.81647698127603,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.039874196908752886,"Fixed 8,000 (4.0%)","8,000
+4.0%"
+50m,sub50_56,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_56,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,145500,bootstrap_mean,2.82464036800341,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.00859106529209622,"Fixed 1,250 (0.9%)","1,250
+0.9%"
+50m,sub50_56,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_56,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,145500,bootstrap_mean,2.82464036800341,pct_1,percent,0.01,1% of pixels,1%,all,1455,0.01,"1% of pixels = 1,455 pixels (1.0%)","1%
+1,455 px"
+50m,sub50_56,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_56,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,145500,bootstrap_mean,2.82464036800341,pct_2,percent,0.02,2% of pixels,2%,all,2910,0.02,"2% of pixels = 2,910 pixels (2.0%)","2%
+2,910 px"
+50m,sub50_56,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_56,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,145500,bootstrap_mean,2.82464036800341,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.027491408934707903,"Fixed 4,000 (2.7%)","4,000
+2.7%"
+50m,sub50_56,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_56,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,145500,bootstrap_mean,2.82464036800341,pct_3,percent,0.03,3% of pixels,3%,all,4365,0.03,"3% of pixels = 4,365 pixels (3.0%)","3%
+4,365 px"
+50m,sub50_56,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_56,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,145500,bootstrap_mean,2.82464036800341,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.041237113402061855,"Fixed 6,000 (4.1%)","6,000
+4.1%"
+50m,sub50_56,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_56,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,145500,bootstrap_mean,2.82464036800341,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.054982817869415807,"Fixed 8,000 (5.5%)","8,000
+5.5%"
+50m,sub50_60,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_60,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,164492,bootstrap_mean,2.88651322016211,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.007599153758237482,"Fixed 1,250 (0.8%)","1,250
+0.8%"
+50m,sub50_60,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_60,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,164492,bootstrap_mean,2.88651322016211,pct_1,percent,0.01,1% of pixels,1%,all,1645,0.010000486345840527,"1% of pixels = 1,645 pixels (1.0%)","1%
+1,645 px"
+50m,sub50_60,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_60,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,164492,bootstrap_mean,2.88651322016211,pct_2,percent,0.02,2% of pixels,2%,all,3290,0.020000972691681055,"2% of pixels = 3,290 pixels (2.0%)","2%
+3,290 px"
+50m,sub50_60,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_60,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,164492,bootstrap_mean,2.88651322016211,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.024317292026359946,"Fixed 4,000 (2.4%)","4,000
+2.4%"
+50m,sub50_60,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_60,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,164492,bootstrap_mean,2.88651322016211,pct_3,percent,0.03,3% of pixels,3%,all,4935,0.03000145903752158,"3% of pixels = 4,935 pixels (3.0%)","3%
+4,935 px"
+50m,sub50_60,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_60,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,164492,bootstrap_mean,2.88651322016211,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.03647593803953992,"Fixed 6,000 (3.6%)","6,000
+3.6%"
+50m,sub50_60,Original random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_60,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,164492,bootstrap_mean,2.88651322016211,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.04863458405271989,"Fixed 8,000 (4.9%)","8,000
+4.9%"
+50m,sub50_8,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_8,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,187893,bootstrap_mean,2.7677994725383,fixed_1250,fixed,1250,"Fixed 1,250","1,250",all,1250,0.0066527225601805285,"Fixed 1,250 (0.7%)","1,250
+0.7%"
+50m,sub50_8,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_8,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,187893,bootstrap_mean,2.7677994725383,pct_1,percent,0.01,1% of pixels,1%,all,1879,0.01000037255246337,"1% of pixels = 1,879 pixels (1.0%)","1%
+1,879 px"
+50m,sub50_8,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_8,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,187893,bootstrap_mean,2.7677994725383,pct_2,percent,0.02,2% of pixels,2%,all,3758,0.02000074510492674,"2% of pixels = 3,758 pixels (2.0%)","2%
+3,758 px"
+50m,sub50_8,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_8,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,187893,bootstrap_mean,2.7677994725383,fixed_4000,fixed,4000,"Fixed 4,000","4,000",all,4000,0.02128871219257769,"Fixed 4,000 (2.1%)","4,000
+2.1%"
+50m,sub50_8,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_8,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,187893,bootstrap_mean,2.7677994725383,pct_3,percent,0.03,3% of pixels,3%,all,5000,0.026610890240722114,"3% of pixels = 5,000 pixels (2.7%)","3%
+5,000 px"
+50m,sub50_8,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_8,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,187893,bootstrap_mean,2.7677994725383,fixed_6000,fixed,6000,"Fixed 6,000","6,000",50m,6000,0.03193306828886654,"Fixed 6,000 (3.2%)","6,000
+3.2%"
+50m,sub50_8,Additional random bootstrap-mean quadrat selected with seed 20260703,Quad_Spectra/50m_smooth_5nm/sub50_8,Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv,187893,bootstrap_mean,2.7677994725383,fixed_8000,fixed,8000,"Fixed 8,000","8,000",50m,8000,0.04257742438515538,"Fixed 8,000 (4.3%)","8,000
+4.3%"

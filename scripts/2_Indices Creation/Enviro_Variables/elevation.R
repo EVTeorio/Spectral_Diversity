@@ -48,4 +48,4 @@ quads <- cbind(quads, elevation_stats_df)
 head(quads)
 
 # Optionally, save the updated shapefile with the new statistics
-st_write(quads, "Indices_SHPs/Other_variables/20m_elevation.shp")
+st_write(quads, "Quad_Values/Other_variables/20m_elevation.shp")

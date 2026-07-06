@@ -22,12 +22,12 @@ Create mean elevation and mean Riley topographic roughness index variables for 1
 
 ## Outputs Created
 
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_10m.csv`
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_10m.shp`
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_20m.csv`
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_20m.shp`
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_50m.csv`
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_50m.shp`
+- `Quad_Values/Enviro_SHPs/enviro_variables_10m.csv`
+- `Quad_Values/Enviro_SHPs/enviro_variables_10m.shp`
+- `Quad_Values/Enviro_SHPs/enviro_variables_20m.csv`
+- `Quad_Values/Enviro_SHPs/enviro_variables_20m.shp`
+- `Quad_Values/Enviro_SHPs/enviro_variables_50m.csv`
+- `Quad_Values/Enviro_SHPs/enviro_variables_50m.shp`
 
 ## Tests Added
 

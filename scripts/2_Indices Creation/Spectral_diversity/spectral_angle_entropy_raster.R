@@ -12,7 +12,7 @@ library(snow)
 # SETTINGS
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/")
 hsi_path        <- "Spectral_Diversity/Quad_Spectra/20m_resampled_5nm"
-output_folder   <- "Spectral_Diversity/Indices_SHPs/Diversity_Rasters"
+output_folder   <- "Spectral_Diversity/Quad_Values/Diversity_Rasters"
 crs_proj        <- 26916
 window_radius_m <- 20
 n_sample        <- 500

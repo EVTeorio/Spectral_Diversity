@@ -30,7 +30,7 @@ suppressPackageStartupMessages({
 CRS_PROJ <- 26916
 TREE_CSV <- "PR_tree_DL.csv"
 TAXA_CSV <- "51sp_taxanomy.csv"
-OUTPUT_DIR <- "Indices_SHPs/Diversity_SHPs"
+OUTPUT_DIR <- "Quad_Values/Diversity_SHPs"
 
 SCALE_CONFIG <- list(
   "10m" = list(

@@ -35,8 +35,8 @@ The following locations appear outdated or non-current and should not be used fo
 | Path | File Count | Approx. Size | Recommendation |
 |---|---:|---:|---|
 | `Quad_Spectra/old/` | 8,305 | 107.836 GB | Highest priority deletion/archive candidate after confirming no current script references it |
-| `Indices_SHPs/old/` | 80 | 0.009 GB | Delete or archive after confirming current outputs are in non-`old` folders |
-| `Indices_SHPs/Diversity_SHPs/old/` | 28 | 0.001 GB | Delete or archive after confirming current diversity outputs |
+| `Quad_Values/old/` | 80 | 0.009 GB | Delete or archive after confirming current outputs are in non-`old` folders |
+| `Quad_Values/Diversity_SHPs/old/` | 28 | 0.001 GB | Delete or archive after confirming current diversity outputs |
 | `scripts/Outdated/` | 9 | <0.001 GB | Delete after script review confirms superseded workflows |
 | `scripts/2_Indices Creation/Plant_diversity/old/` | 7 | <0.001 GB | Delete after confirming current plant diversity scripts reproduce needed outputs |
 | `scripts/3_Analysis/Currently not relevant/` | 1 | <0.001 GB | Keep only if environmental/topographic analysis will be revived |

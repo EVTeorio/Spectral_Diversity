@@ -85,7 +85,7 @@ write_combined_variable_guide_docx <- function() {
   ))
   doc <- body_add_par(
     doc,
-    "If per-species composition values are needed later, use the original plant-diversity files in Indices_SHPs/Diversity_SHPs/plant_diversity_*m.csv.",
+    "If per-species composition values are needed later, use the original plant-diversity files in Quad_Values/Diversity_SHPs/plant_diversity_*m.csv.",
     style = "Normal"
   )
 
@@ -137,7 +137,7 @@ write_combined_variable_guide_docx <- function() {
       "spec_hull3d_v", "spec_hull3d_a"
     ),
     meaning = c(
-      "Spectral angle entropy.",
+      "Spectral angle entropy mean.",
       "Mean PCA-space spectral distance.",
       "Median PCA-space spectral distance.",
       "Standard deviation of PCA-space spectral distances.",
@@ -148,7 +148,7 @@ write_combined_variable_guide_docx <- function() {
       "Convex-hull surface area in PC1-PC3 space."
     ),
     calculation = c(
-      "Primary entropy value from sunlit, shadow-masked smoothed 5 nm spectra; exact all-pixel entropy where feasible, otherwise the bootstrap mean.",
+      "Primary entropy mean from sunlit, shadow-masked smoothed 5 nm spectra; for most quadrats this is the mean of 70 bootstrap iterations using up to 5,000 retained pixels, while the small exact subset uses all retained pixel pairs.",
       "Mean Euclidean distance of retained pixels from the quadrat centroid in global PC1-PC3 spectral space.",
       "Median Euclidean distance of retained pixels from the quadrat centroid in global PC1-PC3 spectral space.",
       "Standard deviation of Euclidean distances of retained pixels from the quadrat centroid in global PC1-PC3 spectral space.",
@@ -187,9 +187,9 @@ write_combined_variable_guide_docx <- function() {
 
   doc <- body_add_par(doc, "Source Files", style = "heading 1")
   doc <- add_bullets(doc, c(
-    "Spectral heterogeneity: Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_*_smooth_masked_5nm_summary.csv",
-    "Species and phylogenetic diversity: Indices_SHPs/Diversity_SHPs/plant_diversity_*m.csv",
-    "Environmental/topographic values: Indices_SHPs/Enviro_SHPs/enviro_variables_*m.csv",
+    "Spectral heterogeneity: Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_*_smooth_masked_5nm_summary.csv",
+    "Species and phylogenetic diversity: Quad_Values/Diversity_SHPs/plant_diversity_*m.csv",
+    "Environmental/topographic values: Quad_Values/Enviro_SHPs/enviro_variables_*m.csv",
     "Reproducible join script: scripts/3_Analysis/combine_quadrat_analysis_tables.R"
   ))
 

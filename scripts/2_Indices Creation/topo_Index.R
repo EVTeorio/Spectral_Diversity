@@ -6,7 +6,7 @@ library(dplyr)
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity/")
 crs_proj <- 26916
 # 1) Read in the ADF file as a raster
-raster_file <- "Indices_SHPs/Other_variables/lci_update/w001001x.adf"
+raster_file <- "Quad_Values/Other_variables/lci_update/w001001x.adf"
 raster_layer <- raster(raster_file)
 
 # 2) Read in the shapefile (quads) as a Simple Feature (SF) object
@@ -40,4 +40,4 @@ quads$dominant_value <- unlist(dominant_values)
 head(quads)
 
 # 5) Optionally, save the result to a new shapefile
-st_write(quads, "Indices_SHPs/Other_variables/20mTopo_Index.shp")
+st_write(quads, "Quad_Values/Other_variables/20mTopo_Index.shp")

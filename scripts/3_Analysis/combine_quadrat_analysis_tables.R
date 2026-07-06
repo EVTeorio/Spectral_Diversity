@@ -23,9 +23,9 @@ suppressPackageStartupMessages({
 })
 
 PROJECT_DIR <- "C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity"
-SPECTRAL_DIR <- "Indices_SHPs/Spectral_diversitySHPs"
-DIVERSITY_DIR <- "Indices_SHPs/Diversity_SHPs"
-ENVIRO_DIR <- "Indices_SHPs/Enviro_SHPs"
+SPECTRAL_DIR <- "Quad_Values/Spectral_diversitySHPs"
+DIVERSITY_DIR <- "Quad_Values/Diversity_SHPs"
+ENVIRO_DIR <- "Quad_Values/Enviro_SHPs"
 TAXA_CSV <- "51sp_taxanomy.csv"
 VARIABLE_GUIDE <- "reports/combined_quadrat_variable_guide.md"
 VALIDATION_REPORT <- "reports/validation/20260624_combined_quadrat_analysis_tables_validation.md"
@@ -210,7 +210,7 @@ make_variable_inventory <- function(taxa_table) {
       "Quadrat grain: 10m, 20m, or 50m.",
       "X coordinate of the quadrat polygon centroid in the plant-diversity shapefile CRS.",
       "Y coordinate of the quadrat polygon centroid in the plant-diversity shapefile CRS.",
-      "Primary spectral angle entropy value from sunlit, shadow-masked smoothed 5 nm spectra; exact all-pixel entropy where feasible, otherwise the bootstrap mean.",
+      "Primary spectral angle entropy mean from sunlit, shadow-masked smoothed 5 nm spectra; for most quadrats this is the mean of 70 bootstrap iterations using up to 5,000 retained pixels, while the small exact subset uses all retained pixel pairs.",
       "Mean Euclidean distance of retained pixels from the quadrat centroid in global PC1-PC3 spectral space.",
       "Median Euclidean distance of retained pixels from the quadrat centroid in global PC1-PC3 spectral space.",
       "Standard deviation of Euclidean distances of retained pixels from the quadrat centroid in global PC1-PC3 spectral space.",
@@ -379,7 +379,7 @@ write_task_report <- function(validation) {
     "## Notes",
     "",
     "- Pixel-count, pair-count, bootstrap replicate, method, exclusion, and geometry metadata fields were excluded.",
-    "- Per-species composition columns were excluded; original composition values remain available in `Indices_SHPs/Diversity_SHPs/plant_diversity_*m.csv` if needed later.",
+    "- Per-species composition columns were excluded; original composition values remain available in `Quad_Values/Diversity_SHPs/plant_diversity_*m.csv` if needed later.",
     "- Species diversity summaries use the `sp_` prefix.",
     "- Spectral columns use the `spec_` prefix.",
     "- Environmental/topographic columns use the `env_` prefix.",

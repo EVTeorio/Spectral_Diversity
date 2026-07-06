@@ -3,7 +3,7 @@ library(sf)
 
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity/")
 
-spectral_div <- st_read("Indices_SHPs/Spectral_diversitySHPs/SA_entropy_20m_masked_5nm.shp")
+spectral_div <- st_read("Quad_Values/Spectral_diversitySHPs/SA_entropy_20m_masked_5nm.shp")
 plot(spectral_div$spctrl_)
 plot(spectral_div)
 

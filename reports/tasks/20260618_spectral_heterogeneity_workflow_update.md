@@ -45,13 +45,13 @@ Calculate per-quadrat spectral heterogeneity values for each resolution from the
 
 ## Outputs Created
 
-- `Indices_SHPs/10m_SA_entropy_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/20m_SA_entropy_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/50m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv`
 - matching long and wide bootstrap CSVs for each scale
-- `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_10m_smooth_masked_5nm.shp`
-- `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_20m_smooth_masked_5nm.shp`
-- `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_50m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/SA_entropy_10m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/SA_entropy_20m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/SA_entropy_50m_smooth_masked_5nm.shp`
 
 ## Results
 
@@ -63,6 +63,7 @@ Calculate per-quadrat spectral heterogeneity values for each resolution from the
 
 ## Notes
 
+- Do not describe the current SA entropy values as if all pairwise spectral angle combinations were calculated for every quadrat. The `n_pairs` field records the possible number of all-retained-pixel pairs, but `method = "bootstrap_mean"` rows report the mean of 70 bootstrap iterations, not exhaustive all-pair entropy.
 - Exact all-pixel entropy remains quadratic in pixel count. The script explores that path only for small enough masked quadrats and otherwise uses `boot_mean` as the primary spectral heterogeneity value.
 - Representative masked quadrats had millions to billions of possible all-pixel spectral angle pairs, so fallback to `boot_mean` was expected for most quadrats.
 - The earlier package visibility issue was sandbox-specific. `terra` and `beepr` were found in `C:/Users/PaintRock/AppData/Local/R/win-library/4.2` when Codex was allowed to access that R user library path.

@@ -10,7 +10,7 @@ library(beepr)
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity/")
 spec_dir <- "Quad_Spectra/20m_smoothed_5nm"
 shp_path <- "Quad_Scale_SHPs/PR_20m.shp"
-out_shp  <- "Indices_SHPs/Spectral_diversitySHPs/QuadInclSA_entropy_20m_smoothed_masked_5nm.shp"
+out_shp  <- "Quad_Values/Spectral_diversitySHPs/QuadInclSA_entropy_20m_smoothed_masked_5nm.shp"
 
 ras_files <- list.files(spec_dir, full.names = TRUE)
 ras_files <- ras_files[!grepl("\\.hdr$|\\.aux$|\\.xml$|\\.enp$|\\.sta$", ras_files)]
@@ -106,7 +106,7 @@ beep()
 stopCluster(cl)
 
 het_df <- bind_rows(het_list)
-write.csv(het_df, "Indices_SHPs/20m_SA_smooth_masked_7_11.csv")
+write.csv(het_df, "Quad_Values/20m_SA_smooth_masked_7_11.csv")
 
 # --- Merge with shapefile ---
 quads_sf <- st_read(shp_path, quiet = TRUE) |>

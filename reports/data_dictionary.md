@@ -1,8 +1,10 @@
 # Data Dictionary
 
-Last updated: 2026-06-24
+Last updated: 2026-07-06
 
 This dictionary inventories current datasets visible in the repository. Large raster and hyperspectral products were documented from file metadata and project context; row/column counts are listed where lightweight tabular inspection was possible. Unnamed first columns in CSV outputs are treated as likely index columns unless later script review shows otherwise.
+
+Path note: as of 2026-07-06, the live derived-output directory visible in the working tree is `Quad_Values/`. Producing scripts and documentation now use this path for derived spectral, diversity, environmental, topographic, and index outputs.
 
 ## Tabular Datasets
 
@@ -94,11 +96,11 @@ This dictionary inventories current datasets visible in the repository. Large ra
 | `spctrl_` | numeric | Spectral metric field, exact derivation should be confirmed |
 | `geometry` | geometry text | Geometry representation |
 
-### `Indices_SHPs/20m_spectral_sp.csv`
+### `Quad_Values/20m_spectral_sp.csv`
 
 - Dataset Name: 20 m spectral, biodiversity, species, and environmental table
 - Description: Main integrated 20 m analysis table combining spectral entropy/PCA metrics, phylogenetic and species-diversity metrics, species abundance columns, geometry, and environmental variables.
-- Source Location: `Indices_SHPs/20m_spectral_sp.csv`
+- Source Location: `Quad_Values/20m_spectral_sp.csv`
 - Row Count: 500
 - Column Count: 69
 - Primary Keys: `Name`
@@ -119,11 +121,11 @@ This dictionary inventories current datasets visible in the repository. Large ra
 | `dmnnt_v`, `avg_lvt`, `elvtn_r` | numeric | Dominance/living-tree/elevation related covariates |
 | `geometry` | geometry text | Quadrat geometry |
 
-### `Indices_SHPs/20m_SA_smooth_masked.csv`
+### `Quad_Values/20m_SA_smooth_masked.csv`
 
 - Dataset Name: 20 m masked smoothed spectral angle entropy
 - Description: Quadrat-level spectral entropy table using smoothed and masked spectra.
-- Source Location: `Indices_SHPs/20m_SA_smooth_masked.csv`
+- Source Location: `Quad_Values/20m_SA_smooth_masked.csv`
 - Row Count: 436
 - Column Count: 3
 - Primary Keys: `Name`
@@ -139,11 +141,11 @@ This dictionary inventories current datasets visible in the repository. Large ra
 | `Name` | numeric | Quadrat identifier |
 | `spectral_entropy` | numeric | Spectral angle entropy |
 
-### `Indices_SHPs/20m_SA_smooth_masked_7_11.csv`
+### `Quad_Values/20m_SA_smooth_masked_7_11.csv`
 
 - Dataset Name: 20 m masked smoothed spectral angle entropy, 7/11 variant
 - Description: Quadrat-level spectral entropy table using a smoothed/masked parameter variant.
-- Source Location: `Indices_SHPs/20m_SA_smooth_masked_7_11.csv`
+- Source Location: `Quad_Values/20m_SA_smooth_masked_7_11.csv`
 - Row Count: 436
 - Column Count: 3
 - Primary Keys: `Name`
@@ -159,11 +161,11 @@ This dictionary inventories current datasets visible in the repository. Large ra
 | `Name` | numeric | Quadrat identifier |
 | `spectral_entropy` | numeric | Spectral angle entropy |
 
-### `Indices_SHPs/20m_SA_entrop_boot_results.csv`
+### `Quad_Values/20m_SA_entrop_boot_results.csv`
 
 - Dataset Name: 20 m spectral angle entropy bootstrap results, 10 iterations
-- Description: Quadrat-level bootstrap estimates for spectral angle entropy.
-- Source Location: `Indices_SHPs/20m_SA_entrop_boot_results.csv`
+- Description: Quadrat-level bootstrap values for spectral angle entropy.
+- Source Location: `Quad_Values/20m_SA_entrop_boot_results.csv`
 - Row Count: 436
 - Column Count: 18
 - Primary Keys: `Name`
@@ -177,14 +179,14 @@ This dictionary inventories current datasets visible in the repository. Large ra
 |---|---|---|
 | `Name` | numeric identifier | Quadrat identifier |
 | `n_pixels` | numeric | Number of pixels sampled |
-| `boot_1` to `boot_10` | numeric | Bootstrap replicate entropy estimates |
+| `boot_1` to `boot_10` | numeric | Bootstrap replicate entropy values |
 | `boot_mean`, `boot_sd`, `boot_cv`, `boot_median`, `boot_min`, `boot_max` | numeric | Bootstrap summary statistics |
 
-### `Indices_SHPs/20m_SA_entrop_boot100_results.csv`
+### `Quad_Values/20m_SA_entrop_boot100_results.csv`
 
 - Dataset Name: 20 m spectral angle entropy bootstrap results, 100 iterations
-- Description: Current expanded bootstrap estimates for spectral angle entropy.
-- Source Location: `Indices_SHPs/20m_SA_entrop_boot100_results.csv`
+- Description: Current expanded bootstrap values for spectral angle entropy.
+- Source Location: `Quad_Values/20m_SA_entrop_boot100_results.csv`
 - Row Count: 436
 - Column Count: 108
 - Primary Keys: `Name`
@@ -198,14 +200,14 @@ This dictionary inventories current datasets visible in the repository. Large ra
 |---|---|---|
 | `Name` | numeric identifier | Quadrat identifier |
 | `n_pixels` | numeric | Number of pixels sampled |
-| `boot_1` to `boot_100` | numeric | Bootstrap replicate entropy estimates |
+| `boot_1` to `boot_100` | numeric | Bootstrap replicate entropy values |
 | `boot_mean`, `boot_sd`, `boot_cv`, `boot_median`, `boot_min`, `boot_max` | numeric | Bootstrap summary statistics |
 
 ### Current spectral angle entropy outputs from `_smooth_5nm`
 
 - Dataset Name: Current per-scale spectral angle entropy from smoothed 5 nm spectra
-- Description: Per-quadrat spectral heterogeneity tables generated by `scripts/2_Indices Creation/Spectral_diversity/SA_entropy_bootstrapping.R` from current smoothed 5 nm spectra. The workflow attempts exact all-pixel spectral angle entropy only when pairwise angle counts are below the configured limit and otherwise uses the mean of bootstrap subsamples as the primary spectral heterogeneity value. Large bootstrap replicates use sampled pixel pairs to avoid materializing all pairwise angles.
-- Source Location: `Indices_SHPs/*_SA_entropy_smooth_masked_5nm_*.csv`
+- Description: Per-quadrat spectral heterogeneity tables generated by `scripts/2_Indices Creation/Spectral_diversity/SA_entropy_bootstrapping.R` from current smoothed 5 nm spectra. For most quadrats, `spectral_entropy` is the mean of 70 bootstrap iterations using up to 5,000 retained pixels per iteration; large bootstrap iterations use 10,000 sampled pixel pairs. The small subset with pair counts below the configured exact threshold uses all retained pixel pairs. Therefore, these outputs should not be described as exhaustive all-pair calculations except for rows with `method = "exact_all_pixels"`.
+- Source Location: `Quad_Values/*_SA_entropy_smooth_masked_5nm_*.csv`
 - Row Count: summary CSVs contain 1,909 rows for 10 m, 485 rows for 20 m, and 80 rows for 50 m; long bootstrap CSVs contain 133,630 rows for 10 m, 33,950 rows for 20 m, and 5,600 rows for 50 m
 - Column Count: summary CSVs contain 12 columns; wide bootstrap CSVs contain 72 columns, including 70 bootstrap replicate columns
 - Primary Keys: `quad_id`
@@ -219,9 +221,9 @@ This dictionary inventories current datasets visible in the repository. Large ra
 |---|---|---|
 | `quad_id` | identifier | Quadrat identifier matched to the appropriate scale: 10 m `sub_id`, 20 m `Name`, or 50 m `Name` |
 | `n_pixels` | numeric | Count of sunlit, valid spectra after shadow masking and NA/zero filtering |
-| `n_pairs` | numeric | Number of possible pairwise spectral angles among retained pixels |
+| `n_pairs` | numeric | Number of possible pairwise spectral angles among retained pixels; for `bootstrap_mean` rows this is metadata, not the number of pairs actually evaluated |
 | `method` | categorical | `exact_all_pixels`, `bootstrap_mean`, or `insufficient_pixels` |
-| `spectral_entropy` | numeric | Primary spectral heterogeneity value; exact entropy when feasible, otherwise bootstrap mean |
+| `spectral_entropy` | numeric | Primary spectral heterogeneity value; all-retained-pixel entropy for exact rows, otherwise the mean of 70 bootstrap iterations |
 | `exact_entropy` | numeric | All-pixel spectral angle entropy when pair counts are below the configured exact threshold |
 | `boot_mean`, `boot_sd`, `boot_cv`, `boot_median`, `boot_min`, `boot_max` | numeric | Bootstrap summary fields used when all-pixel entropy is not computationally reasonable |
 | `boot_1` ... `boot_n` | numeric | Wide-format bootstrap replicate values, where `n` is controlled by `SA_N_BOOT` |
@@ -230,7 +232,7 @@ This dictionary inventories current datasets visible in the repository. Large ra
 
 - Dataset Name: Current per-scale combined spectral heterogeneity outputs
 - Description: Exclusion-aware spectral heterogeneity tables generated by `scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all_metrics.R`. These combine existing SA entropy with PCA-dependent metrics. The current PCA basis excludes manually documented atmospheric/cloud-affected quadrats before PCA sampling and leaves PCA-dependent values missing for those quadrats. Earlier PCA-dependent outputs from 2026-06-22 created before this exclusion policy should be disregarded.
-- Source Location: `Indices_SHPs/*_spectral_heterogeneity_smooth_masked_5nm_summary.csv` and `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_*_smooth_masked_5nm.*`
+- Source Location: `Quad_Values/*_spectral_heterogeneity_smooth_masked_5nm_summary.csv` and `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_*_smooth_masked_5nm.*`
 - Row Count: combined CSVs contain 1,909 rows for 10 m, 485 rows for 20 m, and 80 rows for 50 m
 - Column Count: not re-counted after all joins; includes PCA-dependent metric fields and prefixed SA entropy fields
 - Primary Keys: `quad_id`
@@ -249,38 +251,85 @@ This dictionary inventories current datasets visible in the repository. Large ra
 | `alpha_hull_area` | numeric | Alpha-hull area in global PC1-PC2 space; may use deterministic sampling for large quadrats |
 | `rao_q_pca` | numeric | Rao's Q using equal pixel weights and squared Euclidean distance in global PC1-PC3 space |
 | `pca_hull_volume_3d`, `pca_hull_area_3d` | numeric | Supplemental convex hull volume and surface area in global PC1-PC3 space; not a true 3D alpha hull |
-| `sa_*` fields | numeric/categorical | Prefixed fields imported from the current SA entropy summary CSVs |
+| `sa_*` fields | numeric/categorical | Prefixed fields imported from the current SA entropy summary CSVs; use `sa_method` to distinguish exact all-pixel entropy from bootstrap means |
 
 ### `reports/tables/bootstrap_variation/*.csv`
 
 - Dataset Name: Bootstrap variation quality-control tables
 - Description: Derived validation tables comparing within-quadrat bootstrap variation with between-quadrat spectral heterogeneity variation for 10 m, 20 m, and 50 m spectral entropy outputs.
 - Source Location: `reports/tables/bootstrap_variation/`
-- Row Count: 3 rows in `bootstrap_variation_scale_summary.csv`; 2,422 rows in `bootstrap_variation_quadrat_diagnostics.csv`; 45 rows in `bootstrap_variation_top_unstable_quadrats.csv`
-- Column Count: 36 columns in scale summary; 18 columns in quadrat diagnostics; 18 columns in top unstable quadrats
+- Row Count: 3 rows in `bootstrap_variation_scale_summary.csv`; 2,422 rows in `bootstrap_variation_quadrat_diagnostics.csv`; 45 rows in `bootstrap_variation_top_unstable_quadrats.csv`; 45 rows in `bootstrap_variation_widest_ci_quadrats.csv`
+- Column Count: 42 columns in scale summary; 24 columns in quadrat diagnostics; 24 columns in top unstable quadrats; 24 columns in widest-CI quadrats
 - Primary Keys: `scale` for scale summary; `scale` + `quad_id` for quadrat-level diagnostics
 - Date Fields: none detected
-- Numeric Fields: bootstrap SD/CV, between-scale variance summaries, standard-error estimates, pixel counts, pair counts, outlier replicate counts
+- Numeric Fields: bootstrap SD/CV, between-scale variance summaries, standard errors, bootstrap-mean confidence intervals, pixel counts, pair counts, outlier replicate counts
 - Categorical Fields: `scale`, `quad_id`, `method`, `stability_class`
 - Missing Value Summary: exact all-pixel and insufficient-pixel quadrats are excluded from quadrat-level bootstrap diagnostics; no missing values expected in the scale summary
 - Last Updated: 2026-06-18
 
 | Variable Group | Type | Description |
 |---|---|---|
-| `scale`, `quad_id`, `method` | identifier/categorical | Analysis scale, quadrat identifier, and spectral entropy estimation method |
+| `scale`, `quad_id`, `method` | identifier/categorical | Analysis scale, quadrat identifier, and spectral entropy calculation method |
 | `between_sd`, `between_var`, `between_iqr` | numeric | Between-quadrat spectral entropy variation at each scale |
 | `mean_entropy`, `median_entropy`, `entropy_skewness` | numeric | Scale-level distribution summaries for final spectral heterogeneity values |
 | `within_sd_*`, `within_cv_*` | numeric | Within-quadrat bootstrap variation summaries |
-| `boot_se_*` | numeric | Standard error summaries for the reported bootstrap mean |
+| `boot_se_*`, `boot_ci_*` | numeric | Standard error and 95 percent confidence interval summaries for the reported bootstrap mean |
 | `within_to_between_var_ratio`, `icc_like_between_fraction` | numeric | Diagnostics comparing within-bootstrap variation to between-quadrat variation |
 | `quads_cv_gt_005`, `quads_cv_gt_010` | numeric | Counts of quadrats exceeding 5% and 10% bootstrap CV thresholds |
 | `outlier_reps` | numeric | Number of bootstrap replicates outside the quadrat-level 1.5 IQR fences |
+
+### `reports/tables/sample_size_effects/sa_entropy/*.csv`
+
+- Dataset Name: SA entropy sample-size effects experiment
+- Description: Bootstrap sensitivity experiment generated by `scripts/3_Analysis/sa_entropy_sample_size_effects.R`. The workflow uses 32 selected 10 m quadrat spectra rasters, 16 selected 20 m rasters, and 8 selected 50 m rasters while retaining the original six pilot quadrats. It compares spectral angle entropy across scale-aware sample-size rules: 1%, 2%, and 3% of retained pixels capped at 5,000 pixels; fixed 1,250 and 4,000 pixels at all scales; fixed 2,000 and 3,000 pixels for 10 m and 20 m; and fixed 6,000 and 8,000 pixels for 50 m. Each quadrat x sample-rule combination uses 50 bootstrap iterations. When a rule resolves to 100% of retained pixels, the full-pixel entropy is calculated once and repeated across the 50 output rows so the full-pixel condition has zero artificial bootstrap variation. Outputs are stored under an `sa_entropy` spectral-variation-type folder so parallel experiments for other spectral metrics can be added cleanly.
+- Source Location: `reports/tables/sample_size_effects/sa_entropy/`
+- Row Count: 392 rows in `sa_entropy_sample_size_design.csv`; 19,600 rows in `sa_entropy_sample_size_boot_long.csv`; 392 rows in `sa_entropy_sample_size_summary.csv`
+- Column Count: 18 columns in design; 21 columns in long bootstrap results; 29 columns in summary
+- Primary Keys: `scale`, `quad_id`, `sample_rule`; plus `bootstrap_iter` for long bootstrap results
+- Date Fields: none detected
+- Numeric Fields: retained pixel counts, sample sizes, sample fractions, bootstrap entropy values, bootstrap means/SD/CV/SE, 95 percent confidence intervals, and differences from the fixed-4,000 rule
+- Categorical Fields: `scale`, `quad_id`, `sample_rule`, `rule_type`, `rule_axis_label`, `sample_label`, `plot_sample_label`, `applicable_scales`, `pair_method`
+- Missing Value Summary: no missing bootstrap entropy values expected; fixed 4,000 is capped to 3,976 pixels for 10 m quadrat `800_a`, which is the only current 100% retained-pixel condition in the expanded design
+- Last Updated: 2026-07-04
+
+| Variable Group | Type | Description |
+|---|---|---|
+| `scale`, `quad_id`, `sample_rule`, `rule_type`, `sample_label` | identifier/categorical | Quadrat scale and sample-size rule, with fixed-count labels showing the realized percent of each quadrat in parentheses |
+| `n_pixels`, `sample_size`, `sample_fraction` | numeric | Retained pixel pool and number/fraction of pixels sampled per bootstrap iteration |
+| `bootstrap_iter`, `spectral_entropy` | numeric | Bootstrap iteration index and resulting SA entropy value |
+| `entropy_mean`, `entropy_sd`, `entropy_cv`, `entropy_se` | numeric | Mean and variability of the 50 bootstrap entropy values for each quadrat x sample-rule combination |
+| `ci_low`, `ci_high`, `ci_half_width` | numeric | 95 percent confidence interval around the 50-iteration mean |
+| `delta_from_fixed_4000` | numeric | Difference between each sample rule mean and the same quadrat's fixed-4,000-pixel mean |
+
+### `reports/tables/sample_size_effects/{pca_mean_distance,spectral_rao_q,alpha_hull_area}/*.csv`
+
+- Dataset Name: PCA-derived spectral metric sample-size effects experiments
+- Description: Bootstrap sensitivity experiments generated by `scripts/3_Analysis/spectral_metric_sample_size_effects.R`. These reuse the finalized SA entropy quadrat/sample design so PCA mean distance, spectral Rao's Q, and alpha-hull area are evaluated on the same 32 selected 10 m quadrats, 16 selected 20 m quadrats, and 8 selected 50 m quadrats. Each quadrat x sample-rule combination uses 50 bootstrap iterations. Each replicate samples retained pixels without replacement; when a rule resolves to 100% of retained pixels, the metric is calculated once from the full retained-pixel set and repeated across the 50 output rows so the full-pixel condition has zero artificial bootstrap variation. Mean-by-sample-size figures include 95% CI error bars around the 50-iteration mean.
+- Source Location: `reports/tables/sample_size_effects/pca_mean_distance/`, `reports/tables/sample_size_effects/spectral_rao_q/`, and `reports/tables/sample_size_effects/alpha_hull_area/`
+- Row Count: each metric folder has 392 rows in `*_sample_size_design.csv`, 19,600 rows in `*_sample_size_boot_long.csv`, and 392 rows in `*_sample_size_summary.csv`
+- Column Count: 18 columns in design; 20 columns in long bootstrap results; 29 columns in summary
+- Primary Keys: `scale`, `quad_id`, `sample_rule`; plus `bootstrap_iter` for long bootstrap results
+- Date Fields: none detected
+- Numeric Fields: retained pixel counts, sample sizes, sample fractions, bootstrap metric values, bootstrap means/SD/CV/SE, 95 percent confidence intervals, and differences from the fixed-4,000 rule
+- Categorical Fields: `scale`, `quad_id`, `sample_rule`, `rule_type`, `rule_axis_label`, `sample_label`, `plot_sample_label`, `metric_method`
+- Missing Value Summary: no missing bootstrap mean values in current summary tables
+- Last Updated: 2026-07-04
+
+| Variable Group | Type | Description |
+|---|---|---|
+| `scale`, `quad_id`, `sample_rule`, `rule_type`, `sample_label` | identifier/categorical | Quadrat scale and sample-size rule, with fixed-count labels showing the realized percent of each quadrat in parentheses |
+| `n_pixels`, `sample_size`, `sample_fraction` | numeric | Retained pixel pool and number/fraction of pixels sampled per bootstrap iteration |
+| `bootstrap_iter`, `metric_value` | numeric | Bootstrap iteration index and resulting PCA mean distance, Rao's Q, or alpha-hull area value, depending on the metric folder |
+| `metric_mean`, `metric_sd`, `metric_cv`, `metric_se` | numeric | Mean and variability of the 50 bootstrap metric values for each quadrat x sample-rule combination |
+| `ci_low`, `ci_high` | numeric | 95 percent confidence interval around the 50-iteration mean |
+| `delta_from_fixed_4000` | numeric | Difference between each sample rule mean and the same quadrat's fixed-4,000-pixel mean |
+| `metric_method`, `metric_n_points_min`, `metric_n_points_max` | categorical/numeric | Calculation method and point counts used by the metric; alpha-hull may remove duplicate PC1-PC2 points internally |
 
 ### Current all-scale plant diversity outputs
 
 - Dataset Name: Current per-scale species and phylogenetic diversity outputs
 - Description: Quadrat-level species matrix, species diversity metrics, and phylogenetic diversity metrics generated by `scripts/2_Indices Creation/Plant_diversity/plant_diversity_all_scales.R`. The species matrix values represent the summed proportion of buffered tree crowns intersecting each quadrat by species. The workflow preserves the current tree filtering logic from the older plant-diversity scripts: `DBH.2024 >= 200`, `crown.position` in `3, 4, 5`, and `cluster_status` in `A, R`.
-- Source Location: `Indices_SHPs/Diversity_SHPs/plant_diversity_10m.csv`, `Indices_SHPs/Diversity_SHPs/plant_diversity_20m.csv`, `Indices_SHPs/Diversity_SHPs/plant_diversity_50m.csv`, with matching shapefiles
+- Source Location: `Quad_Values/Diversity_SHPs/plant_diversity_10m.csv`, `Quad_Values/Diversity_SHPs/plant_diversity_20m.csv`, `Quad_Values/Diversity_SHPs/plant_diversity_50m.csv`, with matching shapefiles
 - Row Count: 2,000 rows for 10 m, 500 rows for 20 m, and 80 rows for 50 m
 - Column Count: 61 columns for 10 m CSV, 60 columns for 20 m CSV, and 60 columns for 50 m CSV
 - Primary Keys: `scale`, `quad_id`
@@ -307,7 +356,7 @@ This dictionary inventories current datasets visible in the repository. Large ra
 
 - Dataset Name: Current per-scale elevation and topographic roughness outputs
 - Description: Quadrat-level environmental covariates generated by `scripts/2_Indices Creation/Enviro_Variables/environmental_variables_all_scales.R` from `PRFPD_DTM_leafOff.tiff`. The workflow calculates mean DTM elevation and mean Riley topographic roughness index values after calculating Riley TRI rasters with 5x5, 11x11, and 21x21 moving windows.
-- Source Location: `Indices_SHPs/Enviro_SHPs/enviro_variables_10m.csv`, `enviro_variables_20m.csv`, and `enviro_variables_50m.csv`, with matching shapefiles
+- Source Location: `Quad_Values/Enviro_SHPs/enviro_variables_10m.csv`, `enviro_variables_20m.csv`, and `enviro_variables_50m.csv`, with matching shapefiles
 - Row Count: 2,000 rows for 10 m, 500 rows for 20 m, and 80 rows for 50 m
 - Column Count: 8 columns for 10 m CSV, 7 columns for 20 m CSV, and 7 columns for 50 m CSV
 - Primary Keys: `scale`, `quad_id`
@@ -352,11 +401,48 @@ This dictionary inventories current datasets visible in the repository. Large ra
 
 Detailed definitions and calculation notes for every shortened column are in `reports/combined_quadrat_variable_guide.md` and the user-friendly Word version `combined_quadrat_variable_guide.docx`.
 
-### `Indices_SHPs/Other_variables/Slope_Aspect.csv`
+### `reports/tables/multiscale_spectral_biodiversity/*.csv`
+
+- Dataset Name: Multiscale spectral-biodiversity analysis outputs
+- Description: Derived analysis tables generated by `scripts/3_Analysis/multiscale_spectral_biodiversity_analysis.R` from the current root-level combined quadrat analysis tables. These tables support the PDF findings report and model appendix.
+- Source Location: `reports/tables/multiscale_spectral_biodiversity/`
+- Row Count: 2,580 rows in `analysis_dataset_with_flags.csv`; 60 rows in `correlation_results.csv`; 105 rows in `model_summary_results.csv`; 309 rows in `model_coefficient_results.csv`; 3 rows in `primary_best_models_by_scale.csv`; 9 rows in `residual_moran_diagnostics.csv`
+- Column Count: varies by output table
+- Primary Keys: `scale` plus `quad_id` for the flagged analysis dataset; `scale`, `response`, `model_type`, and `predictor` for model summaries; `scale`, `response`, and `predictor` for correlations
+- Date Fields: none detected
+- Numeric Fields: standardized analysis variables, Pearson/Spearman correlations, model R2 and AIC values, coefficients, confidence intervals, p-values, and Moran's I diagnostics
+- Categorical Fields: `quad_id`, `scale`, `response`, `predictor`, `model_type`, edge/primary-analysis flags
+- Missing Value Summary: preserves upstream missingness from the combined quadrat tables; no spectral values are imputed
+- Last Updated: 2026-06-24
+
+| Variable Group | Type | Description |
+|---|---|---|
+| `quad_id`, `scale`, `edge_flag`, `primary_analysis` | identifier/categorical | Quadrat identity, analysis scale, documented edge-quadrat flag, and whether the row is included in primary model inference |
+| `*_z` fields | numeric | Standardized model variables used for comparable coefficients |
+| `pearson_r`, `spearman_r`, `pearson_p` | numeric | Correlation diagnostics by scale, spectral response, and predictor |
+| `r_squared`, `adj_r_squared`, `aic`, `delta_aic` | numeric | Candidate-model performance summaries |
+| `estimate`, `std.error`, `conf.low`, `conf.high`, `p.value` | numeric | Model coefficient summaries from standardized OLS candidate models |
+| `moran_i`, `expected_i` | numeric | 8-nearest-neighbor Moran's I diagnostics for residual spatial autocorrelation |
+
+### `Documents/PDFs/spectral_biodiversity_*.pdf`
+
+- Dataset Name: Multiscale spectral-biodiversity PDF reports
+- Description: User-facing PDF reports summarizing the current multiscale spectral-biodiversity analysis and model appendix.
+- Source Location: `Documents/PDFs/spectral_biodiversity_multiscale_findings.pdf` and `Documents/PDFs/spectral_biodiversity_model_appendix.pdf`
+- Row Count: not applicable
+- Column Count: not applicable
+- Primary Keys: not applicable
+- Date Fields: file timestamps only
+- Numeric Fields: embedded model, correlation, and diagnostic summaries
+- Categorical Fields: report sections, captions, and interpretation notes
+- Missing Value Summary: not applicable
+- Last Updated: 2026-06-24
+
+### `Quad_Values/Other_variables/Slope_Aspect.csv`
 
 - Dataset Name: 20 m slope/aspect environmental covariates
 - Description: Quadrat-level topographic covariates used as environmental drivers.
-- Source Location: `Indices_SHPs/Other_variables/Slope_Aspect.csv`
+- Source Location: `Quad_Values/Other_variables/Slope_Aspect.csv`
 - Row Count: 500
 - Column Count: 7
 - Primary Keys: `name`
@@ -460,11 +546,11 @@ Detailed definitions and calculation notes for every shortened column are in `re
 | 20 m | `Quad_Spectra/20m_smooth_5nm` | 485 | 17.387 GB | `0`: 121 bands, 272 rows, 272 columns |
 | 50 m | `Quad_Spectra/50m_smooth_5nm` | 80 | 17.908 GB | `sub50_1`: 121 bands, 680 rows, 680 columns |
 
-### `Indices_SHPs/Diversity_Rasters/`
+### `Quad_Values/Diversity_Rasters/`
 
 - Dataset Name: Diversity raster outputs
 - Description: Rasterized biodiversity metrics, including Shannon, Simpson, richness, Rao PD, Faith PD, abundance-weighted Faith PD, and evenness products.
-- Source Location: `Indices_SHPs/Diversity_Rasters/`
+- Source Location: `Quad_Values/Diversity_Rasters/`
 - Row Count: not applicable
 - Column Count: not applicable
 - Primary Keys: raster filenames
@@ -474,11 +560,11 @@ Detailed definitions and calculation notes for every shortened column are in `re
 - Missing Value Summary: not inspected
 - Last Updated: based on file metadata
 
-### `Indices_SHPs/Diversity_SHPs/`
+### `Quad_Values/Diversity_SHPs/`
 
 - Dataset Name: Diversity shapefile outputs
 - Description: Vector biodiversity metrics for analysis quadrats.
-- Source Location: `Indices_SHPs/Diversity_SHPs/`
+- Source Location: `Quad_Values/Diversity_SHPs/`
 - Row Count: not inspected from shapefile DBF in this pass
 - Column Count: not inspected from shapefile DBF in this pass
 - Primary Keys: quadrat identifiers
@@ -488,11 +574,11 @@ Detailed definitions and calculation notes for every shortened column are in `re
 - Missing Value Summary: not inspected
 - Last Updated: based on file metadata
 
-### `Indices_SHPs/Spectral_diversitySHPs/`
+### `Quad_Values/Spectral_diversitySHPs/`
 
 - Dataset Name: Spectral diversity shapefile outputs
 - Description: Current vector spectral products that produce spectral heterogeneity values, including spectral angle entropy, band entropy, quadrat-inclusive entropy variants, and global PCA metrics.
-- Source Location: `Indices_SHPs/Spectral_diversitySHPs/`
+- Source Location: `Quad_Values/Spectral_diversitySHPs/`
 - Row Count: not inspected from shapefile DBF in this pass
 - Column Count: not inspected from shapefile DBF in this pass
 - Primary Keys: quadrat identifiers
@@ -519,7 +605,7 @@ Detailed definitions and calculation notes for every shortened column are in `re
 ## Notes
 
 - PowerShell assigned `H1` to unnamed first columns in several CSVs. These are documented as unnamed row/index columns and should not be interpreted as analytical variables unless script review proves otherwise.
-- Spectral products that produce spectral heterogeneity values are in `Indices_SHPs/Spectral_diversitySHPs/`.
+- Spectral products that produce spectral heterogeneity values are stored in `Quad_Values/Spectral_diversitySHPs/`.
 - Confirmed spectra cropped to quadrat extents are in `Quad_Spectra/10m`, `Quad_Spectra/20m`, and `Quad_Spectra/50m`.
 - Current smoothed spectra generated from confirmed partitioned inputs are in `Quad_Spectra/10m_smooth`, `Quad_Spectra/20m_smooth`, and `Quad_Spectra/50m_smooth`.
 - Current smoothed 5 nm spectra are in `Quad_Spectra/10m_smooth_5nm`, `Quad_Spectra/20m_smooth_5nm`, and `Quad_Spectra/50m_smooth_5nm`.

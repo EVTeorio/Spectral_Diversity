@@ -23,7 +23,7 @@ suppressPackageStartupMessages({
 })
 
 DTM_PATH <- "PRFPD_DTM_leafOff.tiff"
-OUTPUT_DIR <- "Indices_SHPs/Enviro_SHPs"
+OUTPUT_DIR <- "Quad_Values/Enviro_SHPs"
 
 SCALE_CONFIG <- list(
   "10m" = list(
@@ -53,7 +53,7 @@ find_project_root <- function(start_dir = getwd()) {
     if (
       file.exists(file.path(current_dir, DTM_PATH)) &&
         dir.exists(file.path(current_dir, "Quad_Scale_SHPs")) &&
-        dir.exists(file.path(current_dir, "Indices_SHPs"))
+        dir.exists(file.path(current_dir, "Quad_Values"))
     ) {
       return(current_dir)
     }

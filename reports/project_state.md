@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-06-24
+Last updated: 2026-07-06
 
 ## Current Objective
 
@@ -42,13 +42,13 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Confirmed R package availability through the R 4.2 user library when Codex is allowed to access `C:/Users/PaintRock/AppData/Local/R/win-library/4.2`; `terra` 1.7.71 and `beepr` are available there.
 - Ran the spectral heterogeneity workflow for all three scales from current `_smooth_5nm` spectra.
 - Created current spectral heterogeneity outputs:
-  - `Indices_SHPs/10m_SA_entropy_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/20m_SA_entropy_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/50m_SA_entropy_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv`
   - matching long and wide bootstrap CSVs for 10 m, 20 m, and 50 m
-  - `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_10m_smooth_masked_5nm.shp`
-  - `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_20m_smooth_masked_5nm.shp`
-  - `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_50m_smooth_masked_5nm.shp`
+  - `Quad_Values/Spectral_diversitySHPs/SA_entropy_10m_smooth_masked_5nm.shp`
+  - `Quad_Values/Spectral_diversitySHPs/SA_entropy_20m_smooth_masked_5nm.shp`
+  - `Quad_Values/Spectral_diversitySHPs/SA_entropy_50m_smooth_masked_5nm.shp`
 - Added `scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all_metrics.R` to create all-scale spectral heterogeneity outputs with four primary measures:
   - existing spectral angle entropy
   - PCA-space mean Euclidean distance from the quadrat centroid
@@ -58,39 +58,43 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Current PCA-dependent outputs supersede and replace the earlier 2026-06-22 PCA-dependent outputs created before manual exclusions were applied; the earlier pre-exclusion PCA values should be disregarded.
 - Created a global PCA basis from a uniform per-eligible-quadrat sample across current 10 m, 20 m, and 50 m smoothed 5 nm spectra, with a requested target of up to 500 retained sunlit pixels per eligible quadrat raster and a configured maximum PCA sample of 800,000 rows. The effective uniform sample was 354 pixels per eligible raster, producing 797,916 sampled pixels from 2,254 eligible rasters.
 - Created PCA variance diagnostic outputs:
-  - `Indices_SHPs/Spectral_diversitySHPs/global_pca_smooth_masked_5nm.rds`
-  - `Indices_SHPs/Spectral_diversitySHPs/global_pca_smooth_masked_5nm_variance_explained.csv`
+  - `Quad_Values/Spectral_diversitySHPs/global_pca_smooth_masked_5nm.rds`
+  - `Quad_Values/Spectral_diversitySHPs/global_pca_smooth_masked_5nm_variance_explained.csv`
   - `reports/figures/spectral_heterogeneity/global_pca_smooth_masked_5nm_variance_explained.png`
 - Global PCA variance explained after manual exclusions: PC1 = 66.98%, PC2 = 19.93%, PC3 = 3.80%, cumulative PC1-PC3 = 90.71%.
 - Created all-scale combined spectral heterogeneity CSVs and shapefiles:
-  - `Indices_SHPs/10m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/20m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/50m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm.shp`
-  - `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm.shp`
-  - `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm.shp`
+  - `Quad_Values/10m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/20m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/50m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm.shp`
+  - `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm.shp`
+  - `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm.shp`
 - Created PCA-only metric CSVs:
-  - `Indices_SHPs/10m_PCA_metrics_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/20m_PCA_metrics_smooth_masked_5nm_summary.csv`
-  - `Indices_SHPs/50m_PCA_metrics_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/10m_PCA_metrics_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/20m_PCA_metrics_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/50m_PCA_metrics_smooth_masked_5nm_summary.csv`
 - Added `reports/validation/20260622_spectral_heterogeneity_all_metrics_validation.md`.
 - Created a bootstrap variation QC analysis comparing within-quadrat bootstrap variation to between-quadrat spectral heterogeneity variation.
 - Added `scripts/3_Analysis/bootstrap_variation_analysis.R`.
 - Created `reports/analysis/20260618_bootstrap_variation_analysis.md` with seven figures and three diagnostic tables under `reports/figures/bootstrap_variation/` and `reports/tables/bootstrap_variation/`.
 - Added `reports/figures/bootstrap_variation/spectral_entropy_histograms_by_scale.png` to visualize spectral heterogeneity distribution shape and skewness by scale.
-- Bootstrap variation analysis conclusion: `spectral_entropy` / `boot_mean` values are usable as primary heterogeneity estimates, but `boot_sd`, `boot_cv`, and `method` should be carried forward as quality-control fields and high-CV quadrats should be used in sensitivity checks.
+- Bootstrap variation analysis conclusion: `spectral_entropy` / `boot_mean` values are usable as primary heterogeneity means, but `boot_sd`, `boot_cv`, bootstrap-mean CI fields, and `method` should be carried forward as quality-control fields and high-CV or wide-CI quadrats should be used in sensitivity checks.
+- Added `scripts/3_Analysis/sa_entropy_sample_size_effects.R` to compare SA entropy means across fixed and percentage-based bootstrap pixel sample sizes for 32 selected 10 m quadrats, 16 selected 20 m quadrats, and 8 selected 50 m quadrats. The script retains the original six pilot quadrats; adds fixed 2,000 and 3,000 pixel rules for 10 m and 20 m, fixed 6,000 and 8,000 pixel rules for 50 m, and percent-based 1%, 2%, and 3% rules; handles full-pixel conditions deterministically so 100% retained-pixel rows have zero artificial bootstrap variation; and writes outputs to `reports/analysis/20260703_sa_entropy_sample_size_effects.md`, `reports/tables/sample_size_effects/sa_entropy/`, and `reports/figures/sample_size_effects/sa_entropy/`.
+- Added `scripts/3_Analysis/spectral_metric_sample_size_effects.R` to extend the same sample-size sensitivity design to PCA mean distance, spectral Rao's Q, and alpha-hull area. The script reuses the finalized SA entropy quadrat/sample design, calculates full-pixel conditions deterministically, writes metric-specific tables under `reports/tables/sample_size_effects/pca_mean_distance/`, `reports/tables/sample_size_effects/spectral_rao_q/`, and `reports/tables/sample_size_effects/alpha_hull_area/`, writes matching metric-specific figure folders under `reports/figures/sample_size_effects/`, draws 95% CI error bars on the mean-by-sample-size figures, and summarizes the outputs in `reports/analysis/20260704_pca_metric_sample_size_effects.md`.
+- Reviewed current Markdown context before the next task and refreshed `reports/directory_map.md` to match the live working tree. As of 2026-07-06, the live derived-output directory is `Quad_Values/`.
+- Updated scripts, reports, execution plans, validation notes, task reports, sample-size design CSVs, governance docs, and `combined_quadrat_variable_guide.docx` so `Quad_Values/` is the canonical derived-output directory. Added `reports/tasks/20260706_quad_values_path_update.md` and `reports/validation/20260706_quad_values_path_update_validation.md`.
 - Refactored the plant-diversity workflow into `scripts/2_Indices Creation/Plant_diversity/plant_diversity_all_scales.R`.
 - Updated the older plant-diversity entry scripts (`sp_weighted_matrix.R`, `species_diversity.R`, and `phylogenetic_diversity.R`) to call the all-scale workflow.
-- Created all-scale plant diversity outputs under `Indices_SHPs/Diversity_SHPs/`:
+- Created all-scale plant diversity outputs under `Quad_Values/Diversity_SHPs/`:
   - `plant_diversity_10m.csv` and `plant_diversity_10m.shp`
   - `plant_diversity_20m.csv` and `plant_diversity_20m.shp`
   - `plant_diversity_50m.csv` and `plant_diversity_50m.shp`
 - Confirmed plant-diversity `quad_id` values align with current spectral diversity IDs: 10 m uses `sub_id` values such as `0_a`, 20 m uses `Name`, and 50 m uses `Name` values such as `sub50_1`.
 - Added `scripts/2_Indices Creation/Enviro_Variables/environmental_variables_all_scales.R` to calculate all-scale environmental covariates from `PRFPD_DTM_leafOff.tiff`.
-- Created all-scale environmental outputs under `Indices_SHPs/Enviro_SHPs/`:
+- Created all-scale environmental outputs under `Quad_Values/Enviro_SHPs/`:
   - `enviro_variables_10m.csv` and `enviro_variables_10m.shp`
   - `enviro_variables_20m.csv` and `enviro_variables_20m.shp`
   - `enviro_variables_50m.csv` and `enviro_variables_50m.shp`
@@ -112,6 +116,18 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Added `reports/validation/20260624_combined_quadrat_analysis_tables_validation.md`.
 - Validation found no duplicate quadrat IDs, no missing center coordinates, no missing environmental elevation values, no per-species composition columns, and no pixel-count/pair-count/bootstrap/method/geometry metadata columns in the combined CSVs.
 - Combined-table spectral missingness reflects upstream raster availability and manual PCA exclusions: missing `spec_sa` values are 97 at 10 m, 15 at 20 m, and 0 at 50 m; missing `spec_pca_mean` values are 256 at 10 m, 64 at 20 m, and 6 at 50 m.
+- Added `scripts/3_Analysis/multiscale_spectral_biodiversity_analysis.R` to evaluate spectral-biodiversity relationships across 10 m, 20 m, and 50 m quadrat scales using the current combined analysis tables.
+- Created user-facing PDF reports under `Documents/PDFs/`:
+  - `spectral_biodiversity_multiscale_findings.pdf`
+  - `spectral_biodiversity_model_appendix.pdf`
+- Created analysis figures under `reports/figures/multiscale_spectral_biodiversity/` and analysis tables under `reports/tables/multiscale_spectral_biodiversity/`.
+- The multiscale analysis treats `spec_sa` as the primary spectral heterogeneity response and uses `spec_pca_mean`, `spec_rao_q`, and `spec_alpha` as secondary response metrics.
+- The multiscale analysis uses `phy_faith`, `phy_afaith`, and `sp_shannon` as primary biodiversity predictors and `env_elev` plus `env_tri11` as environmental controls.
+- Documented 10 m and 20 m edge quadrats were excluded from primary inference in the multiscale analysis; 50 m used all quadrats because no separate 50 m edge rule is documented.
+- Best-supported primary-response candidate models by AIC used abundance-weighted Faith's PD: biodiversity plus environment at 10 m and 20 m, and abundance-weighted Faith's PD by elevation interaction at 50 m. Adjusted R2 values were approximately 0.038, 0.094, and 0.242, respectively.
+- Residual Moran's I remained significant in primary spectral angle entropy models at all three scales, so OLS p-values should be interpreted cautiously until spatial model sensitivity checks are added.
+- Added `reports/tasks/20260624_multiscale_spectral_biodiversity_analysis.md`.
+- Added `reports/validation/20260624_multiscale_spectral_biodiversity_analysis_validation.md`.
 - Created required governance directories under `reports/` and `logs/`.
 - Created an execution plan for repository documentation and cleanup.
 - Created baseline `reports/directory_map.md`.
@@ -135,13 +151,15 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Standardize script and directory names that contain spaces or spelling errors after checking dependencies.
 - Add formal `testthat` tests once core functions are modularized.
 - Expand shapefile and raster data dictionary entries using R geospatial packages.
+- Add spatial model sensitivity checks for the multiscale spectral-biodiversity analysis because residual Moran's I remained significant after the current OLS candidate models.
+- Join bootstrap quality-control fields (`boot_sd`, `boot_cv`, and `method`) into a companion modeling table and rerun sensitivity checks that flag or exclude high-CV quadrats.
 
 ## Known Issues
 
 - R/Rscript was not available on the command path during this documentation pass.
 - Several script and directory names contain spaces or misspellings, which can complicate reproducible command-line execution.
 - Some current CSV files contain unnamed first columns.
-- `Indices_SHPs/20m_spectral_sp.csv` has 64 missing values for each primary spectral metric.
+- `Quad_Values/20m_spectral_sp.csv` has 64 missing values for each primary spectral metric.
 - `Rscript` is available at `C:/Program Files/R/R-4.2.3/bin/Rscript.exe`, matching the required R 4.2.3 compatibility target, though it is not available as `Rscript` on the active shell path.
 - Codex can access the R 4.2 user package library under `C:/Users/PaintRock/AppData/Local/R/win-library/4.2` when commands are run with permission outside the workspace sandbox; sandboxed Rscript may still report only the base R library.
 
@@ -154,9 +172,10 @@ Build a reproducible and well-documented research workflow for evaluating relati
 ## Important Assumptions
 
 - Legacy directories named `old`, `Outdated`, and `Currently not relevant` have been removed from the active repository.
-- The primary integrated 20 m analysis table is `Indices_SHPs/20m_spectral_sp.csv`.
-- The current all-scale plant-diversity outputs are `Indices_SHPs/Diversity_SHPs/plant_diversity_10m.csv`, `plant_diversity_20m.csv`, and `plant_diversity_50m.csv`, with matching shapefiles.
-- The current all-scale environmental outputs are `Indices_SHPs/Enviro_SHPs/enviro_variables_10m.csv`, `enviro_variables_20m.csv`, and `enviro_variables_50m.csv`, with matching shapefiles.
+- As of 2026-07-06, current derived spectral, diversity, environmental, and topographic outputs are visible under `Quad_Values/`.
+- The primary integrated 20 m analysis table is `Quad_Values/20m_spectral_sp.csv`.
+- The current all-scale plant-diversity outputs are `Quad_Values/Diversity_SHPs/plant_diversity_10m.csv`, `plant_diversity_20m.csv`, and `plant_diversity_50m.csv`, with matching shapefiles.
+- The current all-scale environmental outputs are `Quad_Values/Enviro_SHPs/enviro_variables_10m.csv`, `enviro_variables_20m.csv`, and `enviro_variables_50m.csv`, with matching shapefiles.
 - The current combined analysis-ready tables are `quadrat_analysis_10m.csv`, `quadrat_analysis_20m.csv`, and `quadrat_analysis_50m.csv`.
 - The combined analysis tables intentionally exclude per-species composition columns, pixel-count, pair-count, bootstrap replicate, processing method, manual exclusion, and geometry metadata columns.
 - Quadrat center coordinate columns in the combined analysis tables are `center_x` and `center_y`, derived from plant-diversity shapefile polygon centroids in NAD83 / UTM zone 16N.
@@ -174,9 +193,9 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Plant-diversity species matrix values represent summed crown-overlap proportions by species and quadrat, preserving the existing crown-buffer/intersection logic.
 - Exact all-pixel spectral angle entropy is only reasonable for small masked quadrats because pairwise angle counts scale quadratically with pixel count; the workflow should use bootstrap `boot_mean` as the primary fallback value for larger quadrats.
 - Current spectral heterogeneity outputs used 70 bootstrap replicates, 5,000 sampled pixels per bootstrap, and 10,000 sampled pixel-pairs per large bootstrap replicate.
-- Validation found 10 m summary rows for 1,909 rasters, with 1,866 bootstrap-mean estimates, 37 exact all-pixel estimates, and 6 insufficient-pixel outputs.
-- Validation found 20 m summary rows for 485 rasters, with 477 bootstrap-mean estimates and 8 exact all-pixel estimates.
-- Validation found 50 m summary rows for 80 rasters, with 79 bootstrap-mean estimates and 1 exact all-pixel estimate.
+- Validation found 10 m summary rows for 1,909 rasters, with 1,866 bootstrap-mean values, 37 exact all-pixel values, and 6 insufficient-pixel outputs.
+- Validation found 20 m summary rows for 485 rasters, with 477 bootstrap-mean values and 8 exact all-pixel values.
+- Validation found 50 m summary rows for 80 rasters, with 79 bootstrap-mean values and 1 exact all-pixel value.
 - The 10 m output shapefile has 97 missing `spec_ent` values: 91 shapefile quadrats without matching current raster outputs and 6 insufficient-pixel raster summaries.
 - The 20 m output shapefile has 15 missing `spec_ent` values from shapefile quadrats without matching current raster outputs.
 - The 50 m output shapefile has no missing `spec_ent` values.
@@ -187,12 +206,12 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - The combined 50 m spectral heterogeneity CSV and shapefile have 80 rows/features. They have no missing SA entropy values and 6 missing PCA-dependent values from manual exclusions.
 - The supplemental three-axis hull output is a convex hull volume/area in global PC1-PC3 space, not a true 3D alpha hull, because `alphashape3d` is not currently installed.
 - Bootstrap QC found low median CV at all scales, about 0.4% to 0.5%, but a non-trivial high-CV tail.
-- Using a 5% bootstrap-CV flag, 372 of 1,866 10 m bootstrap-estimated quadrats, 60 of 477 20 m quadrats, and 11 of 79 50 m quadrats would be flagged.
-- Using a 10% bootstrap-CV flag, 127 of 1,866 10 m bootstrap-estimated quadrats and 12 of 477 20 m quadrats would be flagged; no 50 m quadrats exceed 10%.
+- Using a 5% bootstrap-CV flag, 372 of 1,866 10 m bootstrap-mean quadrats, 60 of 477 20 m quadrats, and 11 of 79 50 m quadrats would be flagged.
+- Using a 10% bootstrap-CV flag, 127 of 1,866 10 m bootstrap-mean quadrats and 12 of 477 20 m quadrats would be flagged; no 50 m quadrats exceed 10%.
 - Spectral heterogeneity distributions show mild right skew at 10 m, near-symmetry at 20 m, and stronger right skew at 50 m.
 - `Quad_Spectra/10m_test`, `Quad_Spectra/20m_test`, and `Quad_Spectra/50m_test` are testing/validation artifacts unless the user explicitly promotes them.
 - Quadrat boundary files are in `Quad_Scale_SHPs/`.
-- Spectral products that produce spectral heterogeneity values are in `Indices_SHPs/Spectral_diversitySHPs/`.
+- Spectral products that produce spectral heterogeneity values are in `Quad_Values/Spectral_diversitySHPs/`.
 - Unnamed first CSV columns are likely index columns.
 
 ## Next Recommended Actions
@@ -203,3 +222,4 @@ Build a reproducible and well-documented research workflow for evaluating relati
 4. Run downstream model sensitivity checks with high-CV quadrats flagged or excluded, using 5% and 10% bootstrap-CV thresholds.
 5. Compare the new current 20 m spectral heterogeneity output against older 20 m spectral entropy products before replacing downstream analysis columns.
 6. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.
+7. Extend the multiscale PDF analysis with spatial GLS/GAM or spatial eigenvector sensitivity models before treating coefficient p-values as final manuscript inference.

@@ -18,7 +18,7 @@ Combined current spectral heterogeneity, species and phylogenetic diversity, env
 ## Notes
 
 - Pixel-count, pair-count, bootstrap replicate, method, exclusion, and geometry metadata fields were excluded.
-- Per-species composition columns were excluded; original composition values remain available in `Indices_SHPs/Diversity_SHPs/plant_diversity_*m.csv` if needed later.
+- Per-species composition columns were excluded; original composition values remain available in `Quad_Values/Diversity_SHPs/plant_diversity_*m.csv` if needed later.
 - Species diversity summaries use the `sp_` prefix.
 - Spectral columns use the `spec_` prefix.
 - Environmental/topographic columns use the `env_` prefix.

@@ -1,23 +1,29 @@
 # Directory Map
 
-Last updated: 2026-06-24
+Last updated: 2026-07-06
 
 Working directory:
 `C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity`
+
+Current live derived-output directory:
+`Quad_Values/`
+
+`Quad_Values/` is the canonical directory for derived biodiversity, spectral diversity, environmental, topographic, and index outputs.
 
 ## Top-Level Inventory
 
 | Directory | Purpose | File Count | Approx. Size |
 |---|---|---:|---:|
-| `Documents/` | Manuscript drafts, reports, presentations, and workshop materials | 18 | 0.015 GB |
+| `.agents/` | Agent-side metadata and coordination files | 0 | <0.001 GB |
+| `Documents/` | Manuscript drafts, reports, presentations, workshop materials, and generated PDF reports | 20 | 0.021 GB |
 | `Functions/` | Legacy/support R functions, package archive, notebooks, and helper modules | 20 | 0.033 GB |
 | `HSI_NA_trimmed/` | Current trimmed raw hyperspectral imagery in ENVI-style raster format | 75 | 57.022 GB |
-| `Indices_SHPs/` | Current derived biodiversity, spectral diversity, and environmental index outputs | 151 | 0.733 GB |
 | `logs/` | Project logs required by governance standards | 10 | <0.001 GB |
 | `Quad_Scale_SHPs/` | Quadrat boundary shapefiles and KMLs for 10 m, 20 m, and 50 m analysis scales | 14 | 0.002 GB |
 | `Quad_Spectra/` | Quadrat-level spectral raster extracts and derived products, including current `_smooth` and `_smooth_5nm` outputs | 37,547 | 391.497 GB |
-| `reports/` | Governance reports, project inventories, task reports, plans, validation notes, analysis reports, figures, and tables | 48 | 0.002 GB |
-| `scripts/` | R workflow scripts for preprocessing, index creation, analysis, utilities, and visuals | 59 | <0.001 GB |
+| `Quad_Values/` | Current derived biodiversity, spectral diversity, environmental, topographic, and index outputs | 136 | 0.722 GB |
+| `reports/` | Governance reports, project inventories, task reports, plans, validation notes, analysis reports, figures, and tables | 243 | 0.094 GB |
+| `scripts/` | R workflow scripts for preprocessing, index creation, analysis, utilities, and visuals | 62 | <0.001 GB |
 | `Shadow_vs_sunlit_SHP/` | Shadow/sunlit training or classification shapefiles | 12 | <0.001 GB |
 | `Test/` | Ad hoc test/projection script area | 1 | <0.001 GB |
 | `tests/` | Formal unit tests, smoke checks, and lightweight reproduced-raster validation artifacts | 4 | 0.565 GB |
@@ -50,6 +56,9 @@ Spectral_Diversity/
 
     Documents/
         manuscript drafts, PDF model reports, ARD presentation, workshop document
+        PDFs/
+            spectral_biodiversity_multiscale_findings.pdf
+            spectral_biodiversity_model_appendix.pdf
 
     Functions/
         1_LCE_derivs.R
@@ -76,7 +85,7 @@ Spectral_Diversity/
     HSI_NA_trimmed/
         trimmed hyperspectral raster cubes and paired metadata
 
-    Indices_SHPs/
+    Quad_Values/
         20m_spectral_sp.csv
         20m_SA_smooth_masked.csv
         20m_SA_smooth_masked_7_11.csv
@@ -103,8 +112,12 @@ Spectral_Diversity/
         Other_variables/
             Slope_Aspect.csv
             Slope_Aspect_rasters/
-            lci_update/
         Spectral_diversitySHPs/
+            global_pca_smooth_masked_5nm.rds
+            global_pca_smooth_masked_5nm_variance_explained.csv
+            spectral_heterogeneity_10m_smooth_masked_5nm.*
+            spectral_heterogeneity_20m_smooth_masked_5nm.*
+            spectral_heterogeneity_50m_smooth_masked_5nm.*
         Spectral_diversitySHPs_first/
 
     Quad_Scale_SHPs/
@@ -171,8 +184,25 @@ Spectral_Diversity/
         combined_quadrat_variable_guide.md
         execution_plans/
         figures/
+            bootstrap_variation/
+            multiscale_spectral_biodiversity/
+            sample_size_effects/
+                alpha_hull_area/
+                pca_mean_distance/
+                sa_entropy/
+                spectral_rao_q/
+            sa_entropy_sample_size_effects/
+            spectral_heterogeneity/
         history/
         tables/
+            bootstrap_variation/
+            multiscale_spectral_biodiversity/
+            sample_size_effects/
+                alpha_hull_area/
+                pca_mean_distance/
+                sa_entropy/
+                spectral_rao_q/
+            sa_entropy_sample_size_effects/
         tasks/
         validation/
 
@@ -227,12 +257,15 @@ Spectral_Diversity/
 - `global_vs_local.R`
 - `linearity_test.R`
 - `LLM.R`
+- `multiscale_spectral_biodiversity_analysis.R`
 - `modeling.R`
 - `modeling_test.R`
 - `ouliers.R`
 - `random Forest.R`
 - `scratch paper.R`
+- `sa_entropy_sample_size_effects.R`
 - `Spatial_random_Forest.R`
+- `spectral_metric_sample_size_effects.R`
 - `within_between_variation.R`
 
 ### `scripts/auxilary/`
@@ -288,21 +321,23 @@ Spectral_Diversity/
 
 | Extension | Count | Notes |
 |---|---:|---|
+| no extension | 16,656 | ENVI raster data files and extensionless raster products |
 | `.xml` | 12,438 | Raster auxiliary metadata, mainly spectral products |
 | `.hdr` | 12,348 | ENVI raster headers |
-| no extension | 12,324 | ENVI raster data files |
 | `.tif` | 579 | Raster imagery and derived products |
-| `.R` | 76 | R workflow scripts, including root-level, function, test, and ad hoc scripts |
-| `.csv` | 41 | Tabular tree, taxonomy, spectral, biodiversity, environmental, bootstrap, validation summary, and combined analysis data |
-| `.md` | 39 | Project context, governance, reports, tasks, plans, validation notes, and variable guides |
-| `.shp/.dbf/.prj/.shx` | 28 each | Shapefile component sets |
+| `.png` | 182 | Exported figures, including bootstrap, multiscale, and sample-size diagnostics |
+| `.R` | 79 | R workflow scripts, including root-level, function, test, and ad hoc scripts |
+| `.csv` | 63 | Tabular tree, taxonomy, spectral, biodiversity, environmental, bootstrap, validation summary, and combined analysis data |
+| `.md` | 43 | Project context, governance, reports, tasks, plans, validation notes, and variable guides |
+| `.shp/.dbf/.prj/.shx` | 26 each | Shapefile component sets |
 | `.envi` | 25 | Vegetation-index raster products |
-| `.adf` | 7 | ArcGIS raster/grid files |
-| `.png` | 13 | Exported figures, including bootstrap variation diagnostics |
+| `.pdf` | 15 | Reports and phylogeny output |
+| `.sample` | 14 | Sample/sidecar files associated with raster products |
 | `.docx` | 6 | Manuscript/workshop documents and the combined quadrat variable guide |
-| `.pdf` | 13 | Reports and phylogeny output |
 | `.log` | 10 | Processing stdout, stderr, and progress logs under `logs/` |
+| `.cpg` | 8 | Shapefile code-page sidecar files |
 | `.Rhistory` | 6 | R session-history files are present and should be treated as non-analytical artifacts |
+| `.rds` | 2 | Serialized R objects, including PCA model outputs |
 | `.ipynb` | 2 | Function-development or segmentation notebooks |
 
 ## Cleanup Notes
@@ -310,16 +345,19 @@ Spectral_Diversity/
 - Removed earlier `.Rhistory` session files on 2026-06-15; as of 2026-06-23, `.Rhistory` files are again present in the live tree and should not be treated as analytical inputs.
 - Removed authorized `old/`, `Outdated/`, and `Currently not relevant/` directories on 2026-06-15.
 - The cleanup removed approximately 107.8 GB from `Quad_Spectra/old/`.
-- Current spectral heterogeneity products are in `Indices_SHPs/Spectral_diversitySHPs/`.
-- `Indices_SHPs/Spectral_diversitySHPs_first/` and `Quad_Spectra/*_smoothed_5nm_first/` are retained first-pass/earlier output folders unless explicitly promoted.
+- Current live derived outputs are in `Quad_Values/`.
+- Current spectral heterogeneity products are in `Quad_Values/Spectral_diversitySHPs/`.
+- `Quad_Values/Spectral_diversitySHPs_first/` and `Quad_Spectra/*_smoothed_5nm_first/` are retained first-pass/earlier output folders unless explicitly promoted.
 - The user has independently tested and confirmed the partitioned quadrat spectra to use moving forward.
 - Confirmed partitioned quadrat spectra are in `Quad_Spectra/10m`, `Quad_Spectra/20m`, and `Quad_Spectra/50m`.
 - Current smoothed spectra generated from those confirmed inputs are in `Quad_Spectra/10m_smooth`, `Quad_Spectra/20m_smooth`, and `Quad_Spectra/50m_smooth`.
 - Current smoothed 5 nm spectra generated from the smoothed outputs are in `Quad_Spectra/10m_smooth_5nm`, `Quad_Spectra/20m_smooth_5nm`, and `Quad_Spectra/50m_smooth_5nm`.
-- The current spectral angle entropy workflow should pick up from the `_smooth_5nm` folders and write per-scale heterogeneity outputs under `Indices_SHPs/` and `Indices_SHPs/Spectral_diversitySHPs/`.
+- The current spectral angle entropy workflow should pick up from the `_smooth_5nm` folders and write outputs under `Quad_Values/`.
 - The current PCA-dependent spectral heterogeneity workflow is `scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all_metrics.R`. It excludes documented atmospheric/cloud-affected quadrats from the global PCA sample and leaves their PCA-dependent metric values missing.
 - Current per-scale spectral heterogeneity outputs have been generated for 10 m, 20 m, and 50 m using the current `_smooth_5nm` spectra.
-- Current per-scale plant diversity outputs have been generated for 10 m, 20 m, and 50 m under `Indices_SHPs/Diversity_SHPs/`, with `quad_id` values aligned to the current spectral heterogeneity outputs.
-- Current per-scale environmental outputs have been generated for 10 m, 20 m, and 50 m under `Indices_SHPs/Enviro_SHPs/`, with `quad_id` values aligned to current plant-diversity and spectral outputs.
+- Current per-scale plant diversity outputs are visible for 10 m, 20 m, and 50 m under `Quad_Values/Diversity_SHPs/`, with `quad_id` values aligned to the current spectral heterogeneity outputs.
+- Current per-scale environmental outputs are visible for 10 m, 20 m, and 50 m under `Quad_Values/Enviro_SHPs/`, with `quad_id` values aligned to current plant-diversity and spectral outputs.
 - Current root-level combined analysis tables are `quadrat_analysis_10m.csv`, `quadrat_analysis_20m.csv`, and `quadrat_analysis_50m.csv`; their shortened-column guides are `reports/combined_quadrat_variable_guide.md` and `combined_quadrat_variable_guide.docx`.
+- Current multiscale spectral-biodiversity PDF reports are in `Documents/PDFs/`; the reproducible workflow is `scripts/3_Analysis/multiscale_spectral_biodiversity_analysis.R`, with companion figures and tables under `reports/figures/multiscale_spectral_biodiversity/` and `reports/tables/multiscale_spectral_biodiversity/`.
+- Current sample-size sensitivity outputs are under `reports/analysis/`, `reports/figures/sample_size_effects/`, and `reports/tables/sample_size_effects/`, including SA entropy, PCA mean distance, spectral Rao's Q, and alpha-hull area.
 - `Quad_Spectra/10m_test`, `Quad_Spectra/20m_test`, and `Quad_Spectra/50m_test` are testing/validation artifacts and should not be treated as primary analytical inputs without explicit user direction.

@@ -6,7 +6,7 @@ Create reproducible environmental covariate outputs for 10 m, 20 m, and 50 m qua
 
 ## Requested Task
 
-Calculate mean elevation and mean Riley topographic roughness index for each quadrat. Riley TRI should be calculated from the DTM using 5x5, 11x11, and 21x21 moving windows. Outputs should be CSVs and shapefiles written to `Indices_SHPs/Enviro_SHPs/`.
+Calculate mean elevation and mean Riley topographic roughness index for each quadrat. Riley TRI should be calculated from the DTM using 5x5, 11x11, and 21x21 moving windows. Outputs should be CSVs and shapefiles written to `Quad_Values/Enviro_SHPs/`.
 
 ## Files To Review
 
@@ -27,9 +27,9 @@ Calculate mean elevation and mean Riley topographic roughness index for each qua
 
 ## Expected Outputs
 
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_10m.csv`
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_20m.csv`
-- `Indices_SHPs/Enviro_SHPs/enviro_variables_50m.csv`
+- `Quad_Values/Enviro_SHPs/enviro_variables_10m.csv`
+- `Quad_Values/Enviro_SHPs/enviro_variables_20m.csv`
+- `Quad_Values/Enviro_SHPs/enviro_variables_50m.csv`
 - Matching `.shp`, `.dbf`, `.prj`, `.shx`, and related shapefile sidecars for each scale.
 
 ## Validation Plan

@@ -1,11 +1,11 @@
 # Ignore large hyperspectral and derived data directories
 HSI_NA_trimmed/
 VegIndex_NA_trimmed/
-Quad_spectra/
+Quad_Spectra/
 
-# Ignore large R data object
+# Ignore large R data objects
 global_pca.rds
-Indices_SHPs/Spectral_diversitySHPs/global_pca_smooth_masked_5nm.rds
+Quad_Values/Spectral_diversitySHPs/*.rds
 
 # R session/history files
 .Rhistory

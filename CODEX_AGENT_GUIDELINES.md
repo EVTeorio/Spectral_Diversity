@@ -317,7 +317,7 @@ The user remains responsible for all Git actions.
 ### Current Data Assumptions
 
 1. Unnamed first columns in CSV outputs are likely index columns unless later evidence shows otherwise.
-2. Spectral products that produce spectral heterogeneity values are stored in `/Indices_SHPs/Spectral_diversitySHPs`.
+2. Spectral products that produce spectral heterogeneity values are stored in `/Quad_Values/Spectral_diversitySHPs`.
 3. The user has independently tested the partitioned quadrat spectra and confirmed they are the spectral inputs to use moving forward.
 4. The confirmed partitioned quadrat spectra are stored in `/Quad_Spectra/10m`, `/Quad_Spectra/20m`, and `/Quad_Spectra/50m`.
 5. Temporary validation folders such as `/Quad_Spectra/10m_test`, `/Quad_Spectra/20m_test`, and `/Quad_Spectra/50m_test` document testing activity and should not replace the confirmed primary spectra unless the user explicitly directs that change.

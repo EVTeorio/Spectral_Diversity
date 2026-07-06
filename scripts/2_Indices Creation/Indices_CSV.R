@@ -5,9 +5,9 @@ library(tools)
 
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens")
 
-spectral_dir <- "Spectral_Diversity/Indices_SHPs/Spectral_diversitySHPs"
-species_dir  <- "Spectral_Diversity/Indices_SHPs/Diversity_SHPs"
-sp_matrix <- st_read("Spectral_Diversity/Indices_SHPs/PR_20m_sp_matrix.shp")
+spectral_dir <- "Spectral_Diversity/Quad_Values/Spectral_diversitySHPs"
+species_dir  <- "Spectral_Diversity/Quad_Values/Diversity_SHPs"
+sp_matrix <- st_read("Spectral_Diversity/Quad_Values/PR_20m_sp_matrix.shp")
 # Drop geometry from sp_matrix
 sp_matrix_data <- st_drop_geometry(sp_matrix)
 
@@ -54,4 +54,4 @@ merged_sf <- st_sf(merged_data, geometry = spectral[[1]]$geometry)
 # Convert geometry to WKT string
 merged_sf$geometry <- st_as_text(merged_sf$geometry, digits = 16)
 
-write.csv(merged_sf, "Spectral_Diversity/Indices_SHPs/20m_spectral_sp.csv")
+write.csv(merged_sf, "Spectral_Diversity/Quad_Values/20m_spectral_sp.csv")

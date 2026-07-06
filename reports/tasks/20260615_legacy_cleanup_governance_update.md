@@ -16,8 +16,8 @@ Update governance instructions based on user clarification and remove authorized
   - record current data assumptions.
 - Created `reports/execution_plans/20260615_1530_execplan.md`.
 - Removed authorized legacy directories:
-  - `Indices_SHPs/old/`
-  - `Indices_SHPs/Diversity_SHPs/old/`
+  - `Quad_Values/old/`
+  - `Quad_Values/Diversity_SHPs/old/`
   - `Quad_Spectra/old/`
   - `scripts/Outdated/`
   - `scripts/2_Indices Creation/Plant_diversity/old/`
@@ -30,12 +30,12 @@ Update governance instructions based on user clarification and remove authorized
 ## Cleanup Result
 
 - `Quad_Spectra/` decreased from approximately 360.608 GB to 252.771 GB.
-- `Indices_SHPs/` decreased from 179 files to 71 files.
+- `Quad_Values/` decreased from 179 files to 71 files.
 - `scripts/` decreased from 64 files to 47 files.
 
 ## Assumptions Confirmed
 
 - Unnamed first CSV columns are likely index columns.
-- Spectral products that produce spectral heterogeneity values are in `Indices_SHPs/Spectral_diversitySHPs/`.
+- Spectral products that produce spectral heterogeneity values are in `Quad_Values/Spectral_diversitySHPs/`.
 - Spectra cropped to quadrat extents are in `Quad_Spectra/`.
 - Previously documented important assumptions remain current unless later script review contradicts them.

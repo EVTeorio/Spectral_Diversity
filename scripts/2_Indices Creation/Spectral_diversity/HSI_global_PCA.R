@@ -11,7 +11,7 @@ setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens
 
 spec_dir <- "Quad_Spectra/20m_resampled_5nm"
 shp_path <- "Quad_Scale_SHPs/PR_20m.shp"
-out_shp  <- "Indices_SHPs/Spectral_diversitySHPs/global_PCA_20m_masked_5nm.shp"
+out_shp  <- "Quad_Values/Spectral_diversitySHPs/global_PCA_20m_masked_5nm.shp"
 
 ras_files <- list.files(spec_dir, full.names = TRUE)
 ras_files <- ras_files[!grepl("\\.hdr$|\\.aux$|\\.xml$|\\.enp$|\\.sta$", ras_files)]

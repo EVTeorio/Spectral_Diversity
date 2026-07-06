@@ -7,8 +7,8 @@ library(stringr)
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity/")
 
 # --- Paths ---
-in_dir  <- "Indices_SHPs/Diversity_SHPs"
-out_dir <- "Indices_SHPs/sp_exclude_quads"
+in_dir  <- "Quad_Values/Diversity_SHPs"
+out_dir <- "Quad_Values/sp_exclude_quads"
 
 # --- Exclusion list ---
 nums <- c(

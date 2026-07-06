@@ -38,7 +38,7 @@ library(performance) # optional diagnostics
 # =============================================================================
 setwd("C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity/")
 
-df <- read.csv("Indices_SHPs/20m_spectral_sp.csv") %>%
+df <- read.csv("Quad_Values/20m_spectral_sp.csv") %>%
   clean_names() %>%
   filter(complete.cases(.))
 

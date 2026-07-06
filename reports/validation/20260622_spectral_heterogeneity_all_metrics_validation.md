@@ -23,7 +23,7 @@ The PCA-dependent outputs created earlier on 2026-06-22 before applying the manu
 - `Quad_Spectra/10m_smooth_5nm`
 - `Quad_Spectra/20m_smooth_5nm`
 - `Quad_Spectra/50m_smooth_5nm`
-- `Indices_SHPs/*_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/*_SA_entropy_smooth_masked_5nm_summary.csv`
 - `Quad_Scale_SHPs/PR_10m.shp`
 - `Quad_Scale_SHPs/PR_20m.shp`
 - `Quad_Scale_SHPs/PR_50m.shp`
@@ -67,8 +67,8 @@ Variance explained by the first axes:
 
 PCA diagnostic outputs:
 
-- `Indices_SHPs/Spectral_diversitySHPs/global_pca_smooth_masked_5nm.rds`
-- `Indices_SHPs/Spectral_diversitySHPs/global_pca_smooth_masked_5nm_variance_explained.csv`
+- `Quad_Values/Spectral_diversitySHPs/global_pca_smooth_masked_5nm.rds`
+- `Quad_Values/Spectral_diversitySHPs/global_pca_smooth_masked_5nm_variance_explained.csv`
 - `reports/figures/spectral_heterogeneity/global_pca_smooth_masked_5nm_variance_explained.png`
 
 ## Output Validation
@@ -109,24 +109,24 @@ Alpha hull:
 
 Per-scale combined CSVs were written both beside the earlier SA entropy CSVs and inside the requested shapefile output directory:
 
-- `Indices_SHPs/10m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/20m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/50m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm_summary.csv`
+- `Quad_Values/10m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
+- `Quad_Values/20m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
+- `Quad_Values/50m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
+- `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm_summary.csv`
+- `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm_summary.csv`
+- `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm_summary.csv`
 
 Per-scale combined shapefiles:
 
-- `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm.shp`
-- `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm.shp`
-- `Indices_SHPs/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_10m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_20m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/spectral_heterogeneity_50m_smooth_masked_5nm.shp`
 
 PCA-only metric CSVs:
 
-- `Indices_SHPs/10m_PCA_metrics_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/20m_PCA_metrics_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/50m_PCA_metrics_smooth_masked_5nm_summary.csv`
+- `Quad_Values/10m_PCA_metrics_smooth_masked_5nm_summary.csv`
+- `Quad_Values/20m_PCA_metrics_smooth_masked_5nm_summary.csv`
+- `Quad_Values/50m_PCA_metrics_smooth_masked_5nm_summary.csv`
 
 ## Result
 

@@ -36,4 +36,4 @@ The added spectral heterogeneity histogram indicates mild right skew at 10 m, ne
 
 ## Recommendation
 
-Use `spectral_entropy` / `boot_mean` as the primary heterogeneity estimate, but carry `boot_sd`, `boot_cv`, and `method` forward into downstream analysis tables. Include sensitivity checks that flag or exclude high-CV quadrats.
+Use `spectral_entropy` / `boot_mean` as the primary heterogeneity mean, but carry `boot_sd`, `boot_cv`, bootstrap-mean CI fields, and `method` forward into downstream analysis tables. Include sensitivity checks that flag or exclude high-CV or wide-CI quadrats.

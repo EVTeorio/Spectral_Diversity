@@ -20,7 +20,7 @@ Pixel-count, pair-count, bootstrap replicate, method, exclusion, geometry metada
 | `scale` | Identifier and coordinates | `scale` | Quadrat grain: 10m, 20m, or 50m. |
 | `center_x` | Identifier and coordinates | `centroid X` | X coordinate of the quadrat polygon centroid in the plant-diversity shapefile CRS. |
 | `center_y` | Identifier and coordinates | `centroid Y` | Y coordinate of the quadrat polygon centroid in the plant-diversity shapefile CRS. |
-| `spec_sa` | Spectral heterogeneity | `sa_entropy` | Primary spectral angle entropy value from sunlit, shadow-masked smoothed 5 nm spectra; exact all-pixel entropy where feasible, otherwise the bootstrap mean. |
+| `spec_sa` | Spectral heterogeneity | `sa_entropy` | Primary spectral angle entropy mean from sunlit, shadow-masked smoothed 5 nm spectra; for most quadrats this is the mean of 70 bootstrap iterations using up to 5,000 retained pixels, while the small exact subset uses all retained pixel pairs. |
 | `spec_pca_mean` | Spectral heterogeneity | `pca_euclidean_mean` | Mean Euclidean distance of retained pixels from the quadrat centroid in global PC1-PC3 spectral space. |
 | `spec_pca_med` | Spectral heterogeneity | `pca_euclidean_median` | Median Euclidean distance of retained pixels from the quadrat centroid in global PC1-PC3 spectral space. |
 | `spec_pca_sd` | Spectral heterogeneity | `pca_euclidean_sd` | Standard deviation of Euclidean distances of retained pixels from the quadrat centroid in global PC1-PC3 spectral space. |

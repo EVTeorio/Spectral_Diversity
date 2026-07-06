@@ -28,7 +28,7 @@ edge_quads <- c(
   "1724","1922","1824","1923","1924","1904","1902","1918"
 )
 
-df_sf <- read.csv("Spectral_Diversity/Indices_SHPs/20m_spectral_sp.csv") %>%
+df_sf <- read.csv("Spectral_Diversity/Quad_Values/20m_spectral_sp.csv") %>%
   clean_names() %>%
   filter(complete.cases(.),
          !name %in% edge_quads)

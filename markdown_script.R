@@ -339,7 +339,7 @@ md_text <- c(
 
 writeLines(md_text, "RESEARCH_OBJECTIVES.md")
 ##################################################################
-"Indices_SHPs/Spectral_diversitySHPs"
+"Quad_Values/Spectral_diversitySHPs"
 
 ##########################################################################
 

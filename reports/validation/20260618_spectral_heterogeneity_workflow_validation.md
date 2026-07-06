@@ -63,18 +63,18 @@ The earlier package issue was due to sandboxed Rscript visibility, not a missing
 
 ## Output Files
 
-- `Indices_SHPs/10m_SA_entropy_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/10m_SA_entropy_smooth_masked_5nm_boot_long.csv`
-- `Indices_SHPs/10m_SA_entropy_smooth_masked_5nm_boot_wide.csv`
-- `Indices_SHPs/20m_SA_entropy_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/20m_SA_entropy_smooth_masked_5nm_boot_long.csv`
-- `Indices_SHPs/20m_SA_entropy_smooth_masked_5nm_boot_wide.csv`
-- `Indices_SHPs/50m_SA_entropy_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/50m_SA_entropy_smooth_masked_5nm_boot_long.csv`
-- `Indices_SHPs/50m_SA_entropy_smooth_masked_5nm_boot_wide.csv`
-- `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_10m_smooth_masked_5nm.shp`
-- `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_20m_smooth_masked_5nm.shp`
-- `Indices_SHPs/Spectral_diversitySHPs/SA_entropy_50m_smooth_masked_5nm.shp`
+- `Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/10m_SA_entropy_smooth_masked_5nm_boot_long.csv`
+- `Quad_Values/10m_SA_entropy_smooth_masked_5nm_boot_wide.csv`
+- `Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/20m_SA_entropy_smooth_masked_5nm_boot_long.csv`
+- `Quad_Values/20m_SA_entropy_smooth_masked_5nm_boot_wide.csv`
+- `Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/50m_SA_entropy_smooth_masked_5nm_boot_long.csv`
+- `Quad_Values/50m_SA_entropy_smooth_masked_5nm_boot_wide.csv`
+- `Quad_Values/Spectral_diversitySHPs/SA_entropy_10m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/SA_entropy_20m_smooth_masked_5nm.shp`
+- `Quad_Values/Spectral_diversitySHPs/SA_entropy_50m_smooth_masked_5nm.shp`
 
 ## Notes
 

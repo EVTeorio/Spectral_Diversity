@@ -38,12 +38,12 @@ Generate species composition, species diversity, and phylogenetic diversity outp
 
 ## Outputs Created
 
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_10m.csv`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_20m.csv`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_50m.csv`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_10m.shp`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_20m.shp`
-- `Indices_SHPs/Diversity_SHPs/plant_diversity_50m.shp`
+- `Quad_Values/Diversity_SHPs/plant_diversity_10m.csv`
+- `Quad_Values/Diversity_SHPs/plant_diversity_20m.csv`
+- `Quad_Values/Diversity_SHPs/plant_diversity_50m.csv`
+- `Quad_Values/Diversity_SHPs/plant_diversity_10m.shp`
+- `Quad_Values/Diversity_SHPs/plant_diversity_20m.shp`
+- `Quad_Values/Diversity_SHPs/plant_diversity_50m.shp`
 
 ## Notes
 

@@ -8,13 +8,13 @@ Analyze the spectral angle entropy bootstrap outputs to compare within-quadrat b
 
 ## Requested Task
 
-Create an analysis report with graphs and visuals to determine whether within-quadrat bootstrap variation is small enough for the spectral heterogeneity estimates to be considered valid.
+Create an analysis report with graphs and visuals to determine whether within-quadrat bootstrap variation is small enough for the spectral heterogeneity means to be used in downstream analysis.
 
 ## Inputs
 
-- `Indices_SHPs/10m_SA_entropy_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/20m_SA_entropy_smooth_masked_5nm_summary.csv`
-- `Indices_SHPs/50m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/10m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/20m_SA_entropy_smooth_masked_5nm_summary.csv`
+- `Quad_Values/50m_SA_entropy_smooth_masked_5nm_summary.csv`
 - matching `_boot_wide.csv` files for each scale
 
 ## Proposed Changes
@@ -39,5 +39,5 @@ Create an analysis report with graphs and visuals to determine whether within-qu
 ## Risks
 
 - Some quadrats have insufficient pixels or missing bootstrap replicates and should be excluded from within-bootstrap summaries.
-- Bootstrap SD measures variation among subsampled estimates, while the uncertainty of the reported `boot_mean` is better represented by `boot_sd / sqrt(n_boot)`.
+- Bootstrap SD measures variation among subsampled bootstrap values, while the uncertainty of the reported `boot_mean` is better represented by `boot_sd / sqrt(n_boot)` and a bootstrap-mean confidence interval.
 - The bootstrap implementation uses sampled pixel pairs for large pixel subsamples, so the report should interpret results as computational bootstrap stability rather than a complete census of all possible pixel pairs.

@@ -13,8 +13,8 @@ if (dir.exists(user_library)) {
 
 PROJECT_DIR <- "C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity"
 SIDECAR_PATTERN <- "\\.(hdr|aux|xml|enp|sta)$"
-OUTPUT_DIR <- "Indices_SHPs"
-OUTPUT_SHP_DIR <- "Indices_SHPs/Spectral_diversitySHPs"
+OUTPUT_DIR <- "Quad_Values"
+OUTPUT_SHP_DIR <- "Quad_Values/Spectral_diversitySHPs"
 FIGURE_DIR <- "reports/figures/spectral_heterogeneity"
 PROGRESS_LOG <- "logs/spectral_heterogeneity_all_metrics_progress.log"
 PCA_RDS <- file.path(OUTPUT_SHP_DIR, "global_pca_smooth_masked_5nm.rds")

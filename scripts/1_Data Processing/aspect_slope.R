@@ -31,23 +31,23 @@ plot(tei_east)
 
 
 writeRaster(slope_percent,
-            "Indices_SHPs/Other_variables/Slope_Aspect_rasters/slope_percent.tif",
+            "Quad_Values/Other_variables/Slope_Aspect_rasters/slope_percent.tif",
             overwrite = TRUE)
 
 writeRaster(aspect_cos,
-            "Indices_SHPs/Other_variables/Slope_Aspect_rasters/cos_aspect.tif",
+            "Quad_Values/Other_variables/Slope_Aspect_rasters/cos_aspect.tif",
             overwrite = TRUE)
 
 writeRaster(aspect_sin,
-            "Indices_SHPs/Other_variables/Slope_Aspect_rasters/sin_aspect.tif",
+            "Quad_Values/Other_variables/Slope_Aspect_rasters/sin_aspect.tif",
             overwrite = TRUE)
 
 writeRaster(tei_north,
-            "Indices_SHPs/Other_variables/Slope_Aspect_rasters/tei_north.tif",
+            "Quad_Values/Other_variables/Slope_Aspect_rasters/tei_north.tif",
             overwrite = TRUE)
 
 writeRaster(tei_east,
-            "Indices_SHPs/Other_variables/Slope_Aspect_rasters/tei_east.tif",
+            "Quad_Values/Other_variables/Slope_Aspect_rasters/tei_east.tif",
             overwrite = TRUE)
 
 ###############################################################################
@@ -93,4 +93,4 @@ df <- data.frame(
   z[, -1]   # remove ID column from extract output
 )
 
-write.csv(df,"Indices_SHPs/Other_variables/Slope_Aspect.csv" )
+write.csv(df,"Quad_Values/Other_variables/Slope_Aspect.csv" )

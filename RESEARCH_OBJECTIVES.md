@@ -26,7 +26,7 @@ Calculate spectral heterogeneity metrics from drone-acquired hyperspectral image
 
 **Primary metric:**
 
-- Spectral entropy derived from pairwise spectral angle distributions among sampled pixels.
+- Spectral entropy derived from pairwise spectral angle distributions. Current SA entropy outputs are usually the mean of 70 bootstrap iterations using up to 5,000 retained pixels per iteration; only the small subset of quadrats below the configured pair-count threshold uses exact all-retained-pixel pairwise angles.
 
 **Potential secondary metrics:**
 
