@@ -2,7 +2,11 @@
 
 Date: 2026-06-22
 
-Updated: 2026-06-22, exclusion-aware PCA rebuild
+Updated: 2026-07-07, superseded by 10 m footprint PCA rebuild
+
+## Current Supersession
+
+This validation report documents the 2026-06-22 exclusion-aware PCA workflow and is retained as historical context. It has been superseded by `reports/validation/20260707_10m_footprint_standardized_pca_rebuild_validation.md`. The current PCA basis samples current 10 m rasters only after shadow masking, requests up to 450 illuminated pixels per 10 m raster, and includes a separate vector-normalized standardized PCA basis.
 
 ## Scope
 

@@ -40,7 +40,10 @@ TASK_REPORT <- file.path(PROJECT_DIR, "reports/tasks/20260624_multiscale_spectra
 VALIDATION_REPORT <- file.path(PROJECT_DIR, "reports/validation/20260624_multiscale_spectral_biodiversity_analysis_validation.md")
 
 PRIMARY_RESPONSE <- "spec_sa"
-SECONDARY_RESPONSES <- c("spec_pca_mean", "spec_rao_q", "spec_alpha")
+SECONDARY_RESPONSES <- c(
+  "spec_pca_mean", "spec_rao_q", "spec_alpha",
+  "spec_spca_mean", "spec_spca_rao", "spec_spca_alpha"
+)
 BIODIVERSITY_PREDICTORS <- c("phy_faith", "phy_afaith", "sp_shannon")
 ENVIRONMENT_PREDICTORS <- c("env_elev", "env_tri11")
 DISPLAY_NAMES <- c(
@@ -48,6 +51,9 @@ DISPLAY_NAMES <- c(
   spec_pca_mean = "PCA mean distance",
   spec_rao_q = "Spectral Rao's Q",
   spec_alpha = "Alpha-hull area",
+  spec_spca_mean = "standardized_PCA mean distance",
+  spec_spca_rao = "standardized_PCA Rao's Q",
+  spec_spca_alpha = "standardized_PCA alpha-hull area",
   phy_faith = "Faith's PD",
   phy_afaith = "Abundance-weighted Faith's PD",
   sp_shannon = "Shannon diversity",
@@ -362,7 +368,10 @@ make_figures <- function(data, correlations, model_results, moran_results, prima
     spec_sa = "02a_distribution_sa_entropy_mean.png",
     spec_pca_mean = "02b_distribution_pca_mean_distance.png",
     spec_rao_q = "02c_distribution_spectral_rao_q.png",
-    spec_alpha = "02d_distribution_alpha_hull_area.png"
+    spec_alpha = "02d_distribution_alpha_hull_area.png",
+    spec_spca_mean = "02e_distribution_standardized_pca_mean_distance.png",
+    spec_spca_rao = "02f_distribution_standardized_pca_rao_q.png",
+    spec_spca_alpha = "02g_distribution_standardized_pca_alpha_hull_area.png"
   )
   for (metric_id in distribution_order) {
     metric_label <- DISPLAY_NAMES[[metric_id]]
@@ -586,7 +595,7 @@ build_findings <- function(data, correlations, model_results, primary_models, mo
     title = "Paint Rock spectral-biodiversity relationships",
     summary = c(
       "The analysis evaluates whether quadrat-level hyperspectral heterogeneity tracks biodiversity and phylogenetic diversity across 10 m, 20 m, and 50 m grains.",
-      "SA entropy mean is treated as the primary response. For most quadrats it is the mean of 70 bootstrap iterations using up to 5,000 retained pixels; the small exact subset uses all retained pixel pairs. PCA mean distance, spectral Rao's Q, and alpha-hull area are secondary sensitivity metrics.",
+      "SA entropy mean is treated as the primary response. For most quadrats it is the mean of 70 bootstrap iterations using up to 5,000 retained pixels; the small exact subset uses all retained pixel pairs. PCA mean distance, spectral Rao's Q, alpha-hull area, and their standardized_PCA analogs are secondary sensitivity metrics.",
       "Models use standardized predictors so coefficients are comparable within scale. Documented 10 m and 20 m edge quadrats are excluded from primary inference; 50 m uses all quadrats because no separate 50 m edge rule is documented."
     ),
     best_model_table = best_rows,
@@ -880,7 +889,7 @@ write_markdown_reports <- function(outputs, pdf_paths) {
     "## Methods",
     "",
     "- Primary response: `spec_sa`, the SA entropy mean. For most quadrats it is the mean of 70 bootstrap iterations using up to 5,000 retained pixels; the small exact subset uses all retained pixel pairs.",
-    "- Secondary responses: `spec_pca_mean`, `spec_rao_q`, and `spec_alpha`.",
+    "- Secondary responses: `spec_pca_mean`, `spec_rao_q`, `spec_alpha`, `spec_spca_mean`, `spec_spca_rao`, and `spec_spca_alpha`.",
     "- Primary biodiversity predictors: `phy_faith`, `phy_afaith`, and `sp_shannon`.",
     "- Environmental controls: `env_elev` and `env_tri11`.",
     "- Predictors and responses were standardized within model datasets.",

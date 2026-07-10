@@ -1,6 +1,6 @@
 # Combined Quadrat Analysis Tables
 
-Last updated: 2026-06-24
+Last updated: 2026-07-07
 
 ## Task
 
@@ -20,14 +20,14 @@ Combined current spectral heterogeneity, species and phylogenetic diversity, env
 - Pixel-count, pair-count, bootstrap replicate, method, exclusion, and geometry metadata fields were excluded.
 - Per-species composition columns were excluded; original composition values remain available in `Quad_Values/Diversity_SHPs/plant_diversity_*m.csv` if needed later.
 - Species diversity summaries use the `sp_` prefix.
-- Spectral columns use the `spec_` prefix.
+- Spectral columns use the `spec_` prefix, including `spec_spca_*` fields for vector-normalized standardized PCA metrics.
 - Environmental/topographic columns use the `env_` prefix.
 - Spectral gaps remain `NA` where current raster-derived spectral summaries were not available or where PCA-dependent values were excluded upstream.
 
 ## Validation Summary
 
-| Scale | Rows | Columns | Duplicate quad IDs | Missing center X | Missing center Y | Missing spectral SA | Missing spectral PCA mean | Missing elevation |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 10m | 2000 | 24 | 0 | 0 | 0 | 97 | 256 | 0 |
-| 20m |  500 | 24 | 0 | 0 | 0 | 15 |  64 | 0 |
-| 50m |   80 | 24 | 0 | 0 | 0 |  0 |   6 | 0 |
+| Scale | Rows | Columns | Duplicate quad IDs | Missing center X | Missing center Y | Missing spectral SA | Missing raw PCA mean | Missing standardized PCA mean | Missing elevation |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 10m | 2000 | 32 | 0 | 0 | 0 | 97 | 256 | 256 | 0 |
+| 20m |  500 | 32 | 0 | 0 | 0 | 15 |  64 |  64 | 0 |
+| 50m |   80 | 32 | 0 | 0 | 0 |  0 |   6 |   6 | 0 |

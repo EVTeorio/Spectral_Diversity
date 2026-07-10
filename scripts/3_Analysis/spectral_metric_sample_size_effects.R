@@ -28,11 +28,24 @@ source("scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all
 
 REPORT_PATH <- "reports/analysis/20260704_pca_metric_sample_size_effects.md"
 SA_DESIGN_PATH <- "reports/tables/sample_size_effects/sa_entropy/sa_entropy_sample_size_design.csv"
+PCA_BASIS <- Sys.getenv("PCA_BASIS", "regular_PCA")
+
+if (!PCA_BASIS %in% c("regular_PCA", "standardized_PCA")) {
+  stop("PCA_BASIS must be either regular_PCA or standardized_PCA", call. = FALSE)
+}
+
+PCA_BASIS_LABEL <- if (PCA_BASIS == "standardized_PCA") "Standardized PCA" else "Regular PCA"
+PCA_BASIS_RDS <- if (PCA_BASIS == "standardized_PCA") STANDARDIZED_PCA_RDS else PCA_RDS
+
+if (PCA_BASIS == "standardized_PCA") {
+  REPORT_PATH <- "reports/analysis/20260707_standardized_pca_metric_sample_size_effects.md"
+}
 
 N_BOOT_EXPERIMENT <- 50
 EXPERIMENT_SEED <- 20260703
 
 metric_catalog <- data.frame(
+  base_metric_id = c("pca_mean_distance", "spectral_rao_q", "alpha_hull_area"),
   metric_id = c("pca_mean_distance", "spectral_rao_q", "alpha_hull_area"),
   metric_label = c("PCA Mean Distance", "Spectral Rao's Q", "Alpha-Hull Area"),
   metric_column = c("pca_euclidean_mean", "rao_q_pca", "alpha_hull_area"),
@@ -46,15 +59,25 @@ metric_catalog <- data.frame(
   stringsAsFactors = FALSE
 )
 
+if (PCA_BASIS == "standardized_PCA") {
+  metric_catalog$metric_id <- paste0("standardized_PCA_", metric_catalog$metric_id)
+  metric_catalog$metric_label <- paste("Standardized", metric_catalog$metric_label)
+  metric_catalog$y_label <- sub("PCA", "standardized PCA", metric_catalog$y_label, fixed = TRUE)
+}
+
 requested_metrics <- Sys.getenv("SAMPLE_SIZE_METRICS", "")
 if (nzchar(requested_metrics)) {
   requested_metrics <- trimws(strsplit(requested_metrics, ",", fixed = TRUE)[[1]])
-  unknown_metrics <- setdiff(requested_metrics, metric_catalog$metric_id)
+  requested_metric_ids <- unique(c(
+    requested_metrics[requested_metrics %in% metric_catalog$metric_id],
+    metric_catalog$metric_id[metric_catalog$base_metric_id %in% requested_metrics]
+  ))
+  unknown_metrics <- setdiff(requested_metrics, c(metric_catalog$metric_id, metric_catalog$base_metric_id))
   if (length(unknown_metrics) > 0) {
     stop("Unknown SAMPLE_SIZE_METRICS value(s): ", paste(unknown_metrics, collapse = ", "), call. = FALSE)
   }
   metric_catalog <- metric_catalog |>
-    filter(.data$metric_id %in% requested_metrics)
+    filter(.data$metric_id %in% requested_metric_ids)
 }
 
 dir.create(dirname(REPORT_PATH), recursive = TRUE, showWarnings = FALSE)
@@ -87,7 +110,7 @@ find_raster_file <- function(scale, quad_id) {
 
 calculate_selected_metrics <- function(scores, quad_id) {
   n_pixels <- nrow(scores)
-  run_alpha <- "alpha_hull_area" %in% metric_catalog$metric_id
+  run_alpha <- "alpha_hull_area" %in% metric_catalog$base_metric_id
 
   if (n_pixels < MIN_VALID_PIXELS) {
     return(data.frame(
@@ -192,15 +215,15 @@ make_summary_table <- function(bootstrap_long, design_table) {
   bootstrap_long |>
     group_by(metric_id, metric_label, scale, quad_id, sample_rule, sample_size, sample_fraction) |>
     summarise(
-      metric_mean = mean(metric_value, na.rm = TRUE),
-      metric_median = median(metric_value, na.rm = TRUE),
-      metric_sd = sd(metric_value, na.rm = TRUE),
-      metric_min = min(metric_value, na.rm = TRUE),
-      metric_max = max(metric_value, na.rm = TRUE),
       n_boot = sum(is.finite(metric_value)),
+      metric_mean = ifelse(n_boot > 0, mean(metric_value, na.rm = TRUE), NA_real_),
+      metric_median = ifelse(n_boot > 0, median(metric_value, na.rm = TRUE), NA_real_),
+      metric_sd = ifelse(n_boot > 1, sd(metric_value, na.rm = TRUE), NA_real_),
+      metric_min = ifelse(n_boot > 0, min(metric_value, na.rm = TRUE), NA_real_),
+      metric_max = ifelse(n_boot > 0, max(metric_value, na.rm = TRUE), NA_real_),
       metric_method = paste(sort(unique(metric_method)), collapse = "; "),
-      metric_n_points_min = min(metric_n_points, na.rm = TRUE),
-      metric_n_points_max = max(metric_n_points, na.rm = TRUE),
+      metric_n_points_min = ifelse(any(is.finite(metric_n_points)), min(metric_n_points, na.rm = TRUE), NA_real_),
+      metric_n_points_max = ifelse(any(is.finite(metric_n_points)), max(metric_n_points, na.rm = TRUE), NA_real_),
       .groups = "drop"
     ) |>
     mutate(
@@ -247,6 +270,17 @@ make_metric_figures <- function(metric_id, bootstrap_long, summary_table, design
   figure_dir <- file.path("reports/figures/sample_size_effects", metric_id)
   split_dir <- file.path(figure_dir, "distributions_by_sample_size")
   dir.create(split_dir, recursive = TRUE, showWarnings = FALSE)
+
+  if (!any(is.finite(metric_boot$metric_value)) || !any(is.finite(metric_summary$metric_mean))) {
+    writeLines(
+      c(
+        paste(metric$metric_label, "figures not generated."),
+        "No finite metric values were available for this PCA basis and metric."
+      ),
+      file.path(figure_dir, paste0(metric_id, "_figure_skip_note.txt"))
+    )
+    return(invisible(FALSE))
+  }
 
   line_color <- "#3b6f6d"
   point_color <- "#273947"
@@ -425,6 +459,17 @@ make_metric_mean_figures <- function(metric_id, summary_table, design_table) {
   figure_dir <- file.path("reports/figures/sample_size_effects", metric_id)
   dir.create(figure_dir, recursive = TRUE, showWarnings = FALSE)
 
+  if (!any(is.finite(metric_summary$metric_mean))) {
+    writeLines(
+      c(
+        paste(metric$metric_label, "mean figures not generated."),
+        "No finite metric means were available for this PCA basis and metric."
+      ),
+      file.path(figure_dir, paste0(metric_id, "_mean_figure_skip_note.txt"))
+    )
+    return(invisible(FALSE))
+  }
+
   line_color <- "#3b6f6d"
   point_color <- "#273947"
 
@@ -592,17 +637,22 @@ write_report <- function(design_table, summary_table) {
   }))
 
   report_lines <- c(
-    "# PCA-Derived Spectral Metric Sample-Size Effects",
+    paste0("# ", PCA_BASIS_LABEL, "-Derived Spectral Metric Sample-Size Effects"),
     "",
-    "Date: 2026-07-04",
+    if (PCA_BASIS == "standardized_PCA") "Date: 2026-07-07" else "Date: 2026-07-04",
     "",
     "## Purpose",
     "",
-    "Extend the sample-size sensitivity analysis from spectral angle entropy to PCA mean distance, spectral Rao's Q, and alpha-hull area.",
+    paste0(
+      "Extend the sample-size sensitivity analysis from spectral angle entropy to ",
+      if (PCA_BASIS == "standardized_PCA") "vector-normalized standardized PCA" else "regular PCA",
+      " mean distance, spectral Rao's Q, and alpha-hull area."
+    ),
     "",
     "## Design",
     "",
     paste0("- Bootstrap iterations per quadrat x sample rule: ", N_BOOT_EXPERIMENT),
+    paste0("- PCA basis: ", PCA_BASIS_LABEL, " (`", PCA_BASIS_RDS, "`)."),
     "- Quadrat and sample-size rules are reused from `reports/tables/sample_size_effects/sa_entropy/sa_entropy_sample_size_design.csv` so the non-SA metrics are evaluated on the same quadrats and retained-pixel sample sizes.",
     "- Each replicate samples retained pixels without replacement. If a rule resolves to 100% of retained pixels, the metric is calculated once from the full retained-pixel set and repeated across the 50 output rows, so full-pixel conditions have zero artificial bootstrap variation.",
     "- PCA mean distance and spectral Rao's Q use all sampled pixels in PCA space. Alpha-hull area uses all sampled PC1-PC2 points unless the existing alpha-hull helper has to remove duplicate points or returns an internal failure method.",
@@ -696,7 +746,7 @@ if (identical(tolower(Sys.getenv("MEAN_FIGURES_ONLY", "false")), "true")) {
   quit(save = "no")
 }
 
-pca_object <- build_or_load_global_pca(SCALE_CONFIG)
+pca_object <- readRDS(PCA_BASIS_RDS)
 
 bootstrap_long <- bind_rows(lapply(seq_len(nrow(quad_metadata)), function(i) {
   quad <- quad_metadata[i, ]

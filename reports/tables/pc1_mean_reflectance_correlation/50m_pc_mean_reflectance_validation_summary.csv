@@ -1,0 +1,6 @@
+"check","expected","observed"
+"50m raster files found",80,"80"
+"pixels per quadrat",250,"250"
+"total sampled pixels per PCA basis",20000,"20000, 20000"
+"quadrat mean rows per PCA basis",80,"80, 80"
+"manual excluded quadrats included",6,"6"

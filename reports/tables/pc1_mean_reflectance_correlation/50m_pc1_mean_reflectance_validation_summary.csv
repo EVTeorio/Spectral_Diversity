@@ -1,0 +1,6 @@
+check,expected,observed
+50m raster files found,80,80
+pixels per quadrat,250,250
+total sampled pixels,20000,20000
+quadrat mean rows,80,80
+manual excluded quadrats included,6,6

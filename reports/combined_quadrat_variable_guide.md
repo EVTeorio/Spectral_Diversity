@@ -1,6 +1,6 @@
 # Combined Quadrat Analysis Tables Variable Guide
 
-Last updated: 2026-06-24
+Last updated: 2026-07-07
 
 This guide documents the shortened columns in the root-level combined CSVs:
 
@@ -29,6 +29,14 @@ Pixel-count, pair-count, bootstrap replicate, method, exclusion, geometry metada
 | `spec_convex` | Spectral heterogeneity | `pca_convex_hull_area` | Convex-hull area in global PC1-PC2 spectral space, used as a supplemental hull summary. |
 | `spec_hull3d_v` | Spectral heterogeneity | `pca_hull_volume_3d` | Convex-hull volume in global PC1-PC3 spectral space, used as a supplemental three-axis hull summary. |
 | `spec_hull3d_a` | Spectral heterogeneity | `pca_hull_area_3d` | Convex-hull surface area in global PC1-PC3 spectral space, used as a supplemental three-axis hull summary. |
+| `spec_spca_mean` | Spectral heterogeneity | `standardized_PCA_pca_euclidean_mean` | Mean Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space. |
+| `spec_spca_med` | Spectral heterogeneity | `standardized_PCA_pca_euclidean_median` | Median Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space. |
+| `spec_spca_sd` | Spectral heterogeneity | `standardized_PCA_pca_euclidean_sd` | Standard deviation of Euclidean distances of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space. |
+| `spec_spca_rao` | Spectral heterogeneity | `standardized_PCA_rao_q_pca` | Rao's Q spectral heterogeneity metric using equal pixel weights and squared Euclidean distance in standardized_PCA PC1-PC3 space. |
+| `spec_spca_alpha` | Spectral heterogeneity | `standardized_PCA_alpha_hull_area` | Alpha-hull area in standardized_PCA PC1-PC2 spectral space. |
+| `spec_spca_convex` | Spectral heterogeneity | `standardized_PCA_pca_convex_hull_area` | Convex-hull area in standardized_PCA PC1-PC2 spectral space, used as a supplemental hull summary. |
+| `spec_spca_hull3d_v` | Spectral heterogeneity | `standardized_PCA_pca_hull_volume_3d` | Convex-hull volume in standardized_PCA PC1-PC3 spectral space, used as a supplemental three-axis hull summary. |
+| `spec_spca_hull3d_a` | Spectral heterogeneity | `standardized_PCA_pca_hull_area_3d` | Convex-hull surface area in standardized_PCA PC1-PC3 spectral space, used as a supplemental three-axis hull summary. |
 | `sp_rich` | Species and phylogenetic diversity | `richness` | Number of species with positive crown-overlap values in the quadrat. |
 | `sp_shannon` | Species and phylogenetic diversity | `shannon` | Shannon species diversity calculated from positive species crown-overlap proportions. |
 | `sp_simpson` | Species and phylogenetic diversity | `simpson` | Simpson diversity calculated from positive species crown-overlap proportions as 1 minus the sum of squared proportional abundances. |

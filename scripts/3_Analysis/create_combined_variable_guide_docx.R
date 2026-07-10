@@ -61,7 +61,7 @@ write_combined_variable_guide_docx <- function() {
   doc <- body_add_par(doc, "What Is Included", style = "heading 1")
   doc <- body_add_par(
     doc,
-    "Each CSV contains one row per quadrat and 24 value columns. The tables retain identifiers, quadrat center coordinates, species diversity summaries, phylogenetic diversity summaries, spectral heterogeneity metrics, and environmental/topographic metrics.",
+    "Each CSV contains one row per quadrat and 32 value columns. The tables retain identifiers, quadrat center coordinates, species diversity summaries, phylogenetic diversity summaries, spectral heterogeneity metrics, standardized_PCA spectral heterogeneity metrics, and environmental/topographic metrics.",
     style = "Normal"
   )
   doc <- add_bullets(doc, c(
@@ -134,7 +134,10 @@ write_combined_variable_guide_docx <- function() {
     column = c(
       "spec_sa", "spec_pca_mean", "spec_pca_med", "spec_pca_sd",
       "spec_rao_q", "spec_alpha", "spec_convex",
-      "spec_hull3d_v", "spec_hull3d_a"
+      "spec_hull3d_v", "spec_hull3d_a",
+      "spec_spca_mean", "spec_spca_med", "spec_spca_sd",
+      "spec_spca_rao", "spec_spca_alpha", "spec_spca_convex",
+      "spec_spca_hull3d_v", "spec_spca_hull3d_a"
     ),
     meaning = c(
       "Spectral angle entropy mean.",
@@ -145,7 +148,15 @@ write_combined_variable_guide_docx <- function() {
       "Alpha-hull area in PC1-PC2 space.",
       "Convex-hull area in PC1-PC2 space.",
       "Convex-hull volume in PC1-PC3 space.",
-      "Convex-hull surface area in PC1-PC3 space."
+      "Convex-hull surface area in PC1-PC3 space.",
+      "Mean standardized_PCA-space spectral distance.",
+      "Median standardized_PCA-space spectral distance.",
+      "Standard deviation of standardized_PCA-space spectral distances.",
+      "Rao's Q in standardized_PCA spectral space.",
+      "Alpha-hull area in standardized_PCA PC1-PC2 space.",
+      "Convex-hull area in standardized_PCA PC1-PC2 space.",
+      "Convex-hull volume in standardized_PCA PC1-PC3 space.",
+      "Convex-hull surface area in standardized_PCA PC1-PC3 space."
     ),
     calculation = c(
       "Primary entropy mean from sunlit, shadow-masked smoothed 5 nm spectra; for most quadrats this is the mean of 70 bootstrap iterations using up to 5,000 retained pixels, while the small exact subset uses all retained pixel pairs.",
@@ -156,7 +167,15 @@ write_combined_variable_guide_docx <- function() {
       "Calculated as alpha-hull area in global PC1-PC2 spectral space.",
       "Calculated as convex-hull area in global PC1-PC2 spectral space.",
       "Calculated as convex-hull volume in global PC1-PC3 spectral space.",
-      "Calculated as convex-hull surface area in global PC1-PC3 spectral space."
+      "Calculated as convex-hull surface area in global PC1-PC3 spectral space.",
+      "Mean Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space.",
+      "Median Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space.",
+      "Standard deviation of Euclidean distances of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space.",
+      "Calculated with equal pixel weights and squared Euclidean distance in standardized_PCA PC1-PC3 space.",
+      "Calculated as alpha-hull area in standardized_PCA PC1-PC2 spectral space.",
+      "Calculated as convex-hull area in standardized_PCA PC1-PC2 spectral space.",
+      "Calculated as convex-hull volume in standardized_PCA PC1-PC3 spectral space.",
+      "Calculated as convex-hull surface area in standardized_PCA PC1-PC3 spectral space."
     )
   ))
 
@@ -179,9 +198,9 @@ write_combined_variable_guide_docx <- function() {
 
   doc <- body_add_par(doc, "Validation Snapshot", style = "heading 1")
   doc <- add_bullets(doc, c(
-    "10 m: 2,000 rows, 24 columns, 0 duplicate quad IDs, 97 missing spec_sa values, 256 missing spec_pca_mean values, and 0 missing elevation values.",
-    "20 m: 500 rows, 24 columns, 0 duplicate quad IDs, 15 missing spec_sa values, 64 missing spec_pca_mean values, and 0 missing elevation values.",
-    "50 m: 80 rows, 24 columns, 0 duplicate quad IDs, 0 missing spec_sa values, 6 missing spec_pca_mean values, and 0 missing elevation values.",
+    "10 m: 2,000 rows, 32 columns, 0 duplicate quad IDs, 97 missing spec_sa values, 256 missing spec_pca_mean values, and 0 missing elevation values.",
+    "20 m: 500 rows, 32 columns, 0 duplicate quad IDs, 15 missing spec_sa values, 64 missing spec_pca_mean values, and 0 missing elevation values.",
+    "50 m: 80 rows, 32 columns, 0 duplicate quad IDs, 0 missing spec_sa values, 6 missing spec_pca_mean values, and 0 missing elevation values.",
     "No per-species composition columns or metadata-style processing columns were detected in the regenerated CSVs."
   ))
 

@@ -4,6 +4,8 @@ VegIndex_NA_trimmed/
 Quad_Spectra/
 
 # Ignore large R data objects
+*.rds
+*.rda
 global_pca.rds
 Quad_Values/Spectral_diversitySHPs/*.rds
 
@@ -19,6 +21,16 @@ tests/reproduced_quad_spectra/
 
 # Geospatial raster sidecars (often large or regenerable)
 *.aux.xml
+
+# Generated raster / hyperspectral data products
+*.tif
+*.tiff
+*.vrt
+*.img
+*.bil
+*.bip
+*.bsq
+*.hdr
 
 # OS / editor files
 .DS_Store

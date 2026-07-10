@@ -1,0 +1,21 @@
+"pca_basis","pca_label","metric","value"
+"regular_PCA","Regular PCA","n_bands",121
+"regular_PCA","Regular PCA","wavelength_min_nm",398
+"regular_PCA","Regular PCA","wavelength_max_nm",998
+"regular_PCA","Regular PCA","pc1_uniform_loading",0.0909090909090909
+"regular_PCA","Regular PCA","pc1_nonuniform_abs_z_threshold",1.4736271393693
+"regular_PCA","Regular PCA","pc2_nonuniform_abs_z_threshold",1.16536014688796
+"regular_PCA","Regular PCA","brightness_flat_abs_pc1_departure_z_threshold",1
+"regular_PCA","Regular PCA","pc1_nonuniform_band_count",13
+"regular_PCA","Regular PCA","pc2_nonuniform_band_count",13
+"regular_PCA","Regular PCA","pc2_strong_not_brightness_band_count",12
+"standardized_PCA","Standardized PCA","n_bands",121
+"standardized_PCA","Standardized PCA","wavelength_min_nm",398
+"standardized_PCA","Standardized PCA","wavelength_max_nm",998
+"standardized_PCA","Standardized PCA","pc1_uniform_loading",0.0909090909090909
+"standardized_PCA","Standardized PCA","pc1_nonuniform_abs_z_threshold",1.34017586880113
+"standardized_PCA","Standardized PCA","pc2_nonuniform_abs_z_threshold",1.65308247534813
+"standardized_PCA","Standardized PCA","brightness_flat_abs_pc1_departure_z_threshold",1
+"standardized_PCA","Standardized PCA","pc1_nonuniform_band_count",13
+"standardized_PCA","Standardized PCA","pc2_nonuniform_band_count",13
+"standardized_PCA","Standardized PCA","pc2_strong_not_brightness_band_count",6

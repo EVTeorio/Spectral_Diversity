@@ -77,7 +77,15 @@ SPECTRAL_MAP <- c(
   alpha_hull_area = "spec_alpha",
   pca_convex_hull_area = "spec_convex",
   pca_hull_volume_3d = "spec_hull3d_v",
-  pca_hull_area_3d = "spec_hull3d_a"
+  pca_hull_area_3d = "spec_hull3d_a",
+  standardized_PCA_pca_euclidean_mean = "spec_spca_mean",
+  standardized_PCA_pca_euclidean_median = "spec_spca_med",
+  standardized_PCA_pca_euclidean_sd = "spec_spca_sd",
+  standardized_PCA_rao_q_pca = "spec_spca_rao",
+  standardized_PCA_alpha_hull_area = "spec_spca_alpha",
+  standardized_PCA_pca_convex_hull_area = "spec_spca_convex",
+  standardized_PCA_pca_hull_volume_3d = "spec_spca_hull3d_v",
+  standardized_PCA_pca_hull_area_3d = "spec_spca_hull3d_a"
 )
 
 ENVIRO_MAP <- c(
@@ -219,6 +227,14 @@ make_variable_inventory <- function(taxa_table) {
       "Convex-hull area in global PC1-PC2 spectral space, used as a supplemental hull summary.",
       "Convex-hull volume in global PC1-PC3 spectral space, used as a supplemental three-axis hull summary.",
       "Convex-hull surface area in global PC1-PC3 spectral space, used as a supplemental three-axis hull summary.",
+      "Mean Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space.",
+      "Median Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space.",
+      "Standard deviation of Euclidean distances of retained vector-normalized spectra from the quadrat centroid in standardized_PCA PC1-PC3 spectral space.",
+      "Rao's Q spectral heterogeneity metric using equal pixel weights and squared Euclidean distance in standardized_PCA PC1-PC3 space.",
+      "Alpha-hull area in standardized_PCA PC1-PC2 spectral space.",
+      "Convex-hull area in standardized_PCA PC1-PC2 spectral space, used as a supplemental hull summary.",
+      "Convex-hull volume in standardized_PCA PC1-PC3 spectral space, used as a supplemental three-axis hull summary.",
+      "Convex-hull surface area in standardized_PCA PC1-PC3 spectral space, used as a supplemental three-axis hull summary.",
       "Number of species with positive crown-overlap values in the quadrat.",
       "Shannon species diversity calculated from positive species crown-overlap proportions.",
       "Simpson diversity calculated from positive species crown-overlap proportions as 1 minus the sum of squared proportional abundances.",

@@ -115,6 +115,8 @@ Spectral_Diversity/
         Spectral_diversitySHPs/
             global_pca_smooth_masked_5nm.rds
             global_pca_smooth_masked_5nm_variance_explained.csv
+            standardized_PCA_global_pca_smooth_masked_5nm.rds
+            standardized_PCA_global_pca_smooth_masked_5nm_variance_explained.csv
             spectral_heterogeneity_10m_smooth_masked_5nm.*
             spectral_heterogeneity_20m_smooth_masked_5nm.*
             spectral_heterogeneity_50m_smooth_masked_5nm.*
@@ -186,6 +188,8 @@ Spectral_Diversity/
         figures/
             bootstrap_variation/
             multiscale_spectral_biodiversity/
+            pca_loading_spectral_regions/
+            pc1_mean_reflectance_correlation/
             sample_size_effects/
                 alpha_hull_area/
                 pca_mean_distance/
@@ -197,6 +201,8 @@ Spectral_Diversity/
         tables/
             bootstrap_variation/
             multiscale_spectral_biodiversity/
+            pca_loading_spectral_regions/
+            pc1_mean_reflectance_correlation/
             sample_size_effects/
                 alpha_hull_area/
                 pca_mean_distance/
@@ -353,11 +359,13 @@ Spectral_Diversity/
 - Current smoothed spectra generated from those confirmed inputs are in `Quad_Spectra/10m_smooth`, `Quad_Spectra/20m_smooth`, and `Quad_Spectra/50m_smooth`.
 - Current smoothed 5 nm spectra generated from the smoothed outputs are in `Quad_Spectra/10m_smooth_5nm`, `Quad_Spectra/20m_smooth_5nm`, and `Quad_Spectra/50m_smooth_5nm`.
 - The current spectral angle entropy workflow should pick up from the `_smooth_5nm` folders and write outputs under `Quad_Values/`.
-- The current PCA-dependent spectral heterogeneity workflow is `scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all_metrics.R`. It excludes documented atmospheric/cloud-affected quadrats from the global PCA sample and leaves their PCA-dependent metric values missing.
+- The current PCA-dependent spectral heterogeneity workflow is `scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all_metrics.R`. The PCA basis samples only current 10 m smoothed 5 nm rasters after shadow masking, requesting up to 450 illuminated pixels per raster. Downstream raw and standardized PCA metric outputs still preserve documented atmospheric/cloud exclusions as missing metric values.
 - Current per-scale spectral heterogeneity outputs have been generated for 10 m, 20 m, and 50 m using the current `_smooth_5nm` spectra.
 - Current per-scale plant diversity outputs are visible for 10 m, 20 m, and 50 m under `Quad_Values/Diversity_SHPs/`, with `quad_id` values aligned to the current spectral heterogeneity outputs.
 - Current per-scale environmental outputs are visible for 10 m, 20 m, and 50 m under `Quad_Values/Enviro_SHPs/`, with `quad_id` values aligned to current plant-diversity and spectral outputs.
 - Current root-level combined analysis tables are `quadrat_analysis_10m.csv`, `quadrat_analysis_20m.csv`, and `quadrat_analysis_50m.csv`; their shortened-column guides are `reports/combined_quadrat_variable_guide.md` and `combined_quadrat_variable_guide.docx`.
 - Current multiscale spectral-biodiversity PDF reports are in `Documents/PDFs/`; the reproducible workflow is `scripts/3_Analysis/multiscale_spectral_biodiversity_analysis.R`, with companion figures and tables under `reports/figures/multiscale_spectral_biodiversity/` and `reports/tables/multiscale_spectral_biodiversity/`.
 - Current sample-size sensitivity outputs are under `reports/analysis/`, `reports/figures/sample_size_effects/`, and `reports/tables/sample_size_effects/`, including SA entropy, PCA mean distance, spectral Rao's Q, and alpha-hull area.
+- Current 50 m PC1-PC3 mean-reflectance correlation outputs are under `reports/analysis/`, `reports/figures/pc1_mean_reflectance_correlation/`, and `reports/tables/pc1_mean_reflectance_correlation/`.
+- Current PCA loading spectral-region outputs are under `reports/analysis/`, `reports/figures/pca_loading_spectral_regions/`, and `reports/tables/pca_loading_spectral_regions/`.
 - `Quad_Spectra/10m_test`, `Quad_Spectra/20m_test`, and `Quad_Spectra/50m_test` are testing/validation artifacts and should not be treated as primary analytical inputs without explicit user direction.

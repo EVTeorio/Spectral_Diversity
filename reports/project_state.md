@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-07-06
+Last updated: 2026-07-09
 
 ## Current Objective
 
@@ -54,14 +54,19 @@ Build a reproducible and well-documented research workflow for evaluating relati
   - PCA-space mean Euclidean distance from the quadrat centroid
   - alpha-hull area in global PC1-PC2 space
   - Rao's Q in global PC1-PC3 space using equal pixel weights and squared Euclidean distance
-- Rebuilt the global PCA basis after applying manual atmospheric/cloud exclusions from `RESEARCH_OBJECTIVES.md`. The current PCA basis excludes affected quadrats from PCA sampling and from PCA-dependent metric calculation.
-- Current PCA-dependent outputs supersede and replace the earlier 2026-06-22 PCA-dependent outputs created before manual exclusions were applied; the earlier pre-exclusion PCA values should be disregarded.
-- Created a global PCA basis from a uniform per-eligible-quadrat sample across current 10 m, 20 m, and 50 m smoothed 5 nm spectra, with a requested target of up to 500 retained sunlit pixels per eligible quadrat raster and a configured maximum PCA sample of 800,000 rows. The effective uniform sample was 354 pixels per eligible raster, producing 797,916 sampled pixels from 2,254 eligible rasters.
+- Rebuilt the global PCA basis to avoid nested multiscale resampling of the same footprint. The current PCA basis samples only current 10 m smoothed 5 nm rasters after the 563 nm shadow mask is applied.
+- Current PCA-dependent outputs supersede and replace the earlier 2026-06-22 PCA-dependent outputs and the later multiscale-nested PCA basis. Those older PCA values should be disregarded for downstream interpretation.
+- Created the raw global PCA basis from 1,909 current 10 m rasters with up to 450 retained illuminated pixels per raster, producing 854,767 sampled pixels and 121 spectral bands. The sample count is below 1,909 x 450 because some 10 m rasters have fewer than 450 valid illuminated pixels after masking.
+- Created a second PCA basis with the same 10 m sampling logic after vector-normalizing each retained spectrum; standardized PCA outputs use the `standardized_PCA...` naming convention.
 - Created PCA variance diagnostic outputs:
   - `Quad_Values/Spectral_diversitySHPs/global_pca_smooth_masked_5nm.rds`
   - `Quad_Values/Spectral_diversitySHPs/global_pca_smooth_masked_5nm_variance_explained.csv`
   - `reports/figures/spectral_heterogeneity/global_pca_smooth_masked_5nm_variance_explained.png`
-- Global PCA variance explained after manual exclusions: PC1 = 66.98%, PC2 = 19.93%, PC3 = 3.80%, cumulative PC1-PC3 = 90.71%.
+  - `Quad_Values/Spectral_diversitySHPs/standardized_PCA_global_pca_smooth_masked_5nm.rds`
+  - `Quad_Values/Spectral_diversitySHPs/standardized_PCA_global_pca_smooth_masked_5nm_variance_explained.csv`
+  - `reports/figures/spectral_heterogeneity/standardized_PCA_global_pca_smooth_masked_5nm_variance_explained.png`
+- Raw global PCA variance explained: PC1 = 66.23%, PC2 = 20.72%, PC3 = 3.76%, cumulative PC1-PC3 = 90.71%.
+- Standardized PCA variance explained: PC1 = 45.46%, PC2 = 22.54%, PC3 = 6.80%, cumulative PC1-PC3 = 74.80%.
 - Created all-scale combined spectral heterogeneity CSVs and shapefiles:
   - `Quad_Values/10m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
   - `Quad_Values/20m_spectral_heterogeneity_smooth_masked_5nm_summary.csv`
@@ -76,6 +81,10 @@ Build a reproducible and well-documented research workflow for evaluating relati
   - `Quad_Values/10m_PCA_metrics_smooth_masked_5nm_summary.csv`
   - `Quad_Values/20m_PCA_metrics_smooth_masked_5nm_summary.csv`
   - `Quad_Values/50m_PCA_metrics_smooth_masked_5nm_summary.csv`
+- Created standardized PCA-only metric CSVs:
+  - `Quad_Values/10m_standardized_PCA_metrics_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/20m_standardized_PCA_metrics_smooth_masked_5nm_summary.csv`
+  - `Quad_Values/50m_standardized_PCA_metrics_smooth_masked_5nm_summary.csv`
 - Added `reports/validation/20260622_spectral_heterogeneity_all_metrics_validation.md`.
 - Created a bootstrap variation QC analysis comparing within-quadrat bootstrap variation to between-quadrat spectral heterogeneity variation.
 - Added `scripts/3_Analysis/bootstrap_variation_analysis.R`.
@@ -83,9 +92,12 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Added `reports/figures/bootstrap_variation/spectral_entropy_histograms_by_scale.png` to visualize spectral heterogeneity distribution shape and skewness by scale.
 - Bootstrap variation analysis conclusion: `spectral_entropy` / `boot_mean` values are usable as primary heterogeneity means, but `boot_sd`, `boot_cv`, bootstrap-mean CI fields, and `method` should be carried forward as quality-control fields and high-CV or wide-CI quadrats should be used in sensitivity checks.
 - Added `scripts/3_Analysis/sa_entropy_sample_size_effects.R` to compare SA entropy means across fixed and percentage-based bootstrap pixel sample sizes for 32 selected 10 m quadrats, 16 selected 20 m quadrats, and 8 selected 50 m quadrats. The script retains the original six pilot quadrats; adds fixed 2,000 and 3,000 pixel rules for 10 m and 20 m, fixed 6,000 and 8,000 pixel rules for 50 m, and percent-based 1%, 2%, and 3% rules; handles full-pixel conditions deterministically so 100% retained-pixel rows have zero artificial bootstrap variation; and writes outputs to `reports/analysis/20260703_sa_entropy_sample_size_effects.md`, `reports/tables/sample_size_effects/sa_entropy/`, and `reports/figures/sample_size_effects/sa_entropy/`.
-- Added `scripts/3_Analysis/spectral_metric_sample_size_effects.R` to extend the same sample-size sensitivity design to PCA mean distance, spectral Rao's Q, and alpha-hull area. The script reuses the finalized SA entropy quadrat/sample design, calculates full-pixel conditions deterministically, writes metric-specific tables under `reports/tables/sample_size_effects/pca_mean_distance/`, `reports/tables/sample_size_effects/spectral_rao_q/`, and `reports/tables/sample_size_effects/alpha_hull_area/`, writes matching metric-specific figure folders under `reports/figures/sample_size_effects/`, draws 95% CI error bars on the mean-by-sample-size figures, and summarizes the outputs in `reports/analysis/20260704_pca_metric_sample_size_effects.md`.
+- Added `scripts/3_Analysis/spectral_metric_sample_size_effects.R` to extend the same sample-size sensitivity design to PCA mean distance, spectral Rao's Q, and alpha-hull area for both regular PCA and vector-normalized standardized PCA. The script reuses the finalized SA entropy quadrat/sample design, calculates full-pixel conditions deterministically, writes regular metric-specific tables under `reports/tables/sample_size_effects/{pca_mean_distance,spectral_rao_q,alpha_hull_area}/`, writes standardized metric-specific tables under `reports/tables/sample_size_effects/standardized_PCA_*`, writes matching figure folders, draws 95% CI error bars on the mean-by-sample-size figures, and summarizes the outputs in `reports/analysis/20260704_pca_metric_sample_size_effects.md` and `reports/analysis/20260707_standardized_pca_metric_sample_size_effects.md`.
 - Reviewed current Markdown context before the next task and refreshed `reports/directory_map.md` to match the live working tree. As of 2026-07-06, the live derived-output directory is `Quad_Values/`.
 - Updated scripts, reports, execution plans, validation notes, task reports, sample-size design CSVs, governance docs, and `combined_quadrat_variable_guide.docx` so `Quad_Values/` is the canonical derived-output directory. Added `reports/tasks/20260706_quad_values_path_update.md` and `reports/validation/20260706_quad_values_path_update_validation.md`.
+- Added `scripts/3_Analysis/pc1_mean_reflectance_correlation_50m.R` to test the relationship between per-pixel mean reflectance and PC1, PC2, and PC3 for both regular PCA and vector-normalized standardized PCA. The analysis samples the same 250 valid sunlit pixels from each current 50 m quadrat for each PCA basis, producing 20,000 sampled pixels per basis from 80 quadrats, and writes combined and basis-specific tables, figures, an analysis report, a task note, and validation notes under `reports/`.
+- The 50 m mean-reflectance diagnostic now uses standardized PCA as the key brightness-reduced interpretation. Under standardized PCA, PC1 has weak pixel-level association with mean reflectance (r = -0.1178, R2 = 0.0139) and a modest quadrat-mean association (r = -0.3482, R2 = 0.1213); PC2 has a stronger pixel-level association (r = -0.3312, R2 = 0.1097) but almost no quadrat-mean association (r = 0.0598, R2 = 0.0036). Regular PCA results are retained as supporting comparison and show the expected brightness-dominated PC1 relationship.
+- Added `scripts/3_Analysis/pca_loading_spectral_region_analysis.R` to identify where PC1 and PC2 loadings are not uniform across wavelength for both regular and standardized PCA. The key finding is stated from standardized PCA: standardized PC1 has its strongest nonuniform loading region at 843-903 nm, standardized PC2 has concentrated structure at 753-813 nm, and the brightness-reduced standardized PC2 region to carry forward is 753-778 nm. Regular PCA loading regions are retained only as supporting comparison.
 - Refactored the plant-diversity workflow into `scripts/2_Indices Creation/Plant_diversity/plant_diversity_all_scales.R`.
 - Updated the older plant-diversity entry scripts (`sp_weighted_matrix.R`, `species_diversity.R`, and `phylogenetic_diversity.R`) to call the all-scale workflow.
 - Created all-scale plant diversity outputs under `Quad_Values/Diversity_SHPs/`:
@@ -106,9 +118,9 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Added `reports/validation/20260623_environmental_variables_all_scales_validation.md`.
 - Added `scripts/3_Analysis/combine_quadrat_analysis_tables.R` to join current spectral heterogeneity, species composition, species diversity, phylogenetic diversity, environmental/topographic values, and quadrat center coordinates into one analysis-ready root-level CSV per scale.
 - Created current combined quadrat analysis tables:
-  - `quadrat_analysis_10m.csv` with 2,000 rows and 24 columns
-  - `quadrat_analysis_20m.csv` with 500 rows and 24 columns
-  - `quadrat_analysis_50m.csv` with 80 rows and 24 columns
+  - `quadrat_analysis_10m.csv` with 2,000 rows and 32 columns
+  - `quadrat_analysis_20m.csv` with 500 rows and 32 columns
+  - `quadrat_analysis_50m.csv` with 80 rows and 32 columns
 - Updated the combined tables to exclude per-species composition columns while retaining species diversity summaries, phylogenetic diversity summaries, spectral heterogeneity metrics, environmental/topographic metrics, and center coordinates.
 - Added shortened-column documentation in `reports/combined_quadrat_variable_guide.md` and a user-friendly Word guide in `combined_quadrat_variable_guide.docx`.
 - Added `scripts/3_Analysis/create_combined_variable_guide_docx.R` to regenerate the Word guide.
@@ -121,7 +133,7 @@ Build a reproducible and well-documented research workflow for evaluating relati
   - `spectral_biodiversity_multiscale_findings.pdf`
   - `spectral_biodiversity_model_appendix.pdf`
 - Created analysis figures under `reports/figures/multiscale_spectral_biodiversity/` and analysis tables under `reports/tables/multiscale_spectral_biodiversity/`.
-- The multiscale analysis treats `spec_sa` as the primary spectral heterogeneity response and uses `spec_pca_mean`, `spec_rao_q`, and `spec_alpha` as secondary response metrics.
+- The multiscale analysis treats `spec_sa` as the primary spectral heterogeneity response and uses `spec_pca_mean`, `spec_rao_q`, `spec_alpha`, `spec_spca_mean`, `spec_spca_rao`, and `spec_spca_alpha` as secondary response metrics. The script has been updated for standardized PCA fields, but biodiversity/environment relationship analyses were intentionally not rerun during the PCA-only diagnostic update.
 - The multiscale analysis uses `phy_faith`, `phy_afaith`, and `sp_shannon` as primary biodiversity predictors and `env_elev` plus `env_tri11` as environmental controls.
 - Documented 10 m and 20 m edge quadrats were excluded from primary inference in the multiscale analysis; 50 m used all quadrats because no separate 50 m edge rule is documented.
 - Best-supported primary-response candidate models by AIC used abundance-weighted Faith's PD: biodiversity plus environment at 10 m and 20 m, and abundance-weighted Faith's PD by elevation interaction at 50 m. Adjusted R2 values were approximately 0.038, 0.094, and 0.242, respectively.
@@ -199,11 +211,11 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - The 10 m output shapefile has 97 missing `spec_ent` values: 91 shapefile quadrats without matching current raster outputs and 6 insufficient-pixel raster summaries.
 - The 20 m output shapefile has 15 missing `spec_ent` values from shapefile quadrats without matching current raster outputs.
 - The 50 m output shapefile has no missing `spec_ent` values.
-- The current PCA-dependent spectral heterogeneity workflow applies the manual atmospheric/cloud exclusion policy `manual_atmospheric_cloud_exclusions_20260622`. Current raster-output exclusions are 165 of 1,909 at 10 m, 49 of 485 at 20 m, and 6 of 80 at 50 m.
+- The current PCA basis samples the entire available 10 m raster footprint after shadow masking and does not sample from 20 m or 50 m rasters. Downstream PCA metric values still apply the manual atmospheric/cloud exclusion policy for metric reporting. Current raster-output exclusions are 165 of 1,909 at 10 m, 49 of 485 at 20 m, and 6 of 80 at 50 m.
 - The current 50 m manual atmospheric/cloud exclusions are `sub50_80`, `sub50_79`, `sub50_71`, `sub50_70`, `sub50_62`, and `sub50_53`.
-- The combined 10 m spectral heterogeneity CSV has 1,909 rows. It has 6 missing SA entropy values from insufficient-pixel SA entropy summaries, and 165 missing PCA Euclidean, Rao Q, and 3D PCA hull values from manual exclusions. It has 168 missing alpha-hull values: 165 manual exclusions plus 3 alpha-hull failures after deterministic sampled fallback.
-- The combined 20 m spectral heterogeneity CSV has 485 rows. It has no missing SA entropy values and 49 missing PCA-dependent values from manual exclusions. The combined 20 m shapefile has 15 missing SA entropy values from shapefile quadrats without matching current raster outputs, and 64 missing PCA-dependent values from those unmatched polygons plus 49 manual exclusions.
-- The combined 50 m spectral heterogeneity CSV and shapefile have 80 rows/features. They have no missing SA entropy values and 6 missing PCA-dependent values from manual exclusions.
+- The combined 10 m spectral heterogeneity CSV has 1,909 rows and 47 columns. It has 6 missing SA entropy values from insufficient-pixel SA entropy summaries, and 165 missing raw and standardized PCA Euclidean, Rao Q, and 3D PCA hull values from manual exclusions. Raw and standardized alpha-hull values have 168 missing values: 165 manual exclusions plus 3 alpha-hull failures after deterministic sampled fallback.
+- The combined 20 m spectral heterogeneity CSV has 485 rows and 47 columns. It has no missing SA entropy values and 49 missing raw and standardized PCA-dependent values from manual exclusions. The combined 20 m shapefile has 15 missing SA entropy values from shapefile quadrats without matching current raster outputs, and 64 missing PCA-dependent values from those unmatched polygons plus 49 manual exclusions.
+- The combined 50 m spectral heterogeneity CSV and shapefile have 80 rows/features. They have no missing SA entropy values and 6 missing raw and standardized PCA-dependent values from manual exclusions.
 - The supplemental three-axis hull output is a convex hull volume/area in global PC1-PC3 space, not a true 3D alpha hull, because `alphashape3d` is not currently installed.
 - Bootstrap QC found low median CV at all scales, about 0.4% to 0.5%, but a non-trivial high-CV tail.
 - Using a 5% bootstrap-CV flag, 372 of 1,866 10 m bootstrap-mean quadrats, 60 of 477 20 m quadrats, and 11 of 79 50 m quadrats would be flagged.

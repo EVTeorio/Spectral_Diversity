@@ -6,7 +6,7 @@
 
 ## Purpose
 
-The purpose of this project is to quantify and evaluate relationships between remotely sensed spectral heterogeneity and field-derived biodiversity metrics within the Paint Rock Forest Dynamics Plot. Specifically, this research investigates whether variation in hyperspectral reflectance can serve as a proxy for phylogenetic diversity across multiple spatial scales.
+The purpose of this project is to quantify and evaluate relationships between remotely sensed spectral heterogeneity and field-derived biodiversity metrics within the Paint Rock Forest Dynamics Plot. Specifically, this research investigates whether variation in drone based hyperspectral reflectance can serve as a proxy for phylogenetic diversity across multiple spatial scales.
 
 The Codex agent will assist in:
 
