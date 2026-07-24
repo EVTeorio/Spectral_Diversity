@@ -1,66 +1,48 @@
-USER_R_LIB <- "C:/Users/PaintRock/AppData/Local/R/win-library/4.2"
-if (dir.exists(USER_R_LIB)) {
-  .libPaths(unique(c(USER_R_LIB, .libPaths())))
-}
-
-required_packages <- c(
-  "dplyr", "ggplot2", "readr", "tibble", "tidyr", "stringr",
-  "broom", "gridExtra", "grid", "spdep", "scales", "png", "beepr"
-)
-missing_packages <- required_packages[
-  !vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)
-]
-if (length(missing_packages) > 0) {
-  stop(
-    "Missing required R packages: ",
-    paste(missing_packages, collapse = ", "),
-    call. = FALSE
-  )
-}
-
-suppressPackageStartupMessages({
-  library(dplyr)
-  library(ggplot2)
-  library(readr)
-  library(tibble)
-  library(tidyr)
-  library(stringr)
-  library(broom)
-  library(gridExtra)
-  library(grid)
-  library(spdep)
-  library(scales)
-})
-
 PROJECT_DIR <- "C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity"
 FIGURE_DIR <- file.path(PROJECT_DIR, "reports/figures/multiscale_spectral_biodiversity")
 TABLE_DIR <- file.path(PROJECT_DIR, "reports/tables/multiscale_spectral_biodiversity")
-PDF_DIR <- file.path(PROJECT_DIR, "Documents/PDFs")
+ANALYSIS_REPORT <- file.path(PROJECT_DIR, "reports/analysis/20260710_sv_diversity_pairwise_correlations.md")
 TASK_REPORT <- file.path(PROJECT_DIR, "reports/tasks/20260624_multiscale_spectral_biodiversity_analysis.md")
 VALIDATION_REPORT <- file.path(PROJECT_DIR, "reports/validation/20260624_multiscale_spectral_biodiversity_analysis_validation.md")
 
-PRIMARY_RESPONSE <- "spec_sa"
-SECONDARY_RESPONSES <- c(
-  "spec_pca_mean", "spec_rao_q", "spec_alpha",
-  "spec_spca_mean", "spec_spca_rao", "spec_spca_alpha"
+SV_MEASURES <- c("spec_spca_mean", "spec_sa")
+DIVERSITY_MEASURES <- c(
+  "phy_faith", "phy_rao", "phy_afaith",
+  "sp_rich", "sp_shannon", "sp_simpson", "sp_even"
 )
-BIODIVERSITY_PREDICTORS <- c("phy_faith", "phy_afaith", "sp_shannon")
-ENVIRONMENT_PREDICTORS <- c("env_elev", "env_tri11")
+
 DISPLAY_NAMES <- c(
-  spec_sa = "SA entropy mean",
-  spec_pca_mean = "PCA mean distance",
-  spec_rao_q = "Spectral Rao's Q",
-  spec_alpha = "Alpha-hull area",
-  spec_spca_mean = "standardized_PCA mean distance",
-  spec_spca_rao = "standardized_PCA Rao's Q",
-  spec_spca_alpha = "standardized_PCA alpha-hull area",
+  spec_spca_mean = "Standardized PCA mean Euclidean distance",
+  spec_sa = "SA entropy",
   phy_faith = "Faith's PD",
+  phy_rao = "Phylogenetic Rao's Q",
   phy_afaith = "Abundance-weighted Faith's PD",
+  sp_rich = "Species richness",
   sp_shannon = "Shannon diversity",
-  env_elev = "Elevation",
-  env_tri5 = "TRI 5x5",
-  env_tri11 = "TRI 11x11",
-  env_tri21 = "TRI 21x21"
+  sp_simpson = "Simpson diversity",
+  sp_even = "Species evenness"
+)
+
+DIVERSITY_GROUPS <- c(
+  phy_faith = "Phylogenetic diversity",
+  phy_rao = "Phylogenetic diversity",
+  phy_afaith = "Phylogenetic diversity",
+  sp_rich = "Species diversity",
+  sp_shannon = "Species diversity",
+  sp_simpson = "Species diversity",
+  sp_even = "Species diversity"
+)
+
+HEATMAP_NAMES <- c(
+  spec_spca_mean = "Std PCA distance",
+  spec_sa = "SA entropy",
+  phy_faith = "Faith PD",
+  phy_rao = "Phylo Rao Q",
+  phy_afaith = "Abund. Faith PD",
+  sp_rich = "Richness",
+  sp_shannon = "Shannon",
+  sp_simpson = "Simpson",
+  sp_even = "Evenness"
 )
 
 EDGE_20M <- c(
@@ -74,945 +56,574 @@ EDGE_20M <- c(
   "1624", "1921", "1724", "1922", "1824", "1923", "1924", "1904", "1902", "1918"
 )
 
-theme_report <- function(base_size = 11) {
-  theme_minimal(base_size = base_size) +
-    theme(
-      plot.title = element_text(face = "bold", color = "#263238", size = base_size + 3),
-      plot.subtitle = element_text(color = "#546E7A"),
-      axis.title = element_text(color = "#263238"),
-      panel.grid.minor = element_blank(),
-      legend.position = "bottom",
-      legend.title = element_text(face = "bold"),
-      strip.text = element_text(face = "bold", color = "#263238"),
-      plot.margin = margin(9, 12, 9, 12)
-    )
-}
-
 dir.create(FIGURE_DIR, recursive = TRUE, showWarnings = FALSE)
 dir.create(TABLE_DIR, recursive = TRUE, showWarnings = FALSE)
-dir.create(PDF_DIR, recursive = TRUE, showWarnings = FALSE)
+dir.create(dirname(ANALYSIS_REPORT), recursive = TRUE, showWarnings = FALSE)
+dir.create(dirname(TASK_REPORT), recursive = TRUE, showWarnings = FALSE)
+dir.create(dirname(VALIDATION_REPORT), recursive = TRUE, showWarnings = FALSE)
+
+display_name <- function(x) {
+  unname(DISPLAY_NAMES[x])
+}
+
+heatmap_name <- function(x) {
+  unname(HEATMAP_NAMES[x])
+}
+
+fmt_num <- function(x, digits = 3) {
+  out <- rep("NA", length(x))
+  ok <- !is.na(x)
+  out[ok] <- formatC(as.numeric(x[ok]), digits = digits, format = "f")
+  out
+}
+
+fmt_p <- function(x) {
+  out <- rep("NA", length(x))
+  ok <- !is.na(x)
+  out[ok] <- ifelse(
+    as.numeric(x[ok]) < 0.001,
+    formatC(as.numeric(x[ok]), digits = 2, format = "e"),
+    formatC(as.numeric(x[ok]), digits = 3, format = "f")
+  )
+  out
+}
 
 read_scale_table <- function(scale_name) {
   file_path <- file.path(PROJECT_DIR, paste0("quadrat_analysis_", scale_name, ".csv"))
-  read_csv(file_path, show_col_types = FALSE) %>%
-    mutate(
-      quad_id = as.character(quad_id),
-      scale = factor(scale, levels = c("10m", "20m", "50m"))
-    )
+  data <- read.csv(file_path, stringsAsFactors = FALSE, check.names = FALSE)
+  data$quad_id <- as.character(data$quad_id)
+  data$scale <- as.character(data$scale)
+  data
+}
+
+read_sampling_metadata <- function(scale_name) {
+  file_path <- file.path(
+    PROJECT_DIR,
+    "Quad_Values",
+    paste0(scale_name, "_spectral_heterogeneity_smooth_masked_5nm_summary.csv")
+  )
+  metadata <- read.csv(file_path, stringsAsFactors = FALSE, check.names = FALSE)
+  metadata$quad_id <- as.character(metadata$quad_id)
+  metadata$scale <- scale_name
+
+  sa_all_pixels_sampled <- rep(NA, nrow(metadata))
+  has_sa_metadata <- !is.na(metadata$sa_n_pixels) & !is.na(metadata$sa_method)
+  sa_all_pixels_sampled[has_sa_metadata] <- metadata$sa_method[has_sa_metadata] == "exact_all_pixels" |
+    (metadata$sa_method[has_sa_metadata] == "bootstrap_mean" & metadata$sa_n_pixels[has_sa_metadata] <= 5000)
+
+  spca_euclidean_all_pixels_sampled <- rep(NA, nrow(metadata))
+  has_spca_metadata <- !is.na(metadata$standardized_PCA_metric_method)
+  spca_euclidean_all_pixels_sampled[has_spca_metadata] <-
+    metadata$standardized_PCA_metric_method[has_spca_metadata] == "all_pixels"
+
+  data.frame(
+    quad_id = metadata$quad_id,
+    scale = metadata$scale,
+    sa_n_pixels = metadata$sa_n_pixels,
+    sa_method = metadata$sa_method,
+    sa_all_pixels_sampled = sa_all_pixels_sampled,
+    spca_n_pixels = metadata$standardized_PCA_n_pixels,
+    spca_metric_method = metadata$standardized_PCA_metric_method,
+    spca_euclidean_all_pixels_sampled = spca_euclidean_all_pixels_sampled,
+    stringsAsFactors = FALSE
+  )
 }
 
 add_edge_flags <- function(data) {
-  data %>%
-    mutate(
-      parent_20m = if_else(
-        scale == "10m",
-        str_replace(quad_id, "_[a-d]$", ""),
-        quad_id
-      ),
-      edge_flag = case_when(
-        scale == "20m" & quad_id %in% EDGE_20M ~ TRUE,
-        scale == "10m" & parent_20m %in% EDGE_20M ~ TRUE,
-        TRUE ~ FALSE
-      ),
-      primary_analysis = case_when(
-        scale %in% c("10m", "20m") ~ !edge_flag,
-        TRUE ~ TRUE
-      )
-    )
+  parent_20m <- data$quad_id
+  is_10m <- data$scale == "10m"
+  parent_20m[is_10m] <- sub("_[a-d]$", "", parent_20m[is_10m])
+
+  edge_flag <- rep(FALSE, nrow(data))
+  edge_flag[data$scale == "20m" & data$quad_id %in% EDGE_20M] <- TRUE
+  edge_flag[data$scale == "10m" & parent_20m %in% EDGE_20M] <- TRUE
+
+  data$parent_20m <- parent_20m
+  data$edge_flag <- edge_flag
+  data$primary_analysis <- ifelse(data$scale %in% c("10m", "20m"), !edge_flag, TRUE)
+  data
 }
 
-z_score <- function(x) {
-  if (all(is.na(x)) || isTRUE(sd(x, na.rm = TRUE) == 0)) {
-    return(rep(NA_real_, length(x)))
-  }
-  as.numeric(scale(x))
-}
-
-prep_model_data <- function(data) {
-  scale_vars <- unique(c(PRIMARY_RESPONSE, SECONDARY_RESPONSES, BIODIVERSITY_PREDICTORS, ENVIRONMENT_PREDICTORS))
-  data %>%
-    mutate(across(all_of(scale_vars), z_score, .names = "{.col}_z"))
-}
-
-model_formula <- function(response, model_type, predictor = NULL) {
-  response_z <- paste0(response, "_z")
-  if (model_type == "Null") {
-    return(as.formula(paste(response_z, "~ 1")))
-  }
-  if (model_type == "Biodiversity") {
-    return(as.formula(paste(response_z, "~", paste0(predictor, "_z"))))
-  }
-  if (model_type == "Environment") {
-    return(as.formula(paste(response_z, "~ env_elev_z + env_tri11_z")))
-  }
-  if (model_type == "Biodiversity + environment") {
-    return(as.formula(paste(response_z, "~", paste0(predictor, "_z"), "+ env_elev_z + env_tri11_z")))
-  }
-  if (model_type == "Biodiversity x elevation") {
-    return(as.formula(paste(response_z, "~", paste0(predictor, "_z"), "* env_elev_z + env_tri11_z")))
-  }
-  stop("Unknown model type: ", model_type, call. = FALSE)
-}
-
-fit_one_model <- function(data, scale_name, response, model_type, predictor = NA_character_) {
-  formula <- model_formula(response, model_type, predictor)
-  model_vars <- all.vars(formula)
-  model_df <- data %>%
-    filter(scale == scale_name, primary_analysis) %>%
-    select(quad_id, center_x, center_y, all_of(model_vars)) %>%
-    tidyr::drop_na()
-
-  if (nrow(model_df) < length(model_vars) + 8) {
-    return(NULL)
-  }
-
-  fit <- lm(formula, data = model_df)
-  glance_fit <- broom::glance(fit)
-  coefficients <- broom::tidy(fit, conf.int = TRUE) %>%
-    mutate(
-      scale = scale_name,
-      response = response,
-      model_type = model_type,
-      predictor = predictor,
-      n = nrow(model_df),
-      r_squared = glance_fit$r.squared,
-      adj_r_squared = glance_fit$adj.r.squared,
-      aic = AIC(fit),
-      bic = BIC(fit),
-      residual_sd = glance_fit$sigma
-    )
-
-  list(
-    fit = fit,
-    model_df = model_df,
-    coefficients = coefficients,
-    summary = tibble(
-      scale = scale_name,
-      response = response,
-      model_type = model_type,
-      predictor = predictor,
-      n = nrow(model_df),
-      r_squared = glance_fit$r.squared,
-      adj_r_squared = glance_fit$adj.r.squared,
-      aic = AIC(fit),
-      bic = BIC(fit),
-      residual_sd = glance_fit$sigma
-    )
+load_analysis_data <- function() {
+  data <- do.call(
+    rbind,
+    list(read_scale_table("10m"), read_scale_table("20m"), read_scale_table("50m"))
   )
+  metadata <- do.call(
+    rbind,
+    list(read_sampling_metadata("10m"), read_sampling_metadata("20m"), read_sampling_metadata("50m"))
+  )
+  data$row_order <- seq_len(nrow(data))
+  data <- merge(data, metadata, by = c("quad_id", "scale"), all.x = TRUE, sort = FALSE)
+  data <- data[order(data$row_order), ]
+  data$row_order <- NULL
+  add_edge_flags(data)
 }
 
-fit_model_grid <- function(data) {
-  responses <- c(PRIMARY_RESPONSE, SECONDARY_RESPONSES)
-  scales <- levels(data$scale)
-  fits <- list()
-  index <- 1
+correlate_pair <- function(data, scale_name, response, predictor) {
+  keep <- data$scale == scale_name &
+    data$primary_analysis &
+    !is.na(data[[response]]) &
+    !is.na(data[[predictor]])
+  pair_df <- data[keep, c("quad_id", "scale", response, predictor)]
+  names(pair_df) <- c("quad_id", "scale", "response_value", "predictor_value")
 
-  for (scale_name in scales) {
-    for (response in responses) {
-      fits[[index]] <- fit_one_model(data, scale_name, response, "Null")
-      index <- index + 1
-      fits[[index]] <- fit_one_model(data, scale_name, response, "Environment")
-      index <- index + 1
-      for (predictor in BIODIVERSITY_PREDICTORS) {
-        fits[[index]] <- fit_one_model(data, scale_name, response, "Biodiversity", predictor)
+  empty_result <- data.frame(
+    scale = scale_name,
+    sv_measure = response,
+    sv_label = display_name(response),
+    diversity_measure = predictor,
+    diversity_label = display_name(predictor),
+    diversity_group = unname(DIVERSITY_GROUPS[predictor]),
+    n = nrow(pair_df),
+    pearson_r = NA_real_,
+    r_squared = NA_real_,
+    f_statistic = NA_real_,
+    f_df1 = NA_real_,
+    f_df2 = NA_real_,
+    f_p_value = NA_real_,
+    slope = NA_real_,
+    intercept = NA_real_,
+    slope_p_value = NA_real_,
+    spearman_r = NA_real_,
+    spearman_p_value = NA_real_,
+    stringsAsFactors = FALSE
+  )
+
+  if (nrow(pair_df) < 3) {
+    return(empty_result)
+  }
+
+  fit <- lm(response_value ~ predictor_value, data = pair_df)
+  fit_summary <- summary(fit)
+  f_values <- fit_summary$fstatistic
+  pearson <- cor.test(pair_df$predictor_value, pair_df$response_value, method = "pearson")
+  spearman <- suppressWarnings(cor.test(
+    pair_df$predictor_value,
+    pair_df$response_value,
+    method = "spearman",
+    exact = FALSE
+  ))
+  f_p <- pf(f_values[["value"]], f_values[["numdf"]], f_values[["dendf"]], lower.tail = FALSE)
+
+  empty_result$pearson_r <- unname(pearson$estimate)
+  empty_result$r_squared <- unname(pearson$estimate)^2
+  empty_result$f_statistic <- unname(f_values[["value"]])
+  empty_result$f_df1 <- unname(f_values[["numdf"]])
+  empty_result$f_df2 <- unname(f_values[["dendf"]])
+  empty_result$f_p_value <- f_p
+  empty_result$slope <- unname(coef(fit)[["predictor_value"]])
+  empty_result$intercept <- unname(coef(fit)[["(Intercept)"]])
+  empty_result$slope_p_value <- coef(fit_summary)["predictor_value", "Pr(>|t|)"]
+  empty_result$spearman_r <- unname(spearman$estimate)
+  empty_result$spearman_p_value <- spearman$p.value
+  empty_result
+}
+
+run_correlations <- function(data) {
+  results <- list()
+  index <- 1
+  for (scale_name in c("10m", "20m", "50m")) {
+    for (response in SV_MEASURES) {
+      for (predictor in DIVERSITY_MEASURES) {
+        results[[index]] <- correlate_pair(data, scale_name, response, predictor)
         index <- index + 1
-        fits[[index]] <- fit_one_model(data, scale_name, response, "Biodiversity + environment", predictor)
-        index <- index + 1
-        if (response == PRIMARY_RESPONSE) {
-          fits[[index]] <- fit_one_model(data, scale_name, response, "Biodiversity x elevation", predictor)
-          index <- index + 1
-        }
       }
     }
   }
-
-  fits <- fits[!vapply(fits, is.null, logical(1))]
-  summaries <- bind_rows(lapply(fits, `[[`, "summary")) %>%
-    group_by(scale, response) %>%
-    mutate(delta_aic = aic - min(aic, na.rm = TRUE)) %>%
-    ungroup()
-  coefficients <- bind_rows(lapply(fits, `[[`, "coefficients"))
-
-  list(fits = fits, summaries = summaries, coefficients = coefficients)
+  do.call(rbind, results)
 }
 
-correlation_tables <- function(data) {
-  combos <- expand_grid(
-    scale = levels(data$scale),
-    response = c(PRIMARY_RESPONSE, SECONDARY_RESPONSES),
-    predictor = c(BIODIVERSITY_PREDICTORS, ENVIRONMENT_PREDICTORS)
-  )
-
-  bind_rows(lapply(seq_len(nrow(combos)), function(i) {
-    scale_i <- combos$scale[[i]]
-    response_i <- combos$response[[i]]
-    predictor_i <- combos$predictor[[i]]
-    tmp <- data %>%
-      filter(.data$scale == scale_i, primary_analysis) %>%
-      select(all_of(c(response_i, predictor_i))) %>%
-      tidyr::drop_na()
-
-    tibble(
-      scale = scale_i,
-      response = response_i,
-      predictor = predictor_i,
-      n = nrow(tmp),
-      pearson_r = if (nrow(tmp) > 3) cor(tmp[[response_i]], tmp[[predictor_i]], method = "pearson") else NA_real_,
-      spearman_r = if (nrow(tmp) > 3) cor(tmp[[response_i]], tmp[[predictor_i]], method = "spearman") else NA_real_,
-      pearson_p = if (nrow(tmp) > 3) cor.test(tmp[[response_i]], tmp[[predictor_i]], method = "pearson")$p.value else NA_real_
+make_coverage_summary <- function(data) {
+  scales <- c("10m", "20m", "50m")
+  rows <- lapply(scales, function(scale_name) {
+    in_scale <- data$scale == scale_name
+    primary <- in_scale & data$primary_analysis
+    data.frame(
+      scale = scale_name,
+      total_quadrats = sum(in_scale),
+      primary_quadrats = sum(primary),
+      edge_flagged = sum(in_scale & data$edge_flag),
+      complete_sa_entropy = sum(primary & !is.na(data$spec_sa)),
+      complete_standardized_pca_distance = sum(primary & !is.na(data$spec_spca_mean)),
+      sa_all_pixels_sampled = sum(primary & data$sa_all_pixels_sampled %in% TRUE),
+      spca_euclidean_all_pixels_sampled = sum(primary & data$spca_euclidean_all_pixels_sampled %in% TRUE),
+      stringsAsFactors = FALSE
     )
-  }))
+  })
+  do.call(rbind, rows)
 }
 
-moran_diagnostic <- function(model_item, k = 8) {
-  model_df <- model_item$model_df
-  if (nrow(model_df) <= k + 3) {
-    return(NULL)
-  }
-  coords <- as.matrix(model_df[, c("center_x", "center_y")])
-  knn <- spdep::knearneigh(coords, k = min(k, nrow(model_df) - 1))
-  nb <- spdep::knn2nb(knn)
-  lw <- spdep::nb2listw(nb, style = "W", zero.policy = TRUE)
-  test <- spdep::moran.test(residuals(model_item$fit), lw, zero.policy = TRUE)
-  tibble(
-    scale = model_item$summary$scale,
-    response = model_item$summary$response,
-    model_type = model_item$summary$model_type,
-    predictor = model_item$summary$predictor,
-    n = nrow(model_df),
-    moran_i = unname(test$estimate[["Moran I statistic"]]),
-    expected_i = unname(test$estimate[["Expectation"]]),
-    p_value = test$p.value
-  )
-}
-
-choose_primary_models <- function(model_results) {
-  model_results$summaries %>%
-    filter(response == PRIMARY_RESPONSE, model_type != "Null") %>%
-    group_by(scale) %>%
-    arrange(aic, desc(adj_r_squared), .by_group = TRUE) %>%
-    slice(1) %>%
-    ungroup()
-}
-
-save_plot <- function(plot, filename, width = 11, height = 7, dpi = 320) {
-  path <- file.path(FIGURE_DIR, filename)
-  ggsave(path, plot, width = width, height = height, dpi = dpi, bg = "white")
-  path
-}
-
-make_figures <- function(data, correlations, model_results, moran_results, primary_models) {
-  figures <- list()
-
-  coverage <- data %>%
-    group_by(scale) %>%
-    summarize(
-      total_quadrats = n(),
-      primary_quadrats = sum(primary_analysis),
-      complete_spec_sa = sum(primary_analysis & !is.na(spec_sa)),
-      complete_pca_mean = sum(primary_analysis & !is.na(spec_pca_mean)),
-      edge_flagged = sum(edge_flag),
-      .groups = "drop"
-    ) %>%
-    pivot_longer(
-      cols = c(primary_quadrats, complete_spec_sa, complete_pca_mean, edge_flagged),
-      names_to = "metric",
-      values_to = "count"
-    ) %>%
-    mutate(metric = recode(
-      metric,
-      primary_quadrats = "Primary analysis quadrats",
-      complete_spec_sa = "Complete SA entropy mean",
-      complete_pca_mean = "Complete PCA mean distance",
-      edge_flagged = "Edge flagged"
-    ))
-
-  p_coverage <- ggplot(coverage, aes(x = scale, y = count, fill = metric)) +
-    geom_col(position = position_dodge(width = 0.8), width = 0.72) +
-    scale_fill_manual(values = c("#1B4D89", "#4F9D69", "#D95F02", "#8D99AE")) +
-    labs(
-      title = "Analysis coverage by scale",
-      subtitle = "Primary analysis excludes documented 10 m and 20 m edge quadrats; 50 m has no separate edge rule.",
-      x = "Quadrat scale",
-      y = "Quadrat count",
-      fill = NULL
-    ) +
-    theme_report()
-  figures$coverage <- save_plot(p_coverage, "01_analysis_coverage_by_scale.png")
-
-  dist_data <- data %>%
-    filter(primary_analysis) %>%
-    select(scale, all_of(c(PRIMARY_RESPONSE, SECONDARY_RESPONSES))) %>%
-    pivot_longer(-scale, names_to = "metric_id", values_to = "value") %>%
-    filter(!is.na(value)) %>%
-    mutate(metric = recode(metric_id, !!!as.list(DISPLAY_NAMES)))
-
-  p_dist_combined <- ggplot(dist_data, aes(x = value, fill = scale)) +
-    geom_histogram(bins = 28, color = "white", alpha = 0.85) +
-    facet_grid(metric ~ scale, scales = "free") +
-    scale_fill_manual(values = c("10m" = "#1B4D89", "20m" = "#4F9D69", "50m" = "#D95F02")) +
-    labs(
-      title = "Spectral heterogeneity distributions",
-      subtitle = "SA entropy is usually the mean of 70 bootstrap iterations; secondary metrics are shown for primary-analysis quadrats.",
-      x = "Metric value",
-      y = "Count",
-      fill = "Scale"
-    ) +
-    theme_report(10) +
-    theme(legend.position = "none")
-  figures$combined_distribution <- save_plot(p_dist_combined, "02_spectral_metric_distributions.png", height = 9)
-
-  distribution_files <- list()
-  distribution_order <- c(PRIMARY_RESPONSE, SECONDARY_RESPONSES)
-  distribution_names <- c(
-    spec_sa = "02a_distribution_sa_entropy_mean.png",
-    spec_pca_mean = "02b_distribution_pca_mean_distance.png",
-    spec_rao_q = "02c_distribution_spectral_rao_q.png",
-    spec_alpha = "02d_distribution_alpha_hull_area.png",
-    spec_spca_mean = "02e_distribution_standardized_pca_mean_distance.png",
-    spec_spca_rao = "02f_distribution_standardized_pca_rao_q.png",
-    spec_spca_alpha = "02g_distribution_standardized_pca_alpha_hull_area.png"
-  )
-  for (metric_id in distribution_order) {
-    metric_label <- DISPLAY_NAMES[[metric_id]]
-    metric_note <- if (metric_id == PRIMARY_RESPONSE) {
-      "Most quadrat values are means of 70 bootstrap iterations using up to 5,000 retained pixels; the small exact subset used all retained pixel pairs."
-    } else {
-      "Distributions are shown for primary-analysis quadrats with non-missing values."
+top_results_by_sv <- function(correlations) {
+  rows <- list()
+  index <- 1
+  for (scale_name in c("10m", "20m", "50m")) {
+    for (response in SV_MEASURES) {
+      subset_rows <- correlations[correlations$scale == scale_name & correlations$sv_measure == response, ]
+      best <- subset_rows[which.max(abs(subset_rows$pearson_r)), ]
+      rows[[index]] <- best
+      index <- index + 1
     }
-    p_dist <- ggplot(dist_data %>% filter(metric_id == !!metric_id), aes(x = value, fill = scale)) +
-      geom_histogram(bins = 28, color = "white", alpha = 0.85) +
-      facet_wrap(~ scale, scales = "free") +
-      scale_fill_manual(values = c("10m" = "#1B4D89", "20m" = "#4F9D69", "50m" = "#D95F02")) +
-      labs(
-        title = paste(metric_label, "distribution by scale"),
-        subtitle = metric_note,
-        x = metric_label,
-        y = "Count",
-        fill = "Scale"
-      ) +
-      theme_report(10) +
-      theme(legend.position = "none")
-    distribution_files[[metric_id]] <- save_plot(
-      p_dist,
-      distribution_names[[metric_id]],
-      height = 5.8
+  }
+  do.call(rbind, rows)
+}
+
+color_for_r <- function(r) {
+  palette <- grDevices::colorRampPalette(c("#4B77BE", "#F7F7F2", "#B03A2E"))(201)
+  idx <- round((pmax(pmin(r, 1), -1) + 1) * 100) + 1
+  palette[idx]
+}
+
+save_heatmap <- function(correlations) {
+  file_path <- file.path(FIGURE_DIR, "01_sv_diversity_pairwise_correlation_heatmap.png")
+  grDevices::png(file_path, width = 4200, height = 1900, res = 300)
+  old_par <- par(no.readonly = TRUE)
+  on.exit({
+    par(old_par)
+    grDevices::dev.off()
+  })
+
+  par(mfrow = c(1, 3), mar = c(7.5, 5.2, 4, 1.5), oma = c(0, 0, 2, 0))
+  for (scale_name in c("10m", "20m", "50m")) {
+    scale_rows <- correlations[correlations$scale == scale_name, ]
+    plot(
+      NA,
+      xlim = c(0.5, length(DIVERSITY_MEASURES) + 0.5),
+      ylim = c(0.5, length(SV_MEASURES) + 0.5),
+      xaxt = "n",
+      yaxt = "n",
+      xlab = "",
+      ylab = "",
+      main = scale_name,
+      bty = "n"
     )
+    axis(1, at = seq_along(DIVERSITY_MEASURES), labels = heatmap_name(DIVERSITY_MEASURES), las = 2, cex.axis = 0.8)
+    axis(2, at = seq_along(SV_MEASURES), labels = heatmap_name(SV_MEASURES), las = 2, cex.axis = 0.85)
+    for (i in seq_along(DIVERSITY_MEASURES)) {
+      for (j in seq_along(SV_MEASURES)) {
+        row <- scale_rows[
+          scale_rows$diversity_measure == DIVERSITY_MEASURES[i] &
+            scale_rows$sv_measure == SV_MEASURES[j],
+        ]
+        rect(i - 0.5, j - 0.5, i + 0.5, j + 0.5, col = color_for_r(row$pearson_r), border = "white", lwd = 2)
+        text(
+          i,
+          j,
+          labels = paste0("r=", fmt_num(row$pearson_r, 2), "\nR2=", fmt_num(row$r_squared, 2)),
+          cex = 0.72
+        )
+      }
+    }
   }
-  figures$distributions <- distribution_files
-
-  p_map <- ggplot(data %>% filter(primary_analysis, !is.na(spec_sa)), aes(center_x, center_y, color = spec_sa)) +
-    geom_point(size = 1.55, alpha = 0.88) +
-    facet_wrap(~ scale) +
-    coord_equal() +
-    scale_color_viridis_c(option = "C", name = "SA entropy mean") +
-    labs(
-      title = "Spatial pattern of SA entropy means",
-      subtitle = "Most SA values are means of 70 bootstrap iterations; centroid maps use plant-diversity quadrat centroids in NAD83 / UTM zone 16N.",
-      x = "UTM easting",
-      y = "UTM northing"
-    ) +
-    theme_report()
-  figures$spatial_sa <- save_plot(p_map, "03_spatial_pattern_spec_sa.png", height = 7.5)
-
-  scatter_for <- function(pred, file, title) {
-    ggplot(data %>% filter(primary_analysis), aes(.data[[pred]], spec_sa)) +
-      geom_point(aes(color = env_elev), alpha = 0.58, size = 1.7, na.rm = TRUE) +
-      geom_smooth(method = "lm", se = TRUE, color = "#263238", linewidth = 0.9, na.rm = TRUE) +
-      facet_wrap(~ scale, scales = "free") +
-      scale_color_viridis_c(option = "D", name = "Elevation") +
-      labs(
-        title = title,
-        subtitle = "Lines show simple linear fits within scale; most SA values are bootstrap means, with exact entropy only for small quadrats.",
-        x = DISPLAY_NAMES[[pred]],
-        y = "SA entropy mean"
-      ) +
-      theme_report()
-  }
-  figures$faith_scatter <- save_plot(
-    scatter_for("phy_faith", "04_spec_sa_vs_faith_pd.png", "SA entropy mean versus Faith's phylogenetic diversity"),
-    "04_spec_sa_vs_faith_pd.png"
-  )
-  figures$afaith_scatter <- save_plot(
-    scatter_for("phy_afaith", "05_spec_sa_vs_abundance_weighted_faith_pd.png", "SA entropy mean versus abundance-weighted Faith's PD"),
-    "05_spec_sa_vs_abundance_weighted_faith_pd.png"
-  )
-  figures$shannon_scatter <- save_plot(
-    scatter_for("sp_shannon", "06_spec_sa_vs_shannon_diversity.png", "SA entropy mean versus Shannon diversity"),
-    "06_spec_sa_vs_shannon_diversity.png"
-  )
-
-  p_corr <- correlations %>%
-    filter(response == PRIMARY_RESPONSE, predictor %in% c(BIODIVERSITY_PREDICTORS, ENVIRONMENT_PREDICTORS)) %>%
-    mutate(
-      predictor_label = recode(predictor, !!!as.list(DISPLAY_NAMES)),
-      sig = case_when(
-        pearson_p < 0.001 ~ "***",
-        pearson_p < 0.01 ~ "**",
-        pearson_p < 0.05 ~ "*",
-        TRUE ~ ""
-      )
-    ) %>%
-    ggplot(aes(x = predictor_label, y = scale, fill = pearson_r)) +
-    geom_tile(color = "white", linewidth = 0.7) +
-    geom_text(aes(label = paste0(sprintf("%.2f", pearson_r), sig)), size = 3.3) +
-    scale_fill_gradient2(low = "#2166AC", mid = "white", high = "#B2182B", midpoint = 0, limits = c(-1, 1)) +
-    labs(
-      title = "Primary correlations with SA entropy means",
-      subtitle = "Pearson r values for primary-analysis quadrats. Asterisks mark p < 0.05, 0.01, and 0.001.",
-      x = NULL,
-      y = "Scale",
-      fill = "Pearson r"
-    ) +
-    theme_report() +
-    theme(axis.text.x = element_text(angle = 35, hjust = 1))
-  figures$correlation_heatmap <- save_plot(p_corr, "07_primary_correlation_heatmap.png", height = 6.2)
-
-  p_r2 <- model_results$summaries %>%
-    filter(response == PRIMARY_RESPONSE, model_type != "Null") %>%
-    mutate(
-      model_label = if_else(is.na(predictor), model_type, paste(model_type, recode(predictor, !!!as.list(DISPLAY_NAMES)), sep = ": ")),
-      model_label = str_replace(model_label, "Biodiversity: ", ""),
-      model_label = str_replace(model_label, "Biodiversity \\+ environment: ", "+ env: "),
-      model_label = str_replace(model_label, "Biodiversity x elevation: ", "x elev: ")
-    ) %>%
-    ggplot(aes(x = reorder(model_label, adj_r_squared), y = adj_r_squared, fill = model_type)) +
-    geom_col(width = 0.72) +
-    coord_flip() +
-    facet_wrap(~ scale, scales = "free_y") +
-    scale_y_continuous(labels = percent_format(accuracy = 1)) +
-    scale_fill_manual(values = c(
-      "Biodiversity" = "#1B4D89",
-      "Environment" = "#7A9E3F",
-      "Biodiversity + environment" = "#D95F02",
-      "Biodiversity x elevation" = "#6A4C93"
-    )) +
-    labs(
-      title = "Model explanatory strength for SA entropy means",
-      subtitle = "Adjusted R2 compares standardized OLS candidate models within each scale.",
-      x = NULL,
-      y = "Adjusted R2",
-      fill = "Model family"
-    ) +
-    theme_report(9)
-  figures$model_r2 <- save_plot(p_r2, "08_model_adjusted_r2_comparison.png", height = 8.5)
-
-  p_coef <- model_results$coefficients %>%
-    filter(
-      response == PRIMARY_RESPONSE,
-      model_type == "Biodiversity + environment",
-      term %in% paste0(BIODIVERSITY_PREDICTORS, "_z")
-    ) %>%
-    mutate(
-      predictor_label = recode(str_remove(term, "_z$"), !!!as.list(DISPLAY_NAMES)),
-      significant_label = if_else(p.value < 0.05, "Yes", "No")
-    ) %>%
-    ggplot(aes(x = estimate, y = predictor_label, color = significant_label)) +
-    geom_vline(xintercept = 0, linetype = "dashed", color = "grey45") +
-    geom_errorbarh(aes(xmin = conf.low, xmax = conf.high), height = 0.18, linewidth = 0.8) +
-    geom_point(size = 2.5) +
-    facet_wrap(~ scale) +
-    scale_color_manual(values = c("No" = "#455A64", "Yes" = "#B2182B"), drop = FALSE) +
-    labs(
-      title = "Standardized biodiversity effects after environmental controls",
-      subtitle = "Points are standardized coefficients; bars are 95 percent confidence intervals.",
-      x = "Standardized coefficient",
-      y = NULL,
-      color = "p < 0.05"
-    ) +
-    theme_report()
-  figures$coefficient_forest <- save_plot(p_coef, "09_primary_coefficient_forest.png", height = 6.5)
-
-  p_moran <- moran_results %>%
-    filter(response == PRIMARY_RESPONSE) %>%
-    mutate(
-      label = if_else(is.na(predictor), model_type, paste(model_type, recode(predictor, !!!as.list(DISPLAY_NAMES)), sep = ": ")),
-      significant_label = if_else(p_value < 0.05, "Yes", "No")
-    ) %>%
-    ggplot(aes(x = moran_i, y = reorder(label, moran_i), color = significant_label)) +
-    geom_vline(xintercept = 0, linetype = "dashed", color = "grey55") +
-    geom_point(size = 2.2) +
-    facet_wrap(~ scale, scales = "free_y") +
-    scale_color_manual(values = c("No" = "#455A64", "Yes" = "#B2182B"), drop = FALSE) +
-    labs(
-      title = "Spatial autocorrelation in model residuals",
-      subtitle = "Moran's I is calculated from 8-nearest-neighbor residuals. Significant residual structure cautions against over-interpreting p-values.",
-      x = "Residual Moran's I",
-      y = NULL,
-      color = "p < 0.05"
-    ) +
-    theme_report(9)
-  figures$residual_moran <- save_plot(p_moran, "10_residual_moran_diagnostics.png", height = 8.5)
-
-  p_scale <- data %>%
-    filter(primary_analysis) %>%
-    select(scale, all_of(c(PRIMARY_RESPONSE, BIODIVERSITY_PREDICTORS, ENVIRONMENT_PREDICTORS))) %>%
-    pivot_longer(-scale, names_to = "metric", values_to = "value") %>%
-    group_by(metric) %>%
-    mutate(value_z = z_score(value)) %>%
-    ungroup() %>%
-    mutate(metric = recode(metric, !!!as.list(DISPLAY_NAMES))) %>%
-    ggplot(aes(scale, value_z, fill = scale)) +
-    geom_boxplot(outlier.alpha = 0.22, width = 0.65) +
-    facet_wrap(~ metric, scales = "free_y", ncol = 3) +
-    scale_fill_manual(values = c("10m" = "#1B4D89", "20m" = "#4F9D69", "50m" = "#D95F02")) +
-    labs(
-      title = "Scale comparison of standardized variables",
-      subtitle = "Values are standardized within each variable to make scale shifts visually comparable.",
-      x = "Quadrat scale",
-      y = "Standardized value"
-    ) +
-    theme_report(9) +
-    theme(legend.position = "none")
-  figures$scale_boxplots <- save_plot(p_scale, "11_scale_comparison_standardized_variables.png", height = 8.5)
-
-  figures
+  mtext("Pairwise SV-diversity correlations", outer = TRUE, cex = 1.3, font = 2)
+  file_path
 }
 
-format_p <- function(p) {
-  case_when(
-    is.na(p) ~ "NA",
-    p < 0.001 ~ "<0.001",
-    TRUE ~ sprintf("%.3f", p)
-  )
-}
-
-build_findings <- function(data, correlations, model_results, primary_models, moran_results) {
-  best_rows <- primary_models %>%
-    mutate(
-      model_readable = if_else(
-        is.na(predictor),
-        model_type,
-        paste0(model_type, " using ", recode(predictor, !!!as.list(DISPLAY_NAMES)))
-      )
-    )
-
-  corr_faith <- correlations %>%
-    filter(response == PRIMARY_RESPONSE, predictor == "phy_faith") %>%
-    mutate(direction = if_else(pearson_r >= 0, "positive", "negative"))
-
-  list(
-    title = "Paint Rock spectral-biodiversity relationships",
-    summary = c(
-      "The analysis evaluates whether quadrat-level hyperspectral heterogeneity tracks biodiversity and phylogenetic diversity across 10 m, 20 m, and 50 m grains.",
-      "SA entropy mean is treated as the primary response. For most quadrats it is the mean of 70 bootstrap iterations using up to 5,000 retained pixels; the small exact subset uses all retained pixel pairs. PCA mean distance, spectral Rao's Q, alpha-hull area, and their standardized_PCA analogs are secondary sensitivity metrics.",
-      "Models use standardized predictors so coefficients are comparable within scale. Documented 10 m and 20 m edge quadrats are excluded from primary inference; 50 m uses all quadrats because no separate 50 m edge rule is documented."
-    ),
-    best_model_table = best_rows,
-    faith_correlation = corr_faith,
-    residual_caution = moran_results %>%
-      filter(response == PRIMARY_RESPONSE, p_value < 0.05) %>%
-      count(scale, name = "significant_residual_models")
-  )
-}
-
-text_page <- function(title, body_lines, footer = NULL, title_size = 20, body_size = 11) {
-  grid.newpage()
-  pushViewport(viewport(width = 0.88, height = 0.86))
-  grid.text(title, x = 0, y = 1, just = c("left", "top"), gp = gpar(fontsize = title_size, fontface = "bold", col = "#263238"))
-  grid.text(
-    paste(body_lines, collapse = "\n\n"),
-    x = 0,
-    y = 0.88,
-    just = c("left", "top"),
-    gp = gpar(fontsize = body_size, col = "#263238", lineheight = 1.1)
-  )
-  if (!is.null(footer)) {
-    grid.text(footer, x = 1, y = 0, just = c("right", "bottom"), gp = gpar(fontsize = 8.5, col = "#607D8B"))
-  }
-  popViewport()
-}
-
-table_page <- function(title, table_data, footer = NULL, rows = 18) {
-  grid.newpage()
-  pushViewport(viewport(width = 0.92, height = 0.88))
-  grid.text(title, x = 0, y = 1, just = c("left", "top"), gp = gpar(fontsize = 17, fontface = "bold", col = "#263238"))
-  if (nrow(table_data) == 0) {
-    grid.text("No rows available.", x = 0, y = 0.88, just = c("left", "top"))
+save_scatter <- function(data, response) {
+  file_name <- if (response == "spec_sa") {
+    "02_sa_entropy_diversity_scatterplots.png"
   } else {
-    table_data <- head(table_data, rows)
-    tg <- tableGrob(table_data, rows = NULL, theme = ttheme_minimal(
-      core = list(fg_params = list(fontsize = 8.2), padding = unit(c(3, 3), "mm")),
-      colhead = list(fg_params = list(fontsize = 8.5, fontface = "bold", col = "white"),
-                     bg_params = list(fill = "#263238", col = NA))
-    ))
-    grid.draw(editGrob(tg, vp = viewport(x = 0.5, y = 0.45, width = 1, height = 0.78)))
+    "03_standardized_pca_distance_diversity_scatterplots.png"
   }
-  if (!is.null(footer)) {
-    grid.text(footer, x = 1, y = 0, just = c("right", "bottom"), gp = gpar(fontsize = 8.5, col = "#607D8B"))
+  file_path <- file.path(FIGURE_DIR, file_name)
+  colors <- c("10m" = "#2F6F73", "20m" = "#A35D2D", "50m" = "#6B5CA5")
+
+  grDevices::png(file_path, width = 3900, height = 2400, res = 300)
+  old_par <- par(no.readonly = TRUE)
+  on.exit({
+    par(old_par)
+    grDevices::dev.off()
+  })
+
+  par(mfrow = c(2, 4), mar = c(4, 4.2, 3, 1), oma = c(0, 0, 2, 0))
+  for (predictor in DIVERSITY_MEASURES) {
+    keep <- data$primary_analysis & !is.na(data[[response]]) & !is.na(data[[predictor]])
+    x <- data[[predictor]][keep]
+    y <- data[[response]][keep]
+    scale_values <- data$scale[keep]
+    plot(
+      x,
+      y,
+      col = adjustcolor(colors[scale_values], alpha.f = 0.45),
+      pch = 16,
+      cex = 0.55,
+      xlab = display_name(predictor),
+      ylab = display_name(response),
+      main = display_name(predictor)
+    )
+    for (scale_name in c("10m", "20m", "50m")) {
+      scale_keep <- keep & data$scale == scale_name
+      if (sum(scale_keep) >= 3) {
+        fit <- lm(data[[response]][scale_keep] ~ data[[predictor]][scale_keep])
+        abline(fit, col = colors[scale_name], lwd = 2)
+      }
+    }
   }
-  popViewport()
+  plot.new()
+  legend("center", legend = names(colors), col = colors, pch = 16, lwd = 2, bty = "n", title = "Scale")
+  mtext(paste0(display_name(response), " versus diversity measures"), outer = TRUE, cex = 1.3, font = 2)
+  file_path
 }
 
-image_page <- function(title, image_path, footer = NULL) {
-  grid.newpage()
-  pushViewport(viewport(width = 0.92, height = 0.9))
-  grid.text(title, x = 0, y = 1, just = c("left", "top"), gp = gpar(fontsize = 17, fontface = "bold", col = "#263238"))
-  img <- png::readPNG(image_path)
-  grid.raster(img, x = 0.5, y = 0.48, width = 0.96, height = 0.78, interpolate = TRUE)
-  if (!is.null(footer)) {
-    grid.text(footer, x = 1, y = 0, just = c("right", "bottom"), gp = gpar(fontsize = 8.5, col = "#607D8B"))
-  }
-  popViewport()
+save_figures <- function(data, correlations) {
+  c(
+    save_heatmap(correlations),
+    save_scatter(data, "spec_sa"),
+    save_scatter(data, "spec_spca_mean")
+  )
 }
 
-write_main_pdf <- function(findings, figures, coverage_table, primary_models, correlations, moran_results) {
-  pdf_path <- file.path(PDF_DIR, "spectral_biodiversity_multiscale_findings.pdf")
-  pdf(pdf_path, width = 11, height = 8.5, onefile = TRUE)
-  on.exit(dev.off(), add = TRUE)
-
-  text_page(
-    findings$title,
-    c(
-      "Main question: can hyperspectral spectral heterogeneity serve as a proxy for biodiversity and phylogenetic diversity in the Paint Rock Forest Dynamics Plot?",
-      findings$summary,
-      "Primary response: SA entropy mean (`spec_sa`). For most quadrats it is the mean of 70 bootstrap iterations using up to 5,000 retained pixels; the small exact subset uses all retained pixel pairs. Primary predictors: Faith's PD, abundance-weighted Faith's PD, Shannon diversity, elevation, and 11x11 Riley TRI.",
-      "Outputs in this report are descriptive and inferential OLS summaries with spatial residual checks. When residual Moran's I remains significant, p-values should be treated cautiously."
-    ),
-    footer = "Generated from current quadrat_analysis_*m.csv tables"
-  )
-
-  coverage_display <- coverage_table %>%
-    mutate(across(where(is.numeric), as.integer)) %>%
-    rename(
-      Scale = scale,
-      `All quadrats` = total_quadrats,
-      `Primary n` = primary_quadrats,
-      `Complete SA` = complete_spec_sa,
-      `Complete PCA mean` = complete_pca_mean,
-      `Edge flagged` = edge_flagged
-    )
-  table_page("Analysis sample sizes", coverage_display)
-
-  image_page("Coverage and data completeness", figures$coverage)
-  image_page("Spatial pattern of primary spectral heterogeneity", figures$spatial_sa)
-  image_page("SA entropy mean versus Faith's PD", figures$faith_scatter)
-  image_page("SA entropy mean versus abundance-weighted Faith's PD", figures$afaith_scatter)
-  image_page("SA entropy mean versus Shannon diversity", figures$shannon_scatter)
-  image_page("Primary correlations", figures$correlation_heatmap)
-  image_page("Model comparison", figures$model_r2)
-  image_page("Biodiversity effects after environmental controls", figures$coefficient_forest)
-  image_page("Residual spatial autocorrelation", figures$residual_moran)
-
-  best_display <- primary_models %>%
-    transmute(
-      Scale = scale,
-      Model = if_else(is.na(predictor), model_type, paste(model_type, recode(predictor, !!!as.list(DISPLAY_NAMES)), sep = ": ")),
-      n = n,
-      `Adj. R2` = sprintf("%.3f", adj_r_squared),
-      AIC = sprintf("%.1f", aic),
-      `Delta AIC` = sprintf("%.1f", delta_aic)
-    )
-  table_page("Best-supported primary-response model by scale", best_display)
-
-  primary_corr_display <- correlations %>%
-    filter(response == PRIMARY_RESPONSE, predictor %in% BIODIVERSITY_PREDICTORS) %>%
-    transmute(
-      Scale = scale,
-      Predictor = recode(predictor, !!!as.list(DISPLAY_NAMES)),
-      n = n,
-      `Pearson r` = sprintf("%.3f", pearson_r),
-      `Spearman r` = sprintf("%.3f", spearman_r),
-      p = format_p(pearson_p)
-    )
-  table_page("Primary biodiversity correlations", primary_corr_display)
-
-  moran_display <- moran_results %>%
-    filter(response == PRIMARY_RESPONSE) %>%
-    arrange(scale, p_value) %>%
-    transmute(
-      Scale = scale,
-      Model = if_else(is.na(predictor), model_type, paste(model_type, recode(predictor, !!!as.list(DISPLAY_NAMES)), sep = ": ")),
-      n = n,
-      `Moran I` = sprintf("%.3f", moran_i),
-      p = format_p(p_value)
-    )
-  table_page("Spatial residual diagnostic summary", moran_display, rows = 24)
-
-  text_page(
-    "Interpretation guardrails",
-    c(
-      "1. A positive biodiversity coefficient supports the spectral-variation hypothesis only when its confidence interval is mostly above zero and residual spatial structure is weak or acknowledged.",
-      "2. Environmental controls are included because topography can affect both canopy composition and observed reflectance. Models that retain biodiversity signal after elevation/TRI controls are stronger evidence for biodiversity-spectral linkage.",
-      "3. The 50 m scale is useful for scale dependence, but sample size is small. Large coefficients at 50 m should be read alongside confidence intervals and residual diagnostics.",
-      "4. Known spectral missingness and PCA exclusion rules are preserved. No spectral values were imputed.",
-      "5. `spec_sa` is usually the mean of 70 bootstrap iterations using up to 5,000 retained pixels; only the small exact subset used all retained pixel pairs. Bootstrap QC fields are not in the combined tables, so sensitivity checks using `boot_cv` and bootstrap CI width should be added before final manuscript inference."
-    )
-  )
-
-  invisible(pdf_path)
+markdown_table <- function(data) {
+  data <- as.data.frame(data, stringsAsFactors = FALSE)
+  header <- paste0("| ", paste(names(data), collapse = " | "), " |")
+  separator <- paste0("| ", paste(rep("---", ncol(data)), collapse = " | "), " |")
+  rows <- apply(data, 1, function(row) paste0("| ", paste(row, collapse = " | "), " |"))
+  c(header, separator, rows)
 }
 
-write_appendix_pdf <- function(figures, model_results, correlations, moran_results) {
-  pdf_path <- file.path(PDF_DIR, "spectral_biodiversity_model_appendix.pdf")
-  pdf(pdf_path, width = 11, height = 8.5, onefile = TRUE)
-  on.exit(dev.off(), add = TRUE)
-
-  text_page(
-    "Model appendix",
-    c(
-      "This appendix contains supplemental figures and detailed model tables for the multiscale spectral-biodiversity analysis.",
-      "All models use standardized responses and predictors. Candidate sets include null, single biodiversity, environment-only, biodiversity plus environment, and biodiversity-by-elevation models for the primary SA entropy mean response.",
-      "Tables are written in full to `reports/tables/multiscale_spectral_biodiversity/`."
-    )
-  )
-
-  for (metric_id in names(figures$distributions)) {
-    image_page(paste(DISPLAY_NAMES[[metric_id]], "distribution"), figures$distributions[[metric_id]])
-  }
-  image_page("Scale comparison of standardized variables", figures$scale_boxplots)
-  image_page("Primary correlations", figures$correlation_heatmap)
-  image_page("Adjusted R2 comparison", figures$model_r2)
-  image_page("Coefficient forest", figures$coefficient_forest)
-  image_page("Residual Moran's I diagnostics", figures$residual_moran)
-
-  top_models <- model_results$summaries %>%
-    arrange(response, scale, delta_aic) %>%
-    group_by(response, scale) %>%
-    slice_head(n = 4) %>%
-    ungroup() %>%
-    transmute(
-      Scale = scale,
-      Response = recode(response, !!!as.list(DISPLAY_NAMES)),
-      Model = if_else(is.na(predictor), model_type, paste(model_type, recode(predictor, !!!as.list(DISPLAY_NAMES)), sep = ": ")),
-      n = n,
-      `Adj. R2` = sprintf("%.3f", adj_r_squared),
-      AIC = sprintf("%.1f", aic),
-      `Delta AIC` = sprintf("%.1f", delta_aic)
-    )
-  table_page("Top candidate models by response and scale", top_models, rows = 26)
-
-  coef_display <- model_results$coefficients %>%
-    filter(term != "(Intercept)", response == PRIMARY_RESPONSE) %>%
-    arrange(scale, model_type, predictor, term) %>%
-    transmute(
-      Scale = scale,
-      Model = if_else(is.na(predictor), model_type, paste(model_type, recode(predictor, !!!as.list(DISPLAY_NAMES)), sep = ": ")),
-      Term = str_replace_all(term, "_z", ""),
-      Estimate = sprintf("%.3f", estimate),
-      SE = sprintf("%.3f", std.error),
-      `CI low` = sprintf("%.3f", conf.low),
-      `CI high` = sprintf("%.3f", conf.high),
-      p = format_p(p.value)
-    )
-  table_page("Primary-response coefficients", coef_display, rows = 24)
-
-  corr_display <- correlations %>%
-    transmute(
-      Scale = scale,
-      Response = recode(response, !!!as.list(DISPLAY_NAMES)),
-      Predictor = recode(predictor, !!!as.list(DISPLAY_NAMES)),
-      n = n,
-      `Pearson r` = sprintf("%.3f", pearson_r),
-      `Spearman r` = sprintf("%.3f", spearman_r),
-      p = format_p(pearson_p)
-    )
-  table_page("Correlation table excerpt", corr_display, rows = 24)
-
-  invisible(pdf_path)
+relative_path <- function(paths) {
+  normalized_project <- normalizePath(PROJECT_DIR, winslash = "/", mustWork = FALSE)
+  normalized_paths <- normalizePath(paths, winslash = "/", mustWork = FALSE)
+  sub(paste0("^", gsub("([\\^$.|?*+(){}\\[\\]\\\\])", "\\\\\\1", normalized_project), "/"), "", normalized_paths)
 }
 
-write_reports <- function(outputs) {
-  coverage_table <- outputs$data %>%
-    group_by(scale) %>%
-    summarize(
-      total_quadrats = n(),
-      primary_quadrats = sum(primary_analysis),
-      complete_spec_sa = sum(primary_analysis & !is.na(spec_sa)),
-      complete_pca_mean = sum(primary_analysis & !is.na(spec_pca_mean)),
-      edge_flagged = sum(edge_flag),
-      .groups = "drop"
-    )
-
-  findings <- build_findings(
-    outputs$data,
-    outputs$correlations,
-    outputs$model_results,
-    outputs$primary_models,
-    outputs$moran_results
+write_analysis_report <- function(correlations, coverage, figure_files) {
+  top_results <- top_results_by_sv(correlations)
+  top_table <- data.frame(
+    Scale = top_results$scale,
+    `SV measure` = top_results$sv_label,
+    `Strongest diversity pairing` = top_results$diversity_label,
+    Group = top_results$diversity_group,
+    n = top_results$n,
+    r = fmt_num(top_results$pearson_r, 3),
+    R2 = fmt_num(top_results$r_squared, 3),
+    F = fmt_num(top_results$f_statistic, 2),
+    `F p-value` = fmt_p(top_results$f_p_value),
+    check.names = FALSE
   )
 
-  main_pdf <- write_main_pdf(
-    findings,
-    outputs$figures,
-    coverage_table,
-    outputs$primary_models,
-    outputs$correlations,
-    outputs$moran_results
-  )
-  appendix_pdf <- write_appendix_pdf(
-    outputs$figures,
-    outputs$model_results,
-    outputs$correlations,
-    outputs$moran_results
+  full_table <- data.frame(
+    Scale = correlations$scale,
+    `SV measure` = correlations$sv_label,
+    `Diversity measure` = correlations$diversity_label,
+    Group = correlations$diversity_group,
+    n = correlations$n,
+    r = fmt_num(correlations$pearson_r, 3),
+    R2 = fmt_num(correlations$r_squared, 3),
+    F = fmt_num(correlations$f_statistic, 2),
+    `F p-value` = fmt_p(correlations$f_p_value),
+    check.names = FALSE
   )
 
-  c(main_pdf = main_pdf, appendix_pdf = appendix_pdf)
+  coverage_table <- data.frame(
+    Scale = coverage$scale,
+    `Total quadrats` = coverage$total_quadrats,
+    `Primary quadrats` = coverage$primary_quadrats,
+    `Edge flagged` = coverage$edge_flagged,
+    `Complete SA entropy` = coverage$complete_sa_entropy,
+    `Complete standardized PCA distance` = coverage$complete_standardized_pca_distance,
+    `SA all pixels sampled` = coverage$sa_all_pixels_sampled,
+    `Std PCA all pixels sampled` = coverage$spca_euclidean_all_pixels_sampled,
+    check.names = FALSE
+  )
+
+  report_lines <- c(
+    "# SV-Diversity Pairwise Correlation Analysis",
+    "",
+    "Date: 2026-07-10",
+    "",
+    "## Research Question",
+    "",
+    "What is the relationship between spectral variation and phylogenetic/species diversity across 10 m, 20 m, and 50 m quadrats?",
+    "",
+    "This analysis is intentionally direct: each primary spectral variation measure is independently paired with each phylogenetic and species diversity measure. No environmental covariates, interaction terms, or multivariable model-selection steps are included in this first relationship layer.",
+    "",
+    "## Primary Spectral Variation Measures",
+    "",
+    "- `spec_spca_mean`: standardized PCA mean Euclidean distance in PC1-PC3 space after vector-normalizing spectra.",
+    "- `spec_sa`: spectral angle entropy mean from sunlit, shadow-masked smoothed 5 nm spectra.",
+    "",
+    "## Diversity Measures",
+    "",
+    "- Phylogenetic diversity: `phy_faith`, `phy_rao`, `phy_afaith`.",
+    "- Species diversity: `sp_rich`, `sp_shannon`, `sp_simpson`, `sp_even`.",
+    "",
+    "## Model Form",
+    "",
+    "For each scale, spectral variation measure, and diversity measure, the workflow fits:",
+    "",
+    "`SV_measure ~ diversity_measure`",
+    "",
+    "Reported values include Pearson `r`, `R2`, simple-regression `F`, F-test p-value, slope, intercept, and Spearman rank correlation. In these one-predictor models, `R2` is the squared Pearson correlation.",
+    "",
+    "`sv_diversity_analysis_dataset.csv` also includes sampling/provenance flags from the upstream spectral heterogeneity summaries. `sa_all_pixels_sampled` is TRUE when the SA entropy workflow sampled all retained pixels for that quadrat and FALSE when the 5,000-pixel cap was used. `spca_euclidean_all_pixels_sampled` is TRUE when the standardized PCA Euclidean-distance metric used all retained pixels for that quadrat.",
+    "",
+    "Documented 10 m and 20 m edge quadrats are excluded from primary analysis; all 50 m quadrats are retained because no separate 50 m edge rule is documented.",
+    "",
+    "## Coverage",
+    "",
+    markdown_table(coverage_table),
+    "",
+    "## Strongest Pairing Per SV Measure And Scale",
+    "",
+    markdown_table(top_table),
+    "",
+    "## Full Pairwise Results",
+    "",
+    markdown_table(full_table),
+    "",
+    "## Figures",
+    "",
+    paste0("- `", relative_path(figure_files), "`"),
+    "",
+    "## Output Tables",
+    "",
+    "- `reports/tables/multiscale_spectral_biodiversity/sv_diversity_pairwise_correlations.csv`",
+    "- `reports/tables/multiscale_spectral_biodiversity/sv_diversity_analysis_dataset.csv`",
+    "- `reports/tables/multiscale_spectral_biodiversity/sv_diversity_top_pairings.csv`",
+    "",
+    "## Superseded Analysis Direction",
+    "",
+    "Earlier candidate-model tables that ranked environmental and interaction models are retained only as historical context if present in the output folder. The active direction for this stage is the direct pairwise relationship between the two primary SV measures and each diversity measure."
+  )
+
+  writeLines(report_lines, ANALYSIS_REPORT)
 }
 
-write_markdown_reports <- function(outputs, pdf_paths) {
-  coverage_table <- outputs$data %>%
-    group_by(scale) %>%
-    summarize(
-      total_quadrats = n(),
-      primary_quadrats = sum(primary_analysis),
-      complete_spec_sa = sum(primary_analysis & !is.na(spec_sa)),
-      complete_pca_mean = sum(primary_analysis & !is.na(spec_pca_mean)),
-      edge_flagged = sum(edge_flag),
-      .groups = "drop"
-    )
-
+write_task_report <- function(correlations, coverage) {
   task_lines <- c(
     "# Multiscale Spectral-Biodiversity Analysis",
     "",
-    "Last updated: 2026-06-24",
+    "Last updated: 2026-07-10",
     "",
-    "## Task",
+    "## Current Direction",
     "",
-    "Created a reproducible downstream analysis and PDF reporting workflow for the current combined quadrat analysis tables.",
+    "The active analysis has been revamped around the first research question: what is the relationship between spectral variation and phylogenetic/species diversity?",
     "",
     "## Inputs",
     "",
     "- `quadrat_analysis_10m.csv`",
     "- `quadrat_analysis_20m.csv`",
     "- `quadrat_analysis_50m.csv`",
-    "- `scripts/3_Analysis/LLM.R` and `scripts/3_Analysis/Analysis_PDF.R` were used as style and method references.",
-    "- `RESEARCH_OBJECTIVES.md` supplied the scientific questions and hypothesis framing.",
+    "- `RESEARCH_OBJECTIVES.md` for scientific framing.",
     "",
-    "## Outputs",
+    "## Primary Spectral Variation Measures",
     "",
-    paste0("- `", normalizePath(pdf_paths[["main_pdf"]], winslash = "/", mustWork = FALSE), "`"),
-    paste0("- `", normalizePath(pdf_paths[["appendix_pdf"]], winslash = "/", mustWork = FALSE), "`"),
-    "- `reports/figures/multiscale_spectral_biodiversity/`",
-    "- `reports/tables/multiscale_spectral_biodiversity/`",
+    "- `spec_spca_mean`: standardized PCA mean Euclidean distance.",
+    "- `spec_sa`: spectral angle entropy.",
+    "",
+    "## Diversity Predictors",
+    "",
+    "- Phylogenetic: `phy_faith`, `phy_rao`, `phy_afaith`.",
+    "- Species: `sp_rich`, `sp_shannon`, `sp_simpson`, `sp_even`.",
     "",
     "## Methods",
     "",
-    "- Primary response: `spec_sa`, the SA entropy mean. For most quadrats it is the mean of 70 bootstrap iterations using up to 5,000 retained pixels; the small exact subset uses all retained pixel pairs.",
-    "- Secondary responses: `spec_pca_mean`, `spec_rao_q`, `spec_alpha`, `spec_spca_mean`, `spec_spca_rao`, and `spec_spca_alpha`.",
-    "- Primary biodiversity predictors: `phy_faith`, `phy_afaith`, and `sp_shannon`.",
-    "- Environmental controls: `env_elev` and `env_tri11`.",
-    "- Predictors and responses were standardized within model datasets.",
-    "- Candidate OLS models were compared using adjusted R2 and AIC.",
-    "- Residual spatial autocorrelation was evaluated with 8-nearest-neighbor Moran's I.",
-    "- Documented 10 m and 20 m edge quadrats were excluded from primary analysis; 50 m used all quadrats because no separate 50 m edge rule is documented.",
+    "- Each SV measure is independently paired with each diversity measure within each spatial scale.",
+    "- Each pair is summarized with Pearson `r`, `R2`, simple-regression `F`, F-test p-value, slope, intercept, and Spearman `r`.",
+    "- `sv_diversity_analysis_dataset.csv` includes `sa_all_pixels_sampled` and `spca_euclidean_all_pixels_sampled`, which flag whether each primary SV metric used all retained pixels for each quadrat.",
+    "- No environmental covariates or multivariable candidate-model ranking are included in this first relationship layer.",
+    "- Documented 10 m and 20 m edge quadrats are excluded from primary analysis; 50 m uses all quadrats.",
     "",
-    "## Coverage Summary",
+    "## Outputs",
     "",
-    "| Scale | Total quadrats | Primary quadrats | Complete SA mean | Complete PCA mean | Edge flagged |",
-    "|---|---:|---:|---:|---:|---:|",
-    apply(coverage_table, 1, function(row) {
-      paste0(
-        "| ", row[["scale"]], " | ",
-        row[["total_quadrats"]], " | ",
-        row[["primary_quadrats"]], " | ",
-        row[["complete_spec_sa"]], " | ",
-        row[["complete_pca_mean"]], " | ",
-        row[["edge_flagged"]], " |"
-      )
-    })
+    "- `reports/analysis/20260710_sv_diversity_pairwise_correlations.md`",
+    "- `reports/tables/multiscale_spectral_biodiversity/sv_diversity_pairwise_correlations.csv`",
+    "- `reports/tables/multiscale_spectral_biodiversity/sv_diversity_analysis_dataset.csv`",
+    "- `reports/tables/multiscale_spectral_biodiversity/sv_diversity_top_pairings.csv`",
+    "- `reports/figures/multiscale_spectral_biodiversity/01_sv_diversity_pairwise_correlation_heatmap.png`",
+    "- `reports/figures/multiscale_spectral_biodiversity/02_sa_entropy_diversity_scatterplots.png`",
+    "- `reports/figures/multiscale_spectral_biodiversity/03_standardized_pca_distance_diversity_scatterplots.png`",
+    "",
+    "## Result Size",
+    "",
+    paste0("- Pairwise correlation rows: ", nrow(correlations)),
+    paste0("- Analysis dataset rows: ", sum(coverage$total_quadrats)),
+    "",
+    "## Superseded Material",
+    "",
+    "The previous environment-adjusted AIC model-ranking workflow is superseded for the current stage. It can be revisited later as a second layer after the direct SV-diversity relationships are interpreted."
   )
   writeLines(task_lines, TASK_REPORT)
+}
 
-  fig_files <- list.files(FIGURE_DIR, pattern = "\\.png$", full.names = FALSE)
-  table_files <- list.files(TABLE_DIR, pattern = "\\.csv$", full.names = FALSE)
+write_validation_report <- function(correlations, coverage, figure_files) {
+  expected_rows <- 3 * length(SV_MEASURES) * length(DIVERSITY_MEASURES)
+  table_files <- c(
+    file.path(TABLE_DIR, "sv_diversity_pairwise_correlations.csv"),
+    file.path(TABLE_DIR, "sv_diversity_analysis_dataset.csv"),
+    file.path(TABLE_DIR, "sv_diversity_top_pairings.csv")
+  )
+
+  coverage_table <- data.frame(
+    Scale = coverage$scale,
+    `Total quadrats` = coverage$total_quadrats,
+    `Primary quadrats` = coverage$primary_quadrats,
+    `Complete SA entropy` = coverage$complete_sa_entropy,
+    `Complete standardized PCA distance` = coverage$complete_standardized_pca_distance,
+    `SA all pixels sampled` = coverage$sa_all_pixels_sampled,
+    `Std PCA all pixels sampled` = coverage$spca_euclidean_all_pixels_sampled,
+    check.names = FALSE
+  )
+
   validation_lines <- c(
     "# Multiscale Spectral-Biodiversity Analysis Validation",
     "",
-    "Last updated: 2026-06-24",
+    "Last updated: 2026-07-10",
     "",
     "## Checks",
     "",
-    paste0("- Main PDF exists: ", file.exists(pdf_paths[["main_pdf"]])),
-    paste0("- Appendix PDF exists: ", file.exists(pdf_paths[["appendix_pdf"]])),
-    paste0("- Figure PNG count: ", length(fig_files)),
-    paste0("- Table CSV count: ", length(table_files)),
-    paste0("- Model summary rows: ", nrow(outputs$model_results$summaries)),
-    paste0("- Coefficient rows: ", nrow(outputs$model_results$coefficients)),
-    paste0("- Correlation rows: ", nrow(outputs$correlations)),
-    paste0("- Moran diagnostic rows: ", nrow(outputs$moran_results)),
+    paste0("- Expected pairwise rows: ", expected_rows),
+    paste0("- Observed pairwise rows: ", nrow(correlations)),
+    paste0("- Pairwise row count matches expectation: ", nrow(correlations) == expected_rows),
+    paste0("- Missing Pearson r values: ", sum(is.na(correlations$pearson_r))),
+    paste0("- Missing F statistics: ", sum(is.na(correlations$f_statistic))),
+    paste0("- Table CSV count: ", sum(file.exists(table_files))),
+    paste0("- Figure PNG count: ", sum(file.exists(figure_files))),
+    "",
+    "## Coverage Summary",
+    "",
+    markdown_table(coverage_table),
     "",
     "## Figure Files",
     "",
-    paste0("- `reports/figures/multiscale_spectral_biodiversity/", fig_files, "`"),
+    paste0("- `", relative_path(figure_files), "`"),
     "",
     "## Table Files",
     "",
-    paste0("- `reports/tables/multiscale_spectral_biodiversity/", table_files, "`"),
+    paste0("- `", relative_path(table_files), "`"),
     "",
     "## Notes",
     "",
-    "- PDF rendering should be checked with Poppler page previews after script execution.",
-    "- Bootstrap quality-control sensitivity checks remain recommended before final manuscript inference."
+    "- This validation checks that the requested pairwise correlation layer is complete.",
+    "- Spatial and environmental sensitivity models remain future second-layer analyses, not part of this direct correlation output."
   )
+
   writeLines(validation_lines, VALIDATION_REPORT)
 }
 
 run_multiscale_spectral_biodiversity_analysis <- function() {
-  old_wd <- getwd()
-  on.exit(setwd(old_wd), add = TRUE)
-  setwd(PROJECT_DIR)
-
-  data <- bind_rows(
-    read_scale_table("10m"),
-    read_scale_table("20m"),
-    read_scale_table("50m")
-  ) %>%
-    add_edge_flags() %>%
-    prep_model_data()
-
-  model_results <- fit_model_grid(data)
-  primary_models <- choose_primary_models(model_results)
-  correlations <- correlation_tables(data)
-
-  primary_fit_keys <- primary_models %>%
-    select(scale, response, model_type, predictor)
-  primary_fit_indices <- vapply(model_results$fits, function(item) {
-    any(
-      primary_fit_keys$scale == item$summary$scale &
-        primary_fit_keys$response == item$summary$response &
-        primary_fit_keys$model_type == item$summary$model_type &
-        (
-          (is.na(primary_fit_keys$predictor) & is.na(item$summary$predictor)) |
-            primary_fit_keys$predictor == item$summary$predictor
-        )
-    )
-  }, logical(1))
-  diagnostic_fits <- c(
-    model_results$fits[primary_fit_indices],
-    model_results$fits[vapply(model_results$fits, function(item) {
-      item$summary$response == PRIMARY_RESPONSE && item$summary$model_type %in% c("Null", "Environment")
-    }, logical(1))]
-  )
-  moran_results <- bind_rows(lapply(diagnostic_fits, moran_diagnostic))
-
-  figures <- make_figures(data, correlations, model_results, moran_results, primary_models)
-
-  readr::write_csv(data, file.path(TABLE_DIR, "analysis_dataset_with_flags.csv"))
-  readr::write_csv(correlations, file.path(TABLE_DIR, "correlation_results.csv"))
-  readr::write_csv(model_results$summaries, file.path(TABLE_DIR, "model_summary_results.csv"))
-  readr::write_csv(model_results$coefficients, file.path(TABLE_DIR, "model_coefficient_results.csv"))
-  readr::write_csv(primary_models, file.path(TABLE_DIR, "primary_best_models_by_scale.csv"))
-  readr::write_csv(moran_results, file.path(TABLE_DIR, "residual_moran_diagnostics.csv"))
-
-  outputs <- list(
-    data = data,
-    correlations = correlations,
-    model_results = model_results,
-    primary_models = primary_models,
-    moran_results = moran_results,
-    figures = figures
-  )
-
-  pdf_paths <- write_reports(outputs)
-  write_markdown_reports(outputs, pdf_paths)
-
-  if (requireNamespace("beepr", quietly = TRUE)) {
-    beepr::beep(3)
+  data <- load_analysis_data()
+  missing_columns <- setdiff(c(SV_MEASURES, DIVERSITY_MEASURES), names(data))
+  if (length(missing_columns) > 0) {
+    stop("Missing expected columns: ", paste(missing_columns, collapse = ", "), call. = FALSE)
   }
 
-  print(pdf_paths)
-  invisible(c(outputs, list(pdf_paths = pdf_paths)))
+  correlations <- run_correlations(data)
+  coverage <- make_coverage_summary(data)
+  top_pairings <- top_results_by_sv(correlations)
+  figure_files <- save_figures(data, correlations)
+
+  write.csv(data, file.path(TABLE_DIR, "sv_diversity_analysis_dataset.csv"), row.names = FALSE)
+  write.csv(correlations, file.path(TABLE_DIR, "sv_diversity_pairwise_correlations.csv"), row.names = FALSE)
+  write.csv(top_pairings, file.path(TABLE_DIR, "sv_diversity_top_pairings.csv"), row.names = FALSE)
+
+  write_analysis_report(correlations, coverage, figure_files)
+  write_task_report(correlations, coverage)
+  write_validation_report(correlations, coverage, figure_files)
+
+  message("SV-diversity pairwise analysis complete.")
+  invisible(list(data = data, correlations = correlations, coverage = coverage))
 }
 
 if (sys.nframe() == 0) {

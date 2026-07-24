@@ -63,25 +63,29 @@ Determine whether spectral heterogeneity is associated with biodiversity metrics
 
 - H1: Spectral heterogeneity increases with phylogenetic diversity.
 - H2: Relationships vary across spatial scales.
-- H3: Environmental variables explain additional variation beyond biodiversity metrics alone.
+- H3: Species-diversity and phylogenetic-diversity measures differ in how strongly they track spectral variation.
 
 **Expected analyses:**
 
-- Correlation analyses
-- Linear regression
-- Generalized linear models where appropriate
-- Spatial diagnostics
-- Model comparison and variance partitioning
+- Primary pairwise correlation analyses between each spectral variation measure and each diversity measure.
+- Simple linear regression for each pair, reporting Pearson `r`, `R2`, F statistic, F-test p-value, slope, and intercept.
+- Scale-specific comparison across 10 m, 20 m, and 50 m quadrats.
+- Spatial diagnostics and environmental sensitivity models as later analysis layers after the direct SV-diversity relationships are interpreted.
 
 **Primary response variables:**
 
-- Spectral entropy and other spectral heterogeneity metrics
+- Standardized PCA mean Euclidean distance (`spec_spca_mean`)
+- Spectral angle entropy (`spec_sa`)
 
 **Primary predictor variables:**
 
 - Faith's phylogenetic diversity
+- Phylogenetic Rao's Q
 - Abundance-weighted Faith's phylogenetic diversity
+- Species richness
 - Shannon diversity
+- Simpson diversity
+- Species evenness
 
 ### Objective 4: Assess Environmental Drivers
 

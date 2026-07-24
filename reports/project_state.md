@@ -128,16 +128,15 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Added `reports/validation/20260624_combined_quadrat_analysis_tables_validation.md`.
 - Validation found no duplicate quadrat IDs, no missing center coordinates, no missing environmental elevation values, no per-species composition columns, and no pixel-count/pair-count/bootstrap/method/geometry metadata columns in the combined CSVs.
 - Combined-table spectral missingness reflects upstream raster availability and manual PCA exclusions: missing `spec_sa` values are 97 at 10 m, 15 at 20 m, and 0 at 50 m; missing `spec_pca_mean` values are 256 at 10 m, 64 at 20 m, and 6 at 50 m.
-- Added `scripts/3_Analysis/multiscale_spectral_biodiversity_analysis.R` to evaluate spectral-biodiversity relationships across 10 m, 20 m, and 50 m quadrat scales using the current combined analysis tables.
-- Created user-facing PDF reports under `Documents/PDFs/`:
-  - `spectral_biodiversity_multiscale_findings.pdf`
-  - `spectral_biodiversity_model_appendix.pdf`
-- Created analysis figures under `reports/figures/multiscale_spectral_biodiversity/` and analysis tables under `reports/tables/multiscale_spectral_biodiversity/`.
-- The multiscale analysis treats `spec_sa` as the primary spectral heterogeneity response and uses `spec_pca_mean`, `spec_rao_q`, `spec_alpha`, `spec_spca_mean`, `spec_spca_rao`, and `spec_spca_alpha` as secondary response metrics. The script has been updated for standardized PCA fields, but biodiversity/environment relationship analyses were intentionally not rerun during the PCA-only diagnostic update.
-- The multiscale analysis uses `phy_faith`, `phy_afaith`, and `sp_shannon` as primary biodiversity predictors and `env_elev` plus `env_tri11` as environmental controls.
-- Documented 10 m and 20 m edge quadrats were excluded from primary inference in the multiscale analysis; 50 m used all quadrats because no separate 50 m edge rule is documented.
-- Best-supported primary-response candidate models by AIC used abundance-weighted Faith's PD: biodiversity plus environment at 10 m and 20 m, and abundance-weighted Faith's PD by elevation interaction at 50 m. Adjusted R2 values were approximately 0.038, 0.094, and 0.242, respectively.
-- Residual Moran's I remained significant in primary spectral angle entropy models at all three scales, so OLS p-values should be interpreted cautiously until spatial model sensitivity checks are added.
+- Revamped `scripts/3_Analysis/multiscale_spectral_biodiversity_analysis.R` so the active first-layer analysis directly answers: what is the relationship between spectral variation and phylogenetic/species diversity?
+- The active multiscale analysis now uses two primary spectral variation responses: standardized PCA mean Euclidean distance (`spec_spca_mean`) and spectral angle entropy (`spec_sa`).
+- Each spectral variation measure is independently paired with each diversity measure: `phy_faith`, `phy_rao`, `phy_afaith`, `sp_rich`, `sp_shannon`, `sp_simpson`, and `sp_even`.
+- Each pairwise relationship is fitted as a simple linear model within scale and reported with Pearson `r`, `R2`, F statistic, F-test p-value, slope, intercept, and Spearman rank correlation.
+- The current direct SV-diversity outputs are `reports/analysis/20260710_sv_diversity_pairwise_correlations.md`, `reports/tables/multiscale_spectral_biodiversity/sv_diversity_pairwise_correlations.csv`, `reports/tables/multiscale_spectral_biodiversity/sv_diversity_analysis_dataset.csv`, and `reports/tables/multiscale_spectral_biodiversity/sv_diversity_top_pairings.csv`.
+- `sv_diversity_analysis_dataset.csv` now carries upstream sampling metadata for both primary SV measures: `sa_n_pixels`, `sa_method`, and `sa_all_pixels_sampled` for SA entropy; and `spca_n_pixels`, `spca_metric_method`, and `spca_euclidean_all_pixels_sampled` for standardized PCA Euclidean distance. `sa_all_pixels_sampled` is TRUE when all retained pixels were sampled for SA entropy and FALSE when the 5,000-pixel cap was used. `spca_euclidean_all_pixels_sampled` is TRUE when standardized PCA Euclidean distance used all retained pixels.
+- Current strongest pairings by absolute Pearson `r` are phylogenetic rather than species-diversity measures: 10 m standardized PCA distance with `phy_rao` (r = 0.121, R2 = 0.015), 10 m SA entropy with `phy_rao` (r = 0.106, R2 = 0.011), 20 m standardized PCA distance with `phy_afaith` (r = 0.291, R2 = 0.085), 20 m SA entropy with `phy_rao` (r = 0.180, R2 = 0.033), 50 m standardized PCA distance with `phy_rao` (r = 0.444, R2 = 0.197), and 50 m SA entropy with `phy_rao` (r = 0.340, R2 = 0.115).
+- The earlier environment-adjusted AIC model-ranking workflow and PDF reports are superseded as the active first-layer analysis. Environmental and spatial models should be revisited only after the direct pairwise SV-diversity relationships are interpreted.
+- Documented 10 m and 20 m edge quadrats remain excluded from primary inference; 50 m uses all quadrats because no separate 50 m edge rule is documented.
 - Added `reports/tasks/20260624_multiscale_spectral_biodiversity_analysis.md`.
 - Added `reports/validation/20260624_multiscale_spectral_biodiversity_analysis_validation.md`.
 - Created required governance directories under `reports/` and `logs/`.
@@ -163,7 +162,7 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Standardize script and directory names that contain spaces or spelling errors after checking dependencies.
 - Add formal `testthat` tests once core functions are modularized.
 - Expand shapefile and raster data dictionary entries using R geospatial packages.
-- Add spatial model sensitivity checks for the multiscale spectral-biodiversity analysis because residual Moran's I remained significant after the current OLS candidate models.
+- After interpreting the direct pairwise SV-diversity layer, add spatial and environmental sensitivity checks as a second analysis layer.
 - Join bootstrap quality-control fields (`boot_sd`, `boot_cv`, and `method`) into a companion modeling table and rerun sensitivity checks that flag or exclude high-CV quadrats.
 
 ## Known Issues
@@ -234,4 +233,4 @@ Build a reproducible and well-documented research workflow for evaluating relati
 4. Run downstream model sensitivity checks with high-CV quadrats flagged or excluded, using 5% and 10% bootstrap-CV thresholds.
 5. Compare the new current 20 m spectral heterogeneity output against older 20 m spectral entropy products before replacing downstream analysis columns.
 6. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.
-7. Extend the multiscale PDF analysis with spatial GLS/GAM or spatial eigenvector sensitivity models before treating coefficient p-values as final manuscript inference.
+7. Extend the revamped direct SV-diversity analysis with spatial GLS/GAM or spatial eigenvector sensitivity models before treating coefficient p-values as final manuscript inference.
