@@ -1,0 +1,572 @@
+# Markdown Context Digest
+
+Created: 2026-08-03
+
+Workflow note: this digest was produced by `tools/create_paper_outline_docx.R` using R 4.2.3. It records that the paper-outline workflow read the repository Markdown corpus before generating the style notes and Word outline.
+
+Markdown files read: 70
+
+## File And Heading Inventory
+
+- `CODEX_AGENT_GUIDELINES.md`
+  - # Governance Standards
+  - ## Working Directory
+  - ## R and Rtools Access
+  - ## Repository Discovery Requirements
+  - ### Directory Map
+  - ### Data Dictionary
+  - #### For every dataset include:
+  - #### For every variable include:
+  - ## Coding Style & Naming Conventions
+  - ### Language
+  - ### Style
+  - #### Requirements:
+- `Documents/Paper/20260730_paper_workspace_index.md`
+  - # Paper Workspace Index
+  - ## Current Files
+  - ## Naming Convention
+  - ## Current Manuscript Direction
+  - ## Analysis-Ready Inputs
+  - ## Key Analysis Reports
+  - ## Methods Documentation Sources
+  - ## Current Figure Sources
+  - ## Current Table Sources
+  - ## Immediate Next Step
+- `Documents/Paper/20260730_working_outline.md`
+  - # Working Manuscript Outline
+  - ## Manuscript Purpose
+  - ## Central Question
+  - ## Working Thesis
+  - ## Candidate Abstract Structure
+  - ## Introduction
+  - ### Opening Problem
+  - ### Conceptual Background
+  - ### Study Gap
+  - ### Objectives And Hypotheses
+  - ## Methods
+  - ### Study Site
+- `Documents/Paper/20260803_markdown_context_digest.md`
+  - # Markdown Context Digest
+  - ## File And Heading Inventory
+- `Documents/Paper/20260803_writing_style_notes.md`
+  - # Writing Style Notes From Prior Drafts
+  - ## Observed Writing Style
+  - ## Style To Preserve In The New Outline
+  - ## Key Methodological Updates To Carry Forward
+  - ## Result Emphasis For This Outline
+- `reports/analysis/20260618_bootstrap_variation_analysis.md`
+  - # Bootstrap Variation Analysis for Spectral Heterogeneity
+  - ## Purpose
+  - ## Inputs
+  - ## Main Conclusion
+  - ## Scale Summary
+  - ## Figures
+  - ### Within Versus Between SD
+  - ### Bootstrap Variation And Mean Uncertainty By Scale
+  - ### CI Width Distribution
+  - ### Widest CI Quadrats
+  - ### Bootstrap CV Distribution
+  - ### Bootstrap SD Versus SA Entropy Mean
+- `reports/analysis/20260703_sa_entropy_sample_size_effects.md`
+  - # SA Entropy Sample-Size Effects
+  - ## Purpose
+  - ## Design
+  - ## 100% Pixel Check
+  - ## Selected Quadrats
+  - ## Sample Rules
+  - ## Summary Results
+  - ## Figures
+  - ### Compact Overview: SA Entropy Mean By Sample Size
+  - ### Compact Overview: Bootstrap CV By Sample Size
+  - ### Compact Overview: Difference From Fixed 4,000 Pixels
+  - ### Compact Overview: Bootstrap Replicate Distributions
+- `reports/analysis/20260704_pca_metric_sample_size_effects.md`
+  - # Regular PCA-Derived Spectral Metric Sample-Size Effects
+  - ## Purpose
+  - ## Design
+  - ## Selected Quadrats
+  - ## Sample Rules
+  - ## Summary Results
+  - ## Figures
+  - ## PCA Mean Distance
+  - ### PCA Mean Distance: 10m Scale Figures
+  - ### PCA Mean Distance: 10m Distribution Charts Split By Sample Size
+  - ### PCA Mean Distance: 20m Scale Figures
+  - ### PCA Mean Distance: 20m Distribution Charts Split By Sample Size
+- `reports/analysis/20260706_50m_pc1_mean_reflectance_correlation.md`
+  - # 50 m PC1 and Mean Reflectance Correlation
+  - ## Purpose
+  - ## Design
+  - ## Results
+  - ## Interpretation Notes
+  - ## Figures
+  - ## Output Tables
+- `reports/analysis/20260707_50m_pc_mean_reflectance_correlation.md`
+  - # 50 m PC1-PC3 and Mean Reflectance Correlation
+  - ## Purpose
+  - ## Design
+  - ## Key Results: Standardized PCA
+  - ## Supporting Regular PCA Results
+  - ## Interpretation Notes
+  - ## Output Tables
+- `reports/analysis/20260707_pca_loading_spectral_regions.md`
+  - # PCA Loading Spectral Region Analysis
+  - ## Purpose
+  - ## Method
+  - ## Key Finding: Standardized PCA
+  - ## Standardized PCA Regions
+  - ## Supporting Regular PCA Comparison
+  - ## Summary Checks
+  - ## Figures
+  - ## Output Tables
+- `reports/analysis/20260707_standardized_pca_metric_sample_size_effects.md`
+  - # Standardized PCA-Derived Spectral Metric Sample-Size Effects
+  - ## Purpose
+  - ## Design
+  - ## Selected Quadrats
+  - ## Sample Rules
+  - ## Summary Results
+  - ## Figures
+  - ## Standardized PCA Mean Distance
+  - ### Standardized PCA Mean Distance: 10m Scale Figures
+  - ### Standardized PCA Mean Distance: 10m Distribution Charts Split By Sample Size
+  - ### Standardized PCA Mean Distance: 20m Scale Figures
+  - ### Standardized PCA Mean Distance: 20m Distribution Charts Split By Sample Size
+- `reports/analysis/20260710_sv_diversity_pairwise_correlations.md`
+  - # SV-Diversity Pairwise Correlation Analysis
+  - ## Research Question
+  - ## Primary Spectral Variation Measures
+  - ## Diversity Measures
+  - ## Model Form
+  - ## Coverage
+  - ## Strongest Pairing Per SV Measure And Scale
+  - ## Full Pairwise Results
+  - ## Figures
+  - ## Output Tables
+  - ## Superseded Analysis Direction
+- `reports/analysis/20260725_edge_bootstrap_sensitivity_sv_diversity.md`
+  - # Edge Quadrat And Bootstrap Sensitivity For SV-Diversity Correlations
+  - ## Purpose
+  - ## Inputs
+  - ## Measures
+  - ## Edge Quadrat Comparison
+  - ### Primary Measure Summary
+  - ### Largest Edge-Removal Changes
+  - ### Strongest Edge-Only Correlations
+  - ## Edge Versus Non-Edge Range Check
+  - ## Equal-Sample-Size Non-Edge Resampling
+  - ## Environmental Context
+  - ### Edge Versus Non-Edge Environmental Distributions
+- `reports/combined_quadrat_variable_guide.md`
+  - # Combined Quadrat Analysis Tables Variable Guide
+  - ## Column Definitions
+- `reports/data_dictionary.md`
+  - # Data Dictionary
+  - ## Tabular Datasets
+  - ### `PR_tree_DL.csv`
+  - ### `51sp_taxanomy.csv`
+  - ### `species_summary.csv`
+  - ### `spec_shannaon_DIV_with Geometry.csv`
+  - ### `Quad_Values/20m_spectral_sp.csv`
+  - ### `Quad_Values/20m_SA_smooth_masked.csv`
+  - ### `Quad_Values/20m_SA_smooth_masked_7_11.csv`
+  - ### `Quad_Values/20m_SA_entrop_boot_results.csv`
+  - ### `Quad_Values/20m_SA_entrop_boot100_results.csv`
+  - ### Current spectral angle entropy outputs from `_smooth_5nm`
+- `reports/directory_map.md`
+  - # Directory Map
+  - ## Top-Level Inventory
+  - ## Repository Structure
+  - ## Current Script Inventory
+  - ### `scripts/1_Data Processing/`
+  - ### `scripts/2_Indices Creation/`
+  - ### `scripts/3_Analysis/`
+  - ### `scripts/auxilary/`
+  - ### `scripts/visuals/`
+  - ### Remaining Review Candidate Scripts
+  - ## Current Function Inventory
+  - ### `Functions/`
+- `reports/execution_plans/20260615_1515_execplan.md`
+  - # ExecPlan: Repository Documentation and Cleanup Baseline
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Relevant Files
+  - ## Proposed Changes
+  - ## Expected Modifications
+  - ## Validation Plan
+  - ## Risks
+  - ## Potential Side Effects
+- `reports/execution_plans/20260615_1530_execplan.md`
+  - # ExecPlan: Authorized Legacy Cleanup and Governance Update
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Relevant Files and Directories
+  - ## Proposed Changes
+  - ## Expected Modifications
+  - ## Validation Plan
+  - ## Risks
+  - ## Potential Side Effects
+- `reports/execution_plans/20260617_1100_smooth_quad_spectra.md`
+  - # ExecPlan: Smooth Confirmed Quadrat Spectra
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Relevant Inputs
+  - ## Proposed Outputs
+  - ## Proposed Changes
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260618_0835_resample_smoothed_quad_spectra.md`
+  - # ExecPlan: Resample Smoothed Quadrat Spectra to 5 nm
+  - ## Objective
+  - ## Requested Task
+  - ## Inputs
+  - ## Outputs
+  - ## Proposed Changes
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260618_1105_spectral_heterogeneity_from_smoothed_5nm.md`
+  - # ExecPlan: Spectral Heterogeneity from Smoothed 5 nm Quadrat Spectra
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Proposed Changes
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260618_1220_bootstrap_variation_analysis.md`
+  - # ExecPlan: Bootstrap Variation Analysis
+  - ## Objective
+  - ## Requested Task
+  - ## Inputs
+  - ## Proposed Changes
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260622_1449_plant_diversity_all_scales.md`
+  - # ExecPlan: Plant Diversity Values at All Scales
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Proposed Changes
+  - ## Expected Outputs
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260623_1125_environmental_variables_all_scales.md`
+  - # ExecPlan: Environmental Variables at All Quadrat Scales
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Proposed Changes
+  - ## Expected Outputs
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260624_0000_execplan.md`
+  - # ExecPlan: Combine Per-Scale Spectral, Diversity, and Topographic Values
+- `reports/execution_plans/20260624_1815_execplan.md`
+  - # ExecPlan: Remove Species Composition Columns and Add Word Variable Guide
+- `reports/execution_plans/20260624_1845_multiscale_spectral_biodiversity_analysis.md`
+  - # ExecPlan: Direct Multiscale SV-Diversity Pairwise Analysis
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Relevant Inputs
+  - ## Proposed Changes
+  - ## Analysis Strategy
+  - ## Expected Outputs
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260706_1658_quad_values_path_update.md`
+  - # ExecPlan: Quad_Values Path Update
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Proposed Changes
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260706_50m_pc1_mean_reflectance_correlation.md`
+  - # ExecPlan: 50 m PC1 Mean Reflectance Correlation
+  - ## Objective
+  - ## Requested Task
+  - ## Files To Review
+  - ## Proposed Changes
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260707_50m_pc_mean_reflectance_correlation.md`
+  - # ExecPlan: 50 m PC1-PC3 Mean Reflectance Correlation
+  - ## Objective
+  - ## Requested Task
+  - ## Implementation
+  - ## Validation Plan
+  - ## Risks
+- `reports/execution_plans/20260707_pca_loading_spectral_regions.md`
+  - # ExecPlan: PCA Loading Spectral Region Analysis
+  - ## Objective
+  - ## Requested Structure
+  - ## Implementation
+  - ## Outputs
+  - ## Validation Plan
+- `reports/project_state.md`
+  - # Project State
+  - ## Current Objective
+  - ## Active Research Questions
+  - ## Completed Work
+  - ## Pending Work
+  - ## Known Issues
+  - ## Technical Debt
+  - ## Important Assumptions
+  - ## Next Recommended Actions
+- `reports/tables/multiscale_spectral_biodiversity/sv_diversity_analysis_dataset_column_guide.md`
+  - # SV Diversity Analysis Dataset Column Guide
+  - ## Quadrat Data
+  - ## Species And Phylogenetic Diversity
+  - ## Spectral Heterogeneity Measures
+  - ## Elevation And Topographic Measures
+  - ## Other Related Info
+- `reports/tasks/20260615_legacy_cleanup_governance_update.md`
+  - # Task Report: Legacy Cleanup and Governance Update
+  - ## Objective
+  - ## Actions Performed
+  - ## Cleanup Result
+  - ## Assumptions Confirmed
+- `reports/tasks/20260615_repository_documentation_cleanup.md`
+  - # Task Report: Repository Documentation and Cleanup Baseline
+  - ## Objective
+  - ## Actions Performed
+  - ## Current Cleanup Candidates
+  - ## Files Not Deleted Yet
+  - ## Notes
+- `reports/tasks/20260617_documentation_current_state_update.md`
+  - # Task Report: Documentation Current-State Update
+  - ## Objective
+  - ## Requested Updates
+  - ## Files Updated
+  - ## Notes
+- `reports/tasks/20260617_smooth_quad_spectra.md`
+  - # Task Report: Smooth Quadrat Spectra
+  - ## Objective
+  - ## Inputs
+  - ## Outputs
+  - ## Script Updated
+  - ## Processing Notes
+  - ## Results
+  - ## Notes
+- `reports/tasks/20260618_bootstrap_variation_analysis.md`
+  - # Task Report: Bootstrap Variation Analysis
+  - ## Objective
+  - ## Inputs
+  - ## Script Added
+  - ## Outputs Created
+  - ## Key Results
+  - ## Recommendation
+- `reports/tasks/20260618_resample_smoothed_quad_spectra.md`
+  - # Task Report: Resample Smoothed Quadrat Spectra
+  - ## Objective
+  - ## Inputs
+  - ## Outputs
+  - ## Script Updated
+  - ## Processing Notes
+  - ## Results
+  - ## Notes
+- `reports/tasks/20260618_spectral_heterogeneity_workflow_update.md`
+  - # Task Report: Spectral Heterogeneity Workflow Update
+  - ## Objective
+  - ## Inputs
+  - ## Script Updated
+  - ## Key Changes
+  - ## Run Settings
+  - ## Outputs Created
+  - ## Results
+  - ## Notes
+- `reports/tasks/20260622_plant_diversity_all_scales.md`
+  - # Task Report: Plant Diversity Values at All Scales
+  - ## Objective
+  - ## Scripts Updated
+  - ## Key Changes
+  - ## Outputs Created
+  - ## Notes
+- `reports/tasks/20260623_environmental_variables_all_scales.md`
+  - # Task Report: Environmental Variables at All Scales
+  - ## Objective
+  - ## Script Added
+  - ## Key Changes
+  - ## Outputs Created
+  - ## Tests Added
+  - ## Notes
+- `reports/tasks/20260624_combined_quadrat_analysis_tables.md`
+  - # Combined Quadrat Analysis Tables
+  - ## Task
+  - ## Outputs
+  - ## Notes
+  - ## Validation Summary
+- `reports/tasks/20260624_multiscale_spectral_biodiversity_analysis.md`
+  - # Multiscale Spectral-Biodiversity Analysis
+  - ## Current Direction
+  - ## Inputs
+  - ## Primary Spectral Variation Measures
+  - ## Diversity Predictors
+  - ## Methods
+  - ## Outputs
+  - ## Result Size
+  - ## Superseded Material
+- `reports/tasks/20260706_50m_pc1_mean_reflectance_correlation.md`
+  - # Task Report: 50 m PC1 Mean Reflectance Correlation
+  - ## Objective
+  - ## Outputs
+  - ## Key Result
+- `reports/tasks/20260706_quad_values_path_update.md`
+  - # Task Report: Quad_Values Path Update
+  - ## Objective
+  - ## Changes Made
+  - ## Key Script Path Updates
+  - ## Notes
+- `reports/tasks/20260707_10m_footprint_standardized_pca_rebuild.md`
+  - # Task Report: 10 m Footprint PCA and Standardized PCA Rebuild
+  - ## Request
+  - ## Work Completed
+  - ## Key Outputs
+  - ## Notes
+- `reports/tasks/20260707_50m_pc_mean_reflectance_correlation.md`
+  - # Task Report: 50 m PC1-PC3 Mean Reflectance Correlation
+  - ## Objective
+  - ## Key Output
+  - ## Standardized PCA Results
+- `reports/tasks/20260707_pca_loading_spectral_regions.md`
+  - # Task Report: PCA Loading Spectral Region Analysis
+  - ## Objective
+  - ## Outputs
+  - ## Key Finding
+- `reports/tasks/20260709_standardized_pca_diagnostics_and_sample_size_completion.md`
+  - # Task Report: Standardized PCA Diagnostics and Sample-Size Completion
+  - ## Objective
+  - ## Completed
+  - ## Key Standardized PCA Findings
+  - ## Outputs
+- `reports/validation/20260615_legacy_cleanup_validation.md`
+  - # Validation Report: Legacy Cleanup and Governance Update
+  - ## Validation Checks
+  - ## Notes
+  - ## Follow-Up
+- `reports/validation/20260615_repository_documentation_validation.md`
+  - # Validation Report: Repository Documentation and Cleanup Baseline
+  - ## Validation Checks
+  - ## Commands and Evidence
+  - ## Limitations
+  - ## Recommended Follow-Up Validation
+- `reports/validation/20260617_documentation_current_state_validation.md`
+  - # Validation Report: Documentation Current-State Update
+  - ## Validation Scope
+  - ## Checks Performed
+  - ## Result
+- `reports/validation/20260617_smooth_quad_spectra_validation.md`
+  - # Validation Report: Smooth Quadrat Spectra
+  - ## Validation Scope
+  - ## Count Validation
+  - ## Raster Open Validation
+  - ## Result
+- `reports/validation/20260618_bootstrap_variation_analysis_validation.md`
+  - # Validation Report: Bootstrap Variation Analysis
+  - ## Validation Scope
+  - ## Checks Performed
+  - ## Main Finding
+  - ## Quantitative Summary
+  - ## Distribution Shape
+  - ## Recommendation
+- `reports/validation/20260618_resample_smoothed_quad_spectra_validation.md`
+  - # Validation Report: Resample Smoothed Quadrat Spectra
+  - ## Validation Scope
+  - ## Count Validation
+  - ## Raster Open Validation
+  - ## Result
+- `reports/validation/20260618_spectral_heterogeneity_workflow_validation.md`
+  - # Validation Report: Spectral Heterogeneity Workflow Update
+  - ## Validation Scope
+  - ## Package Availability
+  - ## Workflow Settings
+  - ## Checks Performed
+  - ## Output Summary
+  - ## Bootstrap Output Dimensions
+  - ## Output Files
+  - ## Notes
+  - ## Result
+- `reports/validation/20260622_plant_diversity_all_scales_validation.md`
+  - # Validation Report: Plant Diversity Values at All Scales
+  - ## Validation Scope
+  - ## Checks Performed
+  - ## Row Counts
+  - ## ID Alignment With Current Spectral Summaries
+  - ## Notes
+- `reports/validation/20260622_spectral_heterogeneity_all_metrics_validation.md`
+  - # Validation Report: Spectral Heterogeneity All-Metrics Workflow
+  - ## Current Supersession
+  - ## Scope
+  - ## Supersession Note
+  - ## Inputs
+  - ## Manual Exclusions
+  - ## PCA Basis
+  - ## Output Validation
+  - ## Method Counts
+  - ## Output Files
+  - ## Result
+- `reports/validation/20260623_environmental_variables_all_scales_validation.md`
+  - # Validation Report: Environmental Variables at All Scales
+  - ## Validation Scope
+  - ## Checks Performed
+  - ## Row Counts
+  - ## Output Value Ranges
+  - ## Result
+- `reports/validation/20260624_combined_quadrat_analysis_tables_validation.md`
+  - # Combined Quadrat Analysis Tables Validation
+  - ## Output Summary
+  - ## Metadata Column Check
+  - ## Species Composition Column Check
+- `reports/validation/20260624_multiscale_spectral_biodiversity_analysis_validation.md`
+  - # Multiscale Spectral-Biodiversity Analysis Validation
+  - ## Checks
+  - ## Coverage Summary
+  - ## Figure Files
+  - ## Table Files
+  - ## Notes
+- `reports/validation/20260706_50m_pc1_mean_reflectance_correlation_validation.md`
+  - # Validation: 50 m PC1 Mean Reflectance Correlation
+  - ## Checks
+  - ## Result
+- `reports/validation/20260706_quad_values_path_update_validation.md`
+  - # Validation: Quad_Values Path Update
+  - ## Checks
+  - ## Validation Commands
+  - ## Result
+- `reports/validation/20260707_10m_footprint_standardized_pca_rebuild_validation.md`
+  - # Validation Report: 10 m Footprint PCA and Standardized PCA Rebuild
+  - ## Scope
+  - ## PCA Basis
+  - ## Variance Checks
+  - ## CSV Validation
+  - ## Downstream Diagnostics
+  - ## Result
+- `reports/validation/20260707_50m_pc_mean_reflectance_correlation_validation.md`
+  - # Validation: 50 m PC1-PC3 Mean Reflectance Correlation
+  - ## Checks
+  - ## Result
+- `reports/validation/20260707_pca_loading_spectral_regions_validation.md`
+  - # Validation: PCA Loading Spectral Region Analysis
+  - ## Checks
+  - ## Result
+- `reports/validation/20260709_standardized_pca_diagnostics_and_sample_size_validation.md`
+  - # Validation: Standardized PCA Diagnostics and Sample-Size Completion
+  - ## Checks
+  - ## Standardized PCA Diagnostic Values
+  - ## Result
+- `RESEARCH_OBJECTIVES.md`
+  - # Research Objective and Analysis Specification for Codex Agent
+  - ## Project Title
+  - ## Purpose
+  - ## Scientific Objectives
+  - ### Objective 1: Quantify Spectral Heterogeneity
+  - ### Objective 2: Quantify Biodiversity Metrics
+  - ### Objective 3: Evaluate Spectral-Biodiversity Relationships
+  - ### Objective 4: Assess Environmental Drivers
+  - ### Objective 5: Evaluate Scale Dependence
+  - ## Data Sources
+  - ### Data Organization and Processing Structure
+  - #### Raw Spectral Data Location

@@ -1,0 +1,145 @@
+"scale","edge_group","env_measure","env_label","variable","variable_label","n","pearson_r","r_squared","p_value"
+"10m","all_quads","env_elev","Elevation","phy_faith","Faith's PD",2000,-0.119054284001923,0.0141739225392104,9.29761098278903e-08
+"10m","all_quads","env_elev","Elevation","phy_rao","Phylogenetic Rao's Q",2000,-0.0803896644203102,0.00646249814561009,0.000319796005206696
+"10m","all_quads","env_elev","Elevation","phy_afaith","Abundance-weighted Faith's PD",2000,-0.0573852298858947,0.00329306460905699,0.0102625102632559
+"10m","all_quads","env_elev","Elevation","sp_shannon","Shannon diversity",2000,0.0635737373865501,0.00404162008529403,0.00445225560384585
+"10m","all_quads","env_elev","Elevation","spec_sa","SA entropy",1903,-0.183175275987192,0.0335531817329841,8.03220681916023e-16
+"10m","all_quads","env_elev","Elevation","spec_spca_mean","Std PCA mean distance",1744,-0.201700074136759,0.040682919906774,1.81977552332011e-17
+"10m","all_quads","env_tri5","TRI 5x5","phy_faith","Faith's PD",2000,-0.0245126928883203,0.000600872112637108,0.273201223659929
+"10m","all_quads","env_tri5","TRI 5x5","phy_rao","Phylogenetic Rao's Q",2000,-0.0399678432667087,0.00159742849539219,0.0739354114638028
+"10m","all_quads","env_tri5","TRI 5x5","phy_afaith","Abundance-weighted Faith's PD",2000,-0.0973288047424114,0.00947289623258644,1.29877977074457e-05
+"10m","all_quads","env_tri5","TRI 5x5","sp_shannon","Shannon diversity",2000,0.0960653582565813,0.00922855305696532,1.68163779362186e-05
+"10m","all_quads","env_tri5","TRI 5x5","spec_sa","SA entropy",1903,-0.0523254210133372,0.00273794968422299,0.0224494527591323
+"10m","all_quads","env_tri5","TRI 5x5","spec_spca_mean","Std PCA mean distance",1744,-0.0709805243944552,0.00503823484331185,0.00301847892040191
+"10m","all_quads","env_tri11","TRI 11x11","phy_faith","Faith's PD",2000,-0.0204269988024987,0.000417262280077285,0.361217664053392
+"10m","all_quads","env_tri11","TRI 11x11","phy_rao","Phylogenetic Rao's Q",2000,-0.0444324929341666,0.00197424642834476,0.0469422993998774
+"10m","all_quads","env_tri11","TRI 11x11","phy_afaith","Abundance-weighted Faith's PD",2000,-0.102511647820615,0.0105086379388978,4.35454782441924e-06
+"10m","all_quads","env_tri11","TRI 11x11","sp_shannon","Shannon diversity",2000,0.113993822239169,0.0129945915086954,3.19710822107557e-07
+"10m","all_quads","env_tri11","TRI 11x11","spec_sa","SA entropy",1903,-0.0523479574875166,0.00274030865311485,0.0223914837501773
+"10m","all_quads","env_tri11","TRI 11x11","spec_spca_mean","Std PCA mean distance",1744,-0.0891626466008084,0.00794997754886066,0.000192776331024879
+"10m","all_quads","env_tri21","TRI 21x21","phy_faith","Faith's PD",2000,-0.0136626736256641,0.000186668650601419,0.541424793564291
+"10m","all_quads","env_tri21","TRI 21x21","phy_rao","Phylogenetic Rao's Q",2000,-0.0475521893904562,0.00226121071582581,0.0334639785135595
+"10m","all_quads","env_tri21","TRI 21x21","phy_afaith","Abundance-weighted Faith's PD",2000,-0.106315436891176,0.0113029721213617,1.88751945975124e-06
+"10m","all_quads","env_tri21","TRI 21x21","sp_shannon","Shannon diversity",2000,0.144637754653743,0.0209200800712762,8.10968514206726e-11
+"10m","all_quads","env_tri21","TRI 21x21","spec_sa","SA entropy",1903,-0.0644504231068199,0.00415385703864811,0.00491392308421679
+"10m","all_quads","env_tri21","TRI 21x21","spec_spca_mean","Std PCA mean distance",1744,-0.112039458848839,0.0125528403391408,2.7277187367534e-06
+"10m","non_edge","env_elev","Elevation","phy_faith","Faith's PD",1656,-0.0819241164288779,0.00671156085265234,0.000847149928029955
+"10m","non_edge","env_elev","Elevation","phy_rao","Phylogenetic Rao's Q",1656,-0.054025309578134,0.00291873407501322,0.0279170249114589
+"10m","non_edge","env_elev","Elevation","phy_afaith","Abundance-weighted Faith's PD",1656,-0.0441229775301946,0.00194683714613006,0.0726444638089374
+"10m","non_edge","env_elev","Elevation","sp_shannon","Shannon diversity",1656,0.0982005936728409,0.00964335659769841,6.25883608984657e-05
+"10m","non_edge","env_elev","Elevation","spec_sa","SA entropy",1587,-0.177302598779993,0.0314362115341393,1.12643279560698e-12
+"10m","non_edge","env_elev","Elevation","spec_spca_mean","Std PCA mean distance",1440,-0.209187018536102,0.0437592087240234,1.05671235237859e-15
+"10m","non_edge","env_tri5","TRI 5x5","phy_faith","Faith's PD",1656,-0.0422001065048744,0.00178084898902275,0.0860233376339325
+"10m","non_edge","env_tri5","TRI 5x5","phy_rao","Phylogenetic Rao's Q",1656,-0.049551814483416,0.00245538231859887,0.0437815230738091
+"10m","non_edge","env_tri5","TRI 5x5","phy_afaith","Abundance-weighted Faith's PD",1656,-0.118726506606153,0.0140959833709009,1.26642894138351e-06
+"10m","non_edge","env_tri5","TRI 5x5","sp_shannon","Shannon diversity",1656,0.107474639105814,0.011550798050925,1.17072996467562e-05
+"10m","non_edge","env_tri5","TRI 5x5","spec_sa","SA entropy",1587,-0.0469157509869079,0.00220108769066555,0.0616858707663009
+"10m","non_edge","env_tri5","TRI 5x5","spec_spca_mean","Std PCA mean distance",1440,-0.0656323353849035,0.00430760344807645,0.0127349922532514
+"10m","non_edge","env_tri11","TRI 11x11","phy_faith","Faith's PD",1656,-0.0361440761110614,0.0013063942379222,0.141503246840612
+"10m","non_edge","env_tri11","TRI 11x11","phy_rao","Phylogenetic Rao's Q",1656,-0.0540377916892702,0.00292008293065296,0.0278808316934238
+"10m","non_edge","env_tri11","TRI 11x11","phy_afaith","Abundance-weighted Faith's PD",1656,-0.122939268729177,0.0151140637956647,5.21695633412136e-07
+"10m","non_edge","env_tri11","TRI 11x11","sp_shannon","Shannon diversity",1656,0.128594575105749,0.0165365647466281,1.51367467366703e-07
+"10m","non_edge","env_tri11","TRI 11x11","spec_sa","SA entropy",1587,-0.0455228465582266,0.00207232955876385,0.0698299245104701
+"10m","non_edge","env_tri11","TRI 11x11","spec_spca_mean","Std PCA mean distance",1440,-0.0866226762987765,0.00750348804916262,0.00100033934619991
+"10m","non_edge","env_tri21","TRI 21x21","phy_faith","Faith's PD",1656,-0.0221745978255731,0.000491712788725912,0.367161982182595
+"10m","non_edge","env_tri21","TRI 21x21","phy_rao","Phylogenetic Rao's Q",1656,-0.0540235651929348,0.00291854559615528,0.0279220861646661
+"10m","non_edge","env_tri21","TRI 21x21","phy_afaith","Abundance-weighted Faith's PD",1656,-0.123525746911702,0.0152586101500938,4.60016477839433e-07
+"10m","non_edge","env_tri21","TRI 21x21","sp_shannon","Shannon diversity",1656,0.16752713954608,0.0280653424844919,6.8505669460387e-12
+"10m","non_edge","env_tri21","TRI 21x21","spec_sa","SA entropy",1587,-0.055384712593305,0.003067466389043,0.0273612369291813
+"10m","non_edge","env_tri21","TRI 21x21","spec_spca_mean","Std PCA mean distance",1440,-0.11395617968107,0.0129860108875043,1.45955825526243e-05
+"10m","edge_only","env_elev","Elevation","phy_faith","Faith's PD",344,-0.195063222503831,0.0380496607735791,0.00027291462924921
+"10m","edge_only","env_elev","Elevation","phy_rao","Phylogenetic Rao's Q",344,-0.127018946073406,0.0161338126615988,0.0184317197086848
+"10m","edge_only","env_elev","Elevation","phy_afaith","Abundance-weighted Faith's PD",344,-0.0739798050104028,0.00547301154937722,0.170998239747914
+"10m","edge_only","env_elev","Elevation","sp_shannon","Shannon diversity",344,-0.0422054757458938,0.00178130218293723,0.435218147405318
+"10m","edge_only","env_elev","Elevation","spec_sa","SA entropy",316,-0.204141365781331,0.0416736972230671,0.000259135840802556
+"10m","edge_only","env_elev","Elevation","spec_spca_mean","Std PCA mean distance",304,-0.171646477352585,0.0294625131875515,0.00267555746593633
+"10m","edge_only","env_tri5","TRI 5x5","phy_faith","Faith's PD",344,0.0919657663447038,0.00845770217936866,0.0885468664056618
+"10m","edge_only","env_tri5","TRI 5x5","phy_rao","Phylogenetic Rao's Q",344,0.0308676505990154,0.000952811853502897,0.568296730245023
+"10m","edge_only","env_tri5","TRI 5x5","phy_afaith","Abundance-weighted Faith's PD",344,0.0603732561198027,0.00364493005450729,0.264122494345761
+"10m","edge_only","env_tri5","TRI 5x5","sp_shannon","Shannon diversity",344,0.0333092214828773,0.00110950423579537,0.538081809093388
+"10m","edge_only","env_tri5","TRI 5x5","spec_sa","SA entropy",316,-0.0827809095931859,0.00685267899307521,0.142040379953481
+"10m","edge_only","env_tri5","TRI 5x5","spec_spca_mean","Std PCA mean distance",304,-0.103632477358525,0.0107396903634652,0.071182525246547
+"10m","edge_only","env_tri11","TRI 11x11","phy_faith","Faith's PD",344,0.093042956311255,0.00865699171913811,0.0848617165138077
+"10m","edge_only","env_tri11","TRI 11x11","phy_rao","Phylogenetic Rao's Q",344,0.034231019913945,0.0011717627243489,0.526886837520381
+"10m","edge_only","env_tri11","TRI 11x11","phy_afaith","Abundance-weighted Faith's PD",344,0.0533639550211981,0.00284771169550446,0.323713861336473
+"10m","edge_only","env_tri11","TRI 11x11","sp_shannon","Shannon diversity",344,0.0345033621584883,0.0011904820002398,0.523602121104294
+"10m","edge_only","env_tri11","TRI 11x11","spec_sa","SA entropy",316,-0.0883547526244548,0.0078065623113286,0.117004612375935
+"10m","edge_only","env_tri11","TRI 11x11","spec_spca_mean","Std PCA mean distance",304,-0.0994753210421227,0.00989533949643339,0.0833513018094027
+"10m","edge_only","env_tri21","TRI 21x21","phy_faith","Faith's PD",344,0.0686701208122998,0.00471558549237586,0.203904655154175
+"10m","edge_only","env_tri21","TRI 21x21","phy_rao","Phylogenetic Rao's Q",344,0.0211935362070722,0.000449165976960481,0.695283735686103
+"10m","edge_only","env_tri21","TRI 21x21","phy_afaith","Abundance-weighted Faith's PD",344,0.029953022893221,0.000897183580441822,0.579819786247793
+"10m","edge_only","env_tri21","TRI 21x21","sp_shannon","Shannon diversity",344,0.025267123650949,0.000638427537592348,0.640496905637894
+"10m","edge_only","env_tri21","TRI 21x21","spec_sa","SA entropy",316,-0.107347273057441,0.0115234370328688,0.0566247603389298
+"10m","edge_only","env_tri21","TRI 21x21","spec_spca_mean","Std PCA mean distance",304,-0.0882250699822257,0.00778366297336862,0.124804945724957
+"20m","all_quads","env_elev","Elevation","phy_faith","Faith's PD",500,-0.272130713770671,0.0740551253773351,6.13440431458526e-10
+"20m","all_quads","env_elev","Elevation","phy_rao","Phylogenetic Rao's Q",500,-0.209523627621007,0.0439001505314663,2.29075081622036e-06
+"20m","all_quads","env_elev","Elevation","phy_afaith","Abundance-weighted Faith's PD",500,-0.175841514994356,0.0309202383955104,7.71979407728706e-05
+"20m","all_quads","env_elev","Elevation","sp_shannon","Shannon diversity",500,-0.0110475936932188,0.000122049326410447,0.805356402544271
+"20m","all_quads","env_elev","Elevation","spec_sa","SA entropy",485,-0.288207264107032,0.0830634270840603,9.89914024690004e-11
+"20m","all_quads","env_elev","Elevation","spec_spca_mean","Std PCA mean distance",436,-0.295896993130044,0.0875550305434013,2.92973669240787e-10
+"20m","all_quads","env_tri5","TRI 5x5","phy_faith","Faith's PD",500,-0.0945648739194799,0.00894251537940714,0.0345168309866267
+"20m","all_quads","env_tri5","TRI 5x5","phy_rao","Phylogenetic Rao's Q",500,-0.139230078554317,0.0193850147742412,0.00180421924557982
+"20m","all_quads","env_tri5","TRI 5x5","phy_afaith","Abundance-weighted Faith's PD",500,-0.226801381436756,0.0514388666216209,2.96461028449629e-07
+"20m","all_quads","env_tri5","TRI 5x5","sp_shannon","Shannon diversity",500,0.126723563552355,0.0160588615594079,0.00453997092605352
+"20m","all_quads","env_tri5","TRI 5x5","spec_sa","SA entropy",485,-0.113122250828084,0.012796643632412,0.0126726974721518
+"20m","all_quads","env_tri5","TRI 5x5","spec_spca_mean","Std PCA mean distance",436,-0.12462000006131,0.0155301444152808,0.00919189509915652
+"20m","all_quads","env_tri11","TRI 11x11","phy_faith","Faith's PD",500,-0.0912540175480847,0.00832729571866615,0.0413849989177616
+"20m","all_quads","env_tri11","TRI 11x11","phy_rao","Phylogenetic Rao's Q",500,-0.145764449183649,0.0212472746458126,0.00108039409049065
+"20m","all_quads","env_tri11","TRI 11x11","phy_afaith","Abundance-weighted Faith's PD",500,-0.234887856629354,0.0551723051919319,1.07465275541729e-07
+"20m","all_quads","env_tri11","TRI 11x11","sp_shannon","Shannon diversity",500,0.155205688584364,0.0240888057689466,0.000495927866560443
+"20m","all_quads","env_tri11","TRI 11x11","spec_sa","SA entropy",485,-0.114995954616938,0.013224069578261,0.0112639719667603
+"20m","all_quads","env_tri11","TRI 11x11","spec_spca_mean","Std PCA mean distance",436,-0.142127834964404,0.0202003214716688,0.00293648644731686
+"20m","all_quads","env_tri21","TRI 21x21","phy_faith","Faith's PD",500,-0.0842604438178892,0.00709982239238766,0.0597336614597784
+"20m","all_quads","env_tri21","TRI 21x21","phy_rao","Phylogenetic Rao's Q",500,-0.144344323217792,0.0208352836452023,0.00120995171942075
+"20m","all_quads","env_tri21","TRI 21x21","phy_afaith","Abundance-weighted Faith's PD",500,-0.236331813204918,0.0558527259327244,8.93032193170345e-08
+"20m","all_quads","env_tri21","TRI 21x21","sp_shannon","Shannon diversity",500,0.203829997256334,0.0415466677815171,4.3338708876894e-06
+"20m","all_quads","env_tri21","TRI 21x21","spec_sa","SA entropy",485,-0.131766749357453,0.0173624762362298,0.00364844546721517
+"20m","all_quads","env_tri21","TRI 21x21","spec_spca_mean","Std PCA mean distance",436,-0.166292060581467,0.0276530494124304,0.000489169553530304
+"20m","non_edge","env_elev","Elevation","phy_faith","Faith's PD",414,-0.242981324434454,0.0590399240239213,5.61000321817883e-07
+"20m","non_edge","env_elev","Elevation","phy_rao","Phylogenetic Rao's Q",414,-0.173983464982254,0.0302702460872311,0.000375832110756461
+"20m","non_edge","env_elev","Elevation","phy_afaith","Abundance-weighted Faith's PD",414,-0.158780010587826,0.02521109176227,0.00118896523810779
+"20m","non_edge","env_elev","Elevation","sp_shannon","Shannon diversity",414,0.0537708459026052,0.00289130386908172,0.275027985006131
+"20m","non_edge","env_elev","Elevation","spec_sa","SA entropy",405,-0.294411677514274,0.0866782358567686,1.53148513438616e-09
+"20m","non_edge","env_elev","Elevation","spec_spca_mean","Std PCA mean distance",360,-0.305960245067499,0.0936116715617639,3.07116922460678e-09
+"20m","non_edge","env_tri5","TRI 5x5","phy_faith","Faith's PD",414,-0.119528042929495,0.0142869530465551,0.0149572568278855
+"20m","non_edge","env_tri5","TRI 5x5","phy_rao","Phylogenetic Rao's Q",414,-0.160803499600433,0.0258577654837463,0.00102575252308155
+"20m","non_edge","env_tri5","TRI 5x5","phy_afaith","Abundance-weighted Faith's PD",414,-0.256947575898138,0.0660220567599293,1.14809142301799e-07
+"20m","non_edge","env_tri5","TRI 5x5","sp_shannon","Shannon diversity",414,0.152993094403569,0.0234068869351793,0.00179666238394287
+"20m","non_edge","env_tri5","TRI 5x5","spec_sa","SA entropy",405,-0.110635682045383,0.012240254141647,0.0259835555717151
+"20m","non_edge","env_tri5","TRI 5x5","spec_spca_mean","Std PCA mean distance",360,-0.121555179678835,0.0147756617067539,0.0210611286483799
+"20m","non_edge","env_tri11","TRI 11x11","phy_faith","Faith's PD",414,-0.111939370061366,0.0125304225697354,0.0227321638390138
+"20m","non_edge","env_tri11","TRI 11x11","phy_rao","Phylogenetic Rao's Q",414,-0.164612675756931,0.0270973330198565,0.000773214121623373
+"20m","non_edge","env_tri11","TRI 11x11","phy_afaith","Abundance-weighted Faith's PD",414,-0.262575481095274,0.0689458832724145,5.89712843805178e-08
+"20m","non_edge","env_tri11","TRI 11x11","sp_shannon","Shannon diversity",414,0.186087637976114,0.0346286090075292,0.000139988062317579
+"20m","non_edge","env_tri11","TRI 11x11","spec_sa","SA entropy",405,-0.110869571236065,0.0122920618260689,0.0256683144433731
+"20m","non_edge","env_tri11","TRI 11x11","spec_spca_mean","Std PCA mean distance",360,-0.139947672649823,0.019585351080102,0.00783301146634902
+"20m","non_edge","env_tri21","TRI 21x21","phy_faith","Faith's PD",414,-0.0931610057572391,0.00867897299370033,0.058233578298937
+"20m","non_edge","env_tri21","TRI 21x21","phy_rao","Phylogenetic Rao's Q",414,-0.154238331581995,0.0237894629291975,0.00164587105328116
+"20m","non_edge","env_tri21","TRI 21x21","phy_afaith","Abundance-weighted Faith's PD",414,-0.257237838554402,0.0661713055841407,1.10973568712899e-07
+"20m","non_edge","env_tri21","TRI 21x21","sp_shannon","Shannon diversity",414,0.248956656166402,0.0619794166495563,2.87879925370513e-07
+"20m","non_edge","env_tri21","TRI 21x21","spec_sa","SA entropy",405,-0.124819442766332,0.0155798932924976,0.0119364400941244
+"20m","non_edge","env_tri21","TRI 21x21","spec_spca_mean","Std PCA mean distance",360,-0.165164554384078,0.0272793300248909,0.00166369969321852
+"20m","edge_only","env_elev","Elevation","phy_faith","Faith's PD",86,-0.324723878412491,0.105445597211251,0.00228522798487605
+"20m","edge_only","env_elev","Elevation","phy_rao","Phylogenetic Rao's Q",86,-0.309409458599194,0.0957342130706462,0.00374532179478617
+"20m","edge_only","env_elev","Elevation","phy_afaith","Abundance-weighted Faith's PD",86,-0.197344765417357,0.0389449564376317,0.0685649521074691
+"20m","edge_only","env_elev","Elevation","sp_shannon","Shannon diversity",86,-0.241346674031093,0.0582482170658705,0.0251813659673984
+"20m","edge_only","env_elev","Elevation","spec_sa","SA entropy",80,-0.281003784217336,0.078963126744463,0.0115726450099271
+"20m","edge_only","env_elev","Elevation","spec_spca_mean","Std PCA mean distance",76,-0.258391281743504,0.066766054481051,0.0242156620885655
+"20m","edge_only","env_tri5","TRI 5x5","phy_faith","Faith's PD",86,0.0702401589126041,0.00493367992406788,0.520455637951455
+"20m","edge_only","env_tri5","TRI 5x5","phy_rao","Phylogenetic Rao's Q",86,0.0158460622028802,0.000251097687337549,0.884861616913687
+"20m","edge_only","env_tri5","TRI 5x5","phy_afaith","Abundance-weighted Faith's PD",86,-0.00658408113388415,4.33501243775692e-05,0.952023879681258
+"20m","edge_only","env_tri5","TRI 5x5","sp_shannon","Shannon diversity",86,-0.0196142133149643,0.000384717363964921,0.85774118512397
+"20m","edge_only","env_tri5","TRI 5x5","spec_sa","SA entropy",80,-0.12424573906237,0.0154370036751544,0.272178785783338
+"20m","edge_only","env_tri5","TRI 5x5","spec_spca_mean","Std PCA mean distance",76,-0.145535478779839,0.0211805755836771,0.209692066476538
+"20m","edge_only","env_tri11","TRI 11x11","phy_faith","Faith's PD",86,0.06412161685162,0.00411158174766596,0.557511253526289
+"20m","edge_only","env_tri11","TRI 11x11","phy_rao","Phylogenetic Rao's Q",86,0.00492091725352603,2.42154266160502e-05,0.964133454865914
+"20m","edge_only","env_tri11","TRI 11x11","phy_afaith","Abundance-weighted Faith's PD",86,-0.018749483031529,0.000351543113949593,0.863951504742887
+"20m","edge_only","env_tri11","TRI 11x11","sp_shannon","Shannon diversity",86,-0.0163054880991538,0.000265868942151645,0.881547253484373
+"20m","edge_only","env_tri11","TRI 11x11","spec_sa","SA entropy",80,-0.131173133749598,0.01720639101769,0.246129287928444
+"20m","edge_only","env_tri11","TRI 11x11","spec_spca_mean","Std PCA mean distance",76,-0.150056088748323,0.0225168297704447,0.195728381196719
+"20m","edge_only","env_tri21","TRI 21x21","phy_faith","Faith's PD",86,0.0200238175962053,0.000400953271126101,0.854802480365095
+"20m","edge_only","env_tri21","TRI 21x21","phy_rao","Phylogenetic Rao's Q",86,-0.0378324737321571,0.00143129606869436,0.729467572945966
+"20m","edge_only","env_tri21","TRI 21x21","phy_afaith","Abundance-weighted Faith's PD",86,-0.0570270207392793,0.00325208109439819,0.601995571133633
+"20m","edge_only","env_tri21","TRI 21x21","sp_shannon","Shannon diversity",86,-0.0397927899749937,0.00158346613399396,0.716031738240576
+"20m","edge_only","env_tri21","TRI 21x21","spec_sa","SA entropy",80,-0.158914445610886,0.0252538010238154,0.159140409857091
+"20m","edge_only","env_tri21","TRI 21x21","spec_spca_mean","Std PCA mean distance",76,-0.159082724715914,0.0253073133030391,0.169868864454316

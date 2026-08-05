@@ -1,10 +1,10 @@
 # Project State
 
-Last updated: 2026-07-09
+Last updated: 2026-08-05
 
 ## Current Objective
 
-Build a reproducible and well-documented research workflow for evaluating relationships between hyperspectral spectral heterogeneity and biodiversity/phylogenetic diversity metrics in the Paint Rock Forest Dynamics Plot.
+Build a reproducible, well-documented research workflow and publication manuscript framework for evaluating relationships between hyperspectral spectral heterogeneity and biodiversity/phylogenetic diversity metrics in the Paint Rock Forest Dynamics Plot.
 
 ## Active Research Questions
 
@@ -136,9 +136,27 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - `sv_diversity_analysis_dataset.csv` now carries upstream sampling metadata for both primary SV measures: `sa_n_pixels`, `sa_method`, and `sa_all_pixels_sampled` for SA entropy; and `spca_n_pixels`, `spca_metric_method`, and `spca_euclidean_all_pixels_sampled` for standardized PCA Euclidean distance. `sa_all_pixels_sampled` is TRUE when all retained pixels were sampled for SA entropy and FALSE when the 5,000-pixel cap was used. `spca_euclidean_all_pixels_sampled` is TRUE when standardized PCA Euclidean distance used all retained pixels.
 - Current strongest pairings by absolute Pearson `r` are phylogenetic rather than species-diversity measures: 10 m standardized PCA distance with `phy_rao` (r = 0.121, R2 = 0.015), 10 m SA entropy with `phy_rao` (r = 0.106, R2 = 0.011), 20 m standardized PCA distance with `phy_afaith` (r = 0.291, R2 = 0.085), 20 m SA entropy with `phy_rao` (r = 0.180, R2 = 0.033), 50 m standardized PCA distance with `phy_rao` (r = 0.444, R2 = 0.197), and 50 m SA entropy with `phy_rao` (r = 0.340, R2 = 0.115).
 - The earlier environment-adjusted AIC model-ranking workflow and PDF reports are superseded as the active first-layer analysis. Environmental and spatial models should be revisited only after the direct pairwise SV-diversity relationships are interpreted.
+- Added edge-quadrat, environmental, and SA entropy bootstrap sensitivity outputs in `reports/analysis/20260725_edge_bootstrap_sensitivity_sv_diversity.md`, `reports/figures/edge_bootstrap_sensitivity/`, and `reports/tables/edge_bootstrap_sensitivity/`. These outputs show that edge removal generally weakens all-quadrat correlations slightly at 10 m and 20 m, elevation is negatively associated with spectral variation, environmental screening models retain some incremental phylogenetic-diversity signal, and low-CV SA entropy subsets retain or strengthen phylogenetic correlations while high-CV subsets show weak or absent relationships.
 - Documented 10 m and 20 m edge quadrats remain excluded from primary inference; 50 m uses all quadrats because no separate 50 m edge rule is documented.
 - Added `reports/tasks/20260624_multiscale_spectral_biodiversity_analysis.md`.
 - Added `reports/validation/20260624_multiscale_spectral_biodiversity_analysis_validation.md`.
+- Created the manuscript workspace under `Documents/Paper/`. All manuscript-related outputs should be saved there and should include the creation date in the filename using `YYYYMMDD_...`.
+- Added `Documents/Paper/20260730_working_outline.md` as the first working manuscript outline. It frames the paper around scale-dependent positive relationships between spectral heterogeneity and phylogenetic diversity, with stronger support for phylogenetic metrics than species-diversity metrics.
+- Added `Documents/Paper/20260730_paper_workspace_index.md` to document the paper folder naming convention, current manuscript direction, analysis-ready inputs, source reports, and likely next writing steps.
+- Added `Documents/Paper/20260803_writing_style_notes.md` using an R-based workflow to record writing-style guidance from accessible prior Word/context documents. `Documents/Spectral Variation Paper.docx` was locked by another process during this pass, so the note records that limitation; `Documents/SVH Outline.docx` contributed 66 extracted paragraphs.
+- Added `Documents/Paper/20260803_markdown_context_digest.md` using R to document the repository Markdown files read before creating the outline.
+- Added `Documents/Paper/20260803_detailed_manuscript_outline.docx` as a detailed Word outline focused on correlations between spectral heterogeneity and two focal biodiversity measures: abundance-weighted Faith's PD and Shannon species diversity. Environmental factors are intentionally excluded from this outline stage.
+- Added `tools/create_paper_outline_docx.R` as the R workflow used to extract accessible Word text, read Markdown context, write paper notes, and generate the outline DOCX.
+- Added `Documents/Paper/20260803_remote_sensing_mdpi_author_requirements.md` for the MDPI Remote Sensing target-journal requirements, including manuscript length, APC, section format, submission notes, references, and fit notes.
+- Added `Documents/Paper/20260805_results_pca_mean_distance_afaith.docx` as a Results-section draft focused on standardized PCA mean Euclidean distance versus abundance-weighted Faith's PD across 10 m, 20 m, and 50 m scales. The draft includes figure and table placeholders and avoids environmental-factor interpretation.
+- Added `tools/create_pca_afaith_results_docx.R` as the R workflow used to extract the accessible style-reference documents, read latest Markdown/project-result context, and generate the focused Results DOCX.
+- Recorded `Documents/Paper/SVH_Results.docx` as a user-created Word results document for manual final edits. Agents may read it for context but should not edit, overwrite, rename, or regenerate it unless explicitly instructed by the user.
+- Added `Documents/Paper/20260805_results_spectral_rao_q_afaith.docx` as a separate Results-section draft focused on spectral Rao's Q versus abundance-weighted Faith's PD across 10 m, 20 m, and 50 m scales. The draft uses primary-analysis rows only, includes figure and table placeholders, and avoids environmental-factor interpretation.
+- Added `tools/create_rao_q_afaith_results_docx.R` as the R workflow used to read current manuscript/project context and generate the focused spectral Rao's Q Results DOCX.
+- Added `Documents/Paper/20260805_discussion_pca_distance_vs_rao_q_scale.docx` as a Discussion-section draft expanding the metric-comparison and scale-dependence interpretation for standardized PCA mean Euclidean distance, spectral Rao's Q, and abundance-weighted Faith's PD.
+- Added `tools/create_metric_discussion_docx.R` as the R workflow used to read current manuscript/project context and generate the focused discussion DOCX.
+- Added clarified copies `Documents/Paper/20260805_results_spectral_rao_q_afaith_centroid_clarified.docx` and `Documents/Paper/20260805_discussion_pca_distance_vs_rao_q_scale_centroid_clarified.docx` after verifying the actual Rao's Q implementation in `scripts/2_Indices Creation/Spectral_diversity/spectral_heterogeneity_all_metrics.R`. The clarified wording states that spectral Rao's Q is conceptually equal-weight pairwise squared Euclidean Rao's Q but is computed with the equivalent centroid formula `2 * mean(squared_radius)`.
+- Updated `reports/directory_map.md` to reflect the `Documents/Paper/` manuscript-output convention and the current edge/bootstrap sensitivity output folders.
 - Created required governance directories under `reports/` and `logs/`.
 - Created an execution plan for repository documentation and cleanup.
 - Created baseline `reports/directory_map.md`.
@@ -164,6 +182,7 @@ Build a reproducible and well-documented research workflow for evaluating relati
 - Expand shapefile and raster data dictionary entries using R geospatial packages.
 - After interpreting the direct pairwise SV-diversity layer, add spatial and environmental sensitivity checks as a second analysis layer.
 - Join bootstrap quality-control fields (`boot_sd`, `boot_cv`, and `method`) into a companion modeling table and rerun sensitivity checks that flag or exclude high-CV quadrats.
+- Await user instruction for the next publication-writing step. Likely next manuscript-prep tasks include target journal scoping, a detailed figure/table inventory, introduction drafting, methods drafting, or results narrative drafting from the current reports.
 
 ## Known Issues
 
@@ -184,6 +203,8 @@ Build a reproducible and well-documented research workflow for evaluating relati
 
 - Legacy directories named `old`, `Outdated`, and `Currently not relevant` have been removed from the active repository.
 - As of 2026-07-06, current derived spectral, diversity, environmental, and topographic outputs are visible under `Quad_Values/`.
+- As of 2026-07-30, manuscript-related outputs belong under `Documents/Paper/` and should include their creation date in the filename.
+- `Documents/Paper/SVH_Results.docx` is a user-created manual-editing document. Treat it as read-only context for agent work unless the user explicitly asks the agent to edit that specific file.
 - The primary integrated 20 m analysis table is `Quad_Values/20m_spectral_sp.csv`.
 - The current all-scale plant-diversity outputs are `Quad_Values/Diversity_SHPs/plant_diversity_10m.csv`, `plant_diversity_20m.csv`, and `plant_diversity_50m.csv`, with matching shapefiles.
 - The current all-scale environmental outputs are `Quad_Values/Enviro_SHPs/enviro_variables_10m.csv`, `enviro_variables_20m.csv`, and `enviro_variables_50m.csv`, with matching shapefiles.
@@ -228,9 +249,9 @@ Build a reproducible and well-documented research workflow for evaluating relati
 ## Next Recommended Actions
 
 1. Use `quadrat_analysis_10m.csv`, `quadrat_analysis_20m.csv`, and `quadrat_analysis_50m.csv` as the current analysis-ready tables for downstream biodiversity/spectral/environment modeling.
-2. Decide whether 10 m and 20 m missing spectral quadrats should remain `NA`, be excluded, or be tracked in a missing-quadrat report.
-3. Decide whether bootstrap quality-control fields such as `boot_sd`, `boot_cv`, and `method` should be added to a separate QC companion table rather than the value-only combined tables.
-4. Run downstream model sensitivity checks with high-CV quadrats flagged or excluded, using 5% and 10% bootstrap-CV thresholds.
-5. Compare the new current 20 m spectral heterogeneity output against older 20 m spectral entropy products before replacing downstream analysis columns.
-6. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.
-7. Extend the revamped direct SV-diversity analysis with spatial GLS/GAM or spatial eigenvector sensitivity models before treating coefficient p-values as final manuscript inference.
+2. Continue manuscript preparation in `Documents/Paper/`, using dated filenames for all outline, draft, figure-inventory, table-inventory, and narrative files.
+3. Decide whether 10 m and 20 m missing spectral quadrats should remain `NA`, be excluded, or be tracked in a missing-quadrat report.
+4. Decide whether bootstrap quality-control fields such as `boot_sd`, `boot_cv`, and `method` should be added to a separate QC companion table rather than the value-only combined tables.
+5. Use the July 25 edge/bootstrap sensitivity outputs to decide which robustness results belong in the main manuscript versus supplement.
+6. Extend the revamped direct SV-diversity analysis with spatial GLS/GAM or spatial eigenvector sensitivity models before treating coefficient p-values as final manuscript inference.
+7. Use `C:/Program Files/R/R-4.2.3/bin/Rscript.exe` for R execution unless the shell path is updated later.

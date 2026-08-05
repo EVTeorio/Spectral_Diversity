@@ -1,6 +1,6 @@
 # Directory Map
 
-Last updated: 2026-07-06
+Last updated: 2026-08-05
 
 Working directory:
 `C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity`
@@ -10,19 +10,24 @@ Current live derived-output directory:
 
 `Quad_Values/` is the canonical directory for derived biodiversity, spectral diversity, environmental, topographic, and index outputs.
 
+Current manuscript-output directory:
+`Documents/Paper/`
+
+All manuscript-related outputs should be saved under `Documents/Paper/` with the creation date in the filename using `YYYYMMDD_...`.
+
 ## Top-Level Inventory
 
 | Directory | Purpose | File Count | Approx. Size |
 |---|---|---:|---:|
 | `.agents/` | Agent-side metadata and coordination files | 0 | <0.001 GB |
-| `Documents/` | Manuscript drafts, reports, presentations, workshop materials, and generated PDF reports | 20 | 0.021 GB |
+| `Documents/` | Manuscript drafts, paper workspace files, reports, presentations, workshop materials, and generated PDF reports | 34 | 0.022 GB |
 | `Functions/` | Legacy/support R functions, package archive, notebooks, and helper modules | 20 | 0.033 GB |
 | `HSI_NA_trimmed/` | Current trimmed raw hyperspectral imagery in ENVI-style raster format | 75 | 57.022 GB |
 | `logs/` | Project logs required by governance standards | 10 | <0.001 GB |
 | `Quad_Scale_SHPs/` | Quadrat boundary shapefiles and KMLs for 10 m, 20 m, and 50 m analysis scales | 14 | 0.002 GB |
 | `Quad_Spectra/` | Quadrat-level spectral raster extracts and derived products, including current `_smooth` and `_smooth_5nm` outputs | 37,547 | 391.497 GB |
 | `Quad_Values/` | Current derived biodiversity, spectral diversity, environmental, topographic, and index outputs | 136 | 0.722 GB |
-| `reports/` | Governance reports, project inventories, task reports, plans, validation notes, analysis reports, figures, and tables | 243 | 0.094 GB |
+| `reports/` | Governance reports, project inventories, task reports, plans, validation notes, analysis reports, figures, and tables | 446 | 0.168 GB |
 | `scripts/` | R workflow scripts for preprocessing, index creation, analysis, utilities, and visuals | 62 | <0.001 GB |
 | `Shadow_vs_sunlit_SHP/` | Shadow/sunlit training or classification shapefiles | 12 | <0.001 GB |
 | `Test/` | Ad hoc test/projection script area | 1 | <0.001 GB |
@@ -56,6 +61,19 @@ Spectral_Diversity/
 
     Documents/
         manuscript drafts, PDF model reports, ARD presentation, workshop document
+        Paper/
+            20260730_paper_workspace_index.md
+            20260730_working_outline.md
+            20260803_detailed_manuscript_outline.docx
+            20260803_markdown_context_digest.md
+            20260803_remote_sensing_mdpi_author_requirements.md
+            20260803_writing_style_notes.md
+            20260805_discussion_pca_distance_vs_rao_q_scale.docx
+            20260805_discussion_pca_distance_vs_rao_q_scale_centroid_clarified.docx
+            20260805_results_pca_mean_distance_afaith.docx
+            20260805_results_spectral_rao_q_afaith.docx
+            20260805_results_spectral_rao_q_afaith_centroid_clarified.docx
+            SVH_Results.docx
         PDFs/
             spectral_biodiversity_multiscale_findings.pdf
             spectral_biodiversity_model_appendix.pdf
@@ -187,6 +205,7 @@ Spectral_Diversity/
         execution_plans/
         figures/
             bootstrap_variation/
+            edge_bootstrap_sensitivity/
             multiscale_spectral_biodiversity/
             pca_loading_spectral_regions/
             pc1_mean_reflectance_correlation/
@@ -200,6 +219,7 @@ Spectral_Diversity/
         history/
         tables/
             bootstrap_variation/
+            edge_bootstrap_sensitivity/
             multiscale_spectral_biodiversity/
             pca_loading_spectral_regions/
             pc1_mean_reflectance_correlation/
@@ -332,14 +352,14 @@ Spectral_Diversity/
 | `.hdr` | 12,348 | ENVI raster headers |
 | `.tif` | 579 | Raster imagery and derived products |
 | `.png` | 182 | Exported figures, including bootstrap, multiscale, and sample-size diagnostics |
-| `.R` | 79 | R workflow scripts, including root-level, function, test, and ad hoc scripts |
+| `.R` | 87 | R workflow scripts, including root-level, function, test, tool, and ad hoc scripts |
 | `.csv` | 63 | Tabular tree, taxonomy, spectral, biodiversity, environmental, bootstrap, validation summary, and combined analysis data |
-| `.md` | 43 | Project context, governance, reports, tasks, plans, validation notes, and variable guides |
+| `.md` | 71 | Project context, governance, reports, tasks, plans, validation notes, variable guides, and dated paper workspace notes |
 | `.shp/.dbf/.prj/.shx` | 26 each | Shapefile component sets |
 | `.envi` | 25 | Vegetation-index raster products |
 | `.pdf` | 15 | Reports and phylogeny output |
 | `.sample` | 14 | Sample/sidecar files associated with raster products |
-| `.docx` | 6 | Manuscript/workshop documents and the combined quadrat variable guide |
+| `.docx` | 16 | Manuscript/workshop documents, paper outline/results drafts, and variable guides |
 | `.log` | 10 | Processing stdout, stderr, and progress logs under `logs/` |
 | `.cpg` | 8 | Shapefile code-page sidecar files |
 | `.Rhistory` | 6 | R session-history files are present and should be treated as non-analytical artifacts |
@@ -365,6 +385,9 @@ Spectral_Diversity/
 - Current per-scale environmental outputs are visible for 10 m, 20 m, and 50 m under `Quad_Values/Enviro_SHPs/`, with `quad_id` values aligned to current plant-diversity and spectral outputs.
 - Current root-level combined analysis tables are `quadrat_analysis_10m.csv`, `quadrat_analysis_20m.csv`, and `quadrat_analysis_50m.csv`; their shortened-column guides are `reports/combined_quadrat_variable_guide.md` and `combined_quadrat_variable_guide.docx`.
 - Current multiscale spectral-biodiversity analysis is the direct SV-diversity pairwise correlation workflow in `scripts/3_Analysis/multiscale_spectral_biodiversity_analysis.R`. The active report is `reports/analysis/20260710_sv_diversity_pairwise_correlations.md`, with companion figures and tables under `reports/figures/multiscale_spectral_biodiversity/` and `reports/tables/multiscale_spectral_biodiversity/`. Older PDF reports in `Documents/PDFs/` are superseded historical context.
+- Current paper workspace is `Documents/Paper/`. Manuscript-related outputs should be created there and should include the creation date in the filename. Current paper-prep files include `Documents/Paper/20260730_working_outline.md`, `Documents/Paper/20260730_paper_workspace_index.md`, `Documents/Paper/20260803_writing_style_notes.md`, `Documents/Paper/20260803_markdown_context_digest.md`, `Documents/Paper/20260803_remote_sensing_mdpi_author_requirements.md`, `Documents/Paper/20260803_detailed_manuscript_outline.docx`, `Documents/Paper/20260805_results_pca_mean_distance_afaith.docx`, `Documents/Paper/20260805_results_spectral_rao_q_afaith.docx`, `Documents/Paper/20260805_results_spectral_rao_q_afaith_centroid_clarified.docx`, `Documents/Paper/20260805_discussion_pca_distance_vs_rao_q_scale.docx`, `Documents/Paper/20260805_discussion_pca_distance_vs_rao_q_scale_centroid_clarified.docx`, and `Documents/Paper/SVH_Results.docx`.
+- `Documents/Paper/SVH_Results.docx` is a user-created Word results document for manual final edits. Agents may read it for context but should not edit, overwrite, rename, or regenerate it unless explicitly instructed by the user.
+- Current edge-quadrat and bootstrap sensitivity outputs are under `reports/analysis/20260725_edge_bootstrap_sensitivity_sv_diversity.md`, `reports/figures/edge_bootstrap_sensitivity/`, and `reports/tables/edge_bootstrap_sensitivity/`. These are manuscript-relevant robustness/sensitivity sources, but the files are currently untracked in git.
 - Current sample-size sensitivity outputs are under `reports/analysis/`, `reports/figures/sample_size_effects/`, and `reports/tables/sample_size_effects/`, including SA entropy, PCA mean distance, spectral Rao's Q, and alpha-hull area.
 - Current 50 m PC1-PC3 mean-reflectance correlation outputs are under `reports/analysis/`, `reports/figures/pc1_mean_reflectance_correlation/`, and `reports/tables/pc1_mean_reflectance_correlation/`.
 - Current PCA loading spectral-region outputs are under `reports/analysis/`, `reports/figures/pca_loading_spectral_regions/`, and `reports/tables/pca_loading_spectral_regions/`.
