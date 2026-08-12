@@ -88,6 +88,7 @@ Supporting or contrast biodiversity measures:
 - `reports/figures/sample_size_effects/`
 - `reports/figures/bootstrap_variation/`
 - `reports/figures/spectral_heterogeneity/`
+- `reports/figures/methods_tree_counts/`
 
 ## Current Table Sources
 
@@ -96,6 +97,16 @@ Supporting or contrast biodiversity measures:
 - `reports/tables/pca_loading_spectral_regions/`
 - `reports/tables/sample_size_effects/`
 - `reports/tables/bootstrap_variation/`
+- `reports/tables/methods_tree_counts/`
+
+## 2026-08-11 Methods Draft Additions
+
+- Created `Documents/Paper/20260811_methods_draft_spectral_phylogenetic_diversity.docx` as a methods-section draft for the current spectral-phylogenetic diversity manuscript.
+- Methods draft was generated with R using `tools/create_methods_docx_and_tree_counts.R`.
+- Style/context references read for the draft: `Documents/Methods-SampleT.docx`, `Documents/Spectral Variation Paper.docx`, and the read-only paper context in `Documents/Paper/SVH_Paper.docx`.
+- The draft covers site context, quadrat construction, crown-overlap abundance estimation, species and phylogenetic diversity calculation, spectral preprocessing, spectral angle entropy, standardized PCA mean Euclidean distance, spectral Rao's Q, quadrat-level statistics, exclusion rules, and scale-specific correlation analysis.
+- Tree-count support outputs were generated from the same R workflow. The all-plot tree pool contains 4,007 eligible tree crowns across 50 species after applying the plant-diversity filters used for phylogenetic diversity.
+- Scale-specific included-tree tables count unique crowns intersecting focal complete analysis quadrats for `spec_spca_mean` versus abundance-weighted Faith's PD. These inclusion sets differ by quadrat scale because 10 m and 20 m use edge-excluded primary quadrats while 50 m does not use that edge rule.
 
 ## Immediate Next Step
 
