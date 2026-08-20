@@ -1,0 +1,46 @@
+"n","k","moran_i","permutation_p","scale","diagnostic_type","variable","variable_label","model"
+1744,8,0.416806563751976,0.005,"10m","variable","spec_spca_alpha","Std PCA alpha hull",NA
+1744,8,0.281392021092632,0.005,"10m","variable","spec_spca_mean","Std PCA mean distance",NA
+1744,8,0.178195188118909,0.005,"10m","variable","spec_spca_rao","Std PCA Rao's Q",NA
+2000,8,0.295230678443516,0.005,"10m","variable","phy_rao","Phylogenetic Rao's Q",NA
+2000,8,0.349178283598268,0.005,"10m","variable","phy_afaith","Abundance-weighted Faith's PD",NA
+2000,8,0.283943188426945,0.005,"10m","variable","sp_shannon","Shannon diversity",NA
+1744,8,0.393949906814179,0.005,"10m","residual",NA,NA,"spec_spca_alpha ~ phy_rao"
+1744,8,0.385262404148631,0.005,"10m","residual",NA,NA,"spec_spca_alpha ~ phy_afaith"
+1744,8,0.416465787857663,0.005,"10m","residual",NA,NA,"spec_spca_alpha ~ sp_shannon"
+1744,8,0.261660610522457,0.005,"10m","residual",NA,NA,"spec_spca_mean ~ phy_rao"
+1744,8,0.262125295365785,0.005,"10m","residual",NA,NA,"spec_spca_mean ~ phy_afaith"
+1744,8,0.281266449238963,0.005,"10m","residual",NA,NA,"spec_spca_mean ~ sp_shannon"
+1744,8,0.17487192056861,0.005,"10m","residual",NA,NA,"spec_spca_rao ~ phy_rao"
+1744,8,0.17615628934664,0.005,"10m","residual",NA,NA,"spec_spca_rao ~ phy_afaith"
+1744,8,0.177156135884215,0.005,"10m","residual",NA,NA,"spec_spca_rao ~ sp_shannon"
+436,8,0.317805449363689,0.005,"20m","variable","spec_spca_alpha","Std PCA alpha hull",NA
+436,8,0.262532266903222,0.005,"20m","variable","spec_spca_mean","Std PCA mean distance",NA
+436,8,0.174397326911736,0.005,"20m","variable","spec_spca_rao","Std PCA Rao's Q",NA
+500,8,0.367917747972758,0.005,"20m","variable","phy_rao","Phylogenetic Rao's Q",NA
+500,8,0.366834817404378,0.005,"20m","variable","phy_afaith","Abundance-weighted Faith's PD",NA
+500,8,0.333338614276046,0.005,"20m","variable","sp_shannon","Shannon diversity",NA
+436,8,0.228235560895391,0.005,"20m","residual",NA,NA,"spec_spca_alpha ~ phy_rao"
+436,8,0.202280362706406,0.005,"20m","residual",NA,NA,"spec_spca_alpha ~ phy_afaith"
+436,8,0.318032002553784,0.005,"20m","residual",NA,NA,"spec_spca_alpha ~ sp_shannon"
+436,8,0.191977239581134,0.005,"20m","residual",NA,NA,"spec_spca_mean ~ phy_rao"
+436,8,0.178919634267749,0.005,"20m","residual",NA,NA,"spec_spca_mean ~ phy_afaith"
+436,8,0.263344749884653,0.005,"20m","residual",NA,NA,"spec_spca_mean ~ sp_shannon"
+436,8,0.150698469838603,0.005,"20m","residual",NA,NA,"spec_spca_rao ~ phy_rao"
+436,8,0.1508501038842,0.005,"20m","residual",NA,NA,"spec_spca_rao ~ phy_afaith"
+436,8,0.175307225785541,0.005,"20m","residual",NA,NA,"spec_spca_rao ~ sp_shannon"
+74,8,0.220909702861736,0.005,"50m","variable","spec_spca_alpha","Std PCA alpha hull",NA
+74,8,0.213820749719786,0.005,"50m","variable","spec_spca_mean","Std PCA mean distance",NA
+74,8,0.111576824864113,0.025,"50m","variable","spec_spca_rao","Std PCA Rao's Q",NA
+80,8,0.372689873260271,0.005,"50m","variable","phy_rao","Phylogenetic Rao's Q",NA
+80,8,0.283311231545914,0.005,"50m","variable","phy_afaith","Abundance-weighted Faith's PD",NA
+80,8,0.214336635087866,0.005,"50m","variable","sp_shannon","Shannon diversity",NA
+74,8,0.0506790224393236,0.43,"50m","residual",NA,NA,"spec_spca_alpha ~ phy_rao"
+74,8,0.0682978877950828,0.255,"50m","residual",NA,NA,"spec_spca_alpha ~ phy_afaith"
+74,8,0.218945861147457,0.005,"50m","residual",NA,NA,"spec_spca_alpha ~ sp_shannon"
+74,8,0.0731461078346574,0.185,"50m","residual",NA,NA,"spec_spca_mean ~ phy_rao"
+74,8,0.100674044785593,0.075,"50m","residual",NA,NA,"spec_spca_mean ~ phy_afaith"
+74,8,0.211647613521602,0.005,"50m","residual",NA,NA,"spec_spca_mean ~ sp_shannon"
+74,8,0.0413813314205826,0.47,"50m","residual",NA,NA,"spec_spca_rao ~ phy_rao"
+74,8,0.0796601666592044,0.105,"50m","residual",NA,NA,"spec_spca_rao ~ phy_afaith"
+74,8,0.103966289272532,0.04,"50m","residual",NA,NA,"spec_spca_rao ~ sp_shannon"

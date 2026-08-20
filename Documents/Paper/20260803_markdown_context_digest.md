@@ -6,6 +6,10 @@ Workflow note: this digest was produced by `tools/create_paper_outline_docx.R` u
 
 Markdown files read: 70
 
+## 2026-08-17 Addendum
+
+Before beginning the species-diversity versus phylogenetic-diversity correlation analysis, the current Markdown context was reviewed again. Key files included the governance notes, project state, data dictionary, directory map, combined variable guide, SV-diversity analysis dataset guide, direct SV-diversity correlation report, edge/bootstrap sensitivity report, and paper workspace index. This addendum documents the current preparatory pass; it does not replace the original 2026-08-03 R-generated digest.
+
 ## File And Heading Inventory
 
 - `CODEX_AGENT_GUIDELINES.md`

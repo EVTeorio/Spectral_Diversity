@@ -1,0 +1,181 @@
+"scale","composition_cluster","cluster_size","species_metric","species_label","phylo_metric","phylo_label","n","mean_abs_phylo_residual_z","sd_phylo_residual","mean_species_value","mean_phylo_value"
+"10m","10m_C5",431,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",431,0.863737513878495,204.83602197187,0.63340513466654,264.318513480349
+"10m","10m_C5",431,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",431,0.854961999565418,195.242851310414,3.21345707656613,264.318513480349
+"10m","10m_C5",431,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",431,0.831520696795193,194.443022031269,0.774644018541103,264.318513480349
+"10m","10m_C5",431,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",431,0.820860909024039,194.482341146399,0.445341747600037,264.318513480349
+"10m","10m_C2",320,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",320,0.775891767908901,188.08215974596,0.747581660067873,323.140559566776
+"10m","10m_C2",320,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",320,0.772461866056803,175.454630845706,4.471875,323.140559566776
+"10m","10m_C2",320,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",320,0.758851694039034,175.809982561113,1.08988858122117,323.140559566776
+"10m","10m_C2",320,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",320,0.756597540245406,177.843640141723,0.593080908904937,323.140559566776
+"10m","10m_C3",339,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",339,0.728227230276756,170.456834110247,0.725321002368635,244.055756757482
+"10m","10m_C3",339,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",339,0.712033040002727,159.02426952281,0.547337750804321,244.055756757482
+"10m","10m_C3",339,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",339,0.693827568092649,152.464354637711,0.99422566447648,244.055756757482
+"10m","10m_C3",339,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",339,0.666954195940571,146.013350442399,4.10029498525074,244.055756757482
+"10m","10m_C4",374,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",374,0.656888677283918,148.537542200908,0.591403024904131,279.718491036216
+"10m","10m_C4",374,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",374,0.655737779195999,156.946267448452,0.734683136534251,279.718491036216
+"10m","10m_C6",286,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",286,0.651520654618407,155.408399355035,0.561533132849622,282.828687874173
+"10m","10m_C6",286,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",286,0.650138356561388,160.901875943923,0.718209688568765,282.828687874173
+"10m","10m_C4",374,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",374,0.649496067403825,144.428519297212,1.10226325237063,279.718491036216
+"10m","10m_C6",286,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",286,0.643546098520674,151.857049788873,1.03079399913244,282.828687874173
+"10m","10m_C4",374,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",374,0.637329210208023,139.168311184529,4.5855614973262,279.718491036216
+"10m","10m_C6",286,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",286,0.630111409592403,145.246672429594,4.31468531468532,282.828687874173
+"10m","10m_C1",250,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",250,0.55835154923521,111.51082716898,4.484,262.306336245156
+"10m","10m_C1",250,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",250,0.552576184155957,111.987999947199,1.09864450768323,262.306336245156
+"10m","10m_C1",250,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",250,0.537854291469643,111.469847948434,0.59878057427688,262.306336245156
+"10m","10m_C1",250,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",250,0.504368020623141,116.681291305311,0.753119108558597,262.306336245156
+"10m","10m_C3",339,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",339,0.938434823510813,203.719445918611,0.547337750804321,381.21014339528
+"10m","10m_C3",339,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",339,0.92572314771476,189.09649176605,0.99422566447648,381.21014339528
+"10m","10m_C3",339,"sp_rich","Species richness","phy_faith","Faith's PD",339,0.909919077998368,167.004571128769,4.10029498525074,381.21014339528
+"10m","10m_C3",339,"sp_even","Species evenness","phy_faith","Faith's PD",339,0.891571540545949,227.422360063842,0.725321002368635,381.21014339528
+"10m","10m_C2",320,"sp_even","Species evenness","phy_faith","Faith's PD",320,0.816525267139735,230.200811497398,0.747581660067873,525.434368871875
+"10m","10m_C2",320,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",320,0.803768039775213,205.451406821297,0.593080908904937,525.434368871875
+"10m","10m_C2",320,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",320,0.791620696258336,197.382913599673,1.08988858122117,525.434368871875
+"10m","10m_C5",431,"sp_even","Species evenness","phy_faith","Faith's PD",431,0.786099567311352,215.557978978397,0.63340513466654,415.509128645012
+"10m","10m_C6",286,"sp_even","Species evenness","phy_faith","Faith's PD",286,0.743055375455625,213.070957154522,0.718209688568765,480.271640685315
+"10m","10m_C6",286,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",286,0.731399779082555,187.977437908263,0.561533132849622,480.271640685315
+"10m","10m_C2",320,"sp_rich","Species richness","phy_faith","Faith's PD",320,0.724073528275434,175.062561576023,4.471875,525.434368871875
+"10m","10m_C6",286,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",286,0.703771960970887,176.381543272537,1.03079399913244,480.271640685315
+"10m","10m_C4",374,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",374,0.688906707788001,172.696128582864,0.591403024904131,505.421469318182
+"10m","10m_C5",431,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",431,0.687749951188518,177.759662711397,0.445341747600037,415.509128645012
+"10m","10m_C4",374,"sp_even","Species evenness","phy_faith","Faith's PD",374,0.682733405196055,194.171503224915,0.734683136534251,505.421469318182
+"10m","10m_C5",431,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",431,0.665999239360597,169.437639005547,0.774644018541103,415.509128645012
+"10m","10m_C1",250,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",250,0.663151733448249,145.575014190837,1.09864450768323,437.272741204
+"10m","10m_C4",374,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",374,0.657823477987982,160.916636222608,1.10226325237063,505.421469318182
+"10m","10m_C1",250,"sp_rich","Species richness","phy_faith","Faith's PD",250,0.636851338938283,126.295087930029,4.484,437.272741204
+"10m","10m_C1",250,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",250,0.633282237927191,148.738560304952,0.59878057427688,437.272741204
+"10m","10m_C5",431,"sp_rich","Species richness","phy_faith","Faith's PD",431,0.62204984808371,151.000969926838,3.21345707656613,415.509128645012
+"10m","10m_C6",286,"sp_rich","Species richness","phy_faith","Faith's PD",286,0.574416405835334,149.789269559563,4.31468531468532,480.271640685315
+"10m","10m_C1",250,"sp_even","Species evenness","phy_faith","Faith's PD",250,0.561310721772099,163.594394019415,0.753119108558597,437.272741204
+"10m","10m_C4",374,"sp_rich","Species richness","phy_faith","Faith's PD",374,0.559419491981895,136.310163062845,4.5855614973262,505.421469318182
+"10m","10m_C3",339,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",339,0.830720305160858,61.2301334655737,0.725321002368635,110.72970607426
+"10m","10m_C5",431,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",431,0.809786837215002,68.4656242710491,3.21345707656613,125.779484110222
+"10m","10m_C3",339,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",339,0.784126378206236,53.3448502777085,0.547337750804321,110.72970607426
+"10m","10m_C3",339,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",339,0.773362163663672,52.5063723005652,0.99422566447648,110.72970607426
+"10m","10m_C3",339,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",339,0.770063289430402,58.9296297093693,4.10029498525074,110.72970607426
+"10m","10m_C2",320,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",320,0.710925244029653,63.2515659784206,4.471875,151.19397389941
+"10m","10m_C2",320,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",320,0.69465206926507,61.6609507801896,0.747581660067873,151.19397389941
+"10m","10m_C2",320,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",320,0.661062118333409,57.1807303971429,1.08988858122117,151.19397389941
+"10m","10m_C5",431,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",431,0.642801334927828,59.9210187266594,0.63340513466654,125.779484110222
+"10m","10m_C6",286,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",286,0.618081936766265,56.8678078370577,4.31468531468532,135.207092591487
+"10m","10m_C4",374,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",374,0.612087348122612,55.2028037912619,4.5855614973262,141.671862650943
+"10m","10m_C2",320,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",320,0.608276949273793,55.6701766974789,0.593080908904937,151.19397389941
+"10m","10m_C5",431,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",431,0.599634963012412,54.3198029609297,0.774644018541103,125.779484110222
+"10m","10m_C6",286,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",286,0.599313674907748,55.3486710737678,0.718209688568765,135.207092591487
+"10m","10m_C1",250,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",250,0.55056741702058,45.818243422842,4.484,128.981621262097
+"10m","10m_C1",250,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",250,0.547740737399171,40.1312509805284,1.09864450768323,128.981621262097
+"10m","10m_C6",286,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",286,0.545204703357402,48.6991367315275,1.03079399913244,135.207092591487
+"10m","10m_C4",374,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",374,0.544131585844235,49.9415997919495,0.734683136534251,141.671862650943
+"10m","10m_C4",374,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",374,0.532778239619754,46.979461801534,1.10226325237063,141.671862650943
+"10m","10m_C1",250,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",250,0.502519422069833,42.2822525295008,0.753119108558597,128.981621262097
+"10m","10m_C6",286,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",286,0.500388458512733,47.9916057245811,0.561533132849622,135.207092591487
+"10m","10m_C1",250,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",250,0.483416646553917,37.9340751646026,0.59878057427688,128.981621262097
+"10m","10m_C5",431,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",431,0.471831436623633,51.0805664845814,0.445341747600037,125.779484110222
+"10m","10m_C4",374,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",374,0.471148743372114,46.273943883643,0.591403024904131,141.671862650943
+"20m","20m_C5",90,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",90,1.10431497652832,595.666830322072,6.83333333333333,1160.29302546965
+"20m","20m_C5",90,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",90,1.08990267221603,603.956304731031,1.50727591416177,1160.29302546965
+"20m","20m_C5",90,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",90,1.08961203310158,601.098027546199,0.798828930750883,1160.29302546965
+"20m","20m_C5",90,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",90,1.08062088910566,604.721450641617,0.722201176189143,1160.29302546965
+"20m","20m_C6",58,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",58,0.778455089460968,396.886421134754,0.73714920925744,756.808072393737
+"20m","20m_C6",58,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",58,0.732680653371925,378.602101873603,0.605877124598575,756.808072393737
+"20m","20m_C6",58,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",58,0.726436271353941,377.553857086453,1.18436948593661,756.808072393737
+"20m","20m_C6",58,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",58,0.72212165852157,370.511644656365,5.20689655172414,756.808072393737
+"20m","20m_C3",68,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",68,0.681308175694362,345.799282764304,0.802165352732256,850.680051373265
+"20m","20m_C1",93,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",93,0.68073732793637,370.154373780603,0.828025140961654,803.448152050803
+"20m","20m_C1",93,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",93,0.678699806794592,366.182929022281,0.768796345693091,803.448152050803
+"20m","20m_C3",68,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",68,0.67710682115338,353.881476847608,0.834537771912611,850.680051373265
+"20m","20m_C3",68,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",68,0.675867274930778,337.200199984285,1.84728833413922,850.680051373265
+"20m","20m_C1",93,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",93,0.672415919834625,360.698025956112,1.68567098871252,803.448152050803
+"20m","20m_C3",68,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",68,0.665336825279906,316.885485050279,9.33823529411765,850.680051373265
+"20m","20m_C1",93,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",93,0.650119765109839,349.406855884516,7.88172043010753,803.448152050803
+"20m","20m_C4",115,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",115,0.620511600002734,271.351406509689,0.804440659892405,676.703341230918
+"20m","20m_C4",115,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",115,0.614326807160706,271.367606757214,0.717638369521563,676.703341230918
+"20m","20m_C4",115,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",115,0.60342136425369,269.096667576965,1.50059352639308,676.703341230918
+"20m","20m_C4",115,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",115,0.581666512733383,262.508024861289,6.57391304347826,676.703341230918
+"20m","20m_C2",76,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",76,0.484730441241148,220.783435163818,9.02631578947368,827.116144110151
+"20m","20m_C2",76,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",76,0.46329503002451,231.302993156962,1.79752447851432,827.116144110151
+"20m","20m_C2",76,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",76,0.457780944847203,233.576415370481,0.788107362924453,827.116144110151
+"20m","20m_C2",76,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",76,0.447498703830278,235.335375180423,0.822253655756762,827.116144110151
+"20m","20m_C3",68,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",68,1.06513405108394,294.689645243746,1.84728833413922,930.671984102941
+"20m","20m_C3",68,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",68,1.05923763655197,318.820652842785,0.802165352732256,930.671984102941
+"20m","20m_C3",68,"sp_rich","Species richness","phy_faith","Faith's PD",68,1.05584111074032,247.43290613318,9.33823529411765,930.671984102941
+"20m","20m_C3",68,"sp_even","Species evenness","phy_faith","Faith's PD",68,1.04742936064905,341.714258672076,0.834537771912611,930.671984102941
+"20m","20m_C5",90,"sp_rich","Species richness","phy_faith","Faith's PD",90,0.968431428891651,206.260753117204,6.83333333333333,846.058984322222
+"20m","20m_C1",93,"sp_rich","Species richness","phy_faith","Faith's PD",93,0.919514319450327,212.407155737819,7.88172043010753,783.639714612903
+"20m","20m_C1",93,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",93,0.91685017970724,245.276305130431,1.68567098871252,783.639714612903
+"20m","20m_C4",115,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",115,0.902790195873699,181.073369809265,0.717638369521563,552.220874043478
+"20m","20m_C1",93,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",93,0.899609733073788,262.55059234096,0.768796345693091,783.639714612903
+"20m","20m_C5",90,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",90,0.894559160103558,235.404398932775,1.50727591416177,846.058984322222
+"20m","20m_C1",93,"sp_even","Species evenness","phy_faith","Faith's PD",93,0.875039369007807,292.789849509622,0.828025140961654,783.639714612903
+"20m","20m_C4",115,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",115,0.868409898328787,168.449476902626,1.50059352639308,552.220874043478
+"20m","20m_C5",90,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",90,0.858603158541227,244.034907512361,0.722201176189143,846.058984322222
+"20m","20m_C5",90,"sp_even","Species evenness","phy_faith","Faith's PD",90,0.837906634411129,268.405844862697,0.798828930750883,846.058984322222
+"20m","20m_C4",115,"sp_even","Species evenness","phy_faith","Faith's PD",115,0.83742147369847,175.836043188952,0.804440659892405,552.220874043478
+"20m","20m_C4",115,"sp_rich","Species richness","phy_faith","Faith's PD",115,0.782839663303274,136.138472056992,6.57391304347826,552.220874043478
+"20m","20m_C6",58,"sp_even","Species evenness","phy_faith","Faith's PD",58,0.665717758964336,200.519570658598,0.73714920925744,592.307258913793
+"20m","20m_C2",76,"sp_even","Species evenness","phy_faith","Faith's PD",76,0.515553728116859,152.075422918649,0.822253655756762,865.306978631579
+"20m","20m_C6",58,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",58,0.512691663069398,154.229451276331,0.605877124598575,592.307258913793
+"20m","20m_C2",76,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",76,0.466386040701659,137.562896936606,0.788107362924453,865.306978631579
+"20m","20m_C2",76,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",76,0.441243502834449,128.256287350353,1.79752447851432,865.306978631579
+"20m","20m_C6",58,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",58,0.418615657380704,117.45888194499,1.18436948593661,592.307258913793
+"20m","20m_C2",76,"sp_rich","Species richness","phy_faith","Faith's PD",76,0.371605428714581,92.2117904731398,9.02631578947368,865.306978631579
+"20m","20m_C6",58,"sp_rich","Species richness","phy_faith","Faith's PD",58,0.323705018735207,63.6791794026447,5.20689655172414,592.307258913793
+"20m","20m_C5",90,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",90,0.991461879869833,67.918324691406,1.50727591416177,213.302348735956
+"20m","20m_C5",90,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",90,0.985187741037496,67.5453426084815,6.83333333333333,213.302348735956
+"20m","20m_C5",90,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",90,0.949060397989711,69.9373201234095,0.798828930750883,213.302348735956
+"20m","20m_C5",90,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",90,0.947493723202493,67.4030432630737,0.722201176189143,213.302348735956
+"20m","20m_C1",93,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",93,0.805013811005409,53.336329658571,0.768796345693091,187.585229242798
+"20m","20m_C1",93,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",93,0.792268992515875,56.8250408020536,0.828025140961654,187.585229242798
+"20m","20m_C1",93,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",93,0.77624641280496,52.4746762522042,1.68567098871252,187.585229242798
+"20m","20m_C4",115,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",115,0.734652778934772,39.6346054607953,0.804440659892405,148.778322153113
+"20m","20m_C1",93,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",93,0.729354227674335,52.66321301911,7.88172043010753,187.585229242798
+"20m","20m_C4",115,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",115,0.699650520477645,37.0421782356337,0.717638369521563,148.778322153113
+"20m","20m_C3",68,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",68,0.699055227385094,49.4211776727062,0.802165352732256,190.004112723487
+"20m","20m_C3",68,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",68,0.686747899554276,48.4825833596486,1.84728833413922,190.004112723487
+"20m","20m_C3",68,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",68,0.676239437601699,51.6143390669305,0.834537771912611,190.004112723487
+"20m","20m_C3",68,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",68,0.667035501643786,47.7808463614146,9.33823529411765,190.004112723487
+"20m","20m_C4",115,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",115,0.658555390083104,36.9654306088232,1.50059352639308,148.778322153113
+"20m","20m_C4",115,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",115,0.638520753838826,39.8290288508022,6.57391304347826,148.778322153113
+"20m","20m_C6",58,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",58,0.509048714912297,35.8757319400598,5.20689655172414,150.942589853942
+"20m","20m_C6",58,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",58,0.479443135603001,30.9729241709953,0.73714920925744,150.942589853942
+"20m","20m_C2",76,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",76,0.376203550134621,23.3903604280469,9.02631578947368,183.90993946636
+"20m","20m_C6",58,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",58,0.336138487929058,21.6596828351049,1.18436948593661,150.942589853942
+"20m","20m_C2",76,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",76,0.280387057720419,16.3019534818653,1.79752447851432,183.90993946636
+"20m","20m_C2",76,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",76,0.243414314482282,17.4659561504342,0.822253655756762,183.90993946636
+"20m","20m_C2",76,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",76,0.225582406134726,15.1695400459526,0.788107362924453,183.90993946636
+"20m","20m_C6",58,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",58,0.192346569265138,10.9661163991522,0.605877124598575,150.942589853942
+"50m","50m_C1",26,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",26,0.941529399421499,2090.07416086075,17,4678.06804152864
+"50m","50m_C1",26,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",26,0.928725554272944,2028.85297806196,0.861927796423262,4678.06804152864
+"50m","50m_C1",26,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",26,0.917604729188359,2000.66877732271,2.31535852223112,4678.06804152864
+"50m","50m_C1",26,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",26,0.901491462824661,1915.71025252774,0.817888232651356,4678.06804152864
+"50m","50m_C2",24,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",24,0.746308260853272,1209.48548578711,0.8104575238283,3049.59031463167
+"50m","50m_C2",24,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",24,0.718789361172412,1045.51313667716,2.0778502725566,3049.59031463167
+"50m","50m_C2",24,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",24,0.699104120888398,1059.19141307381,0.827713029131473,3049.59031463167
+"50m","50m_C2",24,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",24,0.656258102199296,1000.72597705912,13.2916666666667,3049.59031463167
+"50m","50m_C3",30,"sp_rich","Species richness","phy_afaith","Abundance-weighted Faith's PD",30,0.64447952581576,1257.69880239706,15.9333333333333,3616.42999782066
+"50m","50m_C3",30,"sp_shannon","Shannon diversity","phy_afaith","Abundance-weighted Faith's PD",30,0.627477148960016,1229.86225150715,2.27395474074881,3616.42999782066
+"50m","50m_C3",30,"sp_simpson","Simpson diversity","phy_afaith","Abundance-weighted Faith's PD",30,0.626777806757995,1223.62614284942,0.847986311735712,3616.42999782066
+"50m","50m_C3",30,"sp_even","Species evenness","phy_afaith","Abundance-weighted Faith's PD",30,0.60699149226003,1184.73802813255,0.82780529355858,3616.42999782066
+"50m","50m_C1",26,"sp_rich","Species richness","phy_faith","Faith's PD",26,1.04751312796087,258.88655510647,17,1597.94689134615
+"50m","50m_C2",24,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",24,1.03405074417119,348.568629043993,0.827713029131473,1111.289767
+"50m","50m_C1",26,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",26,0.986607311505563,271.511355352094,2.31535852223112,1597.94689134615
+"50m","50m_C2",24,"sp_even","Species evenness","phy_faith","Faith's PD",24,0.981767377547817,355.617973150816,0.8104575238283,1111.289767
+"50m","50m_C1",26,"sp_even","Species evenness","phy_faith","Faith's PD",26,0.955936377103687,263.852483058298,0.817888232651356,1597.94689134615
+"50m","50m_C2",24,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",24,0.938905485180867,287.035539165706,2.0778502725566,1111.289767
+"50m","50m_C1",26,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",26,0.91204564571441,247.655160968003,0.861927796423262,1597.94689134615
+"50m","50m_C2",24,"sp_rich","Species richness","phy_faith","Faith's PD",24,0.830220891288144,214.710728726642,13.2916666666667,1111.289767
+"50m","50m_C3",30,"sp_shannon","Shannon diversity","phy_faith","Faith's PD",30,0.663088032697549,215.357770358855,2.27395474074881,1306.53138525667
+"50m","50m_C3",30,"sp_rich","Species richness","phy_faith","Faith's PD",30,0.630665668434953,166.353826160894,15.9333333333333,1306.53138525667
+"50m","50m_C3",30,"sp_simpson","Simpson diversity","phy_faith","Faith's PD",30,0.585566315691966,240.870357164724,0.847986311735712,1306.53138525667
+"50m","50m_C3",30,"sp_even","Species evenness","phy_faith","Faith's PD",30,0.567424735911989,273.936996037458,0.82780529355858,1306.53138525667
+"50m","50m_C1",26,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",26,1.09148445281496,58.4037826702397,2.31535852223112,236.603624890618
+"50m","50m_C1",26,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",26,1.08834993505882,56.680288396588,17,236.603624890618
+"50m","50m_C1",26,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",26,1.06389329535937,57.0487372110106,0.861927796423262,236.603624890618
+"50m","50m_C1",26,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",26,1.04100619602751,57.3709806396034,0.817888232651356,236.603624890618
+"50m","50m_C2",24,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",24,0.82733479572336,36.9361256252525,0.8104575238283,185.479312601654
+"50m","50m_C2",24,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",24,0.772761678642467,34.9944486591925,0.827713029131473,185.479312601654
+"50m","50m_C2",24,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",24,0.719236455162934,34.4257250208092,2.0778502725566,185.479312601654
+"50m","50m_C2",24,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",24,0.68555119446328,37.7107186819363,13.2916666666667,185.479312601654
+"50m","50m_C3",30,"sp_rich","Species richness","phy_rao","Phylogenetic Rao's Q",30,0.358402465247082,16.195254690653,15.9333333333333,203.037754918857
+"50m","50m_C3",30,"sp_even","Species evenness","phy_rao","Phylogenetic Rao's Q",30,0.304657590481073,16.3870226179118,0.82780529355858,203.037754918857
+"50m","50m_C3",30,"sp_shannon","Shannon diversity","phy_rao","Phylogenetic Rao's Q",30,0.303228005834463,14.1504368156054,2.27395474074881,203.037754918857
+"50m","50m_C3",30,"sp_simpson","Simpson diversity","phy_rao","Phylogenetic Rao's Q",30,0.293580345474609,14.3443694265444,0.847986311735712,203.037754918857

@@ -54,6 +54,7 @@ Generate spatially explicit biodiversity layers derived from forest census data.
 
 - How do biodiversity patterns vary spatially?
 - How do diversity estimates change across analysis scales?
+- How closely do species-diversity measures and phylogenetic-diversity measures track one another within each analysis scale?
 
 ### Objective 3: Evaluate Spectral-Biodiversity Relationships
 
@@ -68,6 +69,7 @@ Determine whether spectral heterogeneity is associated with biodiversity metrics
 **Expected analyses:**
 
 - Primary pairwise correlation analyses between each spectral variation measure and each diversity measure.
+- A biodiversity-metric concordance layer comparing species-diversity measures directly with phylogenetic-diversity measures before interpreting why phylogenetic metrics may track spectral variation more strongly.
 - Simple linear regression for each pair, reporting Pearson `r`, `R2`, F statistic, F-test p-value, slope, and intercept.
 - Scale-specific comparison across 10 m, 20 m, and 50 m quadrats.
 - Spatial diagnostics and environmental sensitivity models as later analysis layers after the direct SV-diversity relationships are interpreted.

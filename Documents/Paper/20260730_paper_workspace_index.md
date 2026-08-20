@@ -18,6 +18,8 @@ This folder is the working location for manuscript-related outputs. New manuscri
 - `20260805_results_spectral_rao_q_afaith_centroid_clarified.docx`: clarified Rao's Q Results draft noting that the script computes equal-weight pairwise squared Euclidean Rao's Q via the equivalent centroid formula `2 * mean(squared_radius)`.
 - `20260805_discussion_pca_distance_vs_rao_q_scale_centroid_clarified.docx`: clarified Discussion draft noting that both PCA mean distance and spectral Rao's Q use the quadrat centroid computationally, while Rao's Q represents equal-weight pairwise squared Euclidean dissimilarity.
 - `SVH_Results.docx`: user-created Word results document for manual final edits. Agents may read this file for context but should not edit, overwrite, rename, or regenerate it unless the user explicitly changes this instruction.
+- `20260819_final_research_direction.md`: focused final paper direction that prioritizes standardized PCA alpha hull, standardized PCA mean distance, and spectral angle entropy against phylogenetic diversity metrics, with species-diversity contrasts and sensitivity outputs assigned to main or supplemental roles.
+- `20260819_final_research_narrative.md`: revised active manuscript narrative using the working title "Assessing the Spectral Variation Hypothesis Across Spatial Scales Using PCA-based Canopy Spectral Heterogeneity" and centering scale dependence, PCA metric behavior, biodiversity metric behavior, transformations, and correlation mechanisms.
 
 ## Naming Convention
 
@@ -61,10 +63,13 @@ Supporting or contrast biodiversity measures:
 - `reports/tables/multiscale_spectral_biodiversity/sv_diversity_top_pairings.csv`
 - `reports/tables/edge_bootstrap_sensitivity/analysis_dataset_with_bootstrap_fields.csv`
 
+For the species-diversity versus phylogenetic-diversity correlation pass, all available biodiversity quadrats are used because these metrics are not affected by the spectral atmospheric-distortion exclusions. `sv_diversity_analysis_dataset.csv` remains useful because it carries `edge_flag` for edge-highlight figures, but `primary_analysis` is not used to filter the biodiversity-only concordance tables.
+
 ## Key Analysis Reports
 
 - `reports/analysis/20260710_sv_diversity_pairwise_correlations.md`
 - `reports/analysis/20260725_edge_bootstrap_sensitivity_sv_diversity.md`
+- `reports/analysis/20260817_species_phylogenetic_correlation_analysis.md`
 - `reports/analysis/20260707_pca_loading_spectral_regions.md`
 - `reports/analysis/20260707_standardized_pca_metric_sample_size_effects.md`
 - `reports/analysis/20260618_bootstrap_variation_analysis.md`
@@ -83,6 +88,7 @@ Supporting or contrast biodiversity measures:
 ## Current Figure Sources
 
 - `reports/figures/multiscale_spectral_biodiversity/`
+- `reports/figures/species_phylogenetic_correlation/`
 - `reports/figures/edge_bootstrap_sensitivity/`
 - `reports/figures/pca_loading_spectral_regions/`
 - `reports/figures/sample_size_effects/`
@@ -93,6 +99,7 @@ Supporting or contrast biodiversity measures:
 ## Current Table Sources
 
 - `reports/tables/multiscale_spectral_biodiversity/`
+- `reports/tables/species_phylogenetic_correlation/`
 - `reports/tables/edge_bootstrap_sensitivity/`
 - `reports/tables/pca_loading_spectral_regions/`
 - `reports/tables/sample_size_effects/`
@@ -110,4 +117,4 @@ Supporting or contrast biodiversity measures:
 
 ## Immediate Next Step
 
-Await user instruction on the next writing task. Likely next choices are target journal scoping, a detailed figure/table inventory, introduction narrative drafting, or methods drafting from the current workflow documentation.
+Use `20260819_final_research_narrative.md` and root-level `Checklist.md` to update the manuscript outline, Results drafts, figure inventory, and table inventory. The active direction is now a scale-centered PCA-based Spectral Variation Hypothesis paper that asks how spectral metrics correlate, why they correlate with biodiversity metrics, and how scale changes those correlations. Complete transformation and spatial-autocorrelation checks before treating p-values as final inferential evidence.
