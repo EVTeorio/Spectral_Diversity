@@ -33,6 +33,7 @@ Calculate spectral heterogeneity metrics from drone-acquired hyperspectral image
 - Alpha hull of pixels in PCA space
 - Euclidean distance in PCA space
 - Rao's Quadratic Entropy
+- Do not carry convex hull or 3D hull volume/area metrics forward for future analysis; retain prior outputs as diagnostic/archive context only.
 - 
 
 **Questions:**

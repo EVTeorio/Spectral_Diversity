@@ -205,8 +205,8 @@ Purpose: identify what is missing from `Documents/Paper/SVH_Paper.docx` relative
 ## Priority Order
 
 - [ ] 1. Verify tree filtering, species counts, CRS language, and final PCA pixel-use details.
-- [X] 2. Decide final main spectral metrics: likely `spec_spca_alpha`, `spec_spca_mean`, and supporting `spec_spca_rao`.
-- [X] Correlations with the other alpha/convex/3D hull metrics have been regenerated in `reports/tables/spectral_biodiversity_all_metrics/`, `reports/figures/spectral_biodiversity_all_metrics/`, and `reports/tables/spectral_heterogeneity_relationships/`.
+- [A] 2. Decide final main spectral metrics: likely `spec_spca_alpha`, `spec_spca_mean`, and supporting `spec_spca_rao`.
+- I need to run correlation to the other alpha hulls metrics first
 - [X] 3. Run transformation analysis.
 - [X] 4. Run spatial autocorrelation diagnostics.
 - [ ] 5. Rewrite Results around scale and metric behavior.

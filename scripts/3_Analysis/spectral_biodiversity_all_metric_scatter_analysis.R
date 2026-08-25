@@ -15,15 +15,9 @@ SPECTRAL_METRICS <- c(
   "spec_alpha",
   "spec_rao_q",
   "spec_pca_mean",
-  "spec_convex",
-  "spec_hull3d_v",
-  "spec_hull3d_a",
   "spec_spca_alpha",
   "spec_spca_rao",
-  "spec_spca_mean",
-  "spec_spca_convex",
-  "spec_spca_hull3d_v",
-  "spec_spca_hull3d_a"
+  "spec_spca_mean"
 )
 
 BIODIVERSITY_METRICS <- c(
@@ -41,15 +35,9 @@ DISPLAY_NAMES <- c(
   spec_alpha = "Raw PCA alpha hull",
   spec_rao_q = "Raw PCA Rao's Q",
   spec_pca_mean = "Raw PCA mean distance",
-  spec_convex = "Raw PCA convex hull",
-  spec_hull3d_v = "Raw PCA 3D hull volume",
-  spec_hull3d_a = "Raw PCA 3D hull area",
   spec_spca_alpha = "Std PCA alpha hull",
   spec_spca_rao = "Std PCA Rao's Q",
   spec_spca_mean = "Std PCA mean distance",
-  spec_spca_convex = "Std PCA convex hull",
-  spec_spca_hull3d_v = "Std PCA 3D hull volume",
-  spec_spca_hull3d_a = "Std PCA 3D hull area",
   phy_faith = "Faith's PD",
   phy_rao = "Phylogenetic Rao's Q",
   phy_afaith = "Abundance-weighted Faith's PD",
@@ -64,15 +52,9 @@ SHORT_NAMES <- c(
   spec_alpha = "raw_pca_alpha_hull",
   spec_rao_q = "raw_pca_rao_q",
   spec_pca_mean = "raw_pca_mean_distance",
-  spec_convex = "raw_pca_convex_hull",
-  spec_hull3d_v = "raw_pca_3d_hull_volume",
-  spec_hull3d_a = "raw_pca_3d_hull_area",
   spec_spca_alpha = "std_pca_alpha_hull",
   spec_spca_rao = "std_pca_rao_q",
-  spec_spca_mean = "std_pca_mean_distance",
-  spec_spca_convex = "std_pca_convex_hull",
-  spec_spca_hull3d_v = "std_pca_3d_hull_volume",
-  spec_spca_hull3d_a = "std_pca_3d_hull_area"
+  spec_spca_mean = "std_pca_mean_distance"
 )
 
 dir.create(TABLE_DIR, recursive = TRUE, showWarnings = FALSE)
@@ -280,7 +262,7 @@ write_reports <- function(data, relationships, figure_files) {
     "",
     "## Purpose",
     "",
-    "This analysis creates one scatterplot figure for each focal spectral heterogeneity measure, including spectral angle entropy and the raw and standardized PCA alpha, Rao's Q, mean distance, convex hull, 3D hull volume, and 3D hull area metrics. In each figure, rows are the seven biodiversity metrics and columns are the 10 m, 20 m, and 50 m quadrat scales.",
+    "This analysis creates one scatterplot figure for each of the seven focal spectral heterogeneity measures. In each figure, rows are the seven biodiversity metrics and columns are the 10 m, 20 m, and 50 m quadrat scales.",
     "",
     "## Data",
     "",
@@ -314,7 +296,7 @@ write_reports <- function(data, relationships, figure_files) {
     "",
     "## Objective",
     "",
-    paste0("Create ", length(SPECTRAL_METRICS), " scale-column scatterplot figures, one for each focal spectral heterogeneity measure, comparing that metric with all seven biodiversity metrics."),
+    "Create seven scale-column scatterplot figures, one for each spectral heterogeneity measure, comparing that metric with all seven biodiversity metrics.",
     "",
     "## Outputs",
     "",
@@ -356,11 +338,6 @@ run_spectral_biodiversity_all_metric_scatter_analysis <- function() {
   write.csv(data, file.path(TABLE_DIR, "spectral_biodiversity_all_metric_dataset.csv"), row.names = FALSE)
   write.csv(relationships, file.path(TABLE_DIR, "spectral_biodiversity_all_metric_relationships.csv"), row.names = FALSE)
   write_reports(data, relationships, figure_files)
-
-  stray_plot <- file.path(PROJECT_DIR, "Rplots.pdf")
-  if (file.exists(stray_plot)) {
-    unlink(stray_plot)
-  }
 
   message("Spectral biodiversity all-metric scatter analysis complete.")
   invisible(list(data = data, relationships = relationships, figure_files = figure_files))

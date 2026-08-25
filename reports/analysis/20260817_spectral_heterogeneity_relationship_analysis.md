@@ -4,11 +4,11 @@ Date: 2026-08-17
 
 ## Purpose
 
-This analysis compares all 13 focal spectral heterogeneity measures across 10 m, 20 m, and 50 m quadrats: spectral angle entropy plus raw and standardized PCA alpha-hull area, spectral Rao's Q, mean Euclidean distance, convex hull, 3D hull volume, and 3D hull area metrics.
+This analysis compares all seven focal spectral heterogeneity measures across 10 m, 20 m, and 50 m quadrats: spectral angle entropy, raw PCA alpha-hull area, raw PCA spectral Rao's Q, raw PCA mean Euclidean distance, standardized PCA alpha-hull area, standardized PCA spectral Rao's Q, and standardized PCA mean Euclidean distance.
 
 ## Methods
 
-- Pairwise scatterplots and correlations were calculated for every unique pair among the 13 focal spectral heterogeneity measures within each scale.
+- Pairwise scatterplots and correlations were calculated for every unique pair among the seven focal spectral heterogeneity measures within each scale.
 - Additional figure sets color the same pairwise relationships by mean elevation, species presence/absence composition type, crown-equivalent individuals, number of species present, mean retained-pixel brightness at 563 nm, and retained-pixel brightness in blue, green, red, and near-infrared spectral regions.
 - Elevation panels report the incremental R2 and p-value for adding `env_elev` after the x-axis spectral metric.
 - Composition-type panels report panel-specific mean silhouette width calculated from the two plotted spectral metrics.
@@ -17,45 +17,45 @@ This analysis compares all 13 focal spectral heterogeneity measures across 10 m,
 
 | Scale | Relationship | n | r | R2 | p-value |
 | --- | --- | --- | --- | --- | --- |
-| 10m | Std PCA convex hull vs Std PCA 3D hull area | 1744 | 0.992 | 0.985 | 0.00e+00 |
-| 10m | Raw PCA convex hull vs Raw PCA 3D hull area | 1744 | 0.991 | 0.983 | 0.00e+00 |
-| 10m | Std PCA 3D hull volume vs Std PCA 3D hull area | 1744 | 0.980 | 0.961 | 0.00e+00 |
-| 20m | Std PCA 3D hull volume vs Std PCA 3D hull area |  436 | 0.981 | 0.962 | 2.65e-311 |
-| 20m | Raw PCA 3D hull volume vs Raw PCA 3D hull area |  436 | 0.980 | 0.961 | 1.74e-307 |
-| 20m | Raw PCA convex hull vs Raw PCA 3D hull area |  436 | 0.976 | 0.952 | 4.66e-288 |
-| 50m | Std PCA 3D hull volume vs Std PCA 3D hull area |   74 | 0.975 | 0.952 | 4.61e-49 |
-| 50m | Raw PCA 3D hull volume vs Raw PCA 3D hull area |   74 | 0.975 | 0.950 | 1.45e-48 |
+| 10m | Std PCA Rao's Q vs Std PCA mean distance | 1744 | 0.907 | 0.823 | 0.00e+00 |
+| 10m | Raw PCA Rao's Q vs Raw PCA mean distance | 1744 | 0.906 | 0.821 | 0.00e+00 |
+| 10m | Raw PCA Rao's Q vs Std PCA Rao's Q | 1744 | 0.855 | 0.732 | 0.00e+00 |
+| 20m | Raw PCA Rao's Q vs Raw PCA mean distance |  436 | 0.926 | 0.858 | 3.90e-186 |
+| 20m | Std PCA alpha hull vs Std PCA mean distance |  436 | 0.904 | 0.817 | 3.48e-162 |
+| 20m | Std PCA Rao's Q vs Std PCA mean distance |  436 | 0.898 | 0.806 | 1.72e-156 |
 | 50m | Raw PCA Rao's Q vs Raw PCA mean distance |   74 | 0.940 | 0.883 | 2.91e-35 |
+| 50m | Std PCA alpha hull vs Std PCA mean distance |   74 | 0.929 | 0.864 | 7.08e-33 |
+| 50m | Std PCA Rao's Q vs Std PCA mean distance |   74 | 0.900 | 0.810 | 1.13e-27 |
 
 ## Largest Elevation Contributions
 
 | Scale | Relationship | n | Elevation delta R2 | Elevation p-value |
 | --- | --- | --- | --- | --- |
-| 50m | Raw PCA convex hull vs Std PCA alpha hull |  74 | 0.227 | 3.03e-06 |
-| 50m | Raw PCA convex hull vs Std PCA mean distance |  74 | 0.220 | 2.38e-07 |
-| 50m | Raw PCA 3D hull area vs Std PCA alpha hull |  74 | 0.203 | 3.02e-06 |
-| 50m | Raw PCA 3D hull area vs Std PCA mean distance |  74 | 0.191 | 2.26e-07 |
-| 50m | Raw PCA 3D hull volume vs Std PCA alpha hull |  74 | 0.176 | 9.04e-06 |
-| 50m | Raw PCA 3D hull volume vs Std PCA mean distance |  74 | 0.158 | 1.11e-06 |
-| 20m | Raw PCA convex hull vs Std PCA alpha hull | 436 | 0.133 | 1.73e-19 |
-| 20m | Raw PCA convex hull vs Std PCA mean distance | 436 | 0.128 | 1.91e-24 |
-| 50m | Std PCA mean distance vs Std PCA 3D hull volume |  74 | 0.126 | 2.66e-04 |
-| 20m | Raw PCA 3D hull area vs Std PCA alpha hull | 436 | 0.117 | 1.33e-17 |
+| 50m | Raw PCA mean distance vs Std PCA alpha hull |  74 | 0.109 | 2.35e-05 |
+| 50m | Raw PCA Rao's Q vs Std PCA alpha hull |  74 | 0.106 | 4.57e-05 |
+| 50m | Raw PCA mean distance vs Std PCA mean distance |  74 | 0.103 | 1.98e-05 |
+| 50m | Raw PCA Rao's Q vs Std PCA mean distance |  74 | 0.088 | 5.70e-06 |
+| 20m | Raw PCA mean distance vs Std PCA alpha hull | 436 | 0.081 | 6.10e-14 |
+| 20m | Raw PCA Rao's Q vs Std PCA alpha hull | 436 | 0.075 | 1.22e-12 |
+| 20m | Raw PCA mean distance vs Std PCA mean distance | 436 | 0.065 | 1.18e-13 |
+| 50m | Raw PCA alpha hull vs Std PCA mean distance |  74 | 0.065 | 2.33e-04 |
+| 20m | Raw PCA alpha hull vs Std PCA alpha hull | 436 | 0.063 | 2.96e-16 |
+| 50m | Raw PCA alpha hull vs Std PCA alpha hull |  74 | 0.057 | 3.90e-05 |
 
 ## Strongest Composition-Type Separation In Spectral Metric Space
 
 | Scale | Relationship | Overall composition silhouette |
 | --- | --- | --- |
-| 50m | Std PCA mean distance vs Std PCA 3D hull volume | 0.014 |
-| 50m | Std PCA mean distance vs Std PCA 3D hull area | 0.009 |
-| 50m | Std PCA alpha hull vs Std PCA 3D hull volume | -0.003 |
 | 50m | Spectral angle entropy vs Std PCA mean distance | -0.006 |
-| 50m | Std PCA alpha hull vs Std PCA 3D hull area | -0.009 |
 | 50m | Spectral angle entropy vs Std PCA alpha hull | -0.011 |
-| 50m | Std PCA Rao's Q vs Std PCA 3D hull volume | -0.015 |
-| 50m | Spectral angle entropy vs Std PCA 3D hull area | -0.018 |
 | 50m | Spectral angle entropy vs Raw PCA mean distance | -0.019 |
-| 50m | Spectral angle entropy vs Std PCA 3D hull volume | -0.021 |
+| 50m | Std PCA alpha hull vs Std PCA mean distance | -0.022 |
+| 50m | Spectral angle entropy vs Raw PCA alpha hull | -0.025 |
+| 50m | Raw PCA mean distance vs Std PCA mean distance | -0.027 |
+| 50m | Spectral angle entropy vs Raw PCA Rao's Q | -0.027 |
+| 50m | Raw PCA alpha hull vs Std PCA mean distance | -0.028 |
+| 50m | Raw PCA mean distance vs Std PCA alpha hull | -0.030 |
+| 50m | Spectral angle entropy vs Std PCA Rao's Q | -0.033 |
 
 ## Figures
 

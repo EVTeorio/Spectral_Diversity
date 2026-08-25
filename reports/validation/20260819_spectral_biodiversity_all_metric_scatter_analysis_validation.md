@@ -5,10 +5,10 @@ Date: 2026-08-19
 ## Checks
 
 - Dataset rows: 2580
-- Relationship rows: 273
-- Expected relationship rows: 273
+- Relationship rows: 147
+- Expected relationship rows: 147
 - Missing Pearson r values: 0
-- Output figures present: 13 of 13
+- Output figures present: 7 of 7
 - Output tables present: 2 of 2
 
 ## Result
