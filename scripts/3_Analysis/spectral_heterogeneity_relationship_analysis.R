@@ -17,18 +17,30 @@ SPECTRAL_METRICS <- c(
   "spec_alpha",
   "spec_rao_q",
   "spec_pca_mean",
+  "spec_convex",
+  "spec_hull3d_v",
+  "spec_hull3d_a",
   "spec_spca_alpha",
   "spec_spca_rao",
-  "spec_spca_mean"
+  "spec_spca_mean",
+  "spec_spca_convex",
+  "spec_spca_hull3d_v",
+  "spec_spca_hull3d_a"
 )
 DISPLAY_NAMES <- c(
   spec_sa = "Spectral angle entropy",
   spec_alpha = "Raw PCA alpha hull",
   spec_rao_q = "Raw PCA Rao's Q",
   spec_pca_mean = "Raw PCA mean distance",
+  spec_convex = "Raw PCA convex hull",
+  spec_hull3d_v = "Raw PCA 3D hull volume",
+  spec_hull3d_a = "Raw PCA 3D hull area",
   spec_spca_alpha = "Std PCA alpha hull",
   spec_spca_rao = "Std PCA Rao's Q",
-  spec_spca_mean = "Std PCA mean distance"
+  spec_spca_mean = "Std PCA mean distance",
+  spec_spca_convex = "Std PCA convex hull",
+  spec_spca_hull3d_v = "Std PCA 3D hull volume",
+  spec_spca_hull3d_a = "Std PCA 3D hull area"
 )
 REGION_BRIGHTNESS_COLUMNS <- c(
   blue = "mean_blue_pixel_brightness",
@@ -280,6 +292,24 @@ read_or_create_brightness <- function(data) {
 
 metric_pairs <- function() utils::combn(SPECTRAL_METRICS, 2, simplify = FALSE)
 
+pairwise_layout <- function() {
+  pair_count <- length(metric_pairs())
+  columns <- min(6, pair_count)
+  c(rows = ceiling(pair_count / columns), columns = columns)
+}
+
+pairwise_png_size <- function() {
+  layout <- pairwise_layout()
+  c(width = layout[["columns"]] * 1000, height = layout[["rows"]] * 900)
+}
+
+regional_layout <- function() c(rows = length(SPECTRAL_METRICS), columns = length(REGION_BRIGHTNESS_COLUMNS))
+
+regional_png_size <- function() {
+  layout <- regional_layout()
+  c(width = layout[["columns"]] * 1300, height = layout[["rows"]] * 900)
+}
+
 run_pairwise_correlations <- function(data) {
   rows <- list()
   index <- 1
@@ -503,9 +533,11 @@ save_plain_scatter <- function(data, correlations) {
   for (scale_index in seq_along(SCALES)) {
     scale_name <- SCALES[scale_index]
     file_path <- file.path(FIGURE_DIR, paste0("01_spectral_metric_pairwise_scatter_", scale_name, ".png"))
-    grDevices::png(file_path, width = 3900, height = 5400, res = 300)
+    plot_size <- pairwise_png_size()
+    plot_layout <- pairwise_layout()
+    grDevices::png(file_path, width = plot_size[["width"]], height = plot_size[["height"]], res = 300)
     old_par <- par(no.readonly = TRUE)
-    par(mfrow = c(7, 3), mar = c(4.2, 4.4, 2.4, 0.8), oma = c(0, 0, 2.2, 0))
+    par(mfrow = c(plot_layout[["rows"]], plot_layout[["columns"]]), mar = c(3.7, 3.9, 2.1, 0.7), oma = c(0, 0, 2.2, 0))
     point_colors <- adjustcolor(rep("#315C8A", nrow(data)), alpha.f = 0.52)
     for (pair in metric_pairs()) {
       plot_pair_panel(data, scale_name, pair[1], pair[2], correlations, point_colors)
@@ -524,9 +556,11 @@ save_elevation_scatter <- function(data, correlations, elevation_models) {
   for (scale_index in seq_along(SCALES)) {
     scale_name <- SCALES[scale_index]
     file_path <- file.path(FIGURE_DIR, paste0("02_spectral_metric_pairwise_scatter_elevation_gradient_", scale_name, ".png"))
-    grDevices::png(file_path, width = 3900, height = 5400, res = 300)
+    plot_size <- pairwise_png_size()
+    plot_layout <- pairwise_layout()
+    grDevices::png(file_path, width = plot_size[["width"]], height = plot_size[["height"]], res = 300)
     old_par <- par(no.readonly = TRUE)
-    par(mfrow = c(7, 3), mar = c(4.2, 4.4, 2.4, 0.8), oma = c(0, 0, 2.2, 0))
+    par(mfrow = c(plot_layout[["rows"]], plot_layout[["columns"]]), mar = c(3.7, 3.9, 2.1, 0.7), oma = c(0, 0, 2.2, 0))
     point_colors <- adjustcolor(ramp_colors(data$env_elev, palette_values), alpha.f = 0.72)
     for (pair_index in seq_along(metric_pairs())) {
       pair <- metric_pairs()[[pair_index]]
@@ -624,9 +658,11 @@ save_composition_scatter <- function(data, clusters, correlations, silhouette_ta
     cluster_colors <- cluster_palette(nrow(scale_clusters))
     names(cluster_colors) <- scale_clusters$composition_cluster
     file_path <- file.path(FIGURE_DIR, paste0("03_spectral_metric_pairwise_scatter_composition_cluster_", scale_name, ".png"))
-    grDevices::png(file_path, width = 3900, height = 5400, res = 300)
+    plot_size <- pairwise_png_size()
+    plot_layout <- pairwise_layout()
+    grDevices::png(file_path, width = plot_size[["width"]], height = plot_size[["height"]], res = 300)
     old_par <- par(no.readonly = TRUE)
-    par(mfrow = c(7, 3), mar = c(4.2, 4.4, 2.4, 0.8), oma = c(0, 0, 2.2, 0))
+    par(mfrow = c(plot_layout[["rows"]], plot_layout[["columns"]]), mar = c(3.7, 3.9, 2.1, 0.7), oma = c(0, 0, 2.2, 0))
     point_colors <- adjustcolor(cluster_colors[plot_data$composition_cluster], alpha.f = 0.62)
     point_colors[is.na(point_colors)] <- adjustcolor("#777777", alpha.f = 0.3)
     for (pair in metric_pairs()) {
@@ -667,9 +703,11 @@ save_count_ramp_scatter <- function(data, counts, correlations, column, label, p
   for (scale_index in seq_along(SCALES)) {
     scale_name <- SCALES[scale_index]
     file_path <- file.path(FIGURE_DIR, paste0(prefix, "_", scale_name, ".png"))
-    grDevices::png(file_path, width = 3900, height = 5400, res = 300)
+    plot_size <- pairwise_png_size()
+    plot_layout <- pairwise_layout()
+    grDevices::png(file_path, width = plot_size[["width"]], height = plot_size[["height"]], res = 300)
     old_par <- par(no.readonly = TRUE)
-    par(mfrow = c(7, 3), mar = c(4.2, 4.4, 2.4, 0.8), oma = c(0, 0, 2.2, 0))
+    par(mfrow = c(plot_layout[["rows"]], plot_layout[["columns"]]), mar = c(3.7, 3.9, 2.1, 0.7), oma = c(0, 0, 2.2, 0))
     point_colors <- adjustcolor(ramp_colors(plot_data[[column]], palette_values), alpha.f = 0.72)
     for (pair_index in seq_along(metric_pairs())) {
       pair <- metric_pairs()[[pair_index]]
@@ -705,9 +743,11 @@ save_metric_vs_regional_brightness_scatter <- function(data, brightness, regiona
   for (scale_index in seq_along(SCALES)) {
     scale_name <- SCALES[scale_index]
     file_path <- file.path(FIGURE_DIR, paste0("11_spectral_metrics_vs_regional_illumination_", scale_name, ".png"))
-    grDevices::png(file_path, width = 3900, height = 7200, res = 300)
+    plot_size <- regional_png_size()
+    plot_layout <- regional_layout()
+    grDevices::png(file_path, width = plot_size[["width"]], height = plot_size[["height"]], res = 300)
     old_par <- par(no.readonly = TRUE)
-    par(mfrow = c(7, 4), mar = c(4.2, 4.4, 2.4, 0.8), oma = c(0, 0, 2.2, 0))
+    par(mfrow = c(plot_layout[["rows"]], plot_layout[["columns"]]), mar = c(3.7, 3.9, 2.1, 0.7), oma = c(0, 0, 2.2, 0))
     for (metric in SPECTRAL_METRICS) {
       for (region_name in names(REGION_BRIGHTNESS_COLUMNS)) {
         brightness_column <- REGION_BRIGHTNESS_COLUMNS[[region_name]]
@@ -904,11 +944,11 @@ write_analysis_report <- function(correlations, elevation_models, metric_stats, 
     "",
     "## Purpose",
     "",
-    "This analysis compares all seven focal spectral heterogeneity measures across 10 m, 20 m, and 50 m quadrats: spectral angle entropy, raw PCA alpha-hull area, raw PCA spectral Rao's Q, raw PCA mean Euclidean distance, standardized PCA alpha-hull area, standardized PCA spectral Rao's Q, and standardized PCA mean Euclidean distance.",
+    "This analysis compares all 13 focal spectral heterogeneity measures across 10 m, 20 m, and 50 m quadrats: spectral angle entropy plus raw and standardized PCA alpha-hull area, spectral Rao's Q, mean Euclidean distance, convex hull, 3D hull volume, and 3D hull area metrics.",
     "",
     "## Methods",
     "",
-    "- Pairwise scatterplots and correlations were calculated for every unique pair among the seven focal spectral heterogeneity measures within each scale.",
+    paste0("- Pairwise scatterplots and correlations were calculated for every unique pair among the ", length(SPECTRAL_METRICS), " focal spectral heterogeneity measures within each scale."),
     "- Additional figure sets color the same pairwise relationships by mean elevation, species presence/absence composition type, crown-equivalent individuals, number of species present, mean retained-pixel brightness at 563 nm, and retained-pixel brightness in blue, green, red, and near-infrared spectral regions.",
     "- Elevation panels report the incremental R2 and p-value for adding `env_elev` after the x-axis spectral metric.",
     "- Composition-type panels report panel-specific mean silhouette width calculated from the two plotted spectral metrics.",

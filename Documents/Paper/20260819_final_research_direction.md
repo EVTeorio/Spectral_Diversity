@@ -42,7 +42,7 @@ Treat these as supporting or supplemental spectral metrics:
 
 - `spec_spca_rao`: standardized PCA spectral Rao's Q.
 - `spec_pca_mean`, `spec_alpha`, and `spec_rao_q`: raw PCA counterparts, useful as brightness-sensitive comparisons.
-- Convex hull and 3D hull summaries: supplemental diagnostics only.
+- Convex hull and 3D hull summaries: diagnostic/archive outputs only. As of 2026-08-20, do not carry these metrics forward into future analysis or the main manuscript result set because they mainly act as broader envelope-size checks and add interpretive complexity without improving the final narrative.
 
 ## Primary Biodiversity Metrics
 
@@ -107,6 +107,7 @@ Use the sensitivity analyses to support caution rather than to redirect the pape
 ## What To Avoid Chasing Before This Paper Draft
 
 - Do not center the manuscript on every spectral metric. Lead with standardized PCA alpha hull, standardized PCA mean distance, and spectral angle entropy.
+- Do not move forward with convex hull or 3D hull volume/area metrics except as archived diagnostics from the metric-screening phase.
 - Do not make environmental model ranking the main result. Keep environmental adjustment as sensitivity unless a final spatial model is completed.
 - Do not overbuild the species-composition clustering narrative. Use it to explain divergence between species and phylogenetic metrics, not as a separate community-type paper.
 - Do not treat 50 m p-values as final inference without noting the small sample size and need for spatial diagnostics.

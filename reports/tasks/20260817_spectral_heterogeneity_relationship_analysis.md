@@ -19,9 +19,9 @@ Create all-pair spectral heterogeneity scatterplot sets and matching elevation, 
 
 ## Result Size
 
-- Spectral pairwise correlation rows: 63
-- Elevation-adjusted model rows: 63
-- Spectral composition silhouette rows: 315
+- Spectral pairwise correlation rows: 234
+- Elevation-adjusted model rows: 234
+- Spectral composition silhouette rows: 1170
 
 ## Notes
 

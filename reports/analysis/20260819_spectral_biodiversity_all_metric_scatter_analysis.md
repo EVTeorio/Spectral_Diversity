@@ -1,10 +1,10 @@
 # Spectral Biodiversity All-Metric Scatter Analysis
 
-Date: 2026-08-19
+Date: 2026-08-20
 
 ## Purpose
 
-This analysis creates one scatterplot figure for each of the seven focal spectral heterogeneity measures. In each figure, rows are the seven biodiversity metrics and columns are the 10 m, 20 m, and 50 m quadrat scales.
+This analysis creates one scatterplot figure for each focal spectral heterogeneity measure, including spectral angle entropy and the raw and standardized PCA alpha, Rao's Q, mean distance, convex hull, 3D hull volume, and 3D hull area metrics. In each figure, rows are the seven biodiversity metrics and columns are the 10 m, 20 m, and 50 m quadrat scales.
 
 ## Data
 
@@ -30,12 +30,12 @@ This analysis creates one scatterplot figure for each of the seven focal spectra
 | 50m | Raw PCA alpha hull | Phylogenetic Rao's Q |  74 | 0.332 | 0.111 | 0.004 |
 | 50m | Raw PCA Rao's Q | Phylogenetic Rao's Q |  74 | 0.319 | 0.102 | 0.006 |
 | 50m | Std PCA alpha hull | Faith's PD |  74 | 0.312 | 0.097 | 0.007 |
+| 50m | Raw PCA 3D hull volume | Phylogenetic Rao's Q |  74 | 0.304 | 0.093 | 0.008 |
 | 20m | Std PCA mean distance | Abundance-weighted Faith's PD | 436 | 0.301 | 0.091 | 1.36e-10 |
 | 50m | Raw PCA mean distance | Phylogenetic Rao's Q |  74 | 0.292 | 0.085 | 0.012 |
 | 20m | Std PCA alpha hull | Faith's PD | 436 | 0.285 | 0.081 | 1.40e-09 |
 | 50m | Std PCA mean distance | Faith's PD |  74 | 0.282 | 0.080 | 0.015 |
 | 20m | Std PCA mean distance | Phylogenetic Rao's Q | 436 | 0.274 | 0.075 | 6.16e-09 |
-| 50m | Std PCA Rao's Q | Abundance-weighted Faith's PD |  74 | 0.272 | 0.074 | 0.019 |
 
 ## Complete Case Ranges
 
@@ -51,11 +51,67 @@ This analysis creates one scatterplot figure for each of the seven focal spectra
 - `reports/figures/spectral_biodiversity_all_metrics/01_raw_pca_alpha_hull_vs_all_biodiversity_metrics_by_scale.png`
 - `reports/figures/spectral_biodiversity_all_metrics/01_raw_pca_rao_q_vs_all_biodiversity_metrics_by_scale.png`
 - `reports/figures/spectral_biodiversity_all_metrics/01_raw_pca_mean_distance_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/01_raw_pca_convex_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/01_raw_pca_3d_hull_volume_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/01_raw_pca_3d_hull_area_vs_all_biodiversity_metrics_by_scale.png`
 - `reports/figures/spectral_biodiversity_all_metrics/01_std_pca_alpha_hull_vs_all_biodiversity_metrics_by_scale.png`
 - `reports/figures/spectral_biodiversity_all_metrics/01_std_pca_rao_q_vs_all_biodiversity_metrics_by_scale.png`
 - `reports/figures/spectral_biodiversity_all_metrics/01_std_pca_mean_distance_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/01_std_pca_convex_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/01_std_pca_3d_hull_volume_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/01_std_pca_3d_hull_area_vs_all_biodiversity_metrics_by_scale.png`
+
+## Power-2 Transformation Figures
+
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_sa_entropy_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_raw_pca_alpha_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_raw_pca_rao_q_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_raw_pca_mean_distance_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_raw_pca_convex_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_raw_pca_3d_hull_volume_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_raw_pca_3d_hull_area_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_std_pca_alpha_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_std_pca_rao_q_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_std_pca_mean_distance_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_std_pca_convex_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_std_pca_3d_hull_volume_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/02_power2_biodiversity_original_spectral_std_pca_3d_hull_area_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_sa_entropy_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_raw_pca_alpha_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_raw_pca_rao_q_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_raw_pca_mean_distance_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_raw_pca_convex_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_raw_pca_3d_hull_volume_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_raw_pca_3d_hull_area_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_std_pca_alpha_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_std_pca_rao_q_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_std_pca_mean_distance_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_std_pca_convex_hull_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_std_pca_3d_hull_volume_vs_all_biodiversity_metrics_by_scale.png`
+- `reports/figures/spectral_biodiversity_all_metrics/03_power2_biodiversity_power2_spectral_std_pca_3d_hull_area_vs_all_biodiversity_metrics_by_scale.png`
+
+## Phylogenetic Transformation Stack Figures
+
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_sa_entropy.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_raw_pca_alpha_hull.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_raw_pca_rao_q.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_raw_pca_mean_distance.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_raw_pca_convex_hull.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_raw_pca_3d_hull_volume.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_raw_pca_3d_hull_area.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_std_pca_alpha_hull.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_std_pca_rao_q.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_std_pca_mean_distance.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_std_pca_convex_hull.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_std_pca_3d_hull_volume.png`
+- `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/01_phylogenetic_transform_stack_std_pca_3d_hull_area.png`
+
+## Standardized PCA Hull And Volume Summary Figure
+
+- `reports/figures/spectral_biodiversity_all_metrics/04_std_pca_volume_metrics_vs_all_biodiversity_metrics_by_scale.png`
 
 ## Tables
 
 - `reports/tables/spectral_biodiversity_all_metrics/spectral_biodiversity_all_metric_dataset.csv`
 - `reports/tables/spectral_biodiversity_all_metrics/spectral_biodiversity_all_metric_relationships.csv`
+- `reports/tables/spectral_biodiversity_all_metrics/spectral_biodiversity_power2_transform_relationships.csv`

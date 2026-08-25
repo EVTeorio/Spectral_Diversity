@@ -84,7 +84,7 @@ Current results support a weak-to-moderate positive relationship between hypersp
 
 - Primary metric 1: `spec_spca_mean`, standardized PCA mean Euclidean distance in PC1-PC3 space after vector-normalizing spectra.
 - Primary metric 2: `spec_sa`, spectral angle entropy from sunlit, shadow-masked, smoothed 5 nm spectra.
-- Supporting metrics: raw PCA distance, standardized PCA median/sd, spectral Rao's Q, alpha-hull area, convex-hull summaries.
+- Supporting metrics: raw PCA distance, standardized PCA median/sd, spectral Rao's Q, and alpha-hull area. Convex-hull and 3D hull volume/area summaries are archived diagnostics only and should not be carried forward for future analysis.
 
 ### Spatial Grains
 

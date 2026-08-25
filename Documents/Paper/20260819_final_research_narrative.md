@@ -65,17 +65,17 @@ This section should be used as a concise methods anchor. It excludes sample-size
 - `spec_pca_sd`: standard deviation of pixel-to-centroid Euclidean distances in raw global PCA PC1-PC3 space.
 - `spec_rao_q`: raw PCA spectral Rao's Q using equal pixel weights and squared Euclidean distance in global PC1-PC3 space; implemented with the equivalent centroid formula for computational efficiency.
 - `spec_alpha`: alpha-hull area of retained pixels in raw global PCA PC1-PC2 space.
-- `spec_convex`: convex-hull area of retained pixels in raw global PCA PC1-PC2 space.
-- `spec_hull3d_v`: convex-hull volume of retained pixels in raw global PCA PC1-PC3 space.
-- `spec_hull3d_a`: convex-hull surface area of retained pixels in raw global PCA PC1-PC3 space.
+- `spec_convex`: convex-hull area of retained pixels in raw global PCA PC1-PC2 space. Archived diagnostic only; do not carry forward for future analysis.
+- `spec_hull3d_v`: convex-hull volume of retained pixels in raw global PCA PC1-PC3 space. Archived diagnostic only; do not carry forward for future analysis.
+- `spec_hull3d_a`: convex-hull surface area of retained pixels in raw global PCA PC1-PC3 space. Archived diagnostic only; do not carry forward for future analysis.
 - `spec_spca_mean`: mean Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized PCA PC1-PC3 space.
 - `spec_spca_med`: median Euclidean distance of retained vector-normalized spectra from the quadrat centroid in standardized PCA PC1-PC3 space.
 - `spec_spca_sd`: standard deviation of standardized PCA pixel-to-centroid Euclidean distances.
 - `spec_spca_rao`: standardized PCA spectral Rao's Q using equal pixel weights and squared Euclidean distance in standardized PCA PC1-PC3 space; implemented with the equivalent centroid formula.
 - `spec_spca_alpha`: alpha-hull area of retained vector-normalized spectra in standardized PCA PC1-PC2 space.
-- `spec_spca_convex`: convex-hull area of retained vector-normalized spectra in standardized PCA PC1-PC2 space.
-- `spec_spca_hull3d_v`: convex-hull volume of retained vector-normalized spectra in standardized PCA PC1-PC3 space.
-- `spec_spca_hull3d_a`: convex-hull surface area of retained vector-normalized spectra in standardized PCA PC1-PC3 space.
+- `spec_spca_convex`: convex-hull area of retained vector-normalized spectra in standardized PCA PC1-PC2 space. Archived diagnostic only; do not carry forward for future analysis.
+- `spec_spca_hull3d_v`: convex-hull volume of retained vector-normalized spectra in standardized PCA PC1-PC3 space. Archived diagnostic only; do not carry forward for future analysis.
+- `spec_spca_hull3d_a`: convex-hull surface area of retained vector-normalized spectra in standardized PCA PC1-PC3 space. Archived diagnostic only; do not carry forward for future analysis.
 
 ### Biodiversity Metrics
 
@@ -123,6 +123,8 @@ Mean PCA distance is stable and interpretable as average spectral departure from
 PCA Rao's Q represents pairwise squared spectral dissimilarity. Its strength is conceptual alignment with diversity theory, but its weakness is greater sensitivity to extreme pixels and residual illumination or canopy-structure effects.
 
 PCA alpha hull captures the occupied area of the quadrat's spectral cloud in PC1-PC2 space. Its current strength is high correlation with phylogenetic metrics, especially at 20 m and 50 m. Its weakness is potential sensitivity to hull geometry, outlying points, and the chosen PCA axes.
+
+Convex hull and 3D hull volume/area metrics were evaluated as hull-family diagnostics, but the current decision is not to move them forward. They should remain archived screening outputs because they primarily summarize broad envelope size, can include unoccupied spectral space, and add complexity without becoming primary manuscript metrics.
 
 Raw PCA metrics are useful because they show the influence of brightness and overall reflectance magnitude. Their weakness is that PC1 can be strongly illumination dominated.
 
