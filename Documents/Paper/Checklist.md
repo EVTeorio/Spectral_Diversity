@@ -57,6 +57,7 @@ Purpose: identify what is missing from `Documents/Paper/SVH_Paper.docx` relative
   - Explain why PCA-based spectral heterogeneity is useful.
   - Explain why biodiversity metrics can disagree.
   - State the revised research questions.
+  - Literature topic map for introduction drafting has been created in `Documents/Paper/20260826_hyperspectral_literature_topic_map.md`.
 - [ ] Add a clear objectives/hypotheses section.
   - Include metric correlation, metric mechanism, scale dependence, transformation testing, and optimal quadrat scale.
 - [ ] Add a table or subsection defining all spectral and biodiversity metrics.
@@ -73,16 +74,17 @@ Purpose: identify what is missing from `Documents/Paper/SVH_Paper.docx` relative
   - This should replace the current narrow focus on only standardized PCA mean distance and spectral Rao's Q versus abundance-weighted Faith's PD.
 - [ ] Add a Results section on transformations if the analysis is completed.
 - [ ] Add a Results section on spatial autocorrelation or spatial sensitivity.
-- [ ] Add a Discussion section specifically about scale.
+- [X] Add a Discussion section specifically about scale.
   - Why 10 m is weak.
   - Why 20 m may be a practical compromise.
   - Why 50 m currently has the strongest correlations but needs sample-size caution.
-- [ ] Add a Discussion section on metric construction.
+- [X] Add a Discussion section on metric construction.
   - Linear distance versus squared distance.
   - Area/hull metrics versus centroid-distance metrics.
   - Raw reflectance PCA versus vector-normalized PCA.
-- [ ] Add a Discussion section on why phylogenetic diversity can correlate when Shannon diversity does not.
-- [ ] Add limitations.
+- [X] Add a Discussion section on why phylogenetic diversity can correlate when Shannon diversity does not.
+- [A] Add limitations.
+  - A limitations-oriented discussion draft has been added in `Documents/Paper/20260826_updated_discussion_section.md`; final manuscript integration should still verify exact wording against final Methods and Results.
   - Spatial non-independence.
   - Single forest plot.
   - 50 m sample size.
@@ -211,5 +213,5 @@ Purpose: identify what is missing from `Documents/Paper/SVH_Paper.docx` relative
 - [X] 3. Run transformation analysis.
 - [X] 4. Run spatial autocorrelation diagnostics.
 - [ ] 5. Rewrite Results around scale and metric behavior.
-- [ ] 6. Rewrite Discussion around why metrics correlate, why they differ, and how scale changes the SVH signal.
+- [X] 6. Rewrite Discussion around why metrics correlate, why they differ, and how scale changes the SVH signal.
 - [ ] 7. Add missing Introduction, Abstract, Conclusions, and journal front/back matter.
