@@ -106,6 +106,24 @@ For the species-diversity versus phylogenetic-diversity correlation pass, all av
 - `reports/tables/bootstrap_variation/`
 - `reports/tables/methods_tree_counts/`
 
+## Zotero Literature Screening Notes
+
+### 2026-10-07: Spectral Angle as a Spectral Variation Metric
+
+Quick scan source: local Zotero index files in `zotero_index/`, especially `.zotero-ft-cache` text files listed in `hyperspectral_paper_zotero_files_only.csv`.
+
+Search terms included `spectral angle`, `spectral-angle`, `Spectral Angle Mapper`, `spectral angular`, `spectral angle distance`, and `angular distance`.
+
+Summary: the indexed library contains several papers that mention spectral angle approaches, but the clearest evidence that spectral angle has been used to quantify spectral heterogeneity/variation comes from the SVH review by Torresani et al. (2024), which lists `average spectral angle`, `spectral angle mapper`, and `spectral angle` among spectral heterogeneity/diversity metrics used in prior studies. The review specifically associates spectral angle metrics with studies such as Frye et al. (2021), Gholizadeh et al. (2018), Gholizadeh et al. (2022), and Van Cleemput et al. (2023). Those cited studies were not found as standalone item titles in the current Zotero index scan.
+
+Relevant indexed papers:
+
+- Thornley et al. (2022), `Intra-annual taxonomic and phenological drivers of spectral variance in grasslands`: mentions Spectral Angle Mapper as one of several multivariate approaches used in SVH/spectral variance studies, but the paper itself emphasizes coefficient of variation and descriptive spectral-variance approaches.
+- Cavender-Bares et al. (2016), `Associations of Leaf Spectra with Genetic and Phylogenetic Variation in Oaks`: uses angular distance in spectral principal coordinates analysis, linking spectral dissimilarity to genetic/phylogenetic structure. This is relevant conceptual support for angle-based spectral dissimilarity, though it is not presented as a quadrat-level SVH spectral-variation metric.
+- Torresani et al. (2024), `Reviewing the Spectral Variation Hypothesis: Twenty years in the tumultuous sea of biodiversity estimation by remote sensing`: directly reviews spectral angle mapper/average spectral angle as spectral heterogeneity metrics in the SVH literature.
+- Feilhauer et al. (2010), `Brightness-normalized Partial Least Squares Regression for hyperspectral data`: explains spectral angle as a brightness-insensitive spectral distance concept and relates it to spectral shape, but the paper is methodological rather than an SVH spectral-variation metric paper.
+- Clark and Roberts (2012), `Species-Level Differences in Hyperspectral Metrics among Tropical Rainforest Trees as Determined by a Tree-Based Classifier`: contains a reference to a multiple-endmember Spectral Angle Mapper approach, but the hit appears in the reference list rather than as the paper's own spectral-variation metric.
+
 ## 2026-08-11 Methods Draft Additions
 
 - Created `Documents/Paper/20260811_methods_draft_spectral_phylogenetic_diversity.docx` as a methods-section draft for the current spectral-phylogenetic diversity manuscript.

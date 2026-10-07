@@ -1,0 +1,2 @@
+"quad_id","pca_basis","alpha","retained_pixels","unique_pc1_pc2_points","recalculated_convex_hull_area","table_convex_hull_area","recalculated_alpha_hull_area","table_alpha_hull_area","table_alpha_hull_method","table_alpha_hull_n_points"
+"800_a","vector-normalized standardized PCA",1,3976,3900,6679.32179982911,6679.32179982578,628.063050155891,628.063050156333,"all_pixels",3900

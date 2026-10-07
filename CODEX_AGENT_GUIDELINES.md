@@ -322,6 +322,7 @@ The user remains responsible for all Git actions.
 4. The confirmed partitioned quadrat spectra are stored in `/Quad_Spectra/10m`, `/Quad_Spectra/20m`, and `/Quad_Spectra/50m`.
 5. Temporary validation folders such as `/Quad_Spectra/10m_test`, `/Quad_Spectra/20m_test`, and `/Quad_Spectra/50m_test` document testing activity and should not replace the confirmed primary spectra unless the user explicitly directs that change.
 6. Current analysis should use current, non-legacy data products. Files under directories named `old`, `Outdated`, or `Currently not relevant` are authorized for deletion when cleanup is requested.
+7. Forward-facing manuscript text, figure titles, table labels, and interpretation notes should call the former `raw PCA` basis the `original PCA` basis. Existing filenames, column names, and code identifiers may remain unchanged where renaming would reduce reproducibility or break links to established outputs.
 
 ### During Work
 

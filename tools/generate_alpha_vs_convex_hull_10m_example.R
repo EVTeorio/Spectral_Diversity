@@ -2,10 +2,12 @@ PROJECT_DIR <- "C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock R
 setwd(PROJECT_DIR)
 
 OUT_PATH <- file.path(PROJECT_DIR, "Documents/Tables and Figures/20_alpha_hull_vs_convex_hull_10m_example.png")
+SCORE_CSV <- file.path(PROJECT_DIR, "reports/tables/figure_sources/20_alpha_hull_vs_convex_hull_10m_example_scores.csv")
 PCA_RDS <- file.path(PROJECT_DIR, "Quad_Values/Spectral_diversitySHPs/standardized_PCA_global_pca_smooth_masked_5nm.rds")
 SPEC_DIR <- file.path(PROJECT_DIR, "Quad_Spectra/10m_smooth_5nm")
 
 dir.create(dirname(OUT_PATH), recursive = TRUE, showWarnings = FALSE)
+dir.create(dirname(SCORE_CSV), recursive = TRUE, showWarnings = FALSE)
 
 samples <- 136L
 lines <- 136L
@@ -159,6 +161,12 @@ example <- make_example()
 if (is.null(example)) {
   stop("No suitable 10 m quadrat found for plotting.", call. = FALSE)
 }
+
+write.csv(
+  data.frame(PC1 = example$scores[, 1], PC2 = example$scores[, 2]),
+  SCORE_CSV,
+  row.names = FALSE
+)
 
 png(OUT_PATH, width = 2400, height = 1400, res = 200, bg = "transparent")
 op <- par(no.readonly = TRUE)
