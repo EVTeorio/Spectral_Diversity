@@ -1,6 +1,6 @@
 # Directory Map
 
-Last updated: 2026-08-17
+Last updated: 2026-10-10
 
 Working directory:
 `C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity`
@@ -31,7 +31,7 @@ All manuscript-related outputs should be saved under `Documents/Paper/` with the
 | `scripts/` | R workflow scripts for preprocessing, index creation, analysis, utilities, and visuals | 67 | 0.001 GB |
 | `Shadow_vs_sunlit_SHP/` | Shadow/sunlit training or classification shapefiles | 12 | <0.001 GB |
 | `Test/` | Ad hoc test/projection script area | 1 | <0.001 GB |
-| `tests/` | Formal unit tests, smoke checks, and lightweight reproduced-raster validation artifacts | 4 | 0.565 GB |
+| `tests/` | Formal unit tests, smoke checks, and lightweight reproduced-raster validation artifacts | 7 | 0.565 GB |
 | `VegIndex_NA_trimmed/` | Vegetation-index raster outputs aligned with trimmed imagery | 75 | 16.485 GB |
 | `Visuals/` | Current exported figures and visual raster products | 5 | 0.001 GB |
 
@@ -190,6 +190,9 @@ Spectral_Diversity/
         test_sa_entropy_bootstrapping.R
         smoke_sa_entropy_bootstrapping.R
         test_environmental_variables_all_scales.R
+        test_pca_phylo_shannon_multiple_regression.R
+        test_pca_phylogenetic_only_multiple_regression.R
+        test_pca_sa_phylogenetic_only_multiple_regression.R
         reproduced_quad_spectra/
 
     VegIndex_NA_trimmed/
@@ -204,7 +207,8 @@ Spectral_Diversity/
         combined_quadrat_variable_guide.md
         execution_plans/
         figures/
-            bootstrap_metric_relationships/
+        alpha_hull_all_pixels_benchmark/
+        bootstrap_metric_relationships/
             bootstrap_variation/
             edge_bootstrap_sensitivity/
             multiscale_spectral_biodiversity/
@@ -296,6 +300,10 @@ Spectral_Diversity/
 - `modeling.R`
 - `modeling_test.R`
 - `ouliers.R`
+- `pca_phylo_shannon_multiple_regression.R`
+- `pca_phylogenetic_only_multiple_regression.R`
+- `pca_sa_phylogenetic_only_multiple_regression.R`
+- `alpha_hull_all_pixels_benchmark.R`
 - `random Forest.R`
 - `scratch paper.R`
 - `sa_entropy_sample_size_effects.R`
@@ -401,6 +409,9 @@ Spectral_Diversity/
 - Current all-metric spectral-biodiversity scatterplot analysis is in `scripts/3_Analysis/spectral_biodiversity_all_metric_scatter_analysis.R`. The active report is `reports/analysis/20260819_spectral_biodiversity_all_metric_scatter_analysis.md`, with companion tables under `reports/tables/spectral_biodiversity_all_metrics/` and 40 figures under `reports/figures/spectral_biodiversity_all_metrics/`. Each original figure holds one spectral heterogeneity measure, including spectral angle entropy plus raw and standardized PCA alpha, Rao's Q, mean distance, convex hull, 3D hull volume, and 3D hull area metrics, with the seven biodiversity metrics as rows and 10 m, 20 m, and 50 m as columns. Companion `02_power2_biodiversity_original_spectral_*` figures square biodiversity metrics only, while `03_power2_biodiversity_power2_spectral_*` figures square both biodiversity and spectral metrics. The single normal-value summary figure `04_std_pca_volume_metrics_vs_all_biodiversity_metrics_by_scale.png` compares standardized PCA alpha hull, convex hull, 3D hull volume, and 3D hull area against all biodiversity metrics. The new `reports/figures/spectral_biodiversity_phylogenetic_transform_stacks/` folder contains 13 tall phylogenetic-only stack figures, one per spectral metric, with rows ordered regular, both-axis power-2, and biodiversity-only power-2 for each phylogenetic biodiversity metric.
 - Decision update, 2026-08-20: convex hull and 3D hull volume/area outputs in the all-metric and spectral-relationship folders are retained as diagnostic/archive products only. Do not use them as forward analysis metrics or primary manuscript result metrics.
 - Current final research direction analysis is in `scripts/3_Analysis/final_research_direction_analysis.R`. The active report is `reports/analysis/20260819_final_research_direction_analysis.md`, with companion tables under `reports/tables/final_research_direction/` and figures under `reports/figures/final_research_direction/`. This manuscript-prep analysis compiles PCA-centered spectral-biodiversity relationships, spectral metric pairwise relationships, biodiversity metric pairwise relationships, transformation diagnostics, metric driver screens, PCA computation-method checks, Moran's I spatial diagnostics, and variogram summaries.
+- Current PCA phylogenetic-Shannon multiple-regression analysis is in `scripts/3_Analysis/pca_phylo_shannon_multiple_regression.R`. The active report is `reports/analysis/20261009_pca_phylo_shannon_multiple_regression.md`, with companion tables under `reports/tables/pca_phylo_shannon_multiple_regression/`. This focused OLS layer models each of six PCA spectral metrics against Faith's PD, phylogenetic Rao's Q, abundance-weighted Faith's PD, and Shannon diversity at 10 m, 20 m, and 50 m.
+- Current PCA phylogenetic-only multiple-regression analysis is in `scripts/3_Analysis/pca_phylogenetic_only_multiple_regression.R`. The active report is `reports/analysis/20261009_pca_phylogenetic_only_multiple_regression.md`, with companion tables under `reports/tables/pca_phylogenetic_only_multiple_regression/` and a paper-facing table at `Documents/Paper/20261009_phylogenetic_only_pca_multiple_regression_table.md`. This focused OLS layer models each of six PCA spectral metrics against Faith's PD, phylogenetic Rao's Q, and abundance-weighted Faith's PD at 10 m, 20 m, and 50 m.
+- Current PCA plus spectral angle phylogenetic-only multiple-regression comparison is in `scripts/3_Analysis/pca_sa_phylogenetic_only_multiple_regression.R`. The active report is `reports/analysis/20261009_pca_sa_phylogenetic_only_multiple_regression.md`, with companion tables under `reports/tables/pca_sa_phylogenetic_only_multiple_regression/` and a paper-facing table at `Documents/Paper/20261009_phylogenetic_only_pca_sa_multiple_regression_table.md`. This comparison adds spectral angle entropy as the angular non-PCA response alongside the six PCA spectral metrics.
 - Current species-diversity versus phylogenetic-diversity concordance analysis is in `scripts/3_Analysis/species_phylogenetic_correlation_analysis.R`. The active report is `reports/analysis/20260817_species_phylogenetic_correlation_analysis.md`, with companion figures and tables under `reports/figures/species_phylogenetic_correlation/` and `reports/tables/species_phylogenetic_correlation/`. Scale-specific all-diversity metric scatterplot figures are named `05_all_diversity_metric_pairwise_scatter_10m.png`, `05_all_diversity_metric_pairwise_scatter_20m.png`, and `05_all_diversity_metric_pairwise_scatter_50m.png`. Edge-highlight versions for 10 m and 20 m are named `06_all_diversity_metric_pairwise_scatter_edge_highlight_10m.png` and `06_all_diversity_metric_pairwise_scatter_edge_highlight_20m.png`.
 - Elevation-gradient all-diversity metric scatterplot figures are named `07_all_diversity_metric_pairwise_scatter_elevation_gradient_10m.png`, `07_all_diversity_metric_pairwise_scatter_elevation_gradient_20m.png`, and `07_all_diversity_metric_pairwise_scatter_elevation_gradient_50m.png`; their companion model table is `reports/tables/species_phylogenetic_correlation/elevation_adjusted_all_diversity_metric_models.csv`.
 - Species composition types are now clustered from species presence/absence rather than abundance and named with diagnostic species codes. The composition-type heatmaps are `08_species_presence_composition_type_heatmap_10m.png`, `08_species_presence_composition_type_heatmap_20m.png`, and `08_species_presence_composition_type_heatmap_50m.png`; companion tables are `species_composition_type_names.csv`, `species_composition_type_presence_frequencies.csv`, and `species_composition_cluster_divergence_summary_presence_based.csv`.

@@ -1,0 +1,73 @@
+"scale","spectral_metric","spectral_label","predictor","predictor_label","predictor_r_squared_with_other_predictors","vif"
+"10m","spec_alpha","Original PCA alpha hull","phy_faith","Faith's PD",0.712671442221801,3.48033626637259
+"10m","spec_alpha","Original PCA alpha hull","phy_rao","Phylogenetic Rao's Q",0.74146107166378,3.8678894758144
+"10m","spec_alpha","Original PCA alpha hull","phy_afaith","Abundance-weighted Faith's PD",0.661401928936264,2.95335409578209
+"10m","spec_alpha","Original PCA alpha hull","sp_shannon","Shannon diversity",0.433751360804703,1.76600865906029
+"10m","spec_pca_mean","Original PCA mean distance","phy_faith","Faith's PD",0.713351583435238,3.488594187905
+"10m","spec_pca_mean","Original PCA mean distance","phy_rao","Phylogenetic Rao's Q",0.742352092191427,3.88126574946993
+"10m","spec_pca_mean","Original PCA mean distance","phy_afaith","Abundance-weighted Faith's PD",0.661959015395066,2.9582211789162
+"10m","spec_pca_mean","Original PCA mean distance","sp_shannon","Shannon diversity",0.434483224814846,1.76829414065143
+"10m","spec_rao_q","Original PCA Rao's Q","phy_faith","Faith's PD",0.713351583435238,3.488594187905
+"10m","spec_rao_q","Original PCA Rao's Q","phy_rao","Phylogenetic Rao's Q",0.742352092191427,3.88126574946993
+"10m","spec_rao_q","Original PCA Rao's Q","phy_afaith","Abundance-weighted Faith's PD",0.661959015395066,2.9582211789162
+"10m","spec_rao_q","Original PCA Rao's Q","sp_shannon","Shannon diversity",0.434483224814846,1.76829414065143
+"10m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_faith","Faith's PD",0.713351583435238,3.488594187905
+"10m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_rao","Phylogenetic Rao's Q",0.742352092191427,3.88126574946993
+"10m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_afaith","Abundance-weighted Faith's PD",0.661959015395066,2.9582211789162
+"10m","spec_spca_alpha","Vector-normalized PCA alpha hull","sp_shannon","Shannon diversity",0.434483224814846,1.76829414065143
+"10m","spec_spca_mean","Vector-normalized PCA mean distance","phy_faith","Faith's PD",0.713351583435238,3.488594187905
+"10m","spec_spca_mean","Vector-normalized PCA mean distance","phy_rao","Phylogenetic Rao's Q",0.742352092191427,3.88126574946993
+"10m","spec_spca_mean","Vector-normalized PCA mean distance","phy_afaith","Abundance-weighted Faith's PD",0.661959015395066,2.9582211789162
+"10m","spec_spca_mean","Vector-normalized PCA mean distance","sp_shannon","Shannon diversity",0.434483224814846,1.76829414065143
+"10m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_faith","Faith's PD",0.713351583435238,3.488594187905
+"10m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_rao","Phylogenetic Rao's Q",0.742352092191427,3.88126574946993
+"10m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_afaith","Abundance-weighted Faith's PD",0.661959015395066,2.9582211789162
+"10m","spec_spca_rao","Vector-normalized PCA Rao's Q","sp_shannon","Shannon diversity",0.434483224814846,1.76829414065143
+"20m","spec_alpha","Original PCA alpha hull","phy_faith","Faith's PD",0.658942631496432,2.93205804169435
+"20m","spec_alpha","Original PCA alpha hull","phy_rao","Phylogenetic Rao's Q",0.71956993592525,3.56595147278305
+"20m","spec_alpha","Original PCA alpha hull","phy_afaith","Abundance-weighted Faith's PD",0.678449518200454,3.1099315864916
+"20m","spec_alpha","Original PCA alpha hull","sp_shannon","Shannon diversity",0.441632325791412,1.79093462281348
+"20m","spec_pca_mean","Original PCA mean distance","phy_faith","Faith's PD",0.658942631496432,2.93205804169435
+"20m","spec_pca_mean","Original PCA mean distance","phy_rao","Phylogenetic Rao's Q",0.71956993592525,3.56595147278305
+"20m","spec_pca_mean","Original PCA mean distance","phy_afaith","Abundance-weighted Faith's PD",0.678449518200454,3.1099315864916
+"20m","spec_pca_mean","Original PCA mean distance","sp_shannon","Shannon diversity",0.441632325791412,1.79093462281348
+"20m","spec_rao_q","Original PCA Rao's Q","phy_faith","Faith's PD",0.658942631496432,2.93205804169435
+"20m","spec_rao_q","Original PCA Rao's Q","phy_rao","Phylogenetic Rao's Q",0.71956993592525,3.56595147278305
+"20m","spec_rao_q","Original PCA Rao's Q","phy_afaith","Abundance-weighted Faith's PD",0.678449518200454,3.1099315864916
+"20m","spec_rao_q","Original PCA Rao's Q","sp_shannon","Shannon diversity",0.441632325791412,1.79093462281348
+"20m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_faith","Faith's PD",0.658942631496432,2.93205804169435
+"20m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_rao","Phylogenetic Rao's Q",0.71956993592525,3.56595147278305
+"20m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_afaith","Abundance-weighted Faith's PD",0.678449518200454,3.1099315864916
+"20m","spec_spca_alpha","Vector-normalized PCA alpha hull","sp_shannon","Shannon diversity",0.441632325791412,1.79093462281348
+"20m","spec_spca_mean","Vector-normalized PCA mean distance","phy_faith","Faith's PD",0.658942631496432,2.93205804169435
+"20m","spec_spca_mean","Vector-normalized PCA mean distance","phy_rao","Phylogenetic Rao's Q",0.71956993592525,3.56595147278305
+"20m","spec_spca_mean","Vector-normalized PCA mean distance","phy_afaith","Abundance-weighted Faith's PD",0.678449518200454,3.1099315864916
+"20m","spec_spca_mean","Vector-normalized PCA mean distance","sp_shannon","Shannon diversity",0.441632325791412,1.79093462281348
+"20m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_faith","Faith's PD",0.658942631496432,2.93205804169435
+"20m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_rao","Phylogenetic Rao's Q",0.71956993592525,3.56595147278305
+"20m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_afaith","Abundance-weighted Faith's PD",0.678449518200454,3.1099315864916
+"20m","spec_spca_rao","Vector-normalized PCA Rao's Q","sp_shannon","Shannon diversity",0.441632325791412,1.79093462281348
+"50m","spec_alpha","Original PCA alpha hull","phy_faith","Faith's PD",0.569202399720174,2.32127569733547
+"50m","spec_alpha","Original PCA alpha hull","phy_rao","Phylogenetic Rao's Q",0.700523625988733,3.33916157259998
+"50m","spec_alpha","Original PCA alpha hull","phy_afaith","Abundance-weighted Faith's PD",0.655952740843156,2.90657743488699
+"50m","spec_alpha","Original PCA alpha hull","sp_shannon","Shannon diversity",0.54903629482091,2.21747335431988
+"50m","spec_pca_mean","Original PCA mean distance","phy_faith","Faith's PD",0.569202399720174,2.32127569733547
+"50m","spec_pca_mean","Original PCA mean distance","phy_rao","Phylogenetic Rao's Q",0.700523625988733,3.33916157259998
+"50m","spec_pca_mean","Original PCA mean distance","phy_afaith","Abundance-weighted Faith's PD",0.655952740843156,2.90657743488699
+"50m","spec_pca_mean","Original PCA mean distance","sp_shannon","Shannon diversity",0.54903629482091,2.21747335431988
+"50m","spec_rao_q","Original PCA Rao's Q","phy_faith","Faith's PD",0.569202399720174,2.32127569733547
+"50m","spec_rao_q","Original PCA Rao's Q","phy_rao","Phylogenetic Rao's Q",0.700523625988733,3.33916157259998
+"50m","spec_rao_q","Original PCA Rao's Q","phy_afaith","Abundance-weighted Faith's PD",0.655952740843156,2.90657743488699
+"50m","spec_rao_q","Original PCA Rao's Q","sp_shannon","Shannon diversity",0.54903629482091,2.21747335431988
+"50m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_faith","Faith's PD",0.569202399720174,2.32127569733547
+"50m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_rao","Phylogenetic Rao's Q",0.700523625988733,3.33916157259998
+"50m","spec_spca_alpha","Vector-normalized PCA alpha hull","phy_afaith","Abundance-weighted Faith's PD",0.655952740843156,2.90657743488699
+"50m","spec_spca_alpha","Vector-normalized PCA alpha hull","sp_shannon","Shannon diversity",0.54903629482091,2.21747335431988
+"50m","spec_spca_mean","Vector-normalized PCA mean distance","phy_faith","Faith's PD",0.569202399720174,2.32127569733547
+"50m","spec_spca_mean","Vector-normalized PCA mean distance","phy_rao","Phylogenetic Rao's Q",0.700523625988733,3.33916157259998
+"50m","spec_spca_mean","Vector-normalized PCA mean distance","phy_afaith","Abundance-weighted Faith's PD",0.655952740843156,2.90657743488699
+"50m","spec_spca_mean","Vector-normalized PCA mean distance","sp_shannon","Shannon diversity",0.54903629482091,2.21747335431988
+"50m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_faith","Faith's PD",0.569202399720174,2.32127569733547
+"50m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_rao","Phylogenetic Rao's Q",0.700523625988733,3.33916157259998
+"50m","spec_spca_rao","Vector-normalized PCA Rao's Q","phy_afaith","Abundance-weighted Faith's PD",0.655952740843156,2.90657743488699
+"50m","spec_spca_rao","Vector-normalized PCA Rao's Q","sp_shannon","Shannon diversity",0.54903629482091,2.21747335431988
