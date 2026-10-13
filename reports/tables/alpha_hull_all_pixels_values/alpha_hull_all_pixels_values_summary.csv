@@ -1,0 +1,4 @@
+"scale","basis","alpha_value","status","total_elapsed_seconds","rows"
+"10m","vector_normalized_pca",1.5,"nonfinite_area",62.1,2
+"10m","vector_normalized_pca",1.5,"ok",1209.34,1742
+"10m","vector_normalized_pca",1.5,"skipped_manual_excluded",NA,165

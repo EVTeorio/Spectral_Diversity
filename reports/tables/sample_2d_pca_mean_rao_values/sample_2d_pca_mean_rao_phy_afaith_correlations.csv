@@ -1,0 +1,3 @@
+"scale","basis","sample_max_points","metric_id","n","pearson_r","r_squared","pearson_p","spearman_r","spearman_p"
+"50m","vector_normalized_pca",10000,"sampled_2d_mean_distance",74,0.417125162666762,0.173993401329773,0.00021799374449931,0.426819696408737,0.000149286624919563
+"50m","vector_normalized_pca",10000,"sampled_2d_rao_q",74,0.273377508202784,0.0747352619911633,0.0184366417870352,0.28068122917438,0.0154219920533259

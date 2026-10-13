@@ -1,0 +1,8 @@
+"check","value"
+"requested_scale","50m"
+"requested_basis","vector_normalized_pca"
+"sample_max_points","10000"
+"current_rows","80"
+"ok_rows","74"
+"skipped_manual_excluded_rows","6"
+"non_ok_non_skipped_rows","0"
