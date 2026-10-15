@@ -19,9 +19,7 @@ Create a revised paper-facing research narrative and a root-level checklist that
 - `Documents/Paper/SVH_Paper.docx`
 - `20260815_evan_next_steps.docx`
 - `reports/combined_quadrat_variable_guide.md`
-- `reports/analysis/20260819_spectral_biodiversity_all_metric_scatter_analysis.md`
-- `reports/analysis/20260817_spectral_heterogeneity_relationship_analysis.md`
-- `reports/analysis/20260817_species_phylogenetic_correlation_analysis.md`
+- `reports/analysis/20261014_historical_analysis_summary.md` (consolidated history of the all-metric, spectral-relationship, and species-phylogenetic analyses)
 
 ## Proposed Changes
 

@@ -1,395 +1,49 @@
-# Governance Standards
+# Project Governance
 
 ## Working Directory
 
-C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity
+`C:/Users/PaintRock/OneDrive - Alabama A&M University/PaintRock RemoteSens/Spectral_Diversity`
 
-## R and Rtools Access
+## Operating Rules
 
-The agent is authorized to discover, read, and execute installed R and Rtools binaries, libraries, package metadata, and supporting files anywhere on this computer, even when those files are outside the designated repository directory.
+- Use R 4.2.3-compatible code. Review nearby scripts before changing R workflows so naming, loops, and output patterns remain consistent.
+- Update `reports/directory_map.md`, `reports/data_dictionary.md`, and `reports/project_state.md` whenever a material directory, dataset, or workflow decision changes.
+- Keep current derived data in `Quad_Values/`, analytical scripts in `scripts/`, and dated manuscript work in `Documents/Paper/`.
+- Never modify `Documents/`, manuscript-state files, or PDFs unless the user explicitly requests it.
+- Never delete, move, or overwrite files outside the stated task without approval. For cleanup, first identify exact paths, establish whether files are duplicates or archival variants, and record the decision.
+- Do not commit, push, rebase, alter system paths, or alter system environment variables.
 
-This exception exists only to support reproducible R execution, package discovery, package compilation, and dependency validation. The agent must not modify, delete, reinstall, or reconfigure R, Rtools, system libraries, system paths, or system environment variables without explicit user approval for that specific action.
+## Current Data and Scale Rules
 
-When R or Rtools are not available through the active shell path, the agent may search common installation locations and use absolute paths to R/Rtools executables for validation and testing.
+- Confirmed base quadrat spectra are `Quad_Spectra/10m/`, `20m/`, and `50m/`.
+- `Quad_Spectra/10m_smooth_5nm/` is the intended current 10 m resampled input but was accidentally deleted and will be restored by the user.
+- Intermediate `*_smooth/` directories were deliberately removed to conserve space and may be regenerated when needed.
+- `Quad_Spectra/25m/`, `25m_smooth_5nm/`, and `33m/` support planned scale expansion. Empty or partial folders at these scales are intentional and must not be removed as cleanup artifacts.
+- Current primary spectral metrics are original-PCA and vector-normalized PCA mean distance plus 2D alpha-hull area. Current biodiversity metrics are the species and phylogenetic summaries in `Quad_Values/Diversity_SHPs/` and the combined analysis tables.
+- Preserve both PCA `.rds` basis objects and their variance-explained tables. Convex-hull, 3D hull, spectral-angle entropy, bootstrap, and sensitivity products are retained as archive/provenance data unless explicitly reopened. They are not current primary metrics.
+- `Quad_Values/Spectral_diversitySHPs/` is the canonical home for current combined spectral-heterogeneity summaries and PCA basis objects. Root-level copies of those combined summary CSVs are redundant copies.
 
-## Repository Discovery Requirements
+## Documentation and Planning
 
-Before performing any work, the agent must create or update the following project inventories.
+For complex changes, create a dated execution plan in `reports/execution_plans/` before editing. The plan must state objective, scope, files reviewed, proposed changes, validation, and risks.
 
-### Directory Map
+Maintain documentation as a concise current-state record:
 
-**Location:**
-`/reports/directory_map.md`
+- `reports/project_state.md`: current objective, recent direction changes, active inputs, primary outputs, pending decisions, and known issues.
+- `reports/data_dictionary.md`: canonical datasets, locations, schemas/keys, status, and archived or duplicate variants.
+- `reports/directory_map.md`: live directory structure and intended role of each major location.
 
-**Purpose:**
-Provide a complete hierarchical map of the repository structure.
+Historical task, validation, analysis, and execution-plan Markdown files are provenance. Do not delete them during routine documentation consolidation unless explicitly authorized.
 
-**Include:**
-- folders
-- scripts
-- functions
-- reports
-- outputs
-- tests
-- documentation
+## Cleanup Rules
 
-**Format:**
-```text
-project_root/
-data/
-    raw/
-    intermediate/
-    processed/
+- In `reports/`, remove only figures or tables that are verified duplicates. Keep the latest suitable rendering when an iteration is demonstrably superseded.
+- Do not delete a similarly named plot or table merely because it covers related metrics; verify byte identity, source data, report references, and analysis purpose first.
+- Retain compact archival tables when they preserve reproducibility or explain a prior analytical decision. Prefer one canonical copy when files are byte-identical and no scripts or current reports require the duplicate path.
+- Existing folders named `old`, `Outdated`, and `Currently not relevant` were previously authorized cleanup targets; do not extend that authorization to new folders without review.
 
-scripts/
-    01_ingest/
-    02_clean/
-    03_transform/
+## Validation
 
-outputs/
+For code or data changes, run focused validation proportional to risk and document the result. For documentation-only work, verify links/paths, file inventories, protected locations, and any stated duplicate decisions.
 
-reports/
-```
-
-Update whenever the repository structure changes.
-
----
-
-### Data Dictionary
-
-**Location:**
-`/reports/data_dictionary.md`
-
-**Purpose:**
-Provide a living inventory of all datasets used in the project.
-
-#### For every dataset include:
-
-- Dataset Name
-- Description
-- Source Location
-- Row Count
-- Column Count
-- Primary Keys
-- Date Fields
-- Numeric Fields
-- Categorical Fields
-- Missing Value Summary
-- Last Updated
-
-#### For every variable include:
-
-| Variable | Type | Description |
-|----------|------|-------------|
-
-The agent should update the data dictionary whenever:
-
-- new datasets are introduced
-- schemas change
-- fields are added or removed
-
----
-
-## Coding Style & Naming Conventions
-
-### Language
-
-Use R for all generated code unless explicitly instructed otherwise.
-
-Generated code should remain compatible with:
-
-`R 4.2.3`
-
-Before writing or restructuring R code, read relevant existing scripts under `/scripts` to understand the user's established workflow structure, object naming, and R style. Pay particular attention to how existing scripts implement loops, nested iteration across scales/quadrats/files, and progress/output handling so generated code fits the project's current pattern unless there is a clear reason to improve it.
-
----
-
-### Style
-
-Use:
-
-- 2-space indentation
-- meaningful object names
-- modular functions
-- concise logic
-
-#### Requirements:
-
-- Keep functions focused on a single responsibility.
-- Prefer maintainable solutions over clever solutions.
-- Add comments where logic is not obvious.
-- Avoid deeply nested logic.
-- Avoid duplicated code.
-
----
-
-### Naming Standards
-
-#### Functions
-
-`snake_case()`
-
-Examples:
-
-```r
-clean_customer_data()
-calculate_growth_rate()
-```
-
-#### Variables
-
-`snake_case`
-
-Examples:
-
-```r
-customer_count
-sales_total
-```
-
-#### Constants
-
-`UPPER_SNAKE_CASE`
-
-Examples:
-
-```r
-MAX_ITERATIONS
-DEFAULT_LOOKBACK_DAYS
-```
-
-#### Files
-
-`snake_case.R`
-
-Examples:
-
-```text
-clean_customer_data.R
-customer_summary_report.R
-```
-
-#### Directories
-
-`lowercase_snake_case`
-
-Examples:
-
-```text
-raw_data
-processed_data
-analysis_results
-```
-
----
-
-## Execution Planning Requirements
-
-For complex requests, create an ExecPlan before making changes.
-
-An ExecPlan should contain:
-
-- Objective
-- Requested task
-- Files To Review
-- Relevant files
-- Proposed Changes
-- Expected modifications
-- Validation Plan
-- How correctness will be verified
-- Risks
-- Potential side effects
-
-**Store plans under:**
-
-`/reports/execution_plans/`
-
-**Naming:**
-
-`YYYYMMDD_HHMM_execplan.md`
-
----
-
-## Testing Standards
-
-Testing is mandatory for:
-
-- new features
-- bug fixes
-- refactors affecting logic
-- cleaning or optimizing R scripts
-
-**Preferred framework:**
-
-`testthat`
-
-**Location:**
-
-`/tests`
-
-**Naming:**
-
-`test_feature_name.R`
-
-### Requirements
-
-- use small representative subsamples of data for unit tests
-- test normal conditions
-- test edge cases
-- test failure conditions
-- test missing data scenarios
-- test invalid inputs
-
-When behavior changes:
-
-- update existing tests
-- update documentation
-
----
-
-## Documentation Requirements
-
-Documentation is considered part of task completion.
-
-Update documentation whenever:
-
-- workflows change
-- outputs change
-- assumptions change
-- dependencies change
-
-Documentation locations:
-
-- `/README.md`
-- `/reports/`
-- `/docs/`
-
----
-
-## Rules
-
-The agent must not:
-
-1. Modify system paths.
-2. Modify system environment variables.
-3. Modify files outside repository boundaries, except for read/execute access to R and Rtools files as described above.
-4. Commit code.
-5. Push code.
-6. Rebase branches.
-7. Delete files without approval.
-
-The agent may:
-
-- recommend Git commands
-- generate commit messages
-- generate release notes
-
-The user remains responsible for all Git actions.
-
----
-
-## Repository Organization Rules
-
-- Autonomous experimentation: `/autoresearch`
-- Architecture notes: `/reports/architecture`
-- Historical summaries: `/reports/history`
-- Task reports: `/reports/tasks`
-- Execution plans: `/reports/execution_plans`
-- Validation reports: `/reports/validation`
-- Logs: `/logs`
-- Unit tests: `/tests`
-
----
-
-## Agent Expectations
-
-### Before Making Changes
-
-1. Review relevant repository files.
-2. Understand current implementation.
-3. Review project_state.md.
-4. Review data_dictionary.md.
-5. Review directory_map.md.
-6. Create an ExecPlan when required.
-7. Identify dependencies.
-8. Confirm assumptions.
-
-### Current Data Assumptions
-
-1. Unnamed first columns in CSV outputs are likely index columns unless later evidence shows otherwise.
-2. Spectral products that produce spectral heterogeneity values are stored in `/Quad_Values/Spectral_diversitySHPs`.
-3. The user has independently tested the partitioned quadrat spectra and confirmed they are the spectral inputs to use moving forward.
-4. The confirmed partitioned quadrat spectra are stored in `/Quad_Spectra/10m`, `/Quad_Spectra/20m`, and `/Quad_Spectra/50m`.
-5. Temporary validation folders such as `/Quad_Spectra/10m_test`, `/Quad_Spectra/20m_test`, and `/Quad_Spectra/50m_test` document testing activity and should not replace the confirmed primary spectra unless the user explicitly directs that change.
-6. Current analysis should use current, non-legacy data products. Files under directories named `old`, `Outdated`, or `Currently not relevant` are authorized for deletion when cleanup is requested.
-7. Forward-facing manuscript text, figure titles, table labels, and interpretation notes should call the former `raw PCA` basis the `original PCA` basis. Existing filenames, column names, and code identifiers may remain unchanged where renaming would reduce reproducibility or break links to established outputs.
-
-### During Work
-
-1. Make minimal targeted changes.
-2. Preserve existing functionality.
-3. Update tests.
-4. Update documentation.
-5. Record actions performed.
-
-### After Work
-
-1. Validate outputs.
-2. Run tests.
-3. Update data dictionary if needed.
-4. Update directory map if needed.
-5. Create task report.
-6. Create validation report.
-7. Summarize work completed.
-8. When all tasks are complete and immediately before producing the final response to the user, execute the following in an interactive R session:
-
-library(beepr)
-beep()
-
-If the beepr package is unavailable, note this in the final response.
-
----
-
-## Project State Tracking
-
-Maintain:
-
-`/reports/project_state.md`
-
-### Purpose
-
-Provide project continuity between agent sessions.
-
-### Required Sections
-
-- Current Objective
-- Active Research Questions
-- Completed Work
-- Pending Work
-- Known Issues
-- Technical Debt
-- Important Assumptions
-- Next Recommended Actions
-
-Update after every major task.
-
----
-
-## Completion Checklist
-
-A task is not complete until all applicable items are complete.
-
-Checklist:
-
-- [ ] Objective completed
-- [ ] Code updated
-- [ ] Tests added or updated
-- [ ] Validation completed
-- [ ] Documentation updated
-- [ ] Data dictionary updated
-- [ ] Directory map updated
-- [ ] Project state updated
-- [ ] Task report created
-- [ ] Validation report created
-- [ ] Summary provided to user
-- [ ] Completion beep run in the R interactive terminal with `library(beepr)` and `beep(3)`
+Before final completion of a substantial task, run an interactive R completion beep with `beepr` when R access is available. Report if `beepr` is unavailable.
