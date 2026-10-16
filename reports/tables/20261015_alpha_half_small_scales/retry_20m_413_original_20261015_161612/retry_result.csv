@@ -1,0 +1,2 @@
+"scale","quad_id","basis","alpha","retained_pixels","unique_points","arc_count","package_area","arc_integral_area","endpoint_integral_area","convex_area","warning","error","arc_error","endpoint_error","elapsed_seconds","timestamp"
+"20m","413","original_pca",0.5,28511,28180,561,NA,NA,NA,848.118450530432," | Problem in area computation (Returns NA)","","closure_error < 1e-08 * max(1, sum(2 * radius * theta)) is not TRUE","Unbalanced boundary vertices: 2",13.98,"2026-10-15 16:16:12 CDT"

@@ -1,0 +1,3 @@
+"scale","quad_id","basis","alpha_value","n_retained_pixels","n_unique_pc12_points","alpha_area_all_pixels","status","arc_count","elapsed_seconds","raster_file","source","run_timestamp","warning","error"
+"10m","413_d","original_pca",0.5,7277,7028,298.93463185474,"ok",614,9.78999999999998,"Quad_Spectra/10m_smooth_5nm/413_d","computed_all_pixels_alpha_0_5_arc_integral_recovery","2026-10-15 15:34:55 CDT","shull: complete hull invisible, data scaling error, will retry with some jitter | Problem in area computation (Returns NA) | Recovered by exact integral of unchanged alphahull circular arcs",""
+"10m","413_d","vector_normalized_pca",0.5,7277,7028,237.481328956866,"ok",713,0,"Quad_Spectra/10m_smooth_5nm/413_d","reused_existing_alpha_0_5","2026-10-15 14:07:49 CDT","",NA

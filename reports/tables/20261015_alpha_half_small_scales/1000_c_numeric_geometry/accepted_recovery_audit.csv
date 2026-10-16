@@ -1,0 +1,2 @@
+"scale","quad_id","basis","alpha_value","method","affected_triangle","determinant","triangle_height","n_retained_pixels","n_unique_points","replaced_mesh_entries","recovered_area","convex_bound","timestamp"
+"10m","1000_c","original_pca",0.5,"stable_circumcenter_same_triangulation",12391,4.58163839311965e-07,3.13607058184887e-08,7126,6890,8,436.777188998198,1211.32595815574,"2026-10-15 17:05:17 CDT"

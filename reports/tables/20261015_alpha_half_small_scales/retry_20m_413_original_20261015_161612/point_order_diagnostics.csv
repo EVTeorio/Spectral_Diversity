@@ -1,0 +1,4 @@
+"order","package_area","arc_area","endpoint_area","warnings","error","arc_error","endpoint_error","seconds"
+"lexicographic",604.134133210042,NA,NA,"","","closure_error < 1e-08 * max(1, sum(2 * radius * theta)) is not TRUE","Unbalanced boundary vertices: 2",7.48
+"reverse_input",NA,NA,NA," | shull: complete hull invisible, data scaling error, will retry with some jitter | shull: complete hull invisible, data scaling error, will retry with some jitter","attempt to set 'colnames' on an object with less than two dimensions","","",0.130000000000001
+"reverse_lexicographic",NA,NA,NA," | shull: complete hull invisible, data scaling error, will retry with some jitter | shull: complete hull invisible, data scaling error, will retry with some jitter","attempt to set 'colnames' on an object with less than two dimensions","","",0.109999999999999

@@ -1,0 +1,8 @@
+"scale","quad_id","basis","endpoint_area_candidate","error"
+"10m","1402_b","original_pca",NA,"Unbalanced boundary vertices: 2"
+"10m","1007_b","original_pca",461.287310545575,""
+"10m","1019_a","original_pca",NA,"Unbalanced boundary vertices: 2"
+"10m","1816_c","original_pca",NA,"Unbalanced boundary vertices: 2"
+"20m","115","vector_normalized_pca",580.187070451148,""
+"20m","413","original_pca",NA,"Unbalanced boundary vertices: 2"
+"25m","sub25_69","original_pca",NA,"Unbalanced boundary vertices: 2"

@@ -1,0 +1,5 @@
+"quad_id","retained_pixels","positive_arcs","unbalanced_vertices","affected_component_vertices","affected_component_arcs","component_width","component_height","single_arc_reversal_candidates","candidate_component_signed_area","warning","error"
+"1000_c",7126,NA,NA,NA,NA,NA,NA,"",NA,"","missing value where TRUE/FALSE needed"
+"1402_b",6315,497,2,3,3,0.325999785499638,0.217431836131846,"353",0.0140542868905864,"",""
+"1019_a",6534,488,2,292,292,36.5190425199347,16.440147487074,"487",330.037735192585,"",""
+"1816_c",5193,553,2,4,4,0.119682498856353,0.0475937974088154,"545",0.0013888727568329,"",""

@@ -1,0 +1,7 @@
+"scale","basis","grid_rows","finite_area","missing_raster","existing_manual_exclusions","unresolved_geometry","recovered_areas"
+"10m","original_pca",2000,1744,91,165,0,4
+"10m","vector_normalized_pca",2000,1744,91,165,0,3
+"20m","original_pca",500,436,15,49,0,0
+"20m","vector_normalized_pca",500,436,15,49,0,2
+"25m","original_pca",320,312,8,0,0,4
+"25m","vector_normalized_pca",320,312,8,0,0,0

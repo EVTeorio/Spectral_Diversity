@@ -1,0 +1,11 @@
+"check","pass"
+"exact_vertex_balance",TRUE
+"endpoint_circle_consistency",TRUE
+"independent_integral_agreement",TRUE
+"closed_remaining_boundary",TRUE
+"negligible_loop_area",TRUE
+"finite_nonnegative_within_convex_bound",TRUE
+"other_canonical_rows_unchanged",TRUE
+"vector_normalized_checkpoint_unchanged",TRUE
+"protected_references_unchanged",TRUE
+"saved_result_round_trip",TRUE

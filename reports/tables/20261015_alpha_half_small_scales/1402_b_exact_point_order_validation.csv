@@ -1,0 +1,4 @@
+"quad_id","basis","ordering","area","error"
+"1402_b","original_pca","xy",NA,"closure_error < 1e-08 * max(1, sum(2 * radius * theta)) is not TRUE"
+"1402_b","original_pca","reverse_xy",NA,"closure_error < 1e-08 * max(1, sum(2 * radius * theta)) is not TRUE"
+"1402_b","original_pca","yx",NA,"closure_error < 1e-08 * max(1, sum(2 * radius * theta)) is not TRUE"

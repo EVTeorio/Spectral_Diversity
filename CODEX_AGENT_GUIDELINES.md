@@ -15,11 +15,11 @@
 
 ## Current Data and Scale Rules
 
-- Confirmed base quadrat spectra are `Quad_Spectra/10m/`, `20m/`, and `50m/`.
-- `Quad_Spectra/10m_smooth_5nm/` is the intended current 10 m resampled input but was accidentally deleted and will be restored by the user.
+- Confirmed base quadrat spectra are `Quad_Spectra/10m/`, `20m/`, `25m/`, and `50m/`.
+- `Quad_Spectra/10m_smooth_5nm/` was restored by the user from a data repository on October 15. See the dated mean-distance/Rao verification outputs before accepting it for further processing.
 - Intermediate `*_smooth/` directories were deliberately removed to conserve space and may be regenerated when needed.
-- `Quad_Spectra/25m/`, `25m_smooth_5nm/`, and `33m/` support planned scale expansion. Empty or partial folders at these scales are intentional and must not be removed as cleanup artifacts.
-- Current primary spectral metrics are original-PCA and vector-normalized PCA mean distance plus 2D alpha-hull area. Current biodiversity metrics are the species and phylogenetic summaries in `Quad_Values/Diversity_SHPs/` and the combined analysis tables.
+- `Quad_Spectra/25m/` and `25m_smooth_5nm/` contain 312 prepared rasters for a 320-cell grid. The user handles 25 m exclusions manually; do not add exclusion flags for this task. 33 m and 100 m processing is deferred. Retain their resources.
+- Current spectral metrics are original-PCA and vector-normalized PCA mean distance, Rao's Q, and 2D alpha-hull area. The authorized alpha = 0.5 passes at 10 m, 20 m, and 25 m are finished, with only original-PCA 10 m 1000_c unresolved. The user authorized a manual arc-orientation repair for 20 m original-PCA 413; preserve its explicit source provenance and original NA backup. The user also reviewed and authorized orientation repairs for 10 m 1402_b, 1019_a, and 1816_c; preserve their manual source provenance and backups. Defer 1000_c for later inspection as requested. These exceptions are not an automatic repair policy for other quadrats. Stop before 50 m until the user authorizes further processing. Current biodiversity metrics are the species and phylogenetic summaries in `Quad_Values/Diversity_SHPs/` and the combined analysis tables.
 - Preserve both PCA `.rds` basis objects and their variance-explained tables. Convex-hull, 3D hull, spectral-angle entropy, bootstrap, and sensitivity products are retained as archive/provenance data unless explicitly reopened. They are not current primary metrics.
 - `Quad_Values/Spectral_diversitySHPs/` is the canonical home for current combined spectral-heterogeneity summaries and PCA basis objects. Root-level copies of those combined summary CSVs are redundant copies.
 

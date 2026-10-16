@@ -1,0 +1,3 @@
+"scale","quad_id","basis","alpha_value","n_retained_pixels","n_unique_pc12_points","alpha_area_all_pixels","status","arc_count","elapsed_seconds","raster_file","source","run_timestamp","warning","error"
+"10m","1108_d","original_pca",0.5,8765,8666,495.401254077096,"ok",1102,11.13,"Quad_Spectra/10m_smooth_5nm/1108_d","computed_all_pixels_alpha_0_5","2026-10-15 14:10:34 CDT","",""
+"10m","1108_d","vector_normalized_pca",0.5,8765,8666,434.590383426525,"ok",1427,0,"Quad_Spectra/10m_smooth_5nm/1108_d","reused_existing_alpha_0_5","2026-10-15 14:10:34 CDT","",""

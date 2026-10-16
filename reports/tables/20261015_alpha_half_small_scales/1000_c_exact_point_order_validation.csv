@@ -1,0 +1,4 @@
+"quad_id","basis","ordering","area","error"
+"1000_c","original_pca","xy",NA,"missing value where TRUE/FALSE needed"
+"1000_c","original_pca","reverse_xy",NA,"missing value where TRUE/FALSE needed"
+"1000_c","original_pca","yx",NA,"missing value where TRUE/FALSE needed"

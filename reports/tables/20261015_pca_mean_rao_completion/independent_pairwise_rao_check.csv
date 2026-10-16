@@ -1,0 +1,3 @@
+"basis","n_pixels","sample_n","pairwise_rao","centroid_rao","absolute_difference","pass"
+"original_pca",31226,64,247.909246902255,247.909246902255,2.8421709430404e-14,TRUE
+"vector_normalized_pca",31226,64,540.074632815254,540.074632815254,0,TRUE

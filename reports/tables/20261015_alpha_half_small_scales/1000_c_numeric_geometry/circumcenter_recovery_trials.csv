@@ -1,0 +1,3 @@
+"method","replacements","mesh_nonfinite","package_area","arc_area","endpoint_area","warnings","error","arc_error","endpoint_error"
+"translated_determinant",1,0,436.777188998198,436.777188998198,436.777188998198,"","","",""
+"translated_linear_solve",1,0,436.777188998198,436.777188998198,436.777188998198,"","","",""

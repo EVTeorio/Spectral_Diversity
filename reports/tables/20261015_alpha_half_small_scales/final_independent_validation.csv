@@ -1,0 +1,9 @@
+"check","pass"
+"canonical_checkpoint_round_trip",TRUE
+"full_grid_keys",TRUE
+"retained_pixel_counts_match_mean_rao",TRUE
+"prior_finite_areas_preserved",TRUE
+"reused_historical_values_preserved",TRUE
+"protected_hashes_unchanged",TRUE
+"report_links_exist",TRUE
+"no_50m_output_created",TRUE

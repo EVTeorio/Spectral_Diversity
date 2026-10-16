@@ -1,0 +1,12 @@
+"check","pass"
+"all_three_exact_vertex_balance",TRUE
+"endpoint_circle_consistency",TRUE
+"independent_integral_agreement",TRUE
+"reconstructed_boundary_closure",TRUE
+"convex_area_bounds",TRUE
+"only_three_authorized_canonical_rows_changed",TRUE
+"vector_normalized_checkpoints_unchanged",TRUE
+"1000_c_20m_25m_and_saved_hulls_unchanged",TRUE
+"protected_references_unchanged",TRUE
+"saved_results_round_trip",TRUE
+"coverage_and_unresolved_consistent",TRUE

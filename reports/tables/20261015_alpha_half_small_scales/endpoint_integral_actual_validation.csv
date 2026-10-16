@@ -1,0 +1,5 @@
+"scale","quad_id","basis","reference_area","endpoint_area","absolute_difference","convex_bound"
+"10m","0_a","original_pca",336.533486401007,336.533486401007,5.6843418860808e-14,1067.78957449128
+"10m","0_a","vector_normalized_pca",278.219918046532,278.219918046532,0,2417.79078320823
+"10m","1007_b","original_pca",NA,461.287310545575,NA,1064.22341738294
+"20m","115","vector_normalized_pca",NA,580.187070451148,NA,3333.64549229826

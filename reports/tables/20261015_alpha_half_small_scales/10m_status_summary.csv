@@ -1,0 +1,7 @@
+"scale","basis","status","rows"
+"10m","original_pca","missing_raster",91
+"10m","vector_normalized_pca","missing_raster",91
+"10m","original_pca","ok",1744
+"10m","vector_normalized_pca","ok",1744
+"10m","original_pca","skipped_manual_excluded",165
+"10m","vector_normalized_pca","skipped_manual_excluded",165

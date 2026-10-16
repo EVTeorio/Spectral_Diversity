@@ -1,0 +1,8 @@
+"check","pass"
+"arc_integral_validation_passed",TRUE
+"full_boundary_ids_accounted_for",TRUE
+"unique_result_keys",TRUE
+"all_successful_areas_finite_nonnegative",TRUE
+"existing_finite_areas_unchanged",TRUE
+"protected_reference_inputs_and_50m_unchanged",TRUE
+"only_authorized_scales",TRUE

@@ -1,0 +1,5 @@
+"scale","quad_id","basis","reference_area","arc_integral_area","absolute_difference","agreement"
+"10m","0_a","original_pca",336.533486401007,336.533486401008,5.6843418860808e-13,TRUE
+"10m","0_a","vector_normalized_pca",278.219918046532,278.219918046533,8.5265128291212e-13,TRUE
+"10m","304_c","original_pca",NA,351.945058618873,NA,NA
+"10m","304_c","vector_normalized_pca",303.816510014724,303.816510014724,1.70530256582424e-13,TRUE

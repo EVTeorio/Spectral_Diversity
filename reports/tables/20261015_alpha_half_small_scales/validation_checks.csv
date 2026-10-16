@@ -1,0 +1,5 @@
+"check","pass"
+"only_10m_20m_25m",TRUE
+"alpha_is_half",TRUE
+"unique_keys",TRUE
+"protected_inputs_and_50m_unchanged",TRUE
